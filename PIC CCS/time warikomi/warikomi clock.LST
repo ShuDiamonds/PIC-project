@@ -1,0 +1,170 @@
+CCS PCM C Compiler, Version 3.185, 22500
+
+               Filename: C:\Users\Fukaken\Desktop\R12\•Ÿ“c\warikomi clock.LST
+
+               ROM used: 109 (11%)
+                         Largest free fragment is 915
+               RAM used: 11 (16%) at main() level
+                         11 (16%) worst case
+               Stack:    1 worst case (0 in main + 1 for interrupts)
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   043
+0003:  NOP
+0004:  BTFSC  03.5
+0005:  GOTO   00A
+0006:  MOVWF  0E
+0007:  SWAPF  03,W
+0008:  MOVWF  0F
+0009:  GOTO   00F
+000A:  BCF    03.5
+000B:  MOVWF  0E
+000C:  SWAPF  03,W
+000D:  MOVWF  0F
+000E:  BSF    0F.1
+000F:  MOVF   0A,W
+0010:  MOVWF  13
+0011:  CLRF   0A
+0012:  BCF    03.7
+0013:  SWAPF  0E,F
+0014:  MOVF   04,W
+0015:  MOVWF  10
+0016:  MOVF   0C,W
+0017:  MOVWF  11
+0018:  MOVF   0D,W
+0019:  MOVWF  12
+001A:  BCF    03.5
+001B:  BTFSS  0B.5
+001C:  GOTO   01F
+001D:  BTFSC  0B.2
+001E:  GOTO   02E
+001F:  MOVF   10,W
+0020:  MOVWF  04
+0021:  MOVF   11,W
+0022:  MOVWF  0C
+0023:  MOVF   12,W
+0024:  MOVWF  0D
+0025:  MOVF   13,W
+0026:  MOVWF  0A
+0027:  SWAPF  0F,W
+0028:  MOVWF  03
+0029:  BCF    03.5
+002A:  SWAPF  0E,W
+002B:  BTFSC  0F.1
+002C:  BSF    03.5
+002D:  RETFIE
+....................  #include <16f84a.h> 
+....................  //////// Standard Header file for the PIC16F84A device ////////////////  
+.................... #device PIC16F84A  
+.................... #list  
+....................  
+.................... #fuses HS,NOWDT,NOPROTECT  
+.................... #use delay(clock=20000000)  
+.................... #define SECMAX 38  
+.................... #byte port_b=6  
+.................... int sec,flag;  
+.................... #INT_RTCC  
+.................... rtcc_isr()  
+.................... {  
+.................... 	sec=sec-1;  
+002E:  MOVLW  01
+002F:  SUBWF  14,F
+.................... 	if(sec==0)  
+.................... 	{  
+0030:  MOVF   14,F
+0031:  BTFSS  03.2
+0032:  GOTO   040
+.................... 		sec=SECMAX;  
+0033:  MOVLW  26
+0034:  MOVWF  14
+.................... 		if(flag==0)  
+.................... 		{  
+0035:  MOVF   15,F
+0036:  BTFSS  03.2
+0037:  GOTO   03D
+.................... 			port_b=0xc0;  
+0038:  MOVLW  C0
+0039:  MOVWF  06
+.................... 			flag=1;  
+003A:  MOVLW  01
+003B:  MOVWF  15
+.................... 		}  
+.................... 		else  
+.................... 		{  
+003C:  GOTO   040
+.................... 			port_b=0x30;  
+003D:  MOVLW  30
+003E:  MOVWF  06
+.................... 			flag=0;  
+003F:  CLRF   15
+.................... 		}  
+.................... 	}  
+.................... }  
+0040:  BCF    0B.2
+0041:  BCF    0A.3
+0042:  GOTO   01F
+.................... main()  
+.................... {  
+0043:  CLRF   04
+0044:  MOVLW  1F
+0045:  ANDWF  03,F
+.................... 	while(1)  
+.................... 	{  
+.................... 		if(input(PIN_A2)==0)  
+.................... 		break;  
+0046:  BSF    03.5
+0047:  BSF    05.2
+0048:  MOVLW  00
+0049:  BCF    03.5
+004A:  BTFSC  05.2
+004B:  MOVLW  01
+004C:  XORLW  00
+004D:  BTFSC  03.2
+004E:  GOTO   050
+.................... 	}  
+004F:  GOTO   046
+.................... 	set_tris_a(0x04);  
+0050:  MOVLW  04
+0051:  TRIS   5
+.................... 	set_tris_b(0);  
+0052:  MOVLW  00
+0053:  TRIS   6
+.................... 	setup_counters(RTCC_INTERNAL,RTCC_DIV_256);  
+0054:  MOVLW  07
+0055:  MOVWF  0C
+0056:  BTFSS  0C.3
+0057:  GOTO   060
+0058:  MOVLW  07
+0059:  CLRF   01
+005A:  MOVLW  81
+005B:  MOVWF  04
+005C:  MOVF   00,W
+005D:  ANDLW  C0
+005E:  IORLW  0F
+005F:  MOVWF  00
+0060:  CLRWDT
+0061:  MOVLW  81
+0062:  MOVWF  04
+0063:  MOVF   00,W
+0064:  ANDLW  C0
+0065:  IORWF  0C,W
+0066:  MOVWF  00
+.................... 	sec=SECMAX;  
+0067:  MOVLW  26
+0068:  MOVWF  14
+.................... 	enable_interrupts(INT_RTCC);  
+0069:  BSF    0B.5
+.................... 	enable_interrupts(GLOBAL);  
+006A:  BSF    0B.7
+.................... 	while(1)  
+.................... 	{  
+.................... 	}  
+006B:  GOTO   06B
+.................... }  
+....................  
+006C:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FFA   HS NOWDT NOPUT NOPROTECT

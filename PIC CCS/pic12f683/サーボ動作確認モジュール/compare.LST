@@ -1,0 +1,278 @@
+CCS PCM C Compiler, Version 3.185, 22500
+
+               Filename: C:\Users\FMV\Dropbox\PIC-project\PIC CCS\pic12f683\サーボ動作確認モジュール\compare.LST
+
+               ROM used: 180 (9%)
+                         Largest free fragment is 1868
+               RAM used: 15 (12%) at main() level
+                         16 (12%) worst case
+               Stack:    2 worst case (1 in main + 1 for interrupts)
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   042
+0003:  NOP
+0004:  BTFSC  03.5
+0005:  GOTO   00A
+0006:  MOVWF  25
+0007:  SWAPF  03,W
+0008:  MOVWF  26
+0009:  GOTO   00F
+000A:  BCF    03.5
+000B:  MOVWF  25
+000C:  SWAPF  03,W
+000D:  MOVWF  26
+000E:  BSF    26.1
+000F:  MOVF   0A,W
+0010:  MOVWF  2D
+0011:  CLRF   0A
+0012:  BCF    03.7
+0013:  SWAPF  25,F
+0014:  MOVF   04,W
+0015:  MOVWF  27
+0016:  MOVF   20,W
+0017:  MOVWF  28
+0018:  MOVF   21,W
+0019:  MOVWF  29
+001A:  MOVF   22,W
+001B:  MOVWF  2A
+001C:  MOVF   23,W
+001D:  MOVWF  2B
+001E:  MOVF   24,W
+001F:  MOVWF  2C
+0020:  BCF    03.5
+0021:  MOVLW  8C
+0022:  MOVWF  04
+0023:  BTFSS  00.0
+0024:  GOTO   027
+0025:  BTFSC  0C.0
+0026:  GOTO   04E
+0027:  MOVLW  8C
+0028:  MOVWF  04
+0029:  BTFSS  00.5
+002A:  GOTO   02D
+002B:  BTFSC  0C.5
+002C:  GOTO   04A
+002D:  MOVF   27,W
+002E:  MOVWF  04
+002F:  MOVF   28,W
+0030:  MOVWF  20
+0031:  MOVF   29,W
+0032:  MOVWF  21
+0033:  MOVF   2A,W
+0034:  MOVWF  22
+0035:  MOVF   2B,W
+0036:  MOVWF  23
+0037:  MOVF   2C,W
+0038:  MOVWF  24
+0039:  MOVF   2D,W
+003A:  MOVWF  0A
+003B:  SWAPF  26,W
+003C:  MOVWF  03
+003D:  BCF    03.5
+003E:  SWAPF  25,W
+003F:  BTFSC  26.1
+0040:  BSF    03.5
+0041:  RETFIE
+0042:  MOVLW  07
+0043:  MOVWF  0A
+0044:  CALL   7FF
+0045:  BSF    03.5
+0046:  MOVWF  10
+0047:  MOVLW  00
+0048:  MOVWF  0A
+0049:  GOTO   069
+....................  #include <12f683.h> 
+....................  //////// Standard Header file for the PIC12F683 device ////////////////  
+.................... #device PIC12F683  
+.................... #list  
+....................  
+.................... #fuses INTRC_IO,NOWDT,NOCPD,NOPROTECT,PUT,NOMCLR,NOBROWNOUT  
+.................... #use delay(clock = 8000000)					 // clock 8MHz  
+*
+0056:  MOVLW  2F
+0057:  MOVWF  04
+0058:  MOVF   00,W
+0059:  BTFSC  03.2
+005A:  GOTO   068
+005B:  MOVLW  02
+005C:  MOVWF  21
+005D:  CLRF   20
+005E:  DECFSZ 20,F
+005F:  GOTO   05E
+0060:  DECFSZ 21,F
+0061:  GOTO   05D
+0062:  MOVLW  97
+0063:  MOVWF  20
+0064:  DECFSZ 20,F
+0065:  GOTO   064
+0066:  DECFSZ 00,F
+0067:  GOTO   05B
+0068:  RETLW  00
+.................... void ccp1_int(void);						 // プロトタイプ  
+.................... void intval();  
+.................... //********PINマクロ  
+.................... #byte GP=5			//GPは0～5の6ポート  
+.................... #bit SorvoPIN=GP.5		//サーボ用PIN   
+.................... #bit AD_PIN=GP.0		//可変抵抗接続  
+.................... #bit M1=GP.1		//モーター信号線１  
+.................... #bit M2=GP.2		//モーター信号線２  
+.................... #bit SW1=GP.4		//タクトスイッチ１  
+.................... #bit SW2=GP.3		//タクトスイッチ２  
+.................... //****************//  
+.................... #use fast_io(a)  
+.................... #define HIGH 1  
+.................... #define LOW 0  
+.................... #define TimerTIME 45536  
+.................... //メイン関数////////////////////////////////////  
+.................... main()  
+.................... {  
+0069:  CLRF   04
+006A:  MOVLW  1F
+006B:  ANDWF  03,F
+006C:  BSF    03.5
+006D:  MOVF   1F,W
+006E:  ANDLW  F0
+006F:  MOVWF  1F
+0070:  BCF    03.5
+0071:  BCF    1F.6
+0072:  MOVLW  07
+0073:  MOVWF  1F
+0074:  MOVLW  70
+0075:  BSF    03.5
+0076:  MOVWF  0F
+.................... 	//ポート設定  
+.................... 	set_tris_a(0b00011001);		  
+0077:  MOVLW  19
+0078:  TRIS   5
+.................... 	//内部クロック指定  
+.................... 	setup_oscillator(OSC_8MHZ);  
+0079:  MOVLW  70
+007A:  MOVWF  0F
+.................... 	//AD変換器初期化  
+.................... //	setup_adc_ports(0b11111110);  
+.................... //	setup_adc(ADC_CLOCK_DIV_32);  
+.................... 	//サーボ用PWM初期化  
+.................... 	setup_timer_1( T1_INTERNAL| T1_DIV_BY_2);	//1カウントに1usかかる  
+007B:  MOVLW  95
+007C:  BCF    03.5
+007D:  MOVWF  10
+.................... 	setup_ccp1(CCP_COMPARE_INT);		  // CCP1コンペアマッチ割込み設定  
+007E:  BSF    03.5
+007F:  BSF    06.3
+0080:  MOVLW  0A
+0081:  BCF    03.5
+0082:  MOVWF  17
+.................... 	set_timer1(TimerTIME);						//周期を20msに設定  
+0083:  MOVLW  B1
+0084:  MOVWF  0F
+0085:  MOVLW  E0
+0086:  MOVWF  0E
+.................... 	  
+.................... 	CCP_1 = 1500+TimerTIME;									  // パルス幅 0	  
+0087:  MOVLW  B7
+0088:  MOVWF  16
+0089:  MOVLW  BC
+008A:  MOVWF  15
+.................... 	enable_interrupts(INT_CCP1);			   //CCP1コンペアマッチチ割込み許可  
+008B:  BSF    03.5
+008C:  BSF    0C.5
+.................... 	enable_interrupts(INT_TIMER1);  
+008D:  BSF    0C.0
+.................... 	enable_interrupts(GLOBAL);			  //全設定割込み許可  
+008E:  MOVLW  C0
+008F:  BCF    03.5
+0090:  IORWF  0B,F
+....................   
+.................... 	while(1)  
+.................... 	{  
+.................... 		//set_adc_channel(0);  //0チャンネルを使用  
+.................... 		  
+.................... 			CCP_1 = 1500+TimerTIME;						  //パルス幅 1.5mS  
+0091:  MOVLW  B7
+0092:  MOVWF  16
+0093:  MOVLW  BC
+0094:  MOVWF  15
+.................... 			delay_ms(1000);  
+0095:  MOVLW  04
+0096:  MOVWF  2E
+0097:  MOVLW  FA
+0098:  MOVWF  2F
+0099:  CALL   056
+009A:  DECFSZ 2E,F
+009B:  GOTO   097
+.................... 			CCP_1 = 1000+TimerTIME;						  //パルス幅 1.0mS  
+009C:  MOVLW  B5
+009D:  MOVWF  16
+009E:  MOVLW  C8
+009F:  MOVWF  15
+.................... 			delay_ms(1000);  
+00A0:  MOVLW  04
+00A1:  MOVWF  2E
+00A2:  MOVLW  FA
+00A3:  MOVWF  2F
+00A4:  CALL   056
+00A5:  DECFSZ 2E,F
+00A6:  GOTO   0A2
+.................... 			CCP_1 = 2000+TimerTIME;						  //パルス幅 2.0mS  
+00A7:  MOVLW  B9
+00A8:  MOVWF  16
+00A9:  MOVLW  B0
+00AA:  MOVWF  15
+.................... 			delay_ms(1000);  
+00AB:  MOVLW  04
+00AC:  MOVWF  2E
+00AD:  MOVLW  FA
+00AE:  MOVWF  2F
+00AF:  CALL   056
+00B0:  DECFSZ 2E,F
+00B1:  GOTO   0AD
+.................... 	}  
+00B2:  GOTO   091
+.................... }  
+....................   
+.................... //パルスクリア///////////////////////////////////  
+.................... #INT_CCP1  
+.................... void ccp1_int()  
+00B3:  SLEEP
+.................... {  
+.................... 	SorvoPIN=LOW;  
+*
+004A:  BCF    05.5
+.................... }  
+....................   
+.................... //	timer1割り込み関数  
+004B:  BCF    0C.5
+004C:  BCF    0A.3
+004D:  GOTO   02D
+.................... #int_timer1  
+.................... void intval()   
+.................... {  
+.................... 	  
+.................... 	set_timer1(TimerTIME);  
+004E:  MOVLW  B1
+004F:  MOVWF  0F
+0050:  MOVLW  E0
+0051:  MOVWF  0E
+.................... 	SorvoPIN=HIGH;  
+0052:  BSF    05.5
+.................... 	  
+.................... }  
+....................   
+.................... /*	備考  
+.................... 周期を20msにするために、timer1の値に45536を入れているので、  
+.................... そこからカウントアップされる。  
+.................... つまりサーボの角度を0度にしようとすれば、1msにすればよいので、  
+.................... 1カウント 1usなので　1000カウント必要  
+.................... よって、45536 + 1000 値をCCP_1に入れればよい  
+....................   
+....................   
+.................... */  
+....................  
+0053:  BCF    0C.0
+0054:  BCF    0A.3
+0055:  GOTO   02D
+
+Configuration Fuses:
+   Word  1: 3CC4   NOWDT NOCPD NOPROTECT NOMCLR PUT INTRC_IO NOBROWNOUT IESO FCMEN

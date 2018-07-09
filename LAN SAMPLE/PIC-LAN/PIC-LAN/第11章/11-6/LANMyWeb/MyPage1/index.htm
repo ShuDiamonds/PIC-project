@@ -1,0 +1,73 @@
+~inc:header.inc~
+<div id="content">
+	<h1>ようこそ！</h1>
+
+	<p><table style="padding-left: 10px;">
+	<tr><td><b>Stack Version:</b></td><td>&nbsp;</td><td>~version~</td></tr>
+	<tr><td><b>Build Date:</b></td><td>&nbsp;</td><td>~builddate~</td></tr>
+	</table></p>
+
+	<div id="status">
+		<div id="loading" style="display:none">Error:<br />Connection to demo board was lost.</div>
+		<div id="display">
+			<p>動作中LED：<span class="leds">
+			<a id="led0">&bull;</a></span>
+			<p>汎用I/O出力制御:<span class="leds">
+			<a id="led2" onClick="newAJAXCommand('leds.cgi?led=2');">&bull;</a>
+			<a id="led1" onClick="newAJAXCommand('leds.cgi?led=1');">&bull;</a></span>
+			<p>現在温度(℃): <span id="pot0" style="font-weight:normal">?</span>
+			<p>カメラ方向制御:&nbsp;&nbsp;<span class="leds">
+			<a id="led3" onClick="newAJAXCommand('leds.cgi?led=3');">&larr;</a>
+			<a id="led4" onClick="newAJAXCommand('leds.cgi?led=4');">&rarr;</a>
+			<a id="led5" onClick="newAJAXCommand('leds.cgi?led=5');">&uarr;</a>
+			<a id="led6" onClick="newAJAXCommand('leds.cgi?led=6');">&darr;</a></span>
+		</div>
+	</div>
+	<p>For more information on the Microchip TCP/IP Stack, please refer to 
+	application note AN833 available at 
+	<a href="http://www.microchip.com">www.microchip.com</a>.</p>
+	<applet codebase="http://picuio.hobby-site.com:1200" code="Lv2View.class" width="320" height="240">
+	　　<param name="quality" value="50"/>
+	　　<param name="password" value="disable"/>
+	</applet>
+</div>
+
+<script type="text/javascript">
+/**
+ * Parses the xmlResponse from status.xml and updates the status box
+ */
+function updateStatus(xmlData) {
+	
+	// Check if a timeout occurred
+	if(!xmlData)
+	{
+		document.getElementById('display').style.display = 'none';
+		document.getElementById('loading').style.display = 'inline';
+		return;
+	}
+
+	// Make sure we're displaying the status display
+	document.getElementById('loading').style.display = 'none';
+	document.getElementById('display').style.display = 'inline';
+	
+	// Loop over all the LEDs
+	for(i = 0; i < 7; i++) {
+		if(getXMLValue(xmlData, 'led'+i) == '1')
+			document.getElementById('led' + i).style.color = '#d00';
+		else
+			document.getElementById('led' + i).style.color = '#090';
+	}
+	
+	//update the POT value
+	document.getElementById('pot0').innerHTML = getXMLValue(xmlData, 'pot0');
+		
+}
+
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+</script>
+
+<script type="text/javascript">
+document.getElementById('hello').innerHTML = "~hellomsg~";
+</script>
+
+~inc:footer.inc~

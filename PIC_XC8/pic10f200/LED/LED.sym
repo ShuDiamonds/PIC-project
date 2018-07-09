@@ -1,0 +1,92 @@
+__S0 2D 0 ABS 0
+__S1 12 0 ABS 0
+_GPIO 6 0 ABS 0
+_main 5 0 CODE 0
+btemp 1C 0 ABS 0
+start 2 0 ENTRY 0
+reset_vec FF 0 CODE 0
+ltemp0 1C 0 ABS 0
+ttemp0 1C 0 ABS 0
+wtemp0 1C 0 ABS 0
+ltemp1 20 0 ABS 0
+ttemp1 1F 0 ABS 0
+wtemp1 1E 0 ABS 0
+wtemp2 20 0 ABS 0
+wtemp3 22 0 ABS 0
+__Hconfig 0 0 CONFIG 0
+__Lconfig 0 0 CONFIG 0
+main@i 10 0 BANK0 1
+__Hram 0 0 ABS 0
+__Lram 0 0 ABS 0
+__Hjmp_tab 0 0 ABS 0
+__Ljmp_tab 0 0 ABS 0
+__Hfunctab 0 0 ENTRY 0
+__Lfunctab 0 0 ENTRY 0
+__Hcommon 0 0 ABS 0
+__Lcommon 0 0 ABS 0
+_GPIObits 6 0 ABS 0
+__Habs1 0 0 ABS 0
+__Labs1 0 0 ABS 0
+__Hsfr0 0 0 ABS 0
+__Lsfr0 0 0 ABS 0
+__Hcode 0 0 ABS 0
+__Lcode 0 0 ABS 0
+__HcstackBANK0 0 0 ABS 0
+__LcstackBANK0 0 0 ABS 0
+__pcstackBANK0 10 0 BANK0 1
+__Hinit 2 0 ENTRY 0
+__Linit 2 0 ENTRY 0
+__end_of_main 2D 0 CODE 0
+__Htext 0 0 ABS 0
+__Ltext 0 0 ABS 0
+end_of_initialization 3 0 ENTRY 0
+__Hstrings 0 0 STRING 0
+__Lstrings 0 0 STRING 0
+__Hbank0 0 0 ABS 0
+__Lbank0 0 0 ABS 0
+___latbits 0 0 ABS 0
+__Hpowerup 0 0 CODE 0
+__Lpowerup 0 0 CODE 0
+__Hclrtext 5 0 ENTRY 0
+__Lclrtext 5 0 ENTRY 0
+__end_of__initialization 3 0 ENTRY 0
+__Hidloc 0 0 IDLOC 0
+__Lidloc 0 0 IDLOC 0
+__Hcinit 5 0 ENTRY 0
+__Lcinit 3 0 ENTRY 0
+__size_of_main 0 0 ABS 0
+__Hreset_wrap 2 0 ENTRY 0
+__Lreset_wrap 0 0 ENTRY 0
+__Hend_init 3 0 ENTRY 0
+__Lend_init 2 0 ENTRY 0
+__Hreset_vec 100 0 CODE 0
+__Lreset_vec FF 0 CODE 0
+__HcstackCOMMON 0 0 ABS 0
+__LcstackCOMMON 0 0 ABS 0
+__pcstackCOMMON 0 0 COMMON 1
+start_initialization 3 0 ENTRY 0
+__Hmaintext 0 0 ABS 0
+__Lmaintext 0 0 ABS 0
+__pmaintext 5 0 CODE 0
+__initialization 3 0 ENTRY 0
+%segments
+reset_vec 1FE 1FF CODE 1FE 0
+reset_wrap 0 9 ENTRY 0 0
+cstackBANK0 10 11 BANK0 10 1
+maintext A 59 CODE A 0
+%locals
+startup.obj
+startup.as
+51 0 0 ENTRY 0
+52 1 0 ENTRY 0
+60 2 0 ENTRY 0
+LED.obj
+C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\LED.c
+11 5 0 CODE 0
+19 7 0 CODE 0
+24 8 0 CODE 0
+26 12 0 CODE 0
+31 2D 0 CODE 0
+LED.as
+78 3 0 ENTRY 0
+79 4 0 ENTRY 0

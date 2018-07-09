@@ -1,0 +1,1090 @@
+CCS PCM C Compiler, Version 3.185, 22500
+
+               Filename: C:\Documents and Settings\Workaholism\My Documents\Dropbox\FUKAKEN\回路\software\TPIP通信 0520\TPIP.LST
+
+               ROM used: 688 (8%)
+                         Largest free fragment is 2048
+               RAM used: 57 (33%) at main() level
+                         59 (34%) worst case
+               Stack:    2 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   044
+0003:  NOP
+....................  #include<16f877a.h> 
+....................  //////// Standard Header file for the PIC16F877A device ////////////////  
+.................... #device PIC16F877A ADC=10  
+.................... #list  
+....................  
+.................... //#include<stdio.h>  
+....................   
+.................... //#define RS_BAUD		115200  
+.................... #define RS_BAUD		9600  
+.................... #define RS_TX		PIN_C6  
+.................... #define RS_RX		PIN_C7  
+.................... #define RUN_LED		PIN_C0  
+.................... //ぴんマクロ  
+.................... /*  
+.................... //鉄火巻きモーターI/O  
+.................... 	#define	TEKKA_Mortor1_IO_R	PIN_A2  
+.................... 	#define	TEKKA_Mortor1_IO_L	PIN_A4  
+.................... 	#define	TEKKA_LED			PIN_E1  
+.................... 	#define	TEKKA_NOPIN			PIN_E0  
+.................... 	#define	TEKKA_Mortor2_IO_R	PIN_A3  
+.................... 	#define	TEKKA_Mortor2_IO_L	PIN_A5  
+.................... 	*/  
+.................... 	//モーターPWM  
+.................... 	#define	TEKKA_Mortor1_PWM	PIN_C1  
+.................... 	#define	TEKKA_Mortor2_PWM	PIN_C2  
+.................... 	//かっぱ巻きモーターI/O  
+.................... 	#define	KAPPA_LED1			PIN_D5	  
+.................... 	#define	KAPPA_LED2			PIN_D4	  
+.................... 	#define	KAPPA_Mortor1_IO_R	PIN_D0	  
+.................... 	#define	KAPPA_Mortor1_IO_L	PIN_C3  
+.................... 	#define	KAPPA_Mortor2_IO_R	PIN_D2	  
+.................... 	#define	KAPPA_Mortor2_IO_L	PIN_D3	  
+.................... 	#define	KAPPA_Mortor3_IO_R	PIN_C4	  
+.................... 	#define	KAPPA_Mortor3_IO_L	PIN_C5	  
+.................... 	#define	KAPPA_Mortor4_IO_R	PIN_D1	  
+.................... 	#define	KAPPA_Mortor4_IO_L	PIN_A0	  
+.................... 	//かっぱ巻きモーター2I/O  
+.................... 	#define	KAPPA2_LED1			PIN_B6	  
+.................... 	#define	KAPPA2_LED2			PIN_B7	  
+.................... 	#define	KAPPA2_Mortor1_IO_R	PIN_D6  
+.................... 	#define	KAPPA2_Mortor1_IO_L	PIN_D7  
+.................... 	#define	KAPPA2_Mortor2_IO_R	PIN_B0	  
+.................... 	#define	KAPPA2_Mortor2_IO_L	PIN_B1	  
+.................... 	#define	KAPPA2_Mortor3_IO_R	PIN_B2	  
+.................... 	#define	KAPPA2_Mortor3_IO_L	PIN_B3	  
+.................... 	#define	KAPPA2_Mortor4_IO_R	PIN_B4	  
+.................... 	#define	KAPPA2_Mortor4_IO_L	PIN_B5	  
+....................   
+....................   
+....................   
+.................... #use delay(clock = 20000000)  
+0004:  MOVLW  55
+0005:  MOVWF  04
+0006:  MOVF   00,W
+0007:  BTFSC  03.2
+0008:  GOTO   016
+0009:  MOVLW  06
+000A:  MOVWF  78
+000B:  CLRF   77
+000C:  DECFSZ 77,F
+000D:  GOTO   00C
+000E:  DECFSZ 78,F
+000F:  GOTO   00B
+0010:  MOVLW  7B
+0011:  MOVWF  77
+0012:  DECFSZ 77,F
+0013:  GOTO   012
+0014:  DECFSZ 00,F
+0015:  GOTO   009
+0016:  RETLW  00
+.................... #fuses HS,NOWDT,NOPROTECT,NOLVP,PUT,NOBROWNOUT  
+.................... #use rs232(BAUD = RS_BAUD , XMIT = RS_TX, RCV = RS_RX)  //rs232c設定  
+....................   
+....................   
+.................... //関数宣言  
+.................... void LED_tikatika( unsigned int16 a)  
+.................... {  
+.................... 	output_high(RUN_LED);   //動作確認  
+0017:  BCF    20.0
+0018:  MOVF   20,W
+0019:  BSF    03.5
+001A:  MOVWF  07
+001B:  BCF    03.5
+001C:  BSF    07.0
+*
+0055:  MOVLW  FF
+0056:  MOVWF  20
+.................... 	delay_ms(a);  
+*
+001D:  MOVF   53,W
+001E:  MOVWF  55
+001F:  CALL   004
+.................... 	output_low(RUN_LED);   //動作確認  
+0020:  BCF    20.0
+0021:  MOVF   20,W
+0022:  BSF    03.5
+0023:  MOVWF  07
+0024:  BCF    03.5
+0025:  BCF    07.0
+.................... 	delay_ms(a);  
+0026:  MOVF   53,W
+0027:  MOVWF  55
+0028:  CALL   004
+.................... 	output_high(RUN_LED);   //動作確認  
+0029:  BCF    20.0
+002A:  MOVF   20,W
+002B:  BSF    03.5
+002C:  MOVWF  07
+002D:  BCF    03.5
+002E:  BSF    07.0
+.................... 	delay_ms(a);  
+002F:  MOVF   53,W
+0030:  MOVWF  55
+0031:  CALL   004
+.................... 	output_low(RUN_LED);   //動作確認  
+0032:  BCF    20.0
+0033:  MOVF   20,W
+0034:  BSF    03.5
+0035:  MOVWF  07
+0036:  BCF    03.5
+0037:  BCF    07.0
+.................... 	delay_ms(a);  
+0038:  MOVF   53,W
+0039:  MOVWF  55
+003A:  CALL   004
+.................... 	output_high(RUN_LED);   //動作確認  
+003B:  BCF    20.0
+003C:  MOVF   20,W
+003D:  BSF    03.5
+003E:  MOVWF  07
+003F:  BCF    03.5
+0040:  BSF    07.0
+.................... 	  
+.................... 	return;	  
+.................... }  
+0041:  BCF    0A.3
+0042:  BCF    0A.4
+0043:  GOTO   0BE (RETURN)
+.................... /*  
+.................... #use fast_io(a)  
+.................... #use fast_io(b)  
+.................... #use fast_io(c)  
+.................... #use fast_io(d)  
+.................... #use fast_io(e)  
+.................... */  
+.................... #byte port_a = 5  
+.................... #byte port_b = 6  
+.................... #byte port_c = 7  
+.................... #byte port_d = 8  
+.................... #byte port_e = 9  
+.................... #byte ADCON1 = 0x9F			//アナログデジタルピン設定	  
+.................... main()  
+.................... {  
+0044:  CLRF   04
+0045:  MOVLW  1F
+0046:  ANDWF  03,F
+0047:  MOVLW  06
+0048:  BSF    03.5
+0049:  MOVWF  1F
+004A:  MOVLW  07
+004B:  BCF    03.5
+004C:  MOVWF  1F
+004D:  MOVLW  81
+004E:  BSF    03.5
+004F:  MOVWF  19
+0050:  MOVLW  26
+0051:  MOVWF  18
+0052:  MOVLW  90
+0053:  BCF    03.5
+0054:  MOVWF  18
+.................... 	//ローカル変数定義  
+.................... 	char cheaker=0;	  
+*
+0057:  CLRF   21
+.................... 	char data_H[20];  
+.................... 	char data_L[20];		//受信データ格納スペース  
+.................... 	int16 E=0,F=0;				  
+0058:  CLRF   4A
+0059:  CLRF   4B
+005A:  CLRF   4C
+005B:  CLRF   4D
+.................... 	int ID=0,hugou=0,i=0;  
+005C:  CLRF   4E
+005D:  CLRF   4F
+005E:  CLRF   50
+.................... 	char motasuu1=0;  
+005F:  CLRF   51
+.................... 	int motasuu = 0;  
+0060:  CLRF   52
+.................... 	//初期化  
+.................... 	set_tris_a(0x01);  
+0061:  MOVLW  01
+0062:  BSF    03.5
+0063:  MOVWF  05
+.................... 	set_tris_b(0x00);  
+0064:  MOVLW  00
+0065:  MOVWF  06
+.................... 	set_tris_c(0x80);  
+0066:  MOVLW  80
+0067:  MOVWF  07
+0068:  BCF    03.5
+0069:  MOVWF  20
+.................... 	set_tris_d(0x00);  
+006A:  MOVLW  00
+006B:  BSF    03.5
+006C:  MOVWF  08
+.................... 	set_tris_e(0x00);  
+006D:  BCF    09.0
+006E:  BCF    09.1
+006F:  BCF    09.2
+.................... 	ADCON1 = 0b00000111;		//デジタルピン設定	  
+0070:  MOVLW  07
+0071:  MOVWF  1F
+.................... 	//PWM初期化  
+.................... 	/*  
+.................... 	setup_ccp1(CCP_PWM);  
+.................... 	setup_ccp2(CCP_PWM);  
+.................... 	SETUP_TIMER_2(T2_DIV_BY_16,0xFF,1);  
+.................... 	*/  
+.................... 	//モーター初期化  
+.................... 	//鉄火巻き初期化  
+.................... 	/*  
+.................... 	set_pwm1_duty(0);  
+.................... 	set_pwm2_duty(0);  
+.................... 	output_low(TEKKA_Mortor1_IO_L);  
+.................... 	output_low(TEKKA_Mortor1_IO_R);  
+.................... 	output_low(TEKKA_Mortor2_IO_L);  
+.................... 	output_low(TEKKA_Mortor2_IO_R);  
+.................... 	*/  
+.................... 	//かっぱ巻き初期化  
+.................... 	output_low(KAPPA_Mortor1_IO_L);  
+0072:  BCF    03.5
+0073:  BCF    20.3
+0074:  MOVF   20,W
+0075:  BSF    03.5
+0076:  MOVWF  07
+0077:  BCF    03.5
+0078:  BCF    07.3
+.................... 	output_low(KAPPA_Mortor1_IO_R);  
+0079:  BSF    03.5
+007A:  BCF    08.0
+007B:  BCF    03.5
+007C:  BCF    08.0
+.................... 	output_low(KAPPA_Mortor2_IO_L);  
+007D:  BSF    03.5
+007E:  BCF    08.3
+007F:  BCF    03.5
+0080:  BCF    08.3
+.................... 	output_low(KAPPA_Mortor2_IO_R);  
+0081:  BSF    03.5
+0082:  BCF    08.2
+0083:  BCF    03.5
+0084:  BCF    08.2
+.................... 	output_low(KAPPA_Mortor3_IO_L);  
+0085:  BCF    20.5
+0086:  MOVF   20,W
+0087:  BSF    03.5
+0088:  MOVWF  07
+0089:  BCF    03.5
+008A:  BCF    07.5
+.................... 	output_low(KAPPA_Mortor3_IO_R);  
+008B:  BCF    20.4
+008C:  MOVF   20,W
+008D:  BSF    03.5
+008E:  MOVWF  07
+008F:  BCF    03.5
+0090:  BCF    07.4
+.................... 	output_low(KAPPA_Mortor4_IO_L);  
+0091:  BSF    03.5
+0092:  BCF    05.0
+0093:  BCF    03.5
+0094:  BCF    05.0
+.................... 	output_low(KAPPA_Mortor4_IO_R);  
+0095:  BSF    03.5
+0096:  BCF    08.1
+0097:  BCF    03.5
+0098:  BCF    08.1
+.................... 		//かっぱ巻き2初期化  
+.................... 	output_low(KAPPA2_Mortor1_IO_L);  
+0099:  BSF    03.5
+009A:  BCF    08.7
+009B:  BCF    03.5
+009C:  BCF    08.7
+.................... 	output_low(KAPPA2_Mortor1_IO_R);  
+009D:  BSF    03.5
+009E:  BCF    08.6
+009F:  BCF    03.5
+00A0:  BCF    08.6
+.................... 	output_low(KAPPA2_Mortor2_IO_L);  
+00A1:  BSF    03.5
+00A2:  BCF    06.1
+00A3:  BCF    03.5
+00A4:  BCF    06.1
+.................... 	output_low(KAPPA2_Mortor2_IO_R);  
+00A5:  BSF    03.5
+00A6:  BCF    06.0
+00A7:  BCF    03.5
+00A8:  BCF    06.0
+.................... 	output_low(KAPPA2_Mortor3_IO_L);  
+00A9:  BSF    03.5
+00AA:  BCF    06.3
+00AB:  BCF    03.5
+00AC:  BCF    06.3
+.................... 	output_low(KAPPA2_Mortor3_IO_R);  
+00AD:  BSF    03.5
+00AE:  BCF    06.2
+00AF:  BCF    03.5
+00B0:  BCF    06.2
+.................... 	output_low(KAPPA2_Mortor4_IO_L);  
+00B1:  BSF    03.5
+00B2:  BCF    06.5
+00B3:  BCF    03.5
+00B4:  BCF    06.5
+.................... 	output_low(KAPPA2_Mortor4_IO_R);  
+00B5:  BSF    03.5
+00B6:  BCF    06.4
+00B7:  BCF    03.5
+00B8:  BCF    06.4
+.................... 	  
+.................... 	//LEDちかちか動作確認  
+.................... 	LED_tikatika(500);  
+00B9:  MOVLW  01
+00BA:  MOVWF  54
+00BB:  MOVLW  F4
+00BC:  MOVWF  53
+00BD:  GOTO   017
+.................... 	  
+.................... 	//output_high(TEKKA_LED);   //動作確認  
+.................... 	output_high(KAPPA_LED1);   //動作確認  
+00BE:  BSF    03.5
+00BF:  BCF    08.5
+00C0:  BCF    03.5
+00C1:  BSF    08.5
+.................... 	output_high(KAPPA_LED2);   //動作確認  
+00C2:  BSF    03.5
+00C3:  BCF    08.4
+00C4:  BCF    03.5
+00C5:  BSF    08.4
+.................... 	output_high(KAPPA2_LED1);   //動作確認  
+00C6:  BSF    03.5
+00C7:  BCF    06.6
+00C8:  BCF    03.5
+00C9:  BSF    06.6
+.................... 	output_high(KAPPA2_LED2);   //動作確認  
+00CA:  BSF    03.5
+00CB:  BCF    06.7
+00CC:  BCF    03.5
+00CD:  BSF    06.7
+.................... 	  
+.................... 	//delay_ms(30);  
+.................... 	while(1)		//アイドルループ  
+.................... 	{  
+.................... 		while(1)  
+.................... 		{	  
+.................... 		//スタートデータ待ち  
+.................... 			while(cheaker != '@')  
+.................... 			{  
+00CE:  MOVF   21,W
+00CF:  SUBLW  40
+00D0:  BTFSC  03.2
+00D1:  GOTO   0D7
+.................... 				cheaker = getc();  
+00D2:  BTFSS  0C.5
+00D3:  GOTO   0D2
+00D4:  MOVF   1A,W
+00D5:  MOVWF  21
+.................... 			}  
+00D6:  GOTO   0CE
+.................... 		//モータの数を確認  
+.................... 			motasuu1 = getc();  
+00D7:  BTFSS  0C.5
+00D8:  GOTO   0D7
+00D9:  MOVF   1A,W
+00DA:  MOVWF  51
+.................... 			motasuu = motasuu1;  
+00DB:  MOVF   51,W
+00DC:  MOVWF  52
+.................... 		//データ受信  
+.................... 			for(i=1;motasuu >= i;i++)  
+00DD:  MOVLW  01
+00DE:  MOVWF  50
+00DF:  MOVF   50,W
+00E0:  SUBWF  52,W
+00E1:  BTFSS  03.0
+00E2:  GOTO   0F3
+.................... 			{  
+.................... 				data_H[i] =getc();  
+00E3:  MOVLW  22
+00E4:  ADDWF  50,W
+00E5:  MOVWF  04
+00E6:  BTFSS  0C.5
+00E7:  GOTO   0E6
+00E8:  MOVF   1A,W
+00E9:  MOVWF  00
+.................... 				data_L[i] =getc();  
+00EA:  MOVLW  36
+00EB:  ADDWF  50,W
+00EC:  MOVWF  04
+00ED:  BTFSS  0C.5
+00EE:  GOTO   0ED
+00EF:  MOVF   1A,W
+00F0:  MOVWF  00
+.................... 			}  
+00F1:  INCF   50,F
+00F2:  GOTO   0DF
+.................... 		//ストップデータ確認  
+.................... 			cheaker = getc();  
+00F3:  BTFSS  0C.5
+00F4:  GOTO   0F3
+00F5:  MOVF   1A,W
+00F6:  MOVWF  21
+.................... 			  
+.................... 			if(cheaker != '*')  
+.................... 			{  
+00F7:  MOVF   21,W
+00F8:  SUBLW  2A
+00F9:  BTFSC  03.2
+00FA:  GOTO   0FC
+.................... 				break;  
+00FB:  GOTO   2AC
+.................... 			}  
+.................... 			  
+.................... 		//データ復号  
+.................... 			for(i=1;motasuu >= i;i++)  
+00FC:  MOVLW  01
+00FD:  MOVWF  50
+00FE:  MOVF   50,W
+00FF:  SUBWF  52,W
+0100:  BTFSS  03.0
+0101:  GOTO   2A1
+.................... 				{  
+.................... 					//IDの取り出し  
+.................... 					ID = data_H[i] & 0b11111000;  
+0102:  MOVLW  22
+0103:  ADDWF  50,W
+0104:  MOVWF  04
+0105:  MOVF   00,W
+0106:  ANDLW  F8
+0107:  MOVWF  4E
+.................... 					ID = ID>>3;  
+0108:  RRF    4E,F
+0109:  RRF    4E,F
+010A:  RRF    4E,F
+010B:  MOVLW  1F
+010C:  ANDWF  4E,F
+.................... 					//符号取り出し  
+.................... 					hugou = data_H[i] & 0b0000100;  
+010D:  MOVLW  22
+010E:  ADDWF  50,W
+010F:  MOVWF  04
+0110:  MOVF   00,W
+0111:  ANDLW  04
+0112:  MOVWF  4F
+.................... 					hugou = hugou>>2;  
+0113:  RRF    4F,F
+0114:  RRF    4F,F
+0115:  MOVLW  3F
+0116:  ANDWF  4F,F
+.................... 					//PWMデータ取り出し  
+.................... 					F = data_H[i] & 0b0000011;		//PWM上位2bit取り出し  
+0117:  MOVLW  22
+0118:  ADDWF  50,W
+0119:  MOVWF  04
+011A:  MOVF   00,W
+011B:  ANDLW  03
+011C:  MOVWF  4C
+011D:  CLRF   4D
+.................... 					F = F<<8;						//PWMデータを8ビット左にシフト  
+011E:  MOVF   4C,W
+011F:  MOVWF  4D
+0120:  CLRF   4C
+.................... 					E = data_L[i];					  
+0121:  MOVLW  36
+0122:  ADDWF  50,W
+0123:  MOVWF  04
+0124:  MOVF   00,W
+0125:  CLRF   7A
+0126:  MOVWF  4A
+0127:  MOVF   7A,W
+0128:  MOVWF  4B
+.................... 					F = F | E;						//PWMのデータの上位と下位をORする(FにPWM用のデータがはいってる)  
+0129:  MOVF   4A,W
+012A:  IORWF  4C,F
+012B:  MOVF   4B,W
+012C:  IORWF  4D,F
+.................... 					  
+.................... 					//PWMデータ判別  
+.................... 					if(F <=370 && F != 0)			//ストップではなく、PWMが370以下のとき  
+.................... 					{  
+012D:  MOVF   4D,W
+012E:  SUBLW  01
+012F:  BTFSS  03.0
+0130:  GOTO   141
+0131:  BTFSS  03.2
+0132:  GOTO   137
+0133:  MOVF   4C,W
+0134:  SUBLW  72
+0135:  BTFSS  03.0
+0136:  GOTO   141
+0137:  MOVF   4C,F
+0138:  BTFSS  03.2
+0139:  GOTO   13D
+013A:  MOVF   4D,F
+013B:  BTFSC  03.2
+013C:  GOTO   141
+.................... 						F = 420;  
+013D:  MOVLW  01
+013E:  MOVWF  4D
+013F:  MOVLW  A4
+0140:  MOVWF  4C
+.................... 					}  
+.................... 					  
+.................... 				//データ実行  
+.................... 					switch (ID)						//モーター判別  
+.................... 					{  
+0141:  MOVF   4E,W
+0142:  MOVWF  77
+0143:  MOVLW  01
+0144:  SUBWF  77,W
+0145:  BTFSC  03.2
+0146:  GOTO   164
+0147:  MOVLW  02
+0148:  SUBWF  77,W
+0149:  BTFSC  03.2
+014A:  GOTO   18F
+014B:  MOVLW  03
+014C:  SUBWF  77,W
+014D:  BTFSC  03.2
+014E:  GOTO   1B4
+014F:  MOVLW  04
+0150:  SUBWF  77,W
+0151:  BTFSC  03.2
+0152:  GOTO   1E5
+0153:  MOVLW  05
+0154:  SUBWF  77,W
+0155:  BTFSC  03.2
+0156:  GOTO   20A
+0157:  MOVLW  06
+0158:  SUBWF  77,W
+0159:  BTFSC  03.2
+015A:  GOTO   22F
+015B:  MOVLW  07
+015C:  SUBWF  77,W
+015D:  BTFSC  03.2
+015E:  GOTO   254
+015F:  MOVLW  08
+0160:  SUBWF  77,W
+0161:  BTFSC  03.2
+0162:  GOTO   279
+0163:  GOTO   29E
+.................... 						case 0x01:					//かっぱモーター１  
+.................... 								if(F)						//モーターが動かす時  
+.................... 								{  
+0164:  MOVF   4C,W
+0165:  IORWF  4D,W
+0166:  BTFSC  03.2
+0167:  GOTO   184
+.................... 									  
+.................... 									if(hugou)  
+.................... 									{  
+0168:  MOVF   4F,F
+0169:  BTFSC  03.2
+016A:  GOTO   176
+.................... 										output_high(KAPPA_Mortor1_IO_R);  
+016B:  BSF    03.5
+016C:  BCF    08.0
+016D:  BCF    03.5
+016E:  BSF    08.0
+.................... 										output_low(KAPPA_Mortor1_IO_L);  
+016F:  BCF    20.3
+0170:  MOVF   20,W
+0171:  BSF    03.5
+0172:  MOVWF  07
+0173:  BCF    03.5
+0174:  BCF    07.3
+.................... 									}else if(!hugou)  
+0175:  GOTO   183
+.................... 									{  
+0176:  MOVF   4F,F
+0177:  BTFSS  03.2
+0178:  GOTO   183
+.................... 										output_high(KAPPA_Mortor1_IO_L);  
+0179:  BCF    20.3
+017A:  MOVF   20,W
+017B:  BSF    03.5
+017C:  MOVWF  07
+017D:  BCF    03.5
+017E:  BSF    07.3
+.................... 										output_low(KAPPA_Mortor1_IO_R);  
+017F:  BSF    03.5
+0180:  BCF    08.0
+0181:  BCF    03.5
+0182:  BCF    08.0
+.................... 									}  
+.................... 								}else						//モーターを動かさないとき  
+.................... 								{  
+0183:  GOTO   18E
+.................... 										output_low(KAPPA_Mortor1_IO_L);  
+0184:  BCF    20.3
+0185:  MOVF   20,W
+0186:  BSF    03.5
+0187:  MOVWF  07
+0188:  BCF    03.5
+0189:  BCF    07.3
+.................... 										output_low(KAPPA_Mortor1_IO_R);  
+018A:  BSF    03.5
+018B:  BCF    08.0
+018C:  BCF    03.5
+018D:  BCF    08.0
+.................... 								}  
+.................... 							break;  
+018E:  GOTO   29F
+.................... 						case 0x02:					//かっぱモーター２  
+.................... 								if(F)						//モーターが動かす時  
+.................... 								{  
+018F:  MOVF   4C,W
+0190:  IORWF  4D,W
+0191:  BTFSC  03.2
+0192:  GOTO   1AB
+.................... 									if(hugou)  
+.................... 									{  
+0193:  MOVF   4F,F
+0194:  BTFSC  03.2
+0195:  GOTO   19F
+.................... 										output_high(KAPPA_Mortor2_IO_R);  
+0196:  BSF    03.5
+0197:  BCF    08.2
+0198:  BCF    03.5
+0199:  BSF    08.2
+.................... 										output_low(KAPPA_Mortor2_IO_L);  
+019A:  BSF    03.5
+019B:  BCF    08.3
+019C:  BCF    03.5
+019D:  BCF    08.3
+.................... 									}else if(!hugou)  
+019E:  GOTO   1AA
+.................... 									{  
+019F:  MOVF   4F,F
+01A0:  BTFSS  03.2
+01A1:  GOTO   1AA
+.................... 										output_high(KAPPA_Mortor2_IO_L);  
+01A2:  BSF    03.5
+01A3:  BCF    08.3
+01A4:  BCF    03.5
+01A5:  BSF    08.3
+.................... 										output_low(KAPPA_Mortor2_IO_R);  
+01A6:  BSF    03.5
+01A7:  BCF    08.2
+01A8:  BCF    03.5
+01A9:  BCF    08.2
+.................... 									}  
+.................... 								}else						//モーターを動かさないとき  
+.................... 								{  
+01AA:  GOTO   1B3
+.................... 										output_low(KAPPA_Mortor2_IO_L);  
+01AB:  BSF    03.5
+01AC:  BCF    08.3
+01AD:  BCF    03.5
+01AE:  BCF    08.3
+.................... 										output_low(KAPPA_Mortor2_IO_R);  
+01AF:  BSF    03.5
+01B0:  BCF    08.2
+01B1:  BCF    03.5
+01B2:  BCF    08.2
+.................... 								}  
+.................... 							break;  
+01B3:  GOTO   29F
+.................... 						case 0x03:					//かっぱモーター３  
+.................... 								if(F)						//モーターが動かす時  
+.................... 								{  
+01B4:  MOVF   4C,W
+01B5:  IORWF  4D,W
+01B6:  BTFSC  03.2
+01B7:  GOTO   1D8
+.................... 									if(hugou)  
+.................... 									{  
+01B8:  MOVF   4F,F
+01B9:  BTFSC  03.2
+01BA:  GOTO   1C8
+.................... 										output_high(KAPPA_Mortor3_IO_R);  
+01BB:  BCF    20.4
+01BC:  MOVF   20,W
+01BD:  BSF    03.5
+01BE:  MOVWF  07
+01BF:  BCF    03.5
+01C0:  BSF    07.4
+.................... 										output_low(KAPPA_Mortor3_IO_L);  
+01C1:  BCF    20.5
+01C2:  MOVF   20,W
+01C3:  BSF    03.5
+01C4:  MOVWF  07
+01C5:  BCF    03.5
+01C6:  BCF    07.5
+.................... 									}else if(!hugou)  
+01C7:  GOTO   1D7
+.................... 									{  
+01C8:  MOVF   4F,F
+01C9:  BTFSS  03.2
+01CA:  GOTO   1D7
+.................... 										output_high(KAPPA_Mortor3_IO_L);  
+01CB:  BCF    20.5
+01CC:  MOVF   20,W
+01CD:  BSF    03.5
+01CE:  MOVWF  07
+01CF:  BCF    03.5
+01D0:  BSF    07.5
+.................... 										output_low(KAPPA_Mortor3_IO_R);  
+01D1:  BCF    20.4
+01D2:  MOVF   20,W
+01D3:  BSF    03.5
+01D4:  MOVWF  07
+01D5:  BCF    03.5
+01D6:  BCF    07.4
+.................... 									}  
+.................... 								}else						//モーターを動かさないとき  
+.................... 								{  
+01D7:  GOTO   1E4
+.................... 										output_low(KAPPA_Mortor3_IO_L);  
+01D8:  BCF    20.5
+01D9:  MOVF   20,W
+01DA:  BSF    03.5
+01DB:  MOVWF  07
+01DC:  BCF    03.5
+01DD:  BCF    07.5
+.................... 										output_low(KAPPA_Mortor3_IO_R);  
+01DE:  BCF    20.4
+01DF:  MOVF   20,W
+01E0:  BSF    03.5
+01E1:  MOVWF  07
+01E2:  BCF    03.5
+01E3:  BCF    07.4
+.................... 								}  
+.................... 							break;  
+01E4:  GOTO   29F
+.................... 						case 0x04:					//かっぱモーター４  
+.................... 								if(F)						//モーターが動かす時  
+.................... 								{  
+01E5:  MOVF   4C,W
+01E6:  IORWF  4D,W
+01E7:  BTFSC  03.2
+01E8:  GOTO   201
+.................... 									if(hugou)  
+.................... 									{  
+01E9:  MOVF   4F,F
+01EA:  BTFSC  03.2
+01EB:  GOTO   1F5
+.................... 										output_high(KAPPA_Mortor4_IO_R);  
+01EC:  BSF    03.5
+01ED:  BCF    08.1
+01EE:  BCF    03.5
+01EF:  BSF    08.1
+.................... 										output_low(KAPPA_Mortor4_IO_L);  
+01F0:  BSF    03.5
+01F1:  BCF    05.0
+01F2:  BCF    03.5
+01F3:  BCF    05.0
+.................... 									}else if(!hugou)  
+01F4:  GOTO   200
+.................... 									{  
+01F5:  MOVF   4F,F
+01F6:  BTFSS  03.2
+01F7:  GOTO   200
+.................... 										output_high(KAPPA_Mortor4_IO_L);  
+01F8:  BSF    03.5
+01F9:  BCF    05.0
+01FA:  BCF    03.5
+01FB:  BSF    05.0
+.................... 										output_low(KAPPA_Mortor4_IO_R);  
+01FC:  BSF    03.5
+01FD:  BCF    08.1
+01FE:  BCF    03.5
+01FF:  BCF    08.1
+.................... 									}  
+.................... 								}else						//モーターを動かさないとき  
+.................... 								{  
+0200:  GOTO   209
+.................... 										output_low(KAPPA_Mortor4_IO_L);  
+0201:  BSF    03.5
+0202:  BCF    05.0
+0203:  BCF    03.5
+0204:  BCF    05.0
+.................... 										output_low(KAPPA_Mortor4_IO_R);  
+0205:  BSF    03.5
+0206:  BCF    08.1
+0207:  BCF    03.5
+0208:  BCF    08.1
+.................... 								}  
+.................... 							break;  
+0209:  GOTO   29F
+.................... 						  
+.................... 						//ここからかっぱポート2番目  
+.................... 						case 0x05:					//かっぱモーター5  
+.................... 								if(F)						//モーターが動かす時  
+.................... 								{  
+020A:  MOVF   4C,W
+020B:  IORWF  4D,W
+020C:  BTFSC  03.2
+020D:  GOTO   226
+.................... 									if(hugou)  
+.................... 									{  
+020E:  MOVF   4F,F
+020F:  BTFSC  03.2
+0210:  GOTO   21A
+.................... 										output_high(KAPPA2_Mortor1_IO_R);  
+0211:  BSF    03.5
+0212:  BCF    08.6
+0213:  BCF    03.5
+0214:  BSF    08.6
+.................... 										output_low(KAPPA2_Mortor1_IO_L);  
+0215:  BSF    03.5
+0216:  BCF    08.7
+0217:  BCF    03.5
+0218:  BCF    08.7
+.................... 									}else if(!hugou)  
+0219:  GOTO   225
+.................... 									{  
+021A:  MOVF   4F,F
+021B:  BTFSS  03.2
+021C:  GOTO   225
+.................... 										output_high(KAPPA2_Mortor1_IO_L);  
+021D:  BSF    03.5
+021E:  BCF    08.7
+021F:  BCF    03.5
+0220:  BSF    08.7
+.................... 										output_low(KAPPA2_Mortor1_IO_R);  
+0221:  BSF    03.5
+0222:  BCF    08.6
+0223:  BCF    03.5
+0224:  BCF    08.6
+.................... 									}  
+.................... 								}else						//モーターを動かさないとき  
+.................... 								{  
+0225:  GOTO   22E
+.................... 										output_low(KAPPA2_Mortor1_IO_L);  
+0226:  BSF    03.5
+0227:  BCF    08.7
+0228:  BCF    03.5
+0229:  BCF    08.7
+.................... 										output_low(KAPPA2_Mortor1_IO_R);  
+022A:  BSF    03.5
+022B:  BCF    08.6
+022C:  BCF    03.5
+022D:  BCF    08.6
+.................... 								}  
+.................... 							break;  
+022E:  GOTO   29F
+.................... 						  
+.................... 						case 0x06:					//かっぱモーター6  
+.................... 								if(F)						//モーターが動かす時  
+.................... 								{  
+022F:  MOVF   4C,W
+0230:  IORWF  4D,W
+0231:  BTFSC  03.2
+0232:  GOTO   24B
+.................... 									if(hugou)  
+.................... 									{  
+0233:  MOVF   4F,F
+0234:  BTFSC  03.2
+0235:  GOTO   23F
+.................... 										output_high(KAPPA2_Mortor2_IO_R);  
+0236:  BSF    03.5
+0237:  BCF    06.0
+0238:  BCF    03.5
+0239:  BSF    06.0
+.................... 										output_low(KAPPA2_Mortor2_IO_L);  
+023A:  BSF    03.5
+023B:  BCF    06.1
+023C:  BCF    03.5
+023D:  BCF    06.1
+.................... 									}else if(!hugou)  
+023E:  GOTO   24A
+.................... 									{  
+023F:  MOVF   4F,F
+0240:  BTFSS  03.2
+0241:  GOTO   24A
+.................... 										output_high(KAPPA2_Mortor2_IO_L);  
+0242:  BSF    03.5
+0243:  BCF    06.1
+0244:  BCF    03.5
+0245:  BSF    06.1
+.................... 										output_low(KAPPA2_Mortor2_IO_R);  
+0246:  BSF    03.5
+0247:  BCF    06.0
+0248:  BCF    03.5
+0249:  BCF    06.0
+.................... 									}  
+.................... 								}else						//モーターを動かさないとき  
+.................... 								{  
+024A:  GOTO   253
+.................... 										output_low(KAPPA2_Mortor2_IO_L);  
+024B:  BSF    03.5
+024C:  BCF    06.1
+024D:  BCF    03.5
+024E:  BCF    06.1
+.................... 										output_low(KAPPA2_Mortor2_IO_R);  
+024F:  BSF    03.5
+0250:  BCF    06.0
+0251:  BCF    03.5
+0252:  BCF    06.0
+.................... 								}  
+.................... 							break;  
+0253:  GOTO   29F
+.................... 						  
+.................... 						case 0x07:					//かっぱモーター7  
+.................... 								if(F)						//モーターが動かす時  
+.................... 								{  
+0254:  MOVF   4C,W
+0255:  IORWF  4D,W
+0256:  BTFSC  03.2
+0257:  GOTO   270
+.................... 									if(hugou)  
+.................... 									{  
+0258:  MOVF   4F,F
+0259:  BTFSC  03.2
+025A:  GOTO   264
+.................... 										output_high(KAPPA2_Mortor3_IO_R);  
+025B:  BSF    03.5
+025C:  BCF    06.2
+025D:  BCF    03.5
+025E:  BSF    06.2
+.................... 										output_low(KAPPA2_Mortor3_IO_L);  
+025F:  BSF    03.5
+0260:  BCF    06.3
+0261:  BCF    03.5
+0262:  BCF    06.3
+.................... 									}else if(!hugou)  
+0263:  GOTO   26F
+.................... 									{  
+0264:  MOVF   4F,F
+0265:  BTFSS  03.2
+0266:  GOTO   26F
+.................... 										output_high(KAPPA2_Mortor3_IO_L);  
+0267:  BSF    03.5
+0268:  BCF    06.3
+0269:  BCF    03.5
+026A:  BSF    06.3
+.................... 										output_low(KAPPA2_Mortor3_IO_R);  
+026B:  BSF    03.5
+026C:  BCF    06.2
+026D:  BCF    03.5
+026E:  BCF    06.2
+.................... 									}  
+.................... 								}else						//モーターを動かさないとき  
+.................... 								{  
+026F:  GOTO   278
+.................... 										output_low(KAPPA2_Mortor3_IO_L);  
+0270:  BSF    03.5
+0271:  BCF    06.3
+0272:  BCF    03.5
+0273:  BCF    06.3
+.................... 										output_low(KAPPA2_Mortor3_IO_R);  
+0274:  BSF    03.5
+0275:  BCF    06.2
+0276:  BCF    03.5
+0277:  BCF    06.2
+.................... 								}  
+.................... 							break;  
+0278:  GOTO   29F
+.................... 						  
+.................... 						case 0x08:					//かっぱモーター8  
+.................... 								if(F)						//モーターが動かす時  
+.................... 								{  
+0279:  MOVF   4C,W
+027A:  IORWF  4D,W
+027B:  BTFSC  03.2
+027C:  GOTO   295
+.................... 									if(hugou)  
+.................... 									{  
+027D:  MOVF   4F,F
+027E:  BTFSC  03.2
+027F:  GOTO   289
+.................... 										output_high(KAPPA2_Mortor4_IO_R);  
+0280:  BSF    03.5
+0281:  BCF    06.4
+0282:  BCF    03.5
+0283:  BSF    06.4
+.................... 										output_low(KAPPA2_Mortor4_IO_L);  
+0284:  BSF    03.5
+0285:  BCF    06.5
+0286:  BCF    03.5
+0287:  BCF    06.5
+.................... 									}else if(!hugou)  
+0288:  GOTO   294
+.................... 									{  
+0289:  MOVF   4F,F
+028A:  BTFSS  03.2
+028B:  GOTO   294
+.................... 										output_high(KAPPA2_Mortor4_IO_L);  
+028C:  BSF    03.5
+028D:  BCF    06.5
+028E:  BCF    03.5
+028F:  BSF    06.5
+.................... 										output_low(KAPPA2_Mortor4_IO_R);  
+0290:  BSF    03.5
+0291:  BCF    06.4
+0292:  BCF    03.5
+0293:  BCF    06.4
+.................... 									}  
+.................... 								}else						//モーターを動かさないとき  
+.................... 								{  
+0294:  GOTO   29D
+.................... 										output_low(KAPPA2_Mortor4_IO_L);  
+0295:  BSF    03.5
+0296:  BCF    06.5
+0297:  BCF    03.5
+0298:  BCF    06.5
+.................... 										output_low(KAPPA2_Mortor4_IO_R);  
+0299:  BSF    03.5
+029A:  BCF    06.4
+029B:  BCF    03.5
+029C:  BCF    06.4
+.................... 								}  
+.................... 							break;  
+029D:  GOTO   29F
+.................... 						  
+.................... 						  
+.................... 						  
+.................... 						  
+.................... 						default:	  
+.................... 							break;  
+029E:  GOTO   29F
+.................... 					  
+.................... 					}  
+.................... 					  
+.................... 				}	//for文抜け出し  
+029F:  INCF   50,F
+02A0:  GOTO   0FE
+.................... 			  
+.................... 			  
+.................... 		//変数初期化  
+.................... 			cheaker=0;  
+02A1:  CLRF   21
+.................... 			motasuu=0;  
+02A2:  CLRF   52
+.................... 			motasuu1=0;  
+02A3:  CLRF   51
+.................... 			 E=0;  
+02A4:  CLRF   4B
+02A5:  CLRF   4A
+.................... 			F=0;  
+02A6:  CLRF   4D
+02A7:  CLRF   4C
+.................... 			ID=0;  
+02A8:  CLRF   4E
+.................... 			hugou=0;  
+02A9:  CLRF   4F
+.................... 			i=0;  
+02AA:  CLRF   50
+.................... 		}  
+02AB:  GOTO   0CE
+.................... 	}		//アイドルループ終了  
+02AC:  GOTO   0CE
+.................... 	  
+.................... 	return(0);  
+02AD:  MOVLW  00
+02AE:  MOVWF  78
+.................... }  
+....................   
+.................... /*参考	getcについて  
+.................... 機能: RS-232C RCV ピンから文字を読み込み、文字を返します。  
+.................... この関数は文字入力が有るまで待ち続けます。この状態を避けたい場合は、この関数の使用直前で  
+.................... 関数kbhit()を使って文字入力可能か否かのテストをして下さい。  
+.................... もし、内蔵USART 機能があれば、ハードウエアは３文字をバッファすることが出来ます。  
+.................... 無ければ、PIC によって文字が受信されている間、文字の取りこぼしを無くす為、GETC で取り込  
+.................... みを継続する必要があります。fgetc()使用時は、指定されたストリームからの入力をします。  
+.................... getc()のデフォルト・ストリームはSTDIN です。若しくは、プログラム的にこれ以前で使用された、  
+.................... ストリームが指定されたと見なして処理します。  
+.................... */  
+....................   
+....................   
+....................  
+02AF:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F32   HS NOWDT PUT NODEBUG NOPROTECT NOBROWNOUT NOLVP NOCPD NOWRT

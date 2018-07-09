@@ -1,0 +1,40 @@
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Debug\UDPsample1.exe
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Debug\UDPsample1.xml
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Debug\UDPsample1.pdb
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\bin\Debug\UDPsample1.exe
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\bin\Debug\UDPsample1.pdb
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\bin\Debug\UDPsample1.xml
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Debug\ResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Debug\UDPsample1.Form1.resources
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Debug\UDPsample1.Resources.resources
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Debug\UDPsample1.vbproj.GenerateResource.Cache
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\bin\Release\UDPsample1.exe
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\bin\Release\UDPsample1.pdb
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\bin\Release\UDPsample1.xml
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Release\ResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Release\UDPsample1.Form1.resources
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Release\UDPsample1.Resources.resources
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Release\UDPsample1.vbproj.GenerateResource.Cache
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Release\UDPsample1.exe
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Release\UDPsample1.xml
+D:\My Documents\Visual Studio 2005\Projects\UDPsample1\UDPsample1\obj\Release\UDPsample1.pdb
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Release\UDPsample1.exe
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Release\UDPsample1.xml
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Release\UDPsample1.pdb
+F:\VisualStudio2005\UDPsample1\UDPsample1\bin\Release\UDPsample1.exe
+F:\VisualStudio2005\UDPsample1\UDPsample1\bin\Release\UDPsample1.pdb
+F:\VisualStudio2005\UDPsample1\UDPsample1\bin\Release\UDPsample1.xml
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Release\ResolveAssemblyReference.cache
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Release\UDPsample1.Form1.resources
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Release\UDPsample1.Resources.resources
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Release\UDPsample1.vbproj.GenerateResource.Cache
+F:\VisualStudio2005\UDPsample1\UDPsample1\bin\Debug\UDPsample1.exe
+F:\VisualStudio2005\UDPsample1\UDPsample1\bin\Debug\UDPsample1.pdb
+F:\VisualStudio2005\UDPsample1\UDPsample1\bin\Debug\UDPsample1.xml
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Debug\ResolveAssemblyReference.cache
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Debug\UDPsample1.Form1.resources
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Debug\UDPsample1.Resources.resources
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Debug\UDPsample1.vbproj.GenerateResource.Cache
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Debug\UDPsample1.exe
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Debug\UDPsample1.xml
+F:\VisualStudio2005\UDPsample1\UDPsample1\obj\Debug\UDPsample1.pdb

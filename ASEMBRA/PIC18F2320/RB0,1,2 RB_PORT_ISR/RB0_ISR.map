@@ -1,0 +1,86 @@
+MPLINK 4.38, Linker
+Linker Map File - Created Sat Mar 09 17:58:12 2013
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000002    program   0x000002
+                   .org_1       code   0x000008    program   0x000006
+                   .org_2       code   0x000018    program   0x000132
+      .config_300001_RB.O    romdata   0x300001    program   0x000001
+      .config_300002_RB.O    romdata   0x300002    program   0x000001
+      .config_300003_RB.O    romdata   0x300003    program   0x000001
+      .config_300005_RB.O    romdata   0x300005    program   0x000001
+      .config_300006_RB.O    romdata   0x300006    program   0x000001
+      .config_300008_RB.O    romdata   0x300008    program   0x000001
+      .config_300009_RB.O    romdata   0x300009    program   0x000001
+      .config_30000A_RB.O    romdata   0x30000a    program   0x000001
+      .config_30000B_RB.O    romdata   0x30000b    program   0x000001
+      .config_30000C_RB.O    romdata   0x30000c    program   0x000001
+      .config_30000D_RB.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000003      
+                            0x000008    0x00000d      
+                            0x000018    0x000149      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            327 out of 8472 program addresses used, program memory utilization is 3%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   CASE_A   0x000096    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                   CASE_B   0x00009c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                 HIGH_ISR   0x0000be    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                     INIT   0x00001c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  LOW_ISR   0x0000cc    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                 MAINLOOP   0x00008c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB0_ISR   0x0000e6    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB1_ISR   0x0000ea    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB2_ISR   0x0000ee    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB4_ISR   0x000132    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB5_CMP   0x0000fe    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB5_ISR   0x000138    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB6_CMP   0x000104    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB6_ISR   0x00013e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB7_CMP   0x00010a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB7_ISR   0x000144    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                   RB_END   0x000110    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+              RB_PORT_ISR   0x0000f2    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                TX_CHEACK   0x0000b6    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     INIT   0x00001c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                 MAINLOOP   0x00008c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                   CASE_A   0x000096    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                   CASE_B   0x00009c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                TX_CHEACK   0x0000b6    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                 HIGH_ISR   0x0000be    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  LOW_ISR   0x0000cc    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB0_ISR   0x0000e6    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB1_ISR   0x0000ea    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB2_ISR   0x0000ee    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+              RB_PORT_ISR   0x0000f2    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB5_CMP   0x0000fe    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB6_CMP   0x000104    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB7_CMP   0x00010a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                   RB_END   0x000110    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB4_ISR   0x000132    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB5_ISR   0x000138    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB6_ISR   0x00013e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+                  RB7_ISR   0x000144    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\RB0,1,2 RB_PORT_ISR\RB.asm
+
+

@@ -1,0 +1,265 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[p mainexit ]
+"257 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic10f200.h
+[v _GPIO `Vuc ~T0 @X0 0 e@6 ]
+"263
+[s S22 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S22 . GP0 GP1 GP2 GP3 ]
+"262
+[u S21 `S22 1 ]
+[n S21 . . ]
+"270
+[v _GPIObits `VS21 ~T0 @X0 0 e@6 ]
+[; ;stdio.h: 8: typedef int ptrdiff_t;
+[; ;stdio.h: 9: typedef unsigned size_t;
+[; ;stdio.h: 10: typedef unsigned short wchar_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 23: extern int errno;
+[; ;stdio.h: 54: struct __prbuf
+[; ;stdio.h: 55: {
+[; ;stdio.h: 56: char * ptr;
+[; ;stdio.h: 57: void (* func)(char);
+[; ;stdio.h: 58: };
+[; ;conio.h: 17: extern int errno;
+[; ;conio.h: 20: extern void init_uart(void);
+[; ;conio.h: 22: extern char getch(void);
+[; ;conio.h: 23: extern char getche(void);
+[; ;conio.h: 24: extern void putch(char);
+[; ;conio.h: 25: extern void ungetch(char);
+[; ;conio.h: 27: extern __bit kbhit(void);
+[; ;conio.h: 31: extern char * cgets(char *);
+[; ;conio.h: 32: extern void cputs(const char *);
+[; ;stdio.h: 99: extern int cprintf(char *, ...);
+[; ;stdio.h: 104: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 194: extern char * gets(char *);
+[; ;stdio.h: 195: extern int puts(const char *);
+[; ;stdio.h: 196: extern int scanf(const char *, ...);
+[; ;stdio.h: 197: extern int sscanf(const char *, const char *, ...);
+[; ;stdio.h: 198: extern int vprintf(const char *, va_list);
+[; ;stdio.h: 199: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 200: extern int vscanf(const char *, va_list ap);
+[; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list);
+[; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 206: extern int printf(const char *, ...);
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: int rem;
+[; ;stdlib.h: 29: int quot;
+[; ;stdlib.h: 30: } div_t;
+[; ;stdlib.h: 31: typedef struct {
+[; ;stdlib.h: 32: unsigned rem;
+[; ;stdlib.h: 33: unsigned quot;
+[; ;stdlib.h: 34: } udiv_t;
+[; ;stdlib.h: 35: typedef struct {
+[; ;stdlib.h: 36: long quot;
+[; ;stdlib.h: 37: long rem;
+[; ;stdlib.h: 38: } ldiv_t;
+[; ;stdlib.h: 39: typedef struct {
+[; ;stdlib.h: 40: unsigned long quot;
+[; ;stdlib.h: 41: unsigned long rem;
+[; ;stdlib.h: 42: } uldiv_t;
+[; ;stdlib.h: 65: extern double atof(const char *);
+[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 67: extern int atoi(const char *);
+[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 69: extern long atol(const char *);
+[; ;stdlib.h: 70: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 72: extern int rand(void);
+[; ;stdlib.h: 73: extern void srand(unsigned int);
+[; ;stdlib.h: 74: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 75: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 76: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 77: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 78: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 79: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 80: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 81: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 82: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 87: extern void * malloc(size_t);
+[; ;stdlib.h: 88: extern void free(void *);
+[; ;stdlib.h: 89: extern void * realloc(void *, size_t);
+[; ;stdlib.h: 91: extern void abort(void);
+[; ;stdlib.h: 92: extern void exit(int);
+[; ;stdlib.h: 93: extern int atexit(void (*)(void));
+[; ;stdlib.h: 94: extern char * getenv(const char *);
+[; ;stdlib.h: 95: extern char ** environ;
+[; ;stdlib.h: 96: extern int system(char *);
+[; ;stdlib.h: 97: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 98: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 99: extern int abs(int);
+[; ;stdlib.h: 100: extern long labs(long);
+[; ;stdlib.h: 103: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 104: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 109: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 110: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;stdlib.h: 112: extern char * ftoa(float f, int * status);
+[; ;pic10f200.h: 44: extern volatile unsigned char INDF @ 0x000;
+"46 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic10f200.h
+[; ;pic10f200.h: 46: asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+[; ;pic10f200.h: 49: typedef union {
+[; ;pic10f200.h: 50: struct {
+[; ;pic10f200.h: 51: unsigned INDF :8;
+[; ;pic10f200.h: 52: };
+[; ;pic10f200.h: 53: } INDFbits_t;
+[; ;pic10f200.h: 54: extern volatile INDFbits_t INDFbits @ 0x000;
+[; ;pic10f200.h: 63: extern volatile unsigned char TMR0 @ 0x001;
+"65
+[; ;pic10f200.h: 65: asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+[; ;pic10f200.h: 68: typedef union {
+[; ;pic10f200.h: 69: struct {
+[; ;pic10f200.h: 70: unsigned TMR0 :8;
+[; ;pic10f200.h: 71: };
+[; ;pic10f200.h: 72: } TMR0bits_t;
+[; ;pic10f200.h: 73: extern volatile TMR0bits_t TMR0bits @ 0x001;
+[; ;pic10f200.h: 82: extern volatile unsigned char PCL @ 0x002;
+"84
+[; ;pic10f200.h: 84: asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+[; ;pic10f200.h: 87: typedef union {
+[; ;pic10f200.h: 88: struct {
+[; ;pic10f200.h: 89: unsigned PCL :8;
+[; ;pic10f200.h: 90: };
+[; ;pic10f200.h: 91: } PCLbits_t;
+[; ;pic10f200.h: 92: extern volatile PCLbits_t PCLbits @ 0x002;
+[; ;pic10f200.h: 101: extern volatile unsigned char STATUS @ 0x003;
+"103
+[; ;pic10f200.h: 103: asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+[; ;pic10f200.h: 106: typedef union {
+[; ;pic10f200.h: 107: struct {
+[; ;pic10f200.h: 108: unsigned C :1;
+[; ;pic10f200.h: 109: unsigned DC :1;
+[; ;pic10f200.h: 110: unsigned Z :1;
+[; ;pic10f200.h: 111: unsigned nPD :1;
+[; ;pic10f200.h: 112: unsigned nTO :1;
+[; ;pic10f200.h: 113: unsigned :2;
+[; ;pic10f200.h: 114: unsigned GPWUF :1;
+[; ;pic10f200.h: 115: };
+[; ;pic10f200.h: 116: struct {
+[; ;pic10f200.h: 117: unsigned CARRY :1;
+[; ;pic10f200.h: 118: };
+[; ;pic10f200.h: 119: struct {
+[; ;pic10f200.h: 120: unsigned :2;
+[; ;pic10f200.h: 121: unsigned ZERO :1;
+[; ;pic10f200.h: 122: };
+[; ;pic10f200.h: 123: } STATUSbits_t;
+[; ;pic10f200.h: 124: extern volatile STATUSbits_t STATUSbits @ 0x003;
+[; ;pic10f200.h: 168: extern volatile unsigned char FSR @ 0x004;
+"170
+[; ;pic10f200.h: 170: asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+[; ;pic10f200.h: 173: typedef union {
+[; ;pic10f200.h: 174: struct {
+[; ;pic10f200.h: 175: unsigned FSR :8;
+[; ;pic10f200.h: 176: };
+[; ;pic10f200.h: 177: } FSRbits_t;
+[; ;pic10f200.h: 178: extern volatile FSRbits_t FSRbits @ 0x004;
+[; ;pic10f200.h: 187: extern volatile unsigned char OSCCAL @ 0x005;
+"189
+[; ;pic10f200.h: 189: asm("OSCCAL equ 05h");
+[; <" OSCCAL equ 05h ;# ">
+[; ;pic10f200.h: 192: typedef union {
+[; ;pic10f200.h: 193: struct {
+[; ;pic10f200.h: 194: unsigned FOSC4 :1;
+[; ;pic10f200.h: 195: unsigned CAL :7;
+[; ;pic10f200.h: 196: };
+[; ;pic10f200.h: 197: struct {
+[; ;pic10f200.h: 198: unsigned :1;
+[; ;pic10f200.h: 199: unsigned CAL0 :1;
+[; ;pic10f200.h: 200: unsigned CAL1 :1;
+[; ;pic10f200.h: 201: unsigned CAL2 :1;
+[; ;pic10f200.h: 202: unsigned CAL3 :1;
+[; ;pic10f200.h: 203: unsigned CAL4 :1;
+[; ;pic10f200.h: 204: unsigned CAL5 :1;
+[; ;pic10f200.h: 205: unsigned CAL6 :1;
+[; ;pic10f200.h: 206: };
+[; ;pic10f200.h: 207: } OSCCALbits_t;
+[; ;pic10f200.h: 208: extern volatile OSCCALbits_t OSCCALbits @ 0x005;
+[; ;pic10f200.h: 257: extern volatile unsigned char GPIO @ 0x006;
+"259
+[; ;pic10f200.h: 259: asm("GPIO equ 06h");
+[; <" GPIO equ 06h ;# ">
+[; ;pic10f200.h: 262: typedef union {
+[; ;pic10f200.h: 263: struct {
+[; ;pic10f200.h: 264: unsigned GP0 :1;
+[; ;pic10f200.h: 265: unsigned GP1 :1;
+[; ;pic10f200.h: 266: unsigned GP2 :1;
+[; ;pic10f200.h: 267: unsigned GP3 :1;
+[; ;pic10f200.h: 268: };
+[; ;pic10f200.h: 269: } GPIObits_t;
+[; ;pic10f200.h: 270: extern volatile GPIObits_t GPIObits @ 0x006;
+[; ;pic10f200.h: 294: extern volatile __control unsigned char OPTION @ 0x000;
+[; ;pic10f200.h: 297: extern volatile __control unsigned char TRIS @ 0x006;
+[; ;pic10f200.h: 300: extern volatile __control unsigned char TRISGPIO @ 0x006;
+[; ;pic10f200.h: 322: extern volatile __bit CAL0 @ (((unsigned) &OSCCAL)*8) + 1;
+[; ;pic10f200.h: 324: extern volatile __bit CAL1 @ (((unsigned) &OSCCAL)*8) + 2;
+[; ;pic10f200.h: 326: extern volatile __bit CAL2 @ (((unsigned) &OSCCAL)*8) + 3;
+[; ;pic10f200.h: 328: extern volatile __bit CAL3 @ (((unsigned) &OSCCAL)*8) + 4;
+[; ;pic10f200.h: 330: extern volatile __bit CAL4 @ (((unsigned) &OSCCAL)*8) + 5;
+[; ;pic10f200.h: 332: extern volatile __bit CAL5 @ (((unsigned) &OSCCAL)*8) + 6;
+[; ;pic10f200.h: 334: extern volatile __bit CAL6 @ (((unsigned) &OSCCAL)*8) + 7;
+[; ;pic10f200.h: 336: extern volatile __bit CARRY @ (((unsigned) &STATUS)*8) + 0;
+[; ;pic10f200.h: 338: extern volatile __bit DC @ (((unsigned) &STATUS)*8) + 1;
+[; ;pic10f200.h: 340: extern volatile __bit FOSC4 @ (((unsigned) &OSCCAL)*8) + 0;
+[; ;pic10f200.h: 342: extern volatile __bit GP0 @ (((unsigned) &GPIO)*8) + 0;
+[; ;pic10f200.h: 344: extern volatile __bit GP1 @ (((unsigned) &GPIO)*8) + 1;
+[; ;pic10f200.h: 346: extern volatile __bit GP2 @ (((unsigned) &GPIO)*8) + 2;
+[; ;pic10f200.h: 348: extern volatile __bit GP3 @ (((unsigned) &GPIO)*8) + 3;
+[; ;pic10f200.h: 350: extern volatile __bit GPWUF @ (((unsigned) &STATUS)*8) + 7;
+[; ;pic10f200.h: 352: extern volatile __bit ZERO @ (((unsigned) &STATUS)*8) + 2;
+[; ;pic10f200.h: 354: extern volatile __bit nPD @ (((unsigned) &STATUS)*8) + 3;
+[; ;pic10f200.h: 356: extern volatile __bit nTO @ (((unsigned) &STATUS)*8) + 4;
+[; ;pic.h: 28: extern void _nop(void);
+[; ;pic.h: 151: extern void _delay(unsigned long);
+"9 C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\LED.c
+[v _main `(i ~T0 @X0 1 ef ]
+{
+[; ;LED.c: 8: main()
+[; ;LED.c: 9: {
+[e :U _main ]
+[f ]
+"11
+[v _i `i ~T0 @X0 1 a ]
+[; ;LED.c: 11: int i = 0;
+[e = _i -> 0 `i ]
+[; ;LED.c: 19: GPIO = 0;
+"19
+[e = _GPIO -> -> 0 `i `uc ]
+[; ;LED.c: 21: while(1)
+"21
+[e :U 25 ]
+[; ;LED.c: 22: {
+"22
+{
+[; ;LED.c: 24: GPIObits.GP0 ^= 1;
+"24
+[e =^ . . _GPIObits 0 0 -> -> 1 `i `uc ]
+[; ;LED.c: 26: for(i=0;i<1000;i++);
+"26
+{
+[e = _i -> 0 `i ]
+[e $ < _i -> 1000 `i 27  ]
+[e $U 28  ]
+[e :U 27 ]
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 1000 `i 27  ]
+[e :U 28 ]
+}
+"27
+}
+[e :U 24 ]
+"21
+[e $U 25  ]
+[e :U 26 ]
+[; ;LED.c: 27: }
+[; ;LED.c: 29: return (0);
+"29
+[e ) -> 0 `i ]
+[e $UE 23  ]
+[; ;LED.c: 31: }
+"31
+[e :UE 23 ]
+}

@@ -1,0 +1,3 @@
+Error[1027] C:\Users\FMV\Dropbox\PIC-project\PIC_RTOS\Source\include\FreeRTOS.h 87 : unable to locate 'stdint.h'
+Error[1027] C:\Users\FMV\Dropbox\PIC-project\PIC_RTOS\Source\include\FreeRTOS.h 97 : unable to locate 'FreeRTOSConfig.h'
+Error[1099] C:\Users\FMV\Dropbox\PIC-project\PIC_RTOS\Source\include\FreeRTOS.h 116 : Missing definition:  configMINIMAL_STACK_SIZE must be defined in FreeRTOSConfig.h.  configMINIMAL_STACK_SIZE defines the size (in words) of the stack allocated to the idle task.  Refer to the demo project provided for your port for a suitable value.

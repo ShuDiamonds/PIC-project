@@ -1,0 +1,51 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+005     port_a
+019.6   C1OUT
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     strtok.save
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  MAIN
+000004  @cinit1
+000010  @cinit2
+
+Project Directory:
+    D:\電子工作\PIC-project\PIC 動作確認\pic12f675\
+
+Project Files:
+    PIC12F675動作確認.c                                     [08-10-12 14:09  CRC=D872A938]
+    C:\Program Files (x86)\PICC\devices\12F675.h            [16-8-12 10:54  CRC=D16C51BB]
+    C:\Program Files (x86)\PICC\drivers\stdio.h             [31-7-07 13:24  CRC=4E4534F4]
+    C:\Program Files (x86)\PICC\drivers\string.h            [14-7-11 10:13  CRC=23EDEC8F]
+    C:\Program Files (x86)\PICC\drivers\stddef.h            [16-7-10 09:27  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\drivers\ctype.h             [03-1-08 13:55  CRC=2D1F019F]
+
+Source signature=FFCD0C20
+
+Units:
+    PIC12F675動作確認 (main)
+
+Compiler Settings:
+    Processor:      PIC12F675
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    Errors:      PIC12F675動作確認.err
+    Ext Symbols: PIC12F675動作確認.esym
+    INHX8:       PIC12F675動作確認.hex
+    Symbols:     PIC12F675動作確認.sym
+    List:        PIC12F675動作確認.lst
+    Debug/eCOD:  PIC12F675動作確認.cod
+    Project:     PIC12F675動作確認.PJT

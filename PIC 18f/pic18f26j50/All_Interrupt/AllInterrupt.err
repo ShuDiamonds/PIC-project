@@ -1,0 +1,7 @@
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\All_Interrupt\AllInterrupt.c 196 : location PROD specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\All_Interrupt\AllInterrupt.c 196 : location WREG specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\All_Interrupt\AllInterrupt.c 196 : location BSR specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\All_Interrupt\AllInterrupt.c 196 : location STATUS specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\All_Interrupt\AllInterrupt.c 197 : location PROD specified in the interrupt save list is redundant
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\All_Interrupt\AllInterrupt.c 181 : type qualifier mismatch in assignment
+Warning[2054] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\All_Interrupt\AllInterrupt.c 374 : suspicious pointer conversion

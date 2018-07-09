@@ -1,0 +1,275 @@
+CCS PCM C Compiler, Version 3.185, 22500
+
+               Filename: C:\Users\Fukaken\Dropbox\FUKAKEN\回路\software\TPIP通信 0520_Debug\part3\TPIP.LST
+
+               ROM used: 138 (2%)
+                         Largest free fragment is 2048
+               RAM used: 37 (21%) at main() level
+                         40 (23%) worst case
+               Stack:    2 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   044
+0003:  NOP
+....................  #include<16f877a.h> 
+....................  //////// Standard Header file for the PIC16F877A device ////////////////  
+.................... #device PIC16F877A ADC=10  
+.................... #list  
+....................  
+.................... //#include<stdio.h>  
+....................   
+.................... //#define RS_BAUD		115200  
+.................... #define RS_BAUD		9600  
+.................... #define RS_TX		PIN_C6  
+.................... #define RS_RX		PIN_C7  
+.................... #define RUN_LED		PIN_C0  
+.................... //ぴんマクロ  
+.................... /*  
+.................... //鉄火巻きモーターI/O  
+.................... 	#define	TEKKA_Mortor1_IO_R	PIN_A2  
+.................... 	#define	TEKKA_Mortor1_IO_L	PIN_A4  
+.................... 	#define	TEKKA_LED			PIN_E1  
+.................... 	#define	TEKKA_NOPIN			PIN_E0  
+.................... 	#define	TEKKA_Mortor2_IO_R	PIN_A3  
+.................... 	#define	TEKKA_Mortor2_IO_L	PIN_A5  
+.................... 	*/  
+.................... 	//モーターPWM  
+.................... 	#define	TEKKA_Mortor1_PWM	PIN_C1  
+.................... 	#define	TEKKA_Mortor2_PWM	PIN_C2  
+.................... 	//かっぱ巻きモーターI/O  
+.................... 	#define	KAPPA_LED1			PIN_D5	  
+.................... 	#define	KAPPA_LED2			PIN_D4	  
+.................... 	#define	KAPPA_Mortor1_IO_R	PIN_D0	  
+.................... 	#define	KAPPA_Mortor1_IO_L	PIN_C3  
+.................... 	#define	KAPPA_Mortor2_IO_R	PIN_D2	  
+.................... 	#define	KAPPA_Mortor2_IO_L	PIN_D3	  
+.................... 	#define	KAPPA_Mortor3_IO_R	PIN_C4	  
+.................... 	#define	KAPPA_Mortor3_IO_L	PIN_C5	  
+.................... 	#define	KAPPA_Mortor4_IO_R	PIN_D1	  
+.................... 	#define	KAPPA_Mortor4_IO_L	PIN_A0	  
+.................... 	//かっぱ巻きモーター2I/O  
+.................... 	#define	KAPPA2_LED1			PIN_B6	  
+.................... 	#define	KAPPA2_LED2			PIN_B7	  
+.................... 	#define	KAPPA2_Mortor1_IO_R	PIN_D6  
+.................... 	#define	KAPPA2_Mortor1_IO_L	PIN_D7  
+.................... 	#define	KAPPA2_Mortor2_IO_R	PIN_B0	  
+.................... 	#define	KAPPA2_Mortor2_IO_L	PIN_B1	  
+.................... 	#define	KAPPA2_Mortor3_IO_R	PIN_B2	  
+.................... 	#define	KAPPA2_Mortor3_IO_L	PIN_B3	  
+.................... 	#define	KAPPA2_Mortor4_IO_R	PIN_B4	  
+.................... 	#define	KAPPA2_Mortor4_IO_L	PIN_B5	  
+....................   
+....................   
+....................   
+.................... #use delay(clock = 20000000)  
+0004:  MOVLW  42
+0005:  MOVWF  04
+0006:  MOVF   00,W
+0007:  BTFSC  03.2
+0008:  GOTO   016
+0009:  MOVLW  06
+000A:  MOVWF  78
+000B:  CLRF   77
+000C:  DECFSZ 77,F
+000D:  GOTO   00C
+000E:  DECFSZ 78,F
+000F:  GOTO   00B
+0010:  MOVLW  7B
+0011:  MOVWF  77
+0012:  DECFSZ 77,F
+0013:  GOTO   012
+0014:  DECFSZ 00,F
+0015:  GOTO   009
+0016:  RETLW  00
+.................... #fuses HS,NOWDT,NOPROTECT,NOLVP,PUT,NOBROWNOUT  
+.................... #use rs232(BAUD = RS_BAUD , XMIT = RS_TX, RCV = RS_RX)  //rs232c設定  
+....................   
+....................   
+.................... //関数宣言  
+.................... void LED_tikatika( unsigned int16 a)  
+.................... {  
+.................... 	output_high(RUN_LED);   //動作確認  
+0017:  BCF    20.0
+0018:  MOVF   20,W
+0019:  BSF    03.5
+001A:  MOVWF  07
+001B:  BCF    03.5
+001C:  BSF    07.0
+*
+0055:  MOVLW  FF
+0056:  MOVWF  20
+.................... 	delay_ms(a);  
+*
+001D:  MOVF   40,W
+001E:  MOVWF  42
+001F:  CALL   004
+.................... 	output_low(RUN_LED);   //動作確認  
+0020:  BCF    20.0
+0021:  MOVF   20,W
+0022:  BSF    03.5
+0023:  MOVWF  07
+0024:  BCF    03.5
+0025:  BCF    07.0
+.................... 	delay_ms(a);  
+0026:  MOVF   40,W
+0027:  MOVWF  42
+0028:  CALL   004
+.................... 	output_high(RUN_LED);   //動作確認  
+0029:  BCF    20.0
+002A:  MOVF   20,W
+002B:  BSF    03.5
+002C:  MOVWF  07
+002D:  BCF    03.5
+002E:  BSF    07.0
+.................... 	delay_ms(a);  
+002F:  MOVF   40,W
+0030:  MOVWF  42
+0031:  CALL   004
+.................... 	output_low(RUN_LED);   //動作確認  
+0032:  BCF    20.0
+0033:  MOVF   20,W
+0034:  BSF    03.5
+0035:  MOVWF  07
+0036:  BCF    03.5
+0037:  BCF    07.0
+.................... 	delay_ms(a);  
+0038:  MOVF   40,W
+0039:  MOVWF  42
+003A:  CALL   004
+.................... 	output_high(RUN_LED);   //動作確認  
+003B:  BCF    20.0
+003C:  MOVF   20,W
+003D:  BSF    03.5
+003E:  MOVWF  07
+003F:  BCF    03.5
+0040:  BSF    07.0
+.................... 	  
+.................... 	return;	  
+.................... }  
+0041:  BCF    0A.3
+0042:  BCF    0A.4
+0043:  GOTO   079 (RETURN)
+.................... /*  
+.................... #use fast_io(a)  
+.................... #use fast_io(b)  
+.................... #use fast_io(c)  
+.................... #use fast_io(d)  
+.................... #use fast_io(e)  
+.................... */  
+.................... #byte port_a = 5  
+.................... #byte port_b = 6  
+.................... #byte port_c = 7  
+.................... #byte port_d = 8  
+.................... #byte port_e = 9  
+.................... #byte ADCON1 = 0x9F			//アナログデジタルピン設定	  
+.................... main()  
+.................... {  
+0044:  CLRF   04
+0045:  MOVLW  1F
+0046:  ANDWF  03,F
+0047:  MOVLW  06
+0048:  BSF    03.5
+0049:  MOVWF  1F
+004A:  MOVLW  07
+004B:  BCF    03.5
+004C:  MOVWF  1F
+004D:  MOVLW  81
+004E:  BSF    03.5
+004F:  MOVWF  19
+0050:  MOVLW  26
+0051:  MOVWF  18
+0052:  MOVLW  90
+0053:  BCF    03.5
+0054:  MOVWF  18
+.................... 	//ローカル変数定義  
+.................... 	char cheaker=0;	  
+*
+0057:  CLRF   21
+.................... 	char data_H[10];  
+.................... 	char data_L[10];		//受信データ格納スペース  
+.................... 	int16 E=0,F=0;				  
+0058:  CLRF   36
+0059:  CLRF   37
+005A:  CLRF   38
+005B:  CLRF   39
+.................... 	int ID=0,hugou=0,i=0;  
+005C:  CLRF   3A
+005D:  CLRF   3B
+005E:  CLRF   3C
+.................... 	char motasuu1=0;  
+005F:  CLRF   3D
+.................... 	char ggg=0;  
+0060:  CLRF   3E
+.................... 	int motasuu = 0;  
+0061:  CLRF   3F
+.................... 	//初期化  
+.................... 	set_tris_a(0x01);  
+0062:  MOVLW  01
+0063:  BSF    03.5
+0064:  MOVWF  05
+.................... 	set_tris_b(0x00);  
+0065:  MOVLW  00
+0066:  MOVWF  06
+.................... 	set_tris_c(0x80);  
+0067:  MOVLW  80
+0068:  MOVWF  07
+0069:  BCF    03.5
+006A:  MOVWF  20
+.................... 	set_tris_d(0x00);  
+006B:  MOVLW  00
+006C:  BSF    03.5
+006D:  MOVWF  08
+.................... 	set_tris_e(0x00);  
+006E:  BCF    09.0
+006F:  BCF    09.1
+0070:  BCF    09.2
+.................... 	ADCON1 = 0b00000111;		//デジタルピン設定	  
+0071:  MOVLW  07
+0072:  MOVWF  1F
+....................   
+.................... 	  
+.................... 	//LEDちかちか動作確認  
+.................... 	LED_tikatika(500);  
+0073:  MOVLW  01
+0074:  BCF    03.5
+0075:  MOVWF  41
+0076:  MOVLW  F4
+0077:  MOVWF  40
+0078:  GOTO   017
+.................... 	  
+....................   
+.................... 	//delay_ms(30);  
+.................... 	while(1)		//アイドルループ  
+.................... 	{  
+.................... 		while(cheaker != '@')  
+.................... 			{  
+0079:  MOVF   21,W
+007A:  SUBLW  40
+007B:  BTFSC  03.2
+007C:  GOTO   088
+.................... 				if(kbhit())  
+.................... 				{  
+007D:  BTFSS  0C.5
+007E:  GOTO   087
+.................... 				cheaker = getc();  
+007F:  BTFSS  0C.5
+0080:  GOTO   07F
+0081:  MOVF   1A,W
+0082:  MOVWF  21
+.................... 					putc(cheaker);  
+0083:  MOVF   21,W
+0084:  BTFSS  0C.4
+0085:  GOTO   084
+0086:  MOVWF  19
+.................... 				}  
+.................... 			}  
+0087:  GOTO   079
+.................... 	}  
+0088:  GOTO   079
+.................... } 
+0089:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F32   HS NOWDT PUT NODEBUG NOPROTECT NOBROWNOUT NOLVP NOCPD NOWRT

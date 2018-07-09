@@ -1,0 +1,857 @@
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;*****************************************
+                      00002         ;delayÉâÉCÉuÉâÉä
+                      00003         ;20MHzÇÃèÍçá
+                      00004         ;íçà”Å@COUNT01,COUNT02Å@Ç∆Ç¢Ç§ïœêîÇêÈåæÇµÇƒÇ®Ç≠
+                      00005         ;1ÉTÉCÉNÉãÇÕ4ÉNÉçÉbÉNÇ»ÇÃÇ≈ 1 / 20M = 0.000 000 005 = 0.05usec
+                      00006         ;Ç»ÇÃÇ≈ 1ÉTÉCÉNÉãÇÕ0.2usecÇ»ÇÃÇ≈ 0.2usec * 500 = 100usec 
+                      00007         ;ZÉtÉâÉOíçà”                    
+                      00008 ;****************************************/
+                      00009                 list    P=PIC16F877A    
+                      00010                 #include        <P16F877A.inc>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F877A processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2011 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+                      00555         LIST
+                      00011                 
+                      00012                 errorlevel  -302 
+                      00013                 
+2007   3FB2           00014                 __CONFIG        _HS_OSC & _WDT_OFF & _PWRTE_ON & _BODEN_OFF & _LVP_ON & _CPD_OFF & _WRT_
+                            OFF & _DEBUG_OFF  & _CP_OFF
+                      00015                 
+                      00016 ;******************************
+                      00017         ;ïœêîíËã`
+                      00018 ;******************************
+                      00019 
+  00000020            00020 WORK1   equ                     020H    ;äÑÇËçûÇ›éûÇÃÉÅÉCÉìÉvÉçÉOÉâÉÄÇÃWÉåÉWÉXÉ^ÇÃ
+                      00021                                                         ;ëﬁîèÍèäÅD
+  00000021            00022 WORK2   equ                     021H    ;äÑÇËçûÇ›éûÇÃÉÅÉCÉìÉvÉçÉOÉâÉÄÇÃSTATUSÉåÉWÉXÉ^ÇÃ
+                      00023                                                         ;ëﬁîèÍèäÅD
+  00000022            00024 COUNT01 equ                     022H
+  00000023            00025 COUNT02 equ                     023H
+  00000024            00026 DATA_1BYRE      equ             024H
+                      00027 ;************************************
+                      00028                 ORG     0x000
+0000   2???           00029                 GOTO    INIT
+                      00030                 ORG     0x004
+                      00031                 ;GOTO   INTERRUPT
+                      00032 
+                      00033 ;***************äÑÇËçûÇ›èàóùÉãÅ[É`Éì******************
+0004                  00034 INTERRUPT
+                      00035                 
+0004   00A0           00036                 MOVWF   WORK1                           ;WÉåÉWÉXÉ^ÇÃì‡óeÇëﬁî
+0005   0803           00037                 MOVF    STATUS,W                        ;STATUSÇWÇ…à⁄ìÆ
+0006   00A1           00038                 MOVWF   WORK2                           ;STATUSÇWORK2Ç…ï€ë∂
+                      00039                 ;BCF            INTCON,GIE              ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉbÉg(7bitñ⁄)Çã÷é
+                            ~
+                      00040                 
+0007   188B           00041                 BTFSC   INTCON,INTF
+0008   2???           00042                 CALL    RB0_ISR                 ;RB0äÑÇËçûÇ›èàóùÇ…çsÇ≠
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0009   180B           00043                 BTFSC   INTCON,RBIF
+000A   2???           00044                 CALL    RBPORT_ISR              ;RBPORTäÑÇËçûÇ›èàóùÇ…çsÇ≠
+000B   1E0C           00045                 BTFSS   PIR1,TXIF               ;TXIFÇÕäÓñ{ÇOÇ≈Ç†ÇÈ
+000C   2???           00046                 CALL    UART_SEND_ISR   ;UARTëóêMäÑÇËçûÇ›èàóùÇ…çsÇ≠
+000D   1A8C           00047                 BTFSC   PIR1,RCIF
+000E   2???           00048                 CALL    UART_RECIVE_ISR ;UARTéÛêMäÑÇËçûÇ›èàóùÇ…çsÇ≠
+000F   1B0C           00049                 BTFSC   PIR1,ADIF
+0010   2???           00050                 CALL    AD_ISR                  ;ADïœä∑äÑÇËçûÇ›èàóùÇ…çsÇ≠
+0011   1B8C           00051                 BTFSC   PIR1,PSPIF
+0012   2???           00052                 CALL    PSP_ISR                 ;PSPäÑÇËçûÇ›èàóùÇ…çsÇ≠
+                      00053                 
+                      00054                 
+0013   0821           00055                 MOVF    WORK2,W                 ;WORK2(STATUS)ÇWÇ…à⁄ìÆ
+0014   0083           00056                 MOVWF   STATUS
+0015   0820           00057                 MOVF WORK1, W                   ;WÉåÉWÉXÉ^ÇÃì‡óeÇñﬂÇ∑
+0016   0009           00058                 RETFIE
+                      00059                 ;RETFIE ÅiäÑÇËçûÇ›Ç©ÇÁÇÃReturnÅjÇé¿çs
+                      00060                 ;Ç∑ÇÈÇ∆ÅCÉXÉ^ÉbÉNÇ…äiî[ÇµÇΩî‘ínÇ™ÉvÉçÉO
+                      00061                 ;ÉâÉÄÉJÉEÉìÉ^Ç…ñﬂÇ≥ÇÍÅCäÑÇËçûÇ›Ç™Ç©Ç©Ç¡
+                      00062                 ;ÇΩéûÇÃÉÅÉCÉìÉvÉçÉOÉâÉÄÇ…ñﬂÇÈ
+                      00063 ;*********RBPORTäÑÇËçûÇ›ÉãÅ[É`Éì***********
+0017                  00064 RBPORT_ISR
+0017   0806           00065                 MOVF    PORTB,W                 ;ÉfÅ[É^éÊÇËèoÇµ
+0018   1A00           00066                 BTFSC   W,4
+0019   2???           00067                 GOTO    RB4_ISR                 ;RB4Ç™highÇÃÇ∆Ç´JMP
+001A   1A80           00068 RB5_CMP BTFSC   W,5
+001B   2???           00069                 GOTO    RB5_ISR                 ;RB4Ç™highÇÃÇ∆Ç´JMP
+001C   1B00           00070 RB6_CMP BTFSC   W,6
+001D   2???           00071                 GOTO    RB6_ISR                 ;RB4Ç™highÇÃÇ∆Ç´JMP
+001E   1B80           00072 RB7_CMP BTFSC   W,7
+001F   2???           00073                 GOTO    RB7_ISR                 ;RB4Ç™highÇÃÇ∆Ç´JMP
+0020   2???           00074 BR_END  CALL    TX_CHEACK
+0021   300A           00075                 MOVLW   '\n'
+0022   0099           00076                 MOVWF   TXREG                   ;ëóêM
+0023   2???           00077                 CALL    TX_CHEACK
+0024   3052           00078                 MOVLW   'R'
+0025   0099           00079                 MOVWF   TXREG                   ;ëóêM
+0026   2???           00080                 CALL    TX_CHEACK
+0027   3042           00081                 MOVLW   'B'
+0028   0099           00082                 MOVWF   TXREG                   ;ëóêM
+0029   2???           00083                 CALL    TX_CHEACK
+002A   300D           00084                 MOVLW   '\r'
+002B   0099           00085                 MOVWF   TXREG                   ;ëóêM
+                      00086                 
+                      00087                 
+002C   1303           00088                 BCF     STATUS,RP1
+002D   1283           00089                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+002E   30FE           00090                 MOVLW   B'11111110'
+002F   058B           00091                 ANDWF   INTCON,F
+                      00092                 ;BCF            INTCON,RBIF
+0030   0008           00093                 RETURN
+0031                  00094 RB4_ISR         ;RB4Ç™highÇÃÇ∆Ç´ÇÃìÆçÏ
+                      00095                 
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0031   2???           00096                 GOTO    RB5_CMP
+0032                  00097 RB5_ISR         ;RB5Ç™highÇÃÇ∆Ç´ÇÃìÆçÏ
+                      00098                 
+0032   2???           00099                 GOTO    RB6_CMP
+0033                  00100 RB6_ISR         ;RB6Ç™highÇÃÇ∆Ç´ÇÃìÆçÏ
+                      00101                 
+0033   2???           00102                 GOTO    RB7_CMP
+0034                  00103 RB7_ISR         ;RB7Ç™highÇÃÇ∆Ç´ÇÃìÆçÏ
+                      00104                 
+0034   2???           00105                 GOTO    BR_END
+                      00106 ;**********RB0äÑÇËçûÇ›èàóùÉãÅ[É`Éì*********
+0035                  00107 RB0_ISR
+                      00108                 
+                      00109                 
+0035   108B           00110                 BCF             INTCON,INTF
+0036   0008           00111                 RETURN
+                      00112 ;*********UARTëóêMäÑÇËçûÇ›ÉãÅ[É`Éì***********
+0037                  00113 UART_SEND_ISR
+0037   1303           00114                 BCF     STATUS,RP1
+0038   1283           00115                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+                      00116                 
+0039   2???           00117                 CALL    TX_CHEACK
+003A   300A           00118                 MOVLW   '\n'
+003B   0099           00119                 MOVWF   TXREG                   ;ëóêM
+003C   2???           00120                 CALL    TX_CHEACK
+003D   3055           00121                 MOVLW   'U'
+003E   0099           00122                 MOVWF   TXREG                   ;ëóêM
+003F   2???           00123                 CALL    TX_CHEACK
+0040   300D           00124                 MOVLW   '\r'
+0041   0099           00125                 MOVWF   TXREG                   ;ëóêM
+0042   1303           00126                 BCF     STATUS,RP1
+0043   1283           00127                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0044   120C           00128                 BCF             PIR1,TXIF
+0045   0008           00129                 RETURN
+                      00130 
+                      00131 
+                      00132 ;*********UARTéÛêMäÑÇËçûÇ›ÉãÅ[É`Éì***********
+0046                  00133 UART_RECIVE_ISR
+0046   1303           00134                 BCF     STATUS,RP1
+0047   1283           00135                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0048   1187           00136                 BCF             PORTC,RC3
+                      00137                 
+0049   2???           00138                 CALL    TX_CHEACK
+004A   300A           00139                 MOVLW   '\n'
+004B   0099           00140                 MOVWF   TXREG                   ;ëóêM
+004C   2???           00141                 CALL    TX_CHEACK
+004D   3052           00142                 MOVLW   'R'
+004E   0099           00143                 MOVWF   TXREG                   ;ëóêM
+004F   2???           00144                 CALL    TX_CHEACK
+0050   3045           00145                 MOVLW   'E'
+0051   0099           00146                 MOVWF   TXREG                   ;ëóêM
+0052   2???           00147                 CALL    TX_CHEACK
+0053   3043           00148                 MOVLW   'C'
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0054   0099           00149                 MOVWF   TXREG                   ;ëóêM
+0055   2???           00150                 CALL    TX_CHEACK
+0056   3049           00151                 MOVLW   'I'
+0057   0099           00152                 MOVWF   TXREG                   ;ëóêM
+0058   3056           00153                 MOVLW   'V'
+0059   0099           00154                 MOVWF   TXREG                   ;ëóêM
+005A   2???           00155                 CALL    TX_CHEACK
+005B   3045           00156                 MOVLW   'E'
+005C   0099           00157                 MOVWF   TXREG                   ;ëóêM
+005D   2???           00158                 CALL    TX_CHEACK               
+005E   081A           00159                 MOVF    RCREG,W
+005F   0099           00160                 MOVWF   TXREG                                           ;ëóêM
+0060   2???           00161                 CALL    TX_CHEACK
+0061   300D           00162                 MOVLW   '\r'
+0062   0099           00163                 MOVWF   TXREG                   ;ëóêM
+                      00164                 
+0063   1303           00165                 BCF     STATUS,RP1
+0064   1283           00166                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0065   128C           00167                 BCF             PIR1,RCIF               ;éÛêMäÑÇËçûÇ›ÉtÉâÉOÉNÉäÉA
+0066   0008           00168                 RETURN
+                      00169 ;********ADïœä∑äÑÇËçûÇ›ÉãÅ[É`Éì**************
+0067                  00170 AD_ISR
+                      00171                 
+0067   1303           00172                 BCF     STATUS,RP1
+0068   1283           00173                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0069   130C           00174                 BCF             PIR1,ADIF
+006A   0008           00175                 RETURN
+                      00176 ;********PSPäÑÇËçûÇ›ÉãÅ[É`Éì*****************
+006B                  00177 PSP_ISR
+                      00178                 
+006B   1303           00179                 BCF     STATUS,RP1
+006C   1283           00180                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+006D   138C           00181                 BCF             PIR1,PSPIF
+006E   0008           00182                 RETURN
+                      00183 ;***********************************
+                      00184 
+                      00185 ;***************èâä˙âª*********************
+006F                  00186 INIT
+006F   1383           00187                 BCF     STATUS,IRP              ;ÉoÉìÉN 0,1Ç…éwíË
+0070   1303           00188                 BCF     STATUS,RP1              ;Ç±ÇÃ2Ç¬Ç≈ÉoÉìÉNÇPÇ…
+0071   1683           00189                 BSF     STATUS,RP0              ;êÿÇËë÷Ç¶
+0072   3080           00190                 MOVLW   B'10000000'             ;RC7ÇIN
+0073   0087           00191                 MOVWF   TRISC                   ;PORTC
+0074   0185           00192                 CLRF    TRISA           
+0075   30A1           00193                 MOVLW   B'10100001'             ;RB5ÇIN
+0076   0086           00194                 MOVWF   TRISB                   ;PORTN
+0077   0188           00195                 CLRF    TRISD
+0078   0189           00196                 CLRF    TRISE                   ;ALL OUT
+0079   1303           00197                 BCF     STATUS,RP1
+007A   1283           00198                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+007B   0185           00199                 CLRF    PORTA
+                      00200                 ;CLRF   PORTB
+                      00201                 ;CLRF   PORTC
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+007C   0188           00202                 CLRF    PORTD
+007D   0189           00203                 CLRF    PORTE
+                      00204 ;*****************************
+                      00205         ;ëóêMÉÇÅ[ÉhÇÃèâä˙âª
+                      00206         ;
+                      00207         ;Clock  10MHz   20MHz
+                      00208         ;Baud   SPBRG   SPBRG
+                      00209         ;1200   81H             FFH
+                      00210         ;2400   40H             81H
+                      00211         ;9600   0FH             20H
+                      00212         ;19K    07H             0FH
+                      00213 ;*****************************
+                      00214 ;**************UARTê›íË************************
+007E   1303           00215                 BCF     STATUS,RP1              ;ÉoÉìÉNÇPÇ…
+007F   1683           00216                 BSF     STATUS,RP0              
+0080   3020           00217                 MOVLW   020H                    ;RC6ÇTXÉÇÅ[ÉhÇ…
+0081   0098           00218                 MOVWF   TXSTA                   ;SET
+                      00219                 ;É{Å[ÉåÅ[Égê›íË ;í·ë¨ÉÇÅ[Éh
+0082   3020           00220                 MOVLW   20H                             ;9600BPS
+                      00221                 ;MOVLW  0FH                             ;19.2KBPS
+0083   0099           00222                 MOVWF   SPBRG                   ;SET BRG
+0084   1303           00223                 BCF     STATUS,RP1
+0085   1283           00224                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0086   3090           00225                 MOVLW   090H
+0087   0098           00226                 MOVWF   RCSTA                   ;RC7ÇRXÇ…Å@òAë±éÛêMÇãñâ¬ ÇWBITí êM
+                      00227 ;************äÑÇËçûÇ›ê›íË***********************
+                      00228                 ;BSF            INTCON,GIE                              ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉ
+                            bÉg(7bitñ⁄)Çãñâ¬
+0088   138B           00229                 BCF             INTCON,GIE                              ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉ
+                            bÉg(7bitñ⁄)Çïsãñâ¬
+0089   170B           00230                 BSF             INTCON,PEIE                                     ;Ç∑Ç◊ÇƒÇÃÉ}ÉXÉNÇ≥ÇÍÇƒÇ¢Ç
+                            »Ç¢é¸ï”ã@î\ÇÃäÑÇËçûÇ›Çégópâ¬î\Ç…Ç∑ÇÈ
+                      00231         ;       BCF             INTCON,PEIE                             ;Ç∑Ç◊ÇƒÇÃé¸ï”ã@î\ÇÃäÑÇËçûÇ›Çégó
+                            pïsâ¬Ç…Ç∑ÇÈ
+                      00232 ;************RB0äÑÇËçûÇ›ê›íË*************
+                      00233                 
+                      00234         ;       BSF             INTCON,INTE                             ;RB0/INT äOïîäÑçûÇ›ÉCÉlÅ[ÉuÉãÉrÉ
+                            bÉg(4bitñ⁄)Çãñâ¬
+008A   120B           00235                 BCF             INTCON,INTE                             ;RB0/INT äOïîäÑçûÇ›ÉCÉlÅ[ÉuÉãÉrÉ
+                            bÉg(4bitñ⁄)Çïsãñâ¬
+008B   1303           00236                 BCF     STATUS,RP1              ;Ç±ÇÃ2Ç¬Ç≈ÉoÉìÉNÇPÇ…
+008C   1683           00237                 BSF     STATUS,RP0              ;êÿÇËë÷Ç¶
+008D   1701           00238                 BSF             OPTION_REG,INTEDG               ;RB0/INT ÉsÉìÇÃóßÇøè„Ç™ÇËÉGÉbÉWÇ…ÇÊÇËäÑÇ
+                            ËçûÇ›(6bitñ⁄)
+                      00239                 ;BCF            OPTION_REG,INTEDG               ;RB0/INT ÉsÉìÇÃóßÇøâ∫Ç™ÇËÉGÉbÉWÇ…ÇÊÇËäÑÇ
+                            ËçûÇ›(6bitñ⁄)
+008E   1303           00240                 BCF     STATUS,RP1
+008F   1283           00241                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+                      00242 ;********RBPORTäÑÇËçûÇ›ê›íË***************
+                      00243         ;       BSF             INTCON,RBIE                             ;RB É|Å[ÉgïœâªäÑÇËçûÇ›Çégópâ¬î\
+                            Ç…Ç∑ÇÈ(3bitñ⁄)
+0090   118B           00244                 BCF             INTCON,RBIE                             ;RB É|Å[ÉgïœâªäÑÇËçûÇ›Çégópïsâ¬
+                            Ç…Ç∑ÇÈ(3bitñ⁄)
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00245 ;********UARTëóêMäÑÇËçûÇ›ê›íË************
+0091   1303           00246                 BCF     STATUS,RP1              ;ÉoÉìÉNÇPÇ…
+0092   1683           00247                 BSF     STATUS,RP0              ;
+                      00248                 ;BSF            PIE1,TXIE                               ;USART ëóêMäÑÇËçûÇ›Çégópâ¬î\Ç…Ç
+                            ∑ÇÈ
+0093   120C           00249                 BCF             PIE1,TXIE                               ;USART ëóêMäÑÇËçûÇ›Çî≠ê∂ïsâ¬Ç…Ç
+                            ∑ÇÈ
+0094   1303           00250                 BCF     STATUS,RP1
+0095   1283           00251                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+                      00252 ;********UARTéÛêMäÑÇËçûÇ›ê›íË************
+0096   1303           00253                 BCF     STATUS,RP1              ;ÉoÉìÉNÇPÇ…
+0097   1683           00254                 BSF     STATUS,RP0              ;
+                      00255         ;       BSF             PIE1,RCIE                       ;USART éÛêMäÑÇËçûÇ›Çégópâ¬î\Ç…Ç∑ÇÈ
+0098   128C           00256                 BCF             PIE1,RCIE                               ;USART éÛêMäÑÇËçûÇ›Çî≠ê∂ïsâ¬Ç…Ç
+                            ∑ÇÈ
+0099   1303           00257                 BCF     STATUS,RP1
+009A   1283           00258                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+                      00259 ;********ADïœä∑äÑÇËçûÇ›ê›íË**************
+009B   1303           00260                 BCF     STATUS,RP1              ;ÉoÉìÉNÇPÇ…
+009C   1683           00261                 BSF     STATUS,RP0              ;
+                      00262                 ;BSF            PIE1,ADIE                       ;AD ÉRÉìÉoÅ[É^äÑÇËçûÇ›Çégópâ¬î\Ç…Ç∑ÇÈ
+009D   130C           00263                 BCF             PIE1,ADIE                       ;AD ÉRÉìÉoÅ[É^äÑÇËçûÇ›Çî≠ê∂ïsâ¬Ç…Ç∑ÇÈ
+009E   1303           00264                 BCF     STATUS,RP1
+009F   1283           00265                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+                      00266 ;********************PSP(ÉpÉâÉåÉãÉXÉåÅ[ÉuÉ|Å[ÉgÉäÅ[ÉhÅ^ÉâÉCÉgäÑÇËçûÇ›)äÑÇËçûÇ›ê›íË*
+00A0   1303           00267                 BCF     STATUS,RP1              ;ÉoÉìÉNÇPÇ…
+00A1   1683           00268                 BSF     STATUS,RP0              ;
+                      00269                 ;BSF            PIE1,PSPIE                      ;PSP ÉäÅ[ÉhÅ^ÉâÉCÉgäÑÇËçûÇ›Çégópâ¬î\Ç…Ç
+                            ∑ÇÈ
+00A2   138C           00270                 BCF             PIE1,PSPIE                              ;PSP ÉäÅ[ÉhÅ^ÉâÉCÉgäÑÇËçûÇ›Çî≠ê
+                            ∂ïsâ¬Ç…Ç∑ÇÈ
+00A3   1303           00271                 BCF     STATUS,RP1
+00A4   1283           00272                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+                      00273 ;*********ÉÅÉCÉìä÷êî****************
+00A5   1303           00274                 BCF     STATUS,RP1
+00A6   1283           00275                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+                      00276                 
+00A7   300A           00277                 MOVLW   '\n'
+00A8   0099           00278                 MOVWF   TXREG                   ;ëóêM
+00A9   2???           00279                 CALL    TX_CHEACK
+00AA   2???           00280                 CALL    TX_CHEACK
+00AB   3053           00281                 MOVLW   'S'
+00AC   0099           00282                 MOVWF   TXREG                   ;ëóêM
+00AD   2???           00283                 CALL    TX_CHEACK
+00AE   3054           00284                 MOVLW   'T'
+00AF   0099           00285                 MOVWF   TXREG                   ;ëóêM
+00B0   2???           00286                 CALL    TX_CHEACK
+00B1   3041           00287                 MOVLW   'A'
+00B2   0099           00288                 MOVWF   TXREG                   ;ëóêM
+00B3   2???           00289                 CALL    TX_CHEACK
+00B4   3052           00290                 MOVLW   'R'
+00B5   0099           00291                 MOVWF   TXREG                   ;ëóêM
+00B6   2???           00292                 CALL    TX_CHEACK
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00B7   3054           00293                 MOVLW   'T'
+00B8   0099           00294                 MOVWF   TXREG                   ;ëóêM
+00B9   300D           00295                 MOVLW   '\r'
+00BA   0099           00296                 MOVWF   TXREG                   ;ëóêM
+                      00297                 
+00BB   178B           00298                 BSF             INTCON,GIE                              ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉ
+                            bÉg(7bitñ⁄)Çãñâ¬
+00BC   158B           00299                 BSF             INTCON,RBIE                             ;RB É|Å[ÉgïœâªäÑÇËçûÇ›Çégópâ¬î\
+                            Ç…Ç∑ÇÈ(3bitñ⁄)
+                      00300                 
+00BD                  00301 MAINLOOP                                                
+00BD   1587           00302                 BSF             PORTC,RC3
+00BE   0000           00303                 NOP
+00BF   2???           00304                 GOTO    MAINLOOP
+                      00305 ;*****ëóêMäÆóπë“ÇøÉãÅ[ÉvÉãÅ[É`Éì******
+                      00306 
+00C0                  00307 TX_CHEACK
+00C0   1303           00308                 BCF     STATUS,RP1              ;Ç±ÇÃ2Ç¬Ç≈ÉoÉìÉNÇPÇ…
+00C1   1683           00309                 BSF     STATUS,RP0              ;êÿÇËë÷Ç¶
+                      00310 
+00C2                  00311 TXLOOP          
+00C2   1C98           00312                 BTFSS   TXSTA,TRMT              ;ëóêMÉoÉbÉtÉ@Ç™ãÛÇ©ÅH
+00C3   2???           00313                 GOTO    TXLOOP
+                      00314                 
+00C4   1303           00315                 BCF     STATUS,RP1
+00C5   1283           00316                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+00C6   0008           00317                 RETURN
+                      00318 ;*****delayÉãÅ[É`Éì*********/
+                      00319                 
+00C7                  00320 DELAY_100US                                             ;ÉTÉCÉNÉã
+00C7   30A5           00321                 MOVLW   D'165'                  ;1
+00C8   00A2           00322                 MOVWF   COUNT01                 ;1
+00C9                  00323 LPLPLPLP
+00C9   0BA2           00324                 DECFSZ  COUNT01,F               ;1*164+2
+00CA   2???           00325                 GOTO    LPLPLPLP                ;2*164
+00CB   0008           00326                 RETURN                                  ;2
+                      00327                                                                 ;åv500 = 100usc
+                      00328                                                                 
+                      00329 ;*****delayÉãÅ[É`Éì*********
+                      00330                 
+00CC                  00331 DELAY_595US                                             ;ÉTÉCÉNÉã
+00CC   2???           00332                 CALL    DELAY_100US
+00CD   2???           00333                 CALL    DELAY_100US
+00CE   2???           00334                 CALL    DELAY_100US
+00CF   2???           00335                 CALL    DELAY_100US
+00D0   2???           00336                 CALL    DELAY_100US
+00D1   1303           00337                 BCF     STATUS,RP1
+00D2   1283           00338                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+00D3   309C           00339                 MOVLW   D'156'                  ;1
+00D4   00A2           00340                 MOVWF   COUNT01                 ;1
+00D5                  00341 LLBAL
+00D5   0BA2           00342                 DECFSZ  COUNT01,F               ;1*155+2
+00D6   2???           00343                 GOTO    LLBAL                   ;2*155
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00D7   0008           00344                 RETURN                                  ;2
+                      00345                                                                 ;åv475 = 95usc + 500sec
+                      00346                                                                 ;          = 595usec
+                      00347                                                                 
+                      00348 ;*****delayÉãÅ[É`Éì*********
+00D8                  00349 NOP_10
+00D8   0000           00350                 NOP                                             ;1
+00D9   0000           00351                 NOP                                             ;1
+00DA   0000           00352                 NOP                                             ;1
+00DB   0000           00353                 NOP                                             ;1
+00DC   0000           00354                 NOP                                             ;1
+00DD   0000           00355                 NOP                                             ;1
+00DE   0008           00356                 RETURN                                  ;2
+                      00357                                                                 ;åv10
+                      00358 
+                      00359 ;************************************
+                      00360         ;RP1    RP0
+                      00361         ; 0             0 Å® Bank0
+                      00362         ; 0             1 Å® Bank1
+                      00363         ; 1             0 Å® Bank2
+                      00364         ; 1             1 Å® Bank3
+                      00365 ;************************************
+                      00366 
+3FB2                  00367                 END
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+AD_ISR                            00000067
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+BR_END                            00000020
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CIS                               00000003
+CKE                               00000006
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+COUNT01                           00000022
+COUNT02                           00000023
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+DATA_1BYRE                        00000024
+DATA_ADDRESS                      00000005
+DC                                00000001
+DELAY_100US                       000000C7
+DELAY_595US                       000000CC
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+INIT                              0000006F
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTERRUPT                         00000004
+INTF                              00000001
+IRP                               00000007
+LLBAL                             000000D5
+LPLPLPLP                          000000C9
+MAINLOOP                          000000BD
+NOP_10                            000000D8
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+P                                 00000004
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE 12
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PSPIF                             00000007
+PSPMODE                           00000004
+PSP_ISR                           0000006B
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB0_ISR                           00000035
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB4_ISR                           00000031
+RB5                               00000005
+RB5_CMP                           0000001A
+RB5_ISR                           00000032
+RB6                               00000006
+RB6_CMP                           0000001C
+RB6_ISR                           00000033
+RB7                               00000007
+RB7_CMP                           0000001E
+RB7_ISR                           00000034
+RBIE                              00000003
+RBIF                              00000000
+RBPORT_ISR                        00000017
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE 13
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+R_W                               00000002
+S                                 00000003
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE 14
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+MPASM  5.40                      WARIKOMI.ASM   3-9-2013  15:54:46         PAGE 15
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXLOOP                            000000C2
+TXREG                             00000019
+TXSTA                             00000098
+TX_CHEACK                         000000C0
+UA                                00000001
+UART_RECIVE_ISR                   00000046
+UART_SEND_ISR                     00000037
+W                                 00000000
+WCOL                              00000007
+WORK1                             00000020
+WORK2                             00000021
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+__DEBUG                           1
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     0 reported,    13 suppressed
+
+

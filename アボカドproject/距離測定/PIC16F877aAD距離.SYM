@@ -1,0 +1,152 @@
+005     port_a
+006     port_b
+007     port_c
+008     port_d
+008     PSP_DATA
+009     port_e
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01B-01C CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     strtok.save
+021     @TRIS_C
+022-023 main.adc
+024-027 main.DDD
+028-02B calculate_distance.calcu_data
+028-029 @ITOF.P1
+028     main.@SCRATCH
+029-02C @PRINTF_F_9600_62_63.P1
+029-02A @PRINTF_LD_9600_62_63.P2
+029     @delay_ms1.P3
+02B     @PRINTF_LD_9600_62_63.@SCRATCH
+02C-02F calculate_distance.x
+02C     @PRINTF_LD_9600_62_63.@SCRATCH
+02D-030 @PRINTF_F_9600_62_63.P1
+02D     @PRINTF_LD_9600_62_63.@SCRATCH
+02E     @PRINTF_LD_9600_62_63.@SCRATCH
+02F     @PRINTF_LD_9600_62_63.@SCRATCH
+030-033 calculate_distance.y
+030     @PRINTF_LD_9600_62_63.@SCRATCH
+031     @PRINTF_F_9600_62_63.@SCRATCH
+032     @PRINTF_F_9600_62_63.@SCRATCH
+033     @PRINTF_F_9600_62_63.@SCRATCH
+034-037 calculate_distance.ans
+034     @PRINTF_F_9600_62_63.@SCRATCH
+035     @PRINTF_F_9600_62_63.@SCRATCH
+036     @PRINTF_F_9600_62_63.@SCRATCH
+037     @PRINTF_F_9600_62_63.@SCRATCH
+038-03B pow.x
+038     @PRINTF_F_9600_62_63.@SCRATCH
+039     @PRINTF_F_9600_62_63.@SCRATCH
+03A     @PRINTF_F_9600_62_63.@SCRATCH
+03C-03F pow.y
+040     pow.@SCRATCH
+041     pow.@SCRATCH
+042     pow.@SCRATCH
+043     pow.@SCRATCH
+044-047 log.x
+044     pow.@SCRATCH
+045-048 exp.x
+048-04B log.y
+049-04C exp.y
+04C-04F log.res
+04D-050 exp.res
+050-053 log.r
+051-054 exp.r
+054-057 log.y2
+055     exp.n
+056.0   exp.s
+057-05A @SFTOI.P1
+057     exp.@SCRATCH
+058     log.n
+058     exp.@SCRATCH
+059-05C @MULFF.P1
+059-05C @FLT.P2
+059     exp.@SCRATCH
+059     log.@SCRATCH
+05A     exp.@SCRATCH
+05A     log.@SCRATCH
+05B-05C @SITOF.P1
+05B     log.@SCRATCH
+05C     log.@SCRATCH
+05D-060 @MULFF.P1
+05D-060 @ADDFF.P2
+05D-060 @FLT.P3
+05D-060 @DIVFF.P4
+061-064 @DIVFF.P1
+061-064 @ADDFF.P2
+061     @FLT.@SCRATCH
+061     @MULFF.@SCRATCH
+062     @FLT.@SCRATCH
+062     @MULFF.@SCRATCH
+063     @MULFF.@SCRATCH
+064     @MULFF.@SCRATCH
+065     @DIVFF.@SCRATCH
+065     @ADDFF.@SCRATCH
+065     @MULFF.@SCRATCH
+066     @DIVFF.@SCRATCH
+066     @ADDFF.@SCRATCH
+067     @DIVFF.@SCRATCH
+067     @ADDFF.@SCRATCH
+068     @DIVFF.@SCRATCH
+068     @ADDFF.@SCRATCH
+069     @DIVFF.@SCRATCH
+069     @ADDFF.@SCRATCH
+06A     @DIVFF.@SCRATCH
+06A     @ADDFF.@SCRATCH
+06B     @ADDFF.@SCRATCH
+06C     @ADDFF.@SCRATCH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+
+0270  @FLT
+0718  @SFTOI
+0058  @ITOF
+03F1  @DIVFF
+02AF  @ADDFF
+0078  @MULFF
+0800  exp
+04BD  @SITOF
+04E5  log
+0A1C  pow
+0043  @delay_ms1
+0AC6  main
+0004  @const10818
+0012  @const10828
+00EF  @PRINTF_F_9600_62_63
+0021  @const10897
+073A  @PRINTF_LD_9600_62_63
+002E  @const10919
+09FC  calculate_distance
+0AC6  @cinit
+
+Project Files:
+    D:\Erectric Enginiaring\PIC-project\アボカドproject\距離測定\PIC16F877aAD距離.c
+    C:\PROGRA~1\PICC\devices\16F877a.h
+    C:\PROGRA~1\PICC\drivers\stdio.h
+    C:\PROGRA~1\PICC\drivers\string.h
+    C:\PROGRA~1\PICC\drivers\stddef.h
+    C:\PROGRA~1\PICC\drivers\ctype.h
+    C:\PROGRA~1\PICC\drivers\math.h
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   8
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      D:\Erectric Enginiaring\PIC-project\アボカドproject\距離測定\PIC16F877aAD距離.err
+    INHX8:       D:\Erectric Enginiaring\PIC-project\アボカドproject\距離測定\PIC16F877aAD距離.HEX
+    Symbols:     D:\Erectric Enginiaring\PIC-project\アボカドproject\距離測定\PIC16F877aAD距離.SYM
+    List:        D:\Erectric Enginiaring\PIC-project\アボカドproject\距離測定\PIC16F877aAD距離.LST
+    Debug/eCOD:  D:\Erectric Enginiaring\PIC-project\アボカドproject\距離測定\PIC16F877aAD距離.cod

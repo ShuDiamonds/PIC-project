@@ -1,0 +1,32 @@
+[PROJECT]
+Target=compare.HEX
+Development_Mode=2
+Processor=0x0F88
+ToolSuite=CCS
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=compare.c;
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[compare.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=C:\Users\FMV\Dropbox\PIC-PR~1\PICCCS~1\サーボ~2\compare.c
+
+[Windows]
+0=0000 C:\Users\FMV\Dropbox\PIC-PR~1\PICCCS~1\サーボ~2\compare.c 0 0 796 451 3 0
+

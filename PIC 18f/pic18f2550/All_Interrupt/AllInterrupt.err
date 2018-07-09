@@ -1,0 +1,7 @@
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\All_Interrupt\AllInterrupt.c 202 : location PROD specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\All_Interrupt\AllInterrupt.c 202 : location WREG specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\All_Interrupt\AllInterrupt.c 202 : location BSR specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\All_Interrupt\AllInterrupt.c 202 : location STATUS specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\All_Interrupt\AllInterrupt.c 203 : location PROD specified in the interrupt save list is redundant
+Warning[2066] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\All_Interrupt\AllInterrupt.c 187 : type qualifier mismatch in assignment
+Warning[2054] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\All_Interrupt\AllInterrupt.c 381 : suspicious pointer conversion

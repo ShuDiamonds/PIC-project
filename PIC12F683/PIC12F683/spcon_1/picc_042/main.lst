@@ -1,0 +1,1339 @@
+
+
+HI-TECH Software PICC Macro Assembler V9.60
+                                                      Wed Jun 27 14:06:49 2007
+
+
+     1                           	processor	16F690
+     2                           	opt	pw 79
+     3                           	psect	rdata_0,global,class=BANK0,space=1,delta
+      +                          =1
+     4                           	psect	idata_0,global,class=CODE,delta=2
+     5                           	psect	text0,local,class=CODE,delta=2
+     6                           	psect	text1,local,class=CODE,delta=2
+     7                           	psect	temp,global,ovrld,class=BANK0,space=1,de
+      +                          lta=1
+     8  0000                     
+     9  0000                     
+    10  0000                     
+    11  0000                     
+    12  0000                     
+    13  0000                     
+    14  0000                     
+    15  0000                     
+    16  0000                     
+    17  0000                     
+    18                           
+    19                           	psect	rdata_0
+    20  003B                     _ver_buf
+                     _ver_buf
+    21  003B                     	ds	1
+                     	ds	1
+    22  003C                     	ds	1
+                     	ds	1
+    23  003D                     	ds	1
+                     	ds	1
+    24  003E                     	ds	1
+                     	ds	1
+    25  003F                     	ds	1
+                     	ds	1
+    26  0040                     	ds	1
+                     	ds	1
+    27  0041                     	ds	1
+                     	ds	1
+    28  0042                     	ds	1
+                     	ds	1
+    29  0043                     	ds	1
+                     	ds	1
+    30  0044                     	ds	1
+                     	ds	1
+    31  0045                     	ds	1
+                     	ds	1
+    32  0046                     	ds	1
+                     	ds	1
+    33  0047                     	ds	1
+                     	ds	1
+    34  0048                     	ds	1
+                     	ds	1
+    35  0049                     	ds	1
+                     	ds	1
+    36  004A                     	ds	1
+                     	ds	1
+    37  004B                     	ds	1
+                     	ds	1
+    38  004C                     	ds	1
+                     	ds	1
+    39  004D                     	ds	1
+                     	ds	1
+    40  004E                     	ds	1
+                     	ds	1
+    41  004F                     	ds	1
+                     	ds	1
+    42  0050                     	ds	1
+                     	ds	1
+    43  0051                     	ds	1
+                     	ds	1
+    44  0052                     	ds	1
+                     	ds	1
+    45  0053                     	ds	1
+                     	ds	1
+    46  0054                     	ds	7
+    47                           
+    48                           	psect	idata_0
+    49  07E0  3453               	retlw	83
+    50  07E1  3470               	retlw	112
+    51  07E2  3465               	retlw	101
+    52  07E3  3465               	retlw	101
+    53  07E4  3464               	retlw	100
+    54  07E5  3420               	retlw	32
+    55  07E6  3443               	retlw	67
+    56  07E7  346F               	retlw	111
+    57  07E8  346E               	retlw	110
+    58  07E9  3474               	retlw	116
+    59  07EA  3472               	retlw	114
+    60  07EB  346F               	retlw	111
+    61  07EC  346C               	retlw	108
+    62  07ED  346C               	retlw	108
+    63  07EE  3465               	retlw	101
+    64  07EF  3472               	retlw	114
+    65  07F0  3420               	retlw	32
+    66  07F1  3456               	retlw	86
+    67  07F2  3465               	retlw	101
+    68  07F3  3472               	retlw	114
+    69  07F4  3430               	retlw	48
+    70  07F5  342E               	retlw	46
+    71  07F6  3434               	retlw	52
+    72  07F7  3432               	retlw	50
+    73  07F8  3400               	retlw	0
+    74  07F9  3400               	retlw	0
+    75  07FA  3400               	retlw	0
+    76  07FB  3400               	retlw	0
+    77  07FC  3400               	retlw	0
+    78  07FD  3400               	retlw	0
+    79  07FE  3400               	retlw	0
+    80  07FF  3400               	retlw	0
+    81                           
+    82                           	psect	text0
+    83  063C                     _main
+    84                           ;	_gate_old assigned to ?a_main+0
+    85  0000                     _main$gate_old	set	?a_main
+    86                           ;	_di_bit assigned to ?a_main+1
+    87  0000                     _main$di_bit	set	?a_main+1
+    88                           ;	_pls_bit assigned to ?a_main+2
+    89  0000                     _main$pls_bit	set	?a_main+2
+    90                           ;	_sw_bit assigned to ?a_main+3
+    91  0000                     _main$sw_bit	set	?a_main+3
+    92                           ;	_pnon_cnt assigned to ?a_main+4
+    93  0000                     _main$pnon_cnt	set	?a_main+4
+    94                           ;	_di_his assigned to ?a_main+5
+    95  0000                     _main$di_his	set	?a_main+5
+    96                           ;	_mmode assigned to ?a_main+6
+    97  0000                     _main$mmode	set	?a_main+6
+    98                           ;	_pls_his assigned to ?a_main+7
+    99  0000                     _main$pls_his	set	?a_main+7
+   100                           ;	_prg_cnt assigned to ?a_main+8
+   101  0000                     _main$prg_cnt	set	?a_main+8
+   102                           ;	_sw_his assigned to ?a_main+9
+   103  0000                     _main$sw_his	set	?a_main+9
+   104                           ;	_dmode assigned to ?a_main+10
+   105  0000                     _main$dmode	set	?a_main+10
+   106                           ;	_pwmdo assigned to ?a_main+11
+   107  0000                     _main$pwmdo	set	?a_main+11
+   108                           ;	_zoffcnt assigned to ?a_main+12
+   109  0000                     _main$zoffcnt	set	?a_main+12
+   110                           ;	_power assigned to ?a_main+13
+   111  0000                     _main$power	set	?a_main+13
+   112                           ;	_pwr assigned to ?a_main+14
+   113  0000                     _main$pwr	set	?a_main+14
+   114                           ;	_wk_int assigned to ?a_main+15
+   115  0000                     _main$wk_int	set	?a_main+15
+   116                           ;	_drive_data assigned to ?a_main+17
+   117  0000                     _main$drive_data	set	?a_main+17
+   118                           ;	_time_cnt assigned to ?a_main+19
+   119  0000                     _main$time_cnt	set	?a_main+19
+   120                           ;	_pulse_data assigned to ?a_main+21
+   121  0000                     _main$pulse_data	set	?a_main+21
+   122                           ;	_motor_data assigned to ?a_main+23
+   123  0000                     _main$motor_data	set	?a_main+23
+   124                           ;main.c: 47: main()
+   125  063C  2624               	call	_sys_init
+   126                           ;main.c: 85: pulse_init() ;
+   127  063D  25EC               	call	_pulse_init
+   128                           ;main.c: 86: motor_init() ;
+   129  063E  25FF               	call	_motor_init
+   130                           ;main.c: 91: pls_his = 0x07 , pls_bit =1 ;
+   131  063F  3007               	movlw	7
+   132  0640  00A7               	movwf	?a_main+7
+   133  0641  01A2               	clrf	?a_main+2
+   134  0642  0AA2               	incf	?a_main+2
+   135                           ;main.c: 92: sw_his = 0x07 , sw_bit = 1 ;
+   136  0643  00A9               	movwf	?a_main+9
+   137  0644  01A3               	clrf	?a_main+3
+   138  0645  0AA3               	incf	?a_main+3
+   139                           ;main.c: 93: di_his = 0x07 , di_bit = 1 ;
+   140  0646  00A5               	movwf	?a_main+5
+   141  0647  01A1               	clrf	?a_main+1
+   142  0648  0AA1               	incf	?a_main+1
+   143                           ;main.c: 94: gate_old = di_bit ;
+   144  0649  01A0               	clrf	?a_main
+   145  064A  0AA0               	incf	?a_main
+   146                           ;main.c: 96: time_cnt = 0 ;
+   147  064B  01B3               	clrf	?a_main+19
+   148  064C  01B4               	clrf	?a_main+20
+   149                           ;main.c: 97: pnon_cnt = 5 ;
+   150  064D  3005               	movlw	5
+   151  064E  00A4               	movwf	?a_main+4
+   152                           ;main.c: 98: pulse_data = 3000 ;
+   153  064F  30B8               	movlw	184
+   154  0650  00B5               	movwf	?a_main+21
+   155  0651  300B               	movlw	11
+   156  0652  00B6               	movwf	?a_main+22
+   157                           ;main.c: 99: drive_data = 0 ;
+   158  0653  01B1               	clrf	?a_main+17
+   159  0654  01B2               	clrf	?a_main+18
+   160                           ;main.c: 100: motor_data = 0 ;
+   161  0655  01B7               	clrf	?a_main+23
+   162  0656  01B8               	clrf	?a_main+24
+   163                           ;main.c: 101: zoffcnt = 30 ;
+   164  0657  301E               	movlw	30
+   165  0658  00AC               	movwf	?a_main+12
+   166                           ;main.c: 102: dmode = mmode = 1 ;
+   167  0659  3001               	movlw	1
+   168  065A  00A6               	movwf	?a_main+6
+   169  065B  00AA               	movwf	?a_main+10
+   170                           ;main.c: 103: pwmdo = 0x00 ;
+   171  065C  01AB               	clrf	?a_main+11
+   172                           ;main.c: 104: pwr = 0 ;
+   173  065D  01AE               	clrf	?a_main+14
+   174  065E                     L1
+   175                           ;main.c: 105: prg_cnt = 0 ;
+   176  065E  01A8               	clrf	?a_main+8
+   177                           ;main.c: 107: while(1){
+   178                           ;main.c: 108: while(motor_flag() != 1){
+   179  065F                     l5
+   180  065F  25F7               	call	_motor_flag
+   181  0660  3A01               	xorlw	1
+   182  0661  1D03               	btfss	3,2
+   183  0662  2E5F               	goto	l5
+   184                           ;main.c: 109: }
+   185  0663  1E05               	btfss	5,4
+   186  0664  2E6F               	goto	l8
+   187                           ;main.c: 118: pls_his = ((pls_his << 1) | 0x01)
+      +                           & 0x07 ;
+   188  0665  1403               	bsf	3,0
+   189  0666  0D27               	rlf	?a_main+7,w
+   190  0667  3907               	andlw	7
+   191  0668  00A7               	movwf	?a_main+7
+   192                           ;main.c: 119: if(pls_his == 0x07){
+   193  0669  3A07               	xorlw	7
+   194  066A  1D03               	btfss	3,2
+   195  066B  2E76               	goto	l10
+   196                           ;main.c: 120: pls_bit = 1 ;
+   197  066C  01A2               	clrf	?a_main+2
+   198  066D  0AA2               	incf	?a_main+2
+   199                           ;main.c: 121: }
+   200  066E  2E76               	goto	l10
+   201  066F                     l8
+   202                           ;main.c: 123: pls_his = ((pls_his << 1) & ~0x01
+      +                          ) & 0x07 ;
+   203  066F  0827               	movf	?a_main+7,w
+   204  0670  0727               	addwf	?a_main+7,w
+   205  0671  3906               	andlw	6
+   206  0672  00A7               	movwf	?a_main+7
+   207                           ;main.c: 124: if(pls_his == 0x00){
+   208  0673  08A7               	movf	?a_main+7
+   209  0674  1903               	btfsc	3,2
+   210                           ;main.c: 125: pls_bit = 0 ;
+   211  0675  01A2               	clrf	?a_main+2
+   212  0676                     l10
+   213                           ;main.c: 126: }
+   214  0676  1E85               	btfss	5,5
+   215  0677  2E82               	goto	l12
+   216                           ;main.c: 129: sw_his = ((sw_his << 1) | 0x01) &
+      +                           0x07 ;
+   217  0678  1403               	bsf	3,0
+   218  0679  0D29               	rlf	?a_main+9,w
+   219  067A  3907               	andlw	7
+   220  067B  00A9               	movwf	?a_main+9
+   221                           ;main.c: 130: if(sw_his == 0x07){
+   222  067C  3A07               	xorlw	7
+   223  067D  1D03               	btfss	3,2
+   224  067E  2E89               	goto	l14
+   225                           ;main.c: 131: sw_bit = 1 ;
+   226  067F  01A3               	clrf	?a_main+3
+   227  0680  0AA3               	incf	?a_main+3
+   228                           ;main.c: 132: }
+   229  0681  2E89               	goto	l14
+   230  0682                     l12
+   231                           ;main.c: 134: sw_his = ((sw_his << 1) & ~0x01) 
+      +                          & 0x07 ;
+   232  0682  0829               	movf	?a_main+9,w
+   233  0683  0729               	addwf	?a_main+9,w
+   234  0684  3906               	andlw	6
+   235  0685  00A9               	movwf	?a_main+9
+   236                           ;main.c: 135: if(sw_his == 0x00){
+   237  0686  08A9               	movf	?a_main+9
+   238  0687  1903               	btfsc	3,2
+   239                           ;main.c: 136: sw_bit = 0 ;
+   240  0688  01A3               	clrf	?a_main+3
+   241  0689                     l14
+   242                           ;main.c: 137: }
+   243  0689  1D85               	btfss	5,3
+   244  068A  2E95               	goto	l16
+   245                           ;main.c: 140: di_his = ((di_his << 1) | 0x01) &
+      +                           0x07 ;
+   246  068B  1403               	bsf	3,0
+   247  068C  0D25               	rlf	?a_main+5,w
+   248  068D  3907               	andlw	7
+   249  068E  00A5               	movwf	?a_main+5
+   250                           ;main.c: 141: if(di_his == 0x07){
+   251  068F  3A07               	xorlw	7
+   252  0690  1D03               	btfss	3,2
+   253  0691  2E9C               	goto	l18
+   254                           ;main.c: 142: di_bit = 1 ;
+   255  0692  01A1               	clrf	?a_main+1
+   256  0693  0AA1               	incf	?a_main+1
+   257                           ;main.c: 143: }
+   258  0694  2E9C               	goto	l18
+   259  0695                     l16
+   260                           ;main.c: 145: di_his = ((di_his << 1) & ~0x01) 
+      +                          & 0x07 ;
+   261  0695  0825               	movf	?a_main+5,w
+   262  0696  0725               	addwf	?a_main+5,w
+   263  0697  3906               	andlw	6
+   264  0698  00A5               	movwf	?a_main+5
+   265                           ;main.c: 146: if(di_his == 0x00){
+   266  0699  08A5               	movf	?a_main+5
+   267  069A  1903               	btfsc	3,2
+   268                           ;main.c: 147: di_bit = 0 ;
+   269  069B  01A1               	clrf	?a_main+1
+   270  069C                     l18
+   271                           ;main.c: 148: }
+   272  069C  0AA8               	incf	?a_main+8
+   273                           ;main.c: 154: if(prg_cnt >= 5){
+   274  069D  3005               	movlw	5
+   275  069E  0228               	subwf	?a_main+8,w
+   276  069F  1C03               	btfss	3,0
+   277  06A0  2FD2               	goto	l22
+   278                           ;main.c: 155: prg_cnt = 1 ;
+   279  06A1  01A8               	clrf	?a_main+8
+   280  06A2  0AA8               	incf	?a_main+8
+   281                           ;main.c: 156: }
+   282  06A3  2FD2               	goto	l22
+   283  06A4                     l23
+   284                           ;main.c: 161: case 1 :{
+   285                           ;main.c: 162: if((gate_old != 0) && (pls_bit ==
+      +                           0)){
+   286  06A4  08A0               	movf	?a_main
+   287  06A5  1903               	btfsc	3,2
+   288  06A6  2ECC               	goto	l24
+   289  06A7  08A2               	movf	?a_main+2
+   290  06A8  1D03               	btfss	3,2
+   291  06A9  2ECC               	goto	l24
+   292                           ;main.c: 163: time_cnt = 0 ;
+   293  06AA  01B3               	clrf	?a_main+19
+   294  06AB  01B4               	clrf	?a_main+20
+   295                           ;main.c: 164: if(pnon_cnt == 0){
+   296  06AC  08A4               	movf	?a_main+4
+   297  06AD  1D03               	btfss	3,2
+   298  06AE  2EC9               	goto	l25
+   299                           ;main.c: 165: pulse_data = pulse_read() ;
+   300  06AF  2611               	call	_pulse_read
+   301  06B0  087D               	movf	btemp,w
+   302  06B1  00B5               	movwf	?a_main+21
+   303  06B2  087E               	movf	btemp+1,w
+   304  06B3  00B6               	movwf	?a_main+22
+   305                           ;main.c: 166: if((pulse_data<=1000)||(5000<=pul
+      +                          se_data)){
+   306  06B4  3003               	movlw	3
+   307  06B5  0236               	subwf	?a_main+22,w
+   308  06B6  30E9               	movlw	233
+   309  06B7  1903               	btfsc	3,2
+   310  06B8  0235               	subwf	?a_main+21,w
+   311  06B9  1C03               	btfss	3,0
+   312  06BA  2EC2               	goto	u180
+   313  06BB  3013               	movlw	19
+   314  06BC  0236               	subwf	?a_main+22,w
+   315  06BD  3088               	movlw	136
+   316  06BE  1903               	btfsc	3,2
+   317  06BF  0235               	subwf	?a_main+21,w
+   318  06C0  1C03               	btfss	3,0
+   319  06C1  2EDF               	goto	l28
+   320  06C2                     u180
+   321                           ;main.c: 167: pulse_data = 3000 ;
+   322  06C2  30B8               	movlw	184
+   323  06C3  00B5               	movwf	?a_main+21
+   324  06C4  300B               	movlw	11
+   325  06C5  00B6               	movwf	?a_main+22
+   326                           ;main.c: 168: pnon_cnt = 2 ;
+   327  06C6  3002               	movlw	2
+   328  06C7  00A4               	movwf	?a_main+4
+   329                           ;main.c: 169: }
+   330  06C8  2EDF               	goto	l28
+   331  06C9                     l25
+   332                           ;main.c: 171: pnon_cnt-- ;
+   333  06C9  03A4               	decf	?a_main+4
+   334                           ;main.c: 172: pulse_read() ;
+   335  06CA  2611               	call	_pulse_read
+   336                           ;main.c: 173: }
+   337  06CB  2EDF               	goto	l28
+   338  06CC                     l24
+   339                           ;main.c: 175: time_cnt++ ;
+   340  06CC  0AB3               	incf	?a_main+19
+   341  06CD  1903               	btfsc	3,2
+   342  06CE  0AB4               	incf	?a_main+20
+   343                           ;main.c: 176: if(time_cnt > 8333){
+   344  06CF  3020               	movlw	32
+   345  06D0  0234               	subwf	?a_main+20,w
+   346  06D1  308E               	movlw	142
+   347  06D2  1903               	btfsc	3,2
+   348  06D3  0233               	subwf	?a_main+19,w
+   349  06D4  1C03               	btfss	3,0
+   350  06D5  2EDF               	goto	l28
+   351                           ;main.c: 177: pulse_read() ;
+   352  06D6  2611               	call	_pulse_read
+   353                           ;main.c: 178: pulse_data = 3000 ;
+   354  06D7  30B8               	movlw	184
+   355  06D8  00B5               	movwf	?a_main+21
+   356  06D9  300B               	movlw	11
+   357  06DA  00B6               	movwf	?a_main+22
+   358                           ;main.c: 179: pnon_cnt = 2 ;
+   359  06DB  3002               	movlw	2
+   360  06DC  00A4               	movwf	?a_main+4
+   361                           ;main.c: 180: time_cnt = 0 ;
+   362  06DD  01B3               	clrf	?a_main+19
+   363  06DE  01B4               	clrf	?a_main+20
+   364  06DF                     l28
+   365                           ;main.c: 181: }
+   366  06DF  0822               	movf	?a_main+2,w
+   367  06E0  00A0               	movwf	?a_main
+   368                           ;main.c: 184: }break ;
+   369  06E1  2E5F               	goto	l5
+   370  06E2                     l30
+   371                           ;main.c: 188: case 2 :{
+   372                           ;main.c: 189: if(((sw_bit==1)&&(di_bit==1)) || 
+      +                          ((sw_bit==0)&&(di_bit==0))){
+   373  06E2  0B23               	decfsz	?a_main+3,w
+   374  06E3  2EE7               	goto	u221
+   375  06E4  0B21               	decfsz	?a_main+1,w
+   376  06E5  2EE7               	goto	u221
+   377  06E6  2EED               	goto	u260
+   378  06E7                     u221
+   379  06E7  08A3               	movf	?a_main+3
+   380  06E8  1D03               	btfss	3,2
+   381  06E9  2F34               	goto	l31
+   382  06EA  08A1               	movf	?a_main+1
+   383  06EB  1D03               	btfss	3,2
+   384  06EC  2F34               	goto	l31
+   385  06ED                     u260
+   386                           ;main.c: 190: wk_int = 3000 - pulse_data ;
+   387  06ED  30B8               	movlw	184
+   388  06EE  00FD               	movwf	btemp
+   389  06EF  300B               	movlw	11
+   390  06F0  00FE               	movwf	btemp+1
+   391  06F1  0835               	movf	?a_main+21,w
+   392  06F2  027D               	subwf	btemp,w
+   393  06F3  00AF               	movwf	?a_main+15
+   394  06F4  0836               	movf	?a_main+22,w
+   395  06F5  1C03               	btfss	3,0
+   396  06F6  0A36               	incf	?a_main+22,w
+   397  06F7  027E               	subwf	btemp+1,w
+   398  06F8  00B0               	movwf	?a_main+16
+   399                           ;main.c: 192: if((wk_int>drive_data+3)||(wk_int
+      +                          <drive_data-3)){
+   400  06F9  0832               	movf	?a_main+18,w
+   401  06FA  00FE               	movwf	btemp+1
+   402  06FB  0831               	movf	?a_main+17,w
+   403  06FC  00FD               	movwf	btemp
+   404  06FD  3003               	movlw	3
+   405  06FE  07FD               	addwf	btemp
+   406  06FF  1803               	btfsc	3,0
+   407  0700  0AFE               	incf	btemp+1
+   408  0701  087E               	movf	btemp+1,w
+   409  0702  3A80               	xorlw	128
+   410  0703  00FF               	movwf	btemp+2
+   411  0704  0830               	movf	?a_main+16,w
+   412  0705  3A80               	xorlw	128
+   413  0706  027F               	subwf	btemp+2,w
+   414  0707  1D03               	btfss	3,2
+   415  0708  2F0B               	goto	u275
+   416  0709  082F               	movf	?a_main+15,w
+   417  070A  027D               	subwf	btemp,w
+   418  070B                     u275
+   419  070B  1283               	bcf	3,5
+   420  070C  1303               	bcf	3,6	;carry unused
+   421  070D  1C03               	btfss	3,0
+   422  070E  2F25               	goto	L5
+   423  070F  0832               	movf	?a_main+18,w
+   424  0710  00FE               	movwf	btemp+1
+   425  0711  0831               	movf	?a_main+17,w
+   426  0712  00FD               	movwf	btemp
+   427  0713  30FD               	movlw	253
+   428  0714  07FD               	addwf	btemp
+   429  0715  1803               	btfsc	3,0
+   430  0716  0AFE               	incf	btemp+1
+   431  0717  30FF               	movlw	255
+   432  0718  07FE               	addwf	btemp+1
+   433  0719  0830               	movf	?a_main+16,w
+   434  071A  3A80               	xorlw	128
+   435  071B  00FF               	movwf	btemp+2
+   436  071C  087E               	movf	btemp+1,w
+   437  071D  3A80               	xorlw	128
+   438  071E  027F               	subwf	btemp+2,w
+   439  071F  1D03               	btfss	3,2
+   440  0720  2F23               	goto	u285
+   441  0721  087D               	movf	btemp,w
+   442  0722  022F               	subwf	?a_main+15,w
+   443  0723                     u285
+   444  0723  1803               	btfsc	3,0
+   445  0724  2E5F               	goto	l5
+   446                           ;main.c: 193: drive_data = (wk_int + 2) & 0xfff
+      +                          c ;
+   447  0725                     L5
+   448  0725  0830               	movf	?a_main+16,w
+   449  0726  00FE               	movwf	btemp+1
+   450  0727  082F               	movf	?a_main+15,w
+   451  0728  00FD               	movwf	btemp
+   452  0729  3002               	movlw	2
+   453  072A  07FD               	addwf	btemp
+   454  072B  1803               	btfsc	3,0
+   455  072C  0AFE               	incf	btemp+1
+   456  072D  30FC               	movlw	252
+   457  072E  057D               	andwf	btemp,w
+   458  072F  00B1               	movwf	?a_main+17
+   459  0730  30FF               	movlw	255
+   460  0731  057E               	andwf	btemp+1,w
+   461  0732  00B2               	movwf	?a_main+18
+   462                           ;main.c: 194: }
+   463  0733  2E5F               	goto	l5
+   464  0734                     l31
+   465                           ;main.c: 196: drive_data = 0 ;
+   466  0734  01B1               	clrf	?a_main+17
+   467  0735  01B2               	clrf	?a_main+18
+   468                           ;main.c: 197: }
+   469  0736  2E5F               	goto	l5
+   470  0737                     l34
+   471                           ;main.c: 202: case 3 :{
+   472                           ;main.c: 204: motor_data = drive_data ;
+   473  0737  0831               	movf	?a_main+17,w
+   474  0738  00B7               	movwf	?a_main+23
+   475  0739  0832               	movf	?a_main+18,w
+   476  073A  00B8               	movwf	?a_main+24
+   477                           ;main.c: 205: if ( 1000 < motor_data ) {
+   478  073B  3A80               	xorlw	128
+   479  073C  3C83               	sublw	131
+   480  073D  1D03               	btfss	3,2
+   481  073E  2F41               	goto	u305
+   482  073F  0837               	movf	?a_main+23,w
+   483  0740  3CE8               	sublw	232
+   484  0741                     u305
+   485  0741  1803               	btfsc	3,0
+   486  0742  2F49               	goto	l35
+   487                           ;main.c: 206: motor_data = 1000 ;
+   488  0743  30E8               	movlw	232
+   489  0744  1283               	bcf	3,5
+   490  0745  1303               	bcf	3,6	;carry unused
+   491  0746  00B7               	movwf	?a_main+23
+   492  0747  3003               	movlw	3
+   493  0748  00B8               	movwf	?a_main+24
+   494  0749                     l35
+   495                           ;main.c: 207: }
+   496  0749  1283               	bcf	3,5
+   497  074A  1303               	bcf	3,6	;carry unused
+   498  074B  0838               	movf	?a_main+24,w
+   499  074C  3A80               	xorlw	128
+   500  074D  00FD               	movwf	btemp
+   501  074E  307C               	movlw	124
+   502  074F  027D               	subwf	btemp,w
+   503  0750  3018               	movlw	24
+   504                           ;set	bank bits (((?a_main+23)))
+   505  0751  1903               	btfsc	3,2
+   506  0752  0237               	subwf	?a_main+23,w
+   507  0753  1803               	btfsc	3,0
+   508  0754  2F59               	goto	l36
+   509                           ;main.c: 209: motor_data = -1000 ;
+   510  0755  3018               	movlw	24
+   511  0756  00B7               	movwf	?a_main+23
+   512  0757  30FC               	movlw	252
+   513  0758  00B8               	movwf	?a_main+24
+   514  0759                     l36
+   515                           ;main.c: 210: }
+   516  0759  0838               	movf	?a_main+24,w
+   517  075A  3A80               	xorlw	128
+   518  075B  3C7F               	sublw	127
+   519  075C  1D03               	btfss	3,2
+   520  075D  2F60               	goto	u325
+   521  075E  0837               	movf	?a_main+23,w
+   522  075F  3CD5               	sublw	213
+   523  0760                     u325
+   524  0760  1C03               	btfss	3,0
+   525  0761  2F6E               	goto	l37
+   526                           ;main.c: 213: dmode = 3 ;
+   527  0762  3003               	movlw	3
+   528  0763  00AA               	movwf	?a_main+10
+   529                           ;main.c: 214: power = ((-1 * motor_data) >> 2) 
+      +                          - 4 ;
+   530  0764  0838               	movf	?a_main+24,w
+   531  0765  00FE               	movwf	btemp+1
+   532  0766  0837               	movf	?a_main+23,w
+   533  0767  00FD               	movwf	btemp
+   534  0768  09FD               	comf	btemp
+   535  0769  09FE               	comf	btemp+1
+   536  076A  0AFD               	incf	btemp
+   537  076B  1903               	btfsc	3,2
+   538  076C  0AFE               	incf	btemp+1
+   539  076D  2F7E               	goto	L2
+   540                           ;main.c: 215: } else {
+   541  076E                     l37
+   542                           ;main.c: 216: if ( 43 <= motor_data ) {
+   543  076E  0838               	movf	?a_main+24,w
+   544  076F  3A80               	xorlw	128
+   545  0770  00FD               	movwf	btemp
+   546  0771  3080               	movlw	128
+   547  0772  027D               	subwf	btemp,w
+   548  0773  302B               	movlw	43
+   549                           ;set	bank bits for (((?a_main+23)))
+   550  0774  1903               	btfsc	3,2
+   551  0775  0237               	subwf	?a_main+23,w
+   552  0776  1C03               	btfss	3,0
+   553  0777  2F88               	goto	l39
+   554                           ;main.c: 217: dmode = 2 ;
+   555  0778  3002               	movlw	2
+   556  0779  00AA               	movwf	?a_main+10
+   557                           ;main.c: 218: power = (motor_data >> 2) - 4 ;
+   558  077A  0838               	movf	?a_main+24,w
+   559  077B  00FE               	movwf	btemp+1
+   560  077C  0837               	movf	?a_main+23,w
+   561  077D  00FD               	movwf	btemp
+   562  077E                     L2
+   563  077E  0D7E               	rlf	btemp+1,w
+   564  077F  0CFE               	rrf	btemp+1
+   565  0780  0CFD               	rrf	btemp
+   566  0781  0D7E               	rlf	btemp+1,w
+   567  0782  0CFE               	rrf	btemp+1
+   568  0783  0CFD               	rrf	btemp
+   569  0784  087D               	movf	btemp,w
+   570  0785  3EFC               	addlw	-4
+   571  0786  00AD               	movwf	?a_main+13
+   572                           ;main.c: 219: } else {
+   573  0787  2E5F               	goto	l5
+   574  0788                     l39
+   575                           ;main.c: 220: dmode = 1 ;
+   576  0788  01AA               	clrf	?a_main+10
+   577  0789  0AAA               	incf	?a_main+10
+   578                           ;main.c: 221: power = 0 ;
+   579  078A  01AD               	clrf	?a_main+13
+   580                           ;main.c: 222: }
+   581  078B  2E5F               	goto	l5
+   582                           ;main.c: 229: }
+   583                           ;main.c: 234: case 4 :{
+   584                           ;main.c: 236: switch( mmode ) {
+   585  078C                     l45
+   586                           ;main.c: 237: case 1 : {
+   587                           ;main.c: 238: pwmdo = 0x00 ;
+   588  078C  01AB               	clrf	?a_main+11
+   589                           ;main.c: 239: pwr = 0 ;
+   590  078D  01AE               	clrf	?a_main+14
+   591                           ;main.c: 240: if ( zoffcnt != 0 ) {
+   592  078E  08AC               	movf	?a_main+12
+   593  078F  1903               	btfsc	3,2
+   594  0790  2F93               	goto	l46
+   595                           ;main.c: 241: zoffcnt-- ;
+   596  0791  03AC               	decf	?a_main+12
+   597                           ;main.c: 242: }else{
+   598  0792  2FCD               	goto	l43
+   599  0793                     l46
+   600                           ;main.c: 243: mmode = dmode ;
+   601  0793  082A               	movf	?a_main+10,w
+   602  0794  00A6               	movwf	?a_main+6
+   603                           ;main.c: 244: }
+   604  0795  2FCD               	goto	l43
+   605  0796                     l48
+   606                           ;main.c: 246: case 2 : {
+   607                           ;main.c: 247: pwmdo = 0x01 ;
+   608  0796  01AB               	clrf	?a_main+11
+   609  0797  0AAB               	incf	?a_main+11
+   610                           ;main.c: 248: if(dmode == 2){
+   611  0798  082A               	movf	?a_main+10,w
+   612  0799  3A02               	xorlw	2
+   613  079A  2FA4               	goto	L4
+   614                           ;main.c: 249: if(pwr < power) pwr++ ;
+   615                           ;main.c: 250: if(pwr > power) pwr-- ;
+   616                           ;main.c: 251: }else{
+   617                           ;main.c: 252: if(pwr != 0){
+   618                           ;main.c: 253: pwr-- ;
+   619                           ;main.c: 254: }else{
+   620                           ;main.c: 255: mmode = 1 ;
+   621                           ;main.c: 256: zoffcnt = 30 ;
+   622                           ;main.c: 257: }
+   623  079B                     l55
+   624                           ;main.c: 260: case 3 : {
+   625                           ;main.c: 261: pwmdo = 0x02 ;
+   626  079B  3002               	movlw	2
+   627  079C  00AB               	movwf	?a_main+11
+   628                           ;main.c: 262: if(dmode == 3){
+   629  079D  082A               	movf	?a_main+10,w
+   630  079E  3A03               	xorlw	3
+   631  079F  2FA4               	goto	L4
+   632                           ;main.c: 263: if(pwr < power) pwr++ ;
+   633                           ;main.c: 264: if(pwr > power) pwr-- ;
+   634                           ;main.c: 265: }else{
+   635                           ;main.c: 266: if(pwr != 0){
+   636                           ;main.c: 267: pwr-- ;
+   637                           ;main.c: 268: }else{
+   638                           ;main.c: 269: mmode = 1 ;
+   639                           ;main.c: 270: zoffcnt = 30 ;
+   640                           ;main.c: 271: }
+   641  07A0                     l62
+   642                           ;main.c: 274: case 4 : {
+   643                           ;main.c: 275: pwmdo = 0x03 ;
+   644  07A0  3003               	movlw	3
+   645  07A1  00AB               	movwf	?a_main+11
+   646                           ;main.c: 276: if(dmode == 4) {
+   647  07A2  082A               	movf	?a_main+10,w
+   648  07A3  3A04               	xorlw	4
+   649  07A4                     L4
+   650  07A4  1D03               	btfss	3,2
+   651  07A5  2FB0               	goto	l63
+   652                           ;main.c: 277: if(pwr < power) pwr++ ;
+   653  07A6  082D               	movf	?a_main+13,w
+   654  07A7  022E               	subwf	?a_main+14,w
+   655  07A8  1803               	btfsc	3,0
+   656  07A9  2FAB               	goto	l64
+   657  07AA  0AAE               	incf	?a_main+14
+   658  07AB                     l64
+   659                           ;main.c: 278: if(pwr > power) pwr-- ;
+   660  07AB  082E               	movf	?a_main+14,w
+   661  07AC  022D               	subwf	?a_main+13,w
+   662  07AD  1803               	btfsc	3,0
+   663  07AE  2FCD               	goto	l43
+   664  07AF  2FB3               	goto	u460
+   665                           ;main.c: 279: }else{
+   666  07B0                     l63
+   667                           ;main.c: 280: if(pwr != 0){
+   668  07B0  08AE               	movf	?a_main+14
+   669  07B1  1903               	btfsc	3,2
+   670  07B2  2FB5               	goto	l67
+   671  07B3                     u460
+   672                           ;main.c: 281: pwr-- ;
+   673  07B3  03AE               	decf	?a_main+14
+   674                           ;main.c: 282: }else{
+   675  07B4  2FCD               	goto	l43
+   676  07B5                     l67
+   677                           ;main.c: 283: mmode = 1 ;
+   678  07B5  01A6               	clrf	?a_main+6
+   679  07B6  0AA6               	incf	?a_main+6
+   680                           ;main.c: 284: zoffcnt = 30 ;
+   681  07B7  301E               	movlw	30
+   682  07B8  00AC               	movwf	?a_main+12
+   683                           ;main.c: 285: }
+   684  07B9  2FCD               	goto	l43
+   685                           ;main.c: 293: }
+   686  07BA                     l44
+   687  07BA  0826               	movf	?a_main+6,w
+   688  07BB  3A01               	xorlw	1
+   689  07BC  1903               	btfsc	3,2
+   690  07BD  2F8C               	goto	l45
+   691  07BE  3A03               	xorlw	3
+   692  07BF  1903               	btfsc	3,2
+   693  07C0  2F96               	goto	l48
+   694  07C1  3A01               	xorlw	1
+   695  07C2  1903               	btfsc	3,2
+   696  07C3  2F9B               	goto	l55
+   697  07C4  3A07               	xorlw	7
+   698  07C5  1903               	btfsc	3,2
+   699  07C6  2FA0               	goto	l62
+   700                           ;main.c: 288: default : {
+   701                           ;main.c: 289: mmode = 1 ;
+   702  07C7  01A6               	clrf	?a_main+6
+   703  07C8  0AA6               	incf	?a_main+6
+   704                           ;main.c: 290: zoffcnt = 30 ;
+   705  07C9  301E               	movlw	30
+   706  07CA  00AC               	movwf	?a_main+12
+   707                           ;main.c: 291: pwr = 0 ;
+   708  07CB  01AE               	clrf	?a_main+14
+   709                           ;main.c: 292: pwmdo = 0x00;
+   710  07CC  01AB               	clrf	?a_main+11
+   711  07CD                     l43
+   712                           ;main.c: 301: motor_out(pwmdo,pwr) ;
+   713  07CD  082E               	movf	?a_main+14,w
+   714  07CE  00B9               	movwf	?_motor_out
+   715  07CF  082B               	movf	?a_main+11,w
+   716  07D0  25F0               	call	_motor_out
+   717                           ;main.c: 302: }break ;
+   718  07D1  2E5F               	goto	l5
+   719                           ;main.c: 306: default :{
+   720                           ;main.c: 307: prg_cnt = 0 ;
+   721                           ;main.c: 308: }
+   722  07D2                     l22
+   723  07D2  0828               	movf	?a_main+8,w
+   724  07D3  3A01               	xorlw	1
+   725  07D4  1903               	btfsc	3,2
+   726  07D5  2EA4               	goto	l23
+   727  07D6  3A03               	xorlw	3
+   728  07D7  1903               	btfsc	3,2
+   729  07D8  2EE2               	goto	l30
+   730  07D9  3A01               	xorlw	1
+   731  07DA  1903               	btfsc	3,2
+   732  07DB  2F37               	goto	l34
+   733  07DC  3A07               	xorlw	7
+   734  07DD  1903               	btfsc	3,2
+   735  07DE  2FBA               	goto	l44
+   736  07DF  2E5E               	goto	L1
+   737                           
+   738                           	psect	text1
+   739  0000                     
+   740  0000                     
+   741  0000                     
+   742  0000                     
+   743  0000                     
+   744  0000                     
+   745  0000                     
+   746  0000                     
+   747  0000                     
+   748  0000                     
+   749  0000                     
+   750  0000                     
+   751  0000                     
+   752  0000                     
+   753  0000                     
+   754  0000                     
+   755  0000                     
+   756  0000                     
+   757  0000                     
+   758  0000                     
+   759  0000                     
+   760  0000                     
+   761  0000                     
+   762  0000                     
+   763  0000                     
+   764  0000                     
+   765  0000                     
+   766  0000                     
+   767  0000                     
+   768  0000                     
+   769  0000                     
+   770  0000                     
+   771  0000                     
+   772  0000                     
+   773  0000                     
+   774  0000                     
+   775  0000                     
+   776  0000                     
+   777  0000                     
+   778  0000                     
+   779  0000                     
+   780  0000                     
+   781  0000                     
+   782  0000                     
+   783  0000                     
+   784  0000                     
+   785  0000                     
+   786  0000                     
+   787  0000                     
+   788  0000                     
+   789  0000                     
+   790  0000                     
+   791  0000                     
+   792  0000                     
+   793  0000                     
+   794  0000                     
+   795  0000                     
+   796  0000                     
+   797  0000                     
+   798  0000                     
+   799  0000                     
+   800  0000                     
+   801  0000                     
+   802  0000                     
+   803  0000                     
+   804  0000                     
+   805  0000                     
+   806  0000                     
+   807  0000                     
+   808  0000                     
+   809  0000                     
+   810  0000                     
+   811  0000                     
+   812  0000                     
+   813  0000                     
+   814  0000                     
+   815  0000                     
+   816  0000                     
+   817  0000                     
+   818  0000                     
+   819  0000                     
+   820  0000                     
+   821  0000                     
+   822  0000                     
+   823  0000                     
+   824  0000                     
+   825  0000                     
+   826  0000                     
+   827  0000                     
+   828  0000                     
+   829  0000                     
+   830  0000                     
+   831  0000                     
+   832  0000                     
+   833  0000                     
+   834  0000                     
+   835  0000                     
+   836  0000                     
+   837  0000                     
+   838  0000                     
+   839  0000                     
+   840  0000                     
+   841  0000                     
+   842  0000                     
+   843  0000                     
+   844  0000                     
+   845  0000                     
+   846  0000                     
+   847  0000                     
+   848  0000                     
+   849  0000                     
+   850  0000                     
+   851  0000                     
+   852  0000                     
+   853  0000                     
+   854  0000                     
+   855  0000                     
+   856  0000                     
+   857  0000                     
+   858  0000                     
+   859  0000                     
+   860  0000                     
+   861  0000                     
+   862  0000                     
+   863  0000                     
+   864  0000                     
+   865  0000                     
+   866  0000                     
+   867  0000                     
+   868  0000                     
+   869  0000                     
+   870  0000                     
+   871  0000                     
+   872  0000                     
+   873  0000                     
+   874  0000                     
+   875  0000                     
+   876  0000                     
+   877  0000                     
+   878  0000                     
+   879  0000                     
+   880  0000                     
+   881  0000                     
+   882  0000                     
+   883  0000                     
+   884  0000                     
+   885  0000                     
+   886  0000                     
+   887  0000                     
+   888  0000                     
+   889  0000                     
+   890  0000                     
+   891  0000                     
+   892  0000                     
+   893  0000                     
+   894  0000                     
+   895  0000                     
+   896  0000                     
+   897  0000                     
+   898  0000                     
+   899  0000                     
+   900  0000                     
+   901  0000                     
+   902  0000                     
+   903  0000                     
+   904  0000                     
+   905  0000                     
+   906  0000                     
+   907  0000                     
+   908  0000                     
+   909  0000                     
+   910  0000                     
+   911  0000                     
+   912  0000                     
+   913  0000                     
+   914  0000                     
+   915  0000                     
+   916  0000                     
+   917  0000                     
+   918  0000                     
+   919  0000                     
+   920  0000                     
+   921  0000                     
+   922  0000                     
+   923  0000                     
+   924  0000                     
+   925  0000                     
+   926  0000                     
+   927  0000                     
+   928  0000                     
+   929  0000                     
+   930  0000                     
+   931  0000                     
+   932  0000                     
+   933  0000                     
+   934  0000                     
+   935  0000                     
+   936  0000                     
+   937  0000                     
+   938  0000                     
+   939  0000                     
+   940  0000                     
+   941  0000                     
+   942  0000                     
+   943  0000                     
+   944  0000                     
+   945  0000                     
+   946  0000                     
+   947  0000                     
+   948  0000                     
+   949  0000                     
+   950  0000                     
+   951  0000                     
+   952  0000                     
+   953  0000                     
+   954  0000                     
+   955  0000                     
+   956  0000                     
+   957  0000                     
+   958  0000                     
+   959  0000                     
+   960  0000                     
+   961  0000                     
+   962  0000                     
+   963  0000                     
+   964  0000                     
+   965  0000                     
+   966  0000                     
+   967  0000                     
+   968  0000                     
+   969  0000                     
+   970  0000                     
+   971  0000                     
+   972  0000                     
+   973  0000                     
+   974  0000                     
+   975  0000                     
+   976  0000                     
+   977  0000                     
+   978  0000                     
+   979  0000                     
+   980  0000                     
+   981  0000                     
+   982  0000                     
+   983  0000                     
+   984  0000                     
+   985  0000                     
+   986  0000                     
+   987  0000                     
+   988  0000                     
+   989  0000                     
+   990  0000                     
+   991  0000                     
+   992  0000                     
+   993  0000                     
+   994  0000                     
+   995  0000                     
+   996  0000                     
+   997  0000                     
+   998  0000                     
+   999  0000                     
+  1000  0000                     
+  1001  0000                     
+  1002  0000                     
+  1003  0000                     
+  1004  0000                     
+  1005  0000                     
+  1006  0000                     
+  1007  0000                     
+  1008  0000                     
+  1009  0000                     
+  1010  0000                     
+  1011  0000                     
+  1012  0000                     
+  1013  0000                     
+  1014  0000                     
+  1015  0000                     
+  1016  0000                     
+  1017  0000                     
+  1018  0000                     
+  1019  0000                     
+  1020  0000                     
+  1021  0000                     
+  1022  0000                     
+  1023  0000                     
+  1024  0000                     
+  1025  0000                     
+  1026  0000                     
+  1027  0000                     
+  1028  0000                     
+  1029  0000                     
+  1030  0000                     
+  1031  0000                     
+  1032  0000                     
+  1033  0000                     
+  1034  0000                     
+  1035  0000                     
+  1036  0000                     
+  1037  0000                     
+  1038  0000                     
+  1039  0000                     
+  1040  0000                     
+  1041  0000                     
+  1042  0000                     
+  1043  0000                     
+  1044  0000                     
+  1045  0000                     
+  1046  0000                     
+  1047  0000                     
+  1048  0000                     
+  1049  0000                     
+  1050  0000                     
+  1051  0000                     
+  1052  0000                     
+  1053  0000                     
+  1054  0000                     
+  1055  0000                     
+  1056  0000                     
+  1057  0000                     
+  1058  0000                     
+  1059  0000                     
+  1060  0000                     
+  1061  0000                     
+  1062  0000                     
+  1063  0000                     
+  1064  0000                     
+  1065  0000                     
+  1066  0000                     
+  1067  0000                     
+  1068  0000                     
+  1069  0000                     
+  1070  0000                     
+  1071  0000                     
+  1072  0000                     
+  1073  0000                     
+  1074  0000                     
+  1075  0000                     
+  1076  0000                     
+  1077  0000                     
+  1078  0000                     
+  1079  0000                     
+  1080  0000                     
+  1081  0000                     
+  1082  0000                     
+  1083  0000                     
+  1084  0000                     
+  1085  0000                     
+  1086  0000                     
+  1087  0000                     
+  1088  0000                     
+  1089  0000                     
+  1090  0000                     
+  1091  0000                     
+  1092  0000                     
+  1093  0000                     
+  1094  0000                     
+  1095  0000                     
+  1096  0000                     
+  1097  0000                     
+  1098  0000                     
+  1099  0000                     
+  1100  0000                     
+  1101  0000                     
+  1102  0000                     
+  1103  0000                     
+  1104  0000                     
+  1105  0000                     
+  1106  0000                     
+  1107  0000                     
+  1108  0000                     
+  1109  0000                     
+  1110  0000                     
+  1111  0000                     
+  1112  0000                     
+  1113  0000                     
+  1114  0000                     
+  1115  0000                     
+  1116  0000                     
+  1117  0000                     
+  1118  0000                     
+  1119  0000                     
+  1120  0000                     
+  1121  0000                     
+  1122  0000                     
+  1123  0000                     
+  1124  0000                     
+  1125  0000                     
+  1126  0000                     
+  1127  0000                     
+  1128  0000                     
+  1129  0000                     
+  1130  0000                     
+  1131  0000                     
+  1132  0000                     
+  1133  0000                     
+  1134  0000                     
+  1135  0000                     
+  1136  0000                     
+  1137  0000                     
+  1138  0000                     
+  1139  0000                     
+  1140  0000                     
+  1141  0000                     
+  1142  0000                     
+  1143  0000                     
+  1144  0000                     
+  1145  0000                     
+  1146  0000                     
+  1147  0000                     
+  1148  0000                     
+  1149  0000                     
+  1150  0000                     
+  1151  0000                     
+  1152  0000                     
+  1153  0000                     
+  1154  0000                     
+  1155  0000                     
+  1156  0000                     
+  1157  0000                     
+  1158  0000                     
+  1159  0000                     
+  1160  0000                     
+  1161  0000                     
+  1162  0000                     
+  1163  0000                     
+  1164  0000                     
+  1165  0000                     
+  1166  0000                     
+  1167  0000                     
+  1168  0000                     
+  1169  0000                     
+  1170  0000                     
+  1171  0000                     
+  1172  0000                     
+  1173  0000                     
+  1174  0000                     
+  1175  0000                     
+  1176  0000                     
+  1177  0000                     
+  1178  0000                     
+  1179  0000                     
+  1180  0000                     
+  1181  0000                     
+  1182  0000                     
+  1183  0000                     
+  1184  0000                     
+  1185  0000                     
+  1186  0000                     
+  1187  0000                     
+  1188  0000                     
+  1189  0000                     
+  1190  0000                     
+  1191  0000                     
+  1192  0000                     
+  1193  0000                     
+  1194  0000                     
+  1195  0000                     
+  1196  0000                     
+  1197  0000                     
+  1198  0000                     
+  1199  0000                     
+  1200  0000                     
+  1201  0000                     
+  1202  0000                     
+  1203  0000                     
+  1204  0000                     
+  1205  0000                     
+  1206  0000                     
+  1207  0000                     
+  1208  0000                     
+  1209  0000                     
+  1210  0000                     
+  1211  0000                     
+  1212  0000                     
+  1213  0000                     
+  1214  0000                     
+  1215  0000                     
+  1216  0000                     
+  1217  0000                     
+  1218  0000                     
+  1219  0000                     
+  1220  0000                     
+  1221  0000                     
+  1222  0000                     
+  1223  0000                     
+  1224  0000                     
+  1225  0000                     
+  1226  0000                     
+  1227  0000                     
+  1228  0000                     
+  1229  0000                     
+  1230  0000                     
+  1231  0000                     
+  1232  0000                     
+  1233  0000                     
+  1234  0000                     
+  1235  0000                     
+  1236  0000                     
+  1237  0000                     
+  1238  0000                     
+  1239  0000                     
+  1240  0000                     
+  1241  0000                     
+  1242  0000                     
+  1243  0000                     
+  1244  0000                     
+  1245  0000                     
+  1246  0000                     
+  1247  0000                     
+  1248  0000                     
+  1249  0000                     
+  1250  0000                     
+  1251  0000                     
+  1252  0000                     
+  1253  0000                     
+  1254  0000                     
+  1255  0000                     
+  1256  0000                     
+  1257  0000                     
+  1258  0000                     
+  1259  0000                     
+  1260  0000                     
+  1261  0000                     
+  1262  0000                     
+  1263  0000                     
+  1264  0000                     
+  1265  0000                     
+  1266                           
+  1267                           	psect	temp
+  1268  007D                     btemp
+                     btemp
+  1269  007D                     	ds	3
+
+
+HI-TECH Software PICC Macro Assembler V9.60
+Symbol Table                                          Wed Jun 27 14:06:49 2007
+
+     _motor_flag 05F7       _motor_init 05FF           ?a_main 0020  
+              l5 065F                l8 066F               l10 0676  
+             l12 0682               l30 06E2               l22 07D2  
+             l14 0689               l31 0734               l23 06A4  
+             l24 06CC               l16 0695               l25 06C9  
+             l34 0737               l18 069C               l43 07CD  
+             l35 0749               l44 07BA               l36 0759  
+             l28 06DF               l45 078C               l37 076E  
+             l62 07A0               l46 0793               l63 07B0  
+             l55 079B               l39 0788               l64 07AB  
+             l48 0796               l67 07B5              u221 06E7  
+            u305 0741              u260 06ED              u180 06C2  
+            u325 0760              u275 070B              u460 07B3  
+            u285 0723       _pulse_init 05EC       _pulse_read 0611  
+           _main 063C             btemp 007D             start 0000  
+       _sys_init 0624        _motor_out 05F0          _ver_buf 003B  
+          status 0003       ?_motor_out 0039       used_btemp0 0001  
+     used_btemp1 0001       used_btemp2 0001  

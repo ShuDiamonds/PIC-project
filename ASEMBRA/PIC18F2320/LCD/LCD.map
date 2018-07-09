@@ -1,0 +1,124 @@
+MPLINK 4.44, Linker
+Linker Map File - Created Sun Mar 10 11:23:26 2013
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000002    program   0x000002
+                   .org_2       code   0x000018    program   0x0002d6
+.config_300001_LCD_MAIN.O    romdata   0x300001    program   0x000001
+.config_300002_LCD_MAIN.O    romdata   0x300002    program   0x000001
+.config_300003_LCD_MAIN.O    romdata   0x300003    program   0x000001
+.config_300005_LCD_MAIN.O    romdata   0x300005    program   0x000001
+.config_300006_LCD_MAIN.O    romdata   0x300006    program   0x000001
+.config_300008_LCD_MAIN.O    romdata   0x300008    program   0x000001
+.config_300009_LCD_MAIN.O    romdata   0x300009    program   0x000001
+.config_30000A_LCD_MAIN.O    romdata   0x30000a    program   0x000001
+.config_30000B_LCD_MAIN.O    romdata   0x30000b    program   0x000001
+.config_30000C_LCD_MAIN.O    romdata   0x30000c    program   0x000001
+.config_30000D_LCD_MAIN.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000003      
+                            0x000018    0x0002ed      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            741 out of 8472 program addresses used, program memory utilization is 8%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 AACCAAAA   0x0001e4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+             DELAY_1000MS   0x000200    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+              DELAY_100US   0x00012e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+               DELAY_10MS   0x000192    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                DELAY_1MS   0x000148    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                      DSD   0x000186    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  DUMYMSG   0x00011c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  DWDWDDS   0x000224    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   ENDMSG   0x000108    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   FEFEEW   0x00023a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                     INIT   0x000020    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   KLPIOJ   0x00021a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   KSIDBH   0x0002d8    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  LCDHEX2   0x0000a0    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   LCDMSG   0x0000c4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  LCD_CLR   0x0002ce    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  LCD_CMD   0x0002c2    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                 LCD_DATA   0x0002a4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  LCD_INI   0x000242    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                     LOOP   0x000078    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                 LPLPLPLP   0x000132    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                 MAINLOOP   0x00006c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                    MLMLM   0x000176    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   MSGPTR   0x0000f6    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  MsgLoop   0x0000ea    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   NUMMSG   0x000112    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+           ONEHUNDRED_001   0x0002e4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  OPOPOPS   0x000204    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   PUTCMD   0x000280    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  PUTDATA   0x000292    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  STOPPER   0x00012a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  STRTMSG   0x000100    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   TIME50   0x0002d4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   TIME5M   0x0002e0    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                    TOH21   0x0000be    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                    TOHEX   0x0000b4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                TX_CHEACK   0x000018    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                    fafff   0x0001f4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                      sss   0x00013c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                TX_CHEACK   0x000018    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                     INIT   0x000020    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                 MAINLOOP   0x00006c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                     LOOP   0x000078    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  LCDHEX2   0x0000a0    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                    TOHEX   0x0000b4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                    TOH21   0x0000be    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   LCDMSG   0x0000c4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  MsgLoop   0x0000ea    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   MSGPTR   0x0000f6    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  STRTMSG   0x000100    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   ENDMSG   0x000108    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   NUMMSG   0x000112    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  DUMYMSG   0x00011c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  STOPPER   0x00012a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+              DELAY_100US   0x00012e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                 LPLPLPLP   0x000132    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                      sss   0x00013c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                DELAY_1MS   0x000148    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                    MLMLM   0x000176    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                      DSD   0x000186    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+               DELAY_10MS   0x000192    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                 AACCAAAA   0x0001e4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                    fafff   0x0001f4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+             DELAY_1000MS   0x000200    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  OPOPOPS   0x000204    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   KLPIOJ   0x00021a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  DWDWDDS   0x000224    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   FEFEEW   0x00023a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  LCD_INI   0x000242    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   PUTCMD   0x000280    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  PUTDATA   0x000292    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                 LCD_DATA   0x0002a4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  LCD_CMD   0x0002c2    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                  LCD_CLR   0x0002ce    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   TIME50   0x0002d4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   KSIDBH   0x0002d8    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+                   TIME5M   0x0002e0    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+           ONEHUNDRED_001   0x0002e4    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\LCD\LCD_MAIN.asm
+
+

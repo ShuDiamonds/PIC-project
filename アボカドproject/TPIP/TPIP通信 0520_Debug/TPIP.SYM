@@ -1,0 +1,87 @@
+005     port_a
+006     port_b
+007     port_c
+008     PSP_DATA
+008     port_d
+009     port_e
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B-01C CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     main.cheaker
+022-02B main.data_H
+02C-035 main.data_L
+036-037 main.E
+038-039 main.F
+03A     main.ID
+03B     main.hugou
+03C     main.i
+03D     main.motasuu1
+03E     main.motasuu
+03F-040 LED_tikatika.a
+03F     main.@SCRATCH
+041     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+09F     ADCON1
+
+037D  @delay_ms1
+0390  LED_tikatika
+03BD  main
+0004  @const10068
+0018  @const10082
+0037  @const10092
+0056  @const10101
+0077  @const10114
+0096  @const10124
+00B5  @const10133
+00D6  @const10146
+00F5  @const10156
+0117  @const10165
+0138  @const10178
+0157  @const10188
+0176  @const10197
+0197  @const10210
+01B6  @const10220
+01D5  @const10229
+01F6  @const10242
+0218  @const10252
+0237  @const10261
+0258  @const10274
+0277  @const10284
+0296  @const10293
+02B7  @const10306
+02D6  @const10316
+02F5  @const10325
+0319  @const10332
+032E  @const10338
+0347  @const10344
+036A  @const10350
+03BD  @cinit
+
+Project Files:
+    C:\Documents and Settings\Workaholism\My Documents\Dropbox\FUKAKEN\âÒòH\software\TPIPí êM 0520_Debug\TPIP.c
+    C:\PROGRA~1\PICC\devices\16f877a.h
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   8
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Documents and Settings\Workaholism\My Documents\Dropbox\FUKAKEN\âÒòH\software\TPIPí êM 0520_Debug\TPIP.err
+    INHX8:       C:\Documents and Settings\Workaholism\My Documents\Dropbox\FUKAKEN\âÒòH\software\TPIPí êM 0520_Debug\TPIP.HEX
+    Symbols:     C:\Documents and Settings\Workaholism\My Documents\Dropbox\FUKAKEN\âÒòH\software\TPIPí êM 0520_Debug\TPIP.SYM
+    List:        C:\Documents and Settings\Workaholism\My Documents\Dropbox\FUKAKEN\âÒòH\software\TPIPí êM 0520_Debug\TPIP.LST
+    Debug/eCOD:  C:\Documents and Settings\Workaholism\My Documents\Dropbox\FUKAKEN\âÒòH\software\TPIPí êM 0520_Debug\TPIP.cod

@@ -1,0 +1,5 @@
+Error[1105] D:\liburary\softwere\pic_RTOS\FreeRTOSV8.0.0\FreeRTOS\Source\portable\MPLAB\PIC18F\port.c 651 : symbol 'T1_16BIT_RW' has not been defined
+Error[1105] D:\liburary\softwere\pic_RTOS\FreeRTOSV8.0.0\FreeRTOS\Source\portable\MPLAB\PIC18F\port.c 651 : symbol 'T1_SOURCE_INT' has not been defined
+Error[1105] D:\liburary\softwere\pic_RTOS\FreeRTOSV8.0.0\FreeRTOS\Source\portable\MPLAB\PIC18F\port.c 651 : symbol 'T1_PS_1_1' has not been defined
+Error[1105] D:\liburary\softwere\pic_RTOS\FreeRTOSV8.0.0\FreeRTOS\Source\portable\MPLAB\PIC18F\port.c 651 : symbol 'T1_CCP1_T3_CCP2' has not been defined
+Warning[2058] D:\liburary\softwere\pic_RTOS\FreeRTOSV8.0.0\FreeRTOS\Source\portable\MPLAB\PIC18F\port.c 651 : call of function without prototype

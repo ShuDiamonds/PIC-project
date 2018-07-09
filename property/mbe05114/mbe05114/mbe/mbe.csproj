@@ -1,0 +1,486 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4092A7D-6863-4FB5-B79D-47E324D94F2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mbe</RootNamespace>
+    <AssemblyName>mbe</AssemblyName>
+    <ApplicationIcon>Resources\mbe48.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBoxForm.Designer.cs">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArcInfo.cs" />
+    <Compile Include="FindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindForm.Designer.cs">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoveSizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoveSizeForm.Designer.cs">
+      <DependentUpon>MoveSizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPageLayerInfo.cs" />
+    <Compile Include="PrintPageLayerListCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentPreview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentSelectForm.Designer.cs">
+      <DependentUpon>ComponentSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpGerberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpGerberForm.Designer.cs">
+      <DependentUpon>ExpGerberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportFilePathForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportFilePathForm.Designer.cs">
+      <DependentUpon>ExportFilePathForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportImageForm.Designer.cs">
+      <DependentUpon>ExportImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FillPolygon2.cs" />
+    <Compile Include="GenOutlineParam.cs" />
+    <Compile Include="GridInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HoleInfo.cs" />
+    <Compile Include="LengthString.cs" />
+    <Compile Include="LibInfo.cs" />
+    <Compile Include="LineInfo.cs" />
+    <Compile Include="MbeLib.cs" />
+    <Compile Include="MyStd.cs" />
+    <Compile Include="PadInfo.cs" />
+    <Compile Include="PolygonInfo.cs" />
+    <Compile Include="PrintPageLayerListTitle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PthInfo.cs" />
+    <Compile Include="SetLibForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetLibForm.Designer.cs">
+      <DependentUpon>SetLibForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPolygonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPolygonForm.Designer.cs">
+      <DependentUpon>SetPolygonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPrintLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPrintLayer.Designer.cs">
+      <DependentUpon>SetPrintLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetupPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupPageForm.Designer.cs">
+      <DependentUpon>SetupPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextInfo.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="BulkMoveLayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulkMoveLayerForm.Designer.cs">
+      <DependentUpon>BulkMoveLayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BulkPropTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulkPropTextForm.Designer.cs">
+      <DependentUpon>BulkPropTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamOut.cs" />
+    <Compile Include="CamOutBaseData.cs" />
+    <Compile Include="DragInfo.cs" />
+    <Compile Include="MbeBoardFont.cs" />
+    <Compile Include="MbeConChk.cs" />
+    <Compile Include="MbeDrc.cs" />
+    <Compile Include="MbeNetOut.cs" />
+    <Compile Include="MbeObjArc.cs" />
+    <Compile Include="MbeObjComponent.cs" />
+    <Compile Include="MbeObjHole.cs" />
+    <Compile Include="MbeObjLine.cs" />
+    <Compile Include="MbeObjPolygon.cs" />
+    <Compile Include="MbeTempInfo.cs" />
+    <Compile Include="MbeObjText.cs" />
+    <Compile Include="MbeView.Prop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PointLog.cs" />
+    <Compile Include="LayerInfoEventArgs.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MbeColors.cs" />
+    <Compile Include="MbeDoc.cs" />
+    <Compile Include="MbeDocInfo.cs" />
+    <Compile Include="MbeLayer.cs" />
+    <Compile Include="MbeObj.cs" />
+    <Compile Include="MbeObjPin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MbeObjPinSMD.cs" />
+    <Compile Include="MbeObjPTH.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MbeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MbeView.Draw1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBoxForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkMoveLayerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BulkMoveLayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkPropTextForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BulkPropTextForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentSelectForm.resx">
+      <DependentUpon>ComponentSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpGerberForm.resx">
+      <DependentUpon>ExpGerberForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportFilePathForm.resx">
+      <DependentUpon>ExportFilePathForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportImageForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindForm.resx">
+      <DependentUpon>FindForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveSizeForm.resx">
+      <DependentUpon>MoveSizeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MbeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MbeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetArcForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetArcForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetBoardFontForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetBoardFontForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetColorForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetColorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetComponentForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetComponentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetDrcForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetDrcForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetGridForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetGridForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetHoleForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetHoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetLayerWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetLayerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetLibForm.resx">
+      <DependentUpon>SetLibForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetLineForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetLineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPinTHForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetPinTHForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPolygonForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetPolygonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPrintLayer.resx">
+      <DependentUpon>SetPrintLayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetSMDPad.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetSMDPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetTextForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetTextForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetLinePropForm.resx">
+      <DependentUpon>SetLinePropForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupPageForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetupPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReadCE3.cs" />
+    <Compile Include="MbeRect.cs" />
+    <Compile Include="SetArcForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetArcForm.Designer.cs">
+      <DependentUpon>SetArcForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetBoardFontForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetBoardFontForm.Designer.cs">
+      <DependentUpon>SetBoardFontForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetColorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetColorForm.Designer.cs">
+      <DependentUpon>SetColorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetComponentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetComponentForm.Designer.cs">
+      <DependentUpon>SetComponentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetDrcForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetDrcForm.Designer.cs">
+      <DependentUpon>SetDrcForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetGridForm.Designer.cs">
+      <DependentUpon>SetGridForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetHoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetHoleForm.Designer.cs">
+      <DependentUpon>SetHoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetLayerWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SetLineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetLineForm.Designer.cs">
+      <DependentUpon>SetLineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPinTHForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPinTHForm.Designer.cs">
+      <DependentUpon>SetPinTHForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetSMDPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetSMDPad.Designer.cs">
+      <DependentUpon>SetSMDPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetTextForm.Designer.cs">
+      <DependentUpon>SetTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="WriteCE3.cs" />
+    <Compile Include="SetLinePropForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetLinePropForm.Designer.cs">
+      <DependentUpon>SetLinePropForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="Resources\gridOriginCursor.ico" />
+    <None Include="Resources\imageSelectorButton.bmp" />
+    <None Include="Resources\imagePlacePTH.bmp" />
+    <None Include="Resources\imageLineButton.bmp" />
+    <None Include="Resources\divideMark.ico" />
+    <None Include="Resources\imagePlaceTextButton.bmp" />
+    <None Include="Resources\imagePlacePAD.bmp" />
+    <None Include="Resources\imagePlaceHole.bmp" />
+    <None Include="Resources\mbe.ico" />
+    <Content Include="mbe.ico" />
+    <None Include="Resources\imagePlaceArc.bmp" />
+    <None Include="Resources\mbe48.ico" />
+    <None Include="Resources\imageConChk.bmp" />
+    <None Include="Resources\GapChkMarkIcon.ico" />
+    <None Include="Resources\imagePolygon.bmp" />
+    <None Include="Resources\ImageGapChkMark.bmp" />
+    <None Include="Resources\imageBending2Line.bmp" />
+    <None Include="Resources\imageStraightLine.bmp" />
+    <None Include="Resources\imageBending1Line.bmp" />
+    <None Include="Resources\imagePolygon1.bmp" />
+    <None Include="Resources\checkMark.ico" />
+    <None Include="Resources\imageRuler.bmp" />
+    <Content Include="Resources\noupdnimage.bmp" />
+    <Content Include="Resources\downimage.bmp" />
+    <Content Include="Resources\placelayer.ico" />
+    <None Include="Resources\tbarSelector.ico" />
+    <Content Include="Resources\upimage.bmp" />
+    <Content Include="Resources\viewlayer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

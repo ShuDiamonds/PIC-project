@@ -1,0 +1,7 @@
+Warning[2073] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c 67 : null-terminated initializer string too long
+Warning[2073] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c 68 : null-terminated initializer string too long
+Warning[2054] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c 88 : suspicious pointer conversion
+Warning[2066] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c 91 : type qualifier mismatch in assignment
+Warning[2054] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c 98 : suspicious pointer conversion
+Warning[2066] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c 102 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c 108 : type qualifier mismatch in assignment

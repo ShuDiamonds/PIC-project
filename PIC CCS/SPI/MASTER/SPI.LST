@@ -1,0 +1,183 @@
+CCS PCM C Compiler, Version 3.185, 22500
+
+               Filename: C:\Users\Fukaken\Desktop\個人フォルダ\R12シリーズ\福田\アボカド\pic16f877a動作確認\SPI\MASTER\SPI.LST
+
+               ROM used: 106 (1%)
+                         Largest free fragment is 2048
+               RAM used: 9 (5%) at main() level
+                         10 (6%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   017
+0003:  NOP
+....................  #include<16f877a.h> 
+....................  //////// Standard Header file for the PIC16F877A device ////////////////  
+.................... #device PIC16F877A ADC=10  
+.................... #list  
+....................  
+....................   
+.................... #fuses HS,NOWDT,NOPROTECT,NOLVP,PUT,BROWNOUT  
+.................... #use delay(clock = 20000000)  
+0004:  MOVLW  24
+0005:  MOVWF  04
+0006:  MOVF   00,W
+0007:  BTFSC  03.2
+0008:  GOTO   016
+0009:  MOVLW  06
+000A:  MOVWF  78
+000B:  CLRF   77
+000C:  DECFSZ 77,F
+000D:  GOTO   00C
+000E:  DECFSZ 78,F
+000F:  GOTO   00B
+0010:  MOVLW  7B
+0011:  MOVWF  77
+0012:  DECFSZ 77,F
+0013:  GOTO   012
+0014:  DECFSZ 00,F
+0015:  GOTO   009
+0016:  RETLW  00
+....................   
+.................... #use fast_io(a)  
+.................... #use fast_io(b)  
+.................... #use fast_io(c)  
+.................... #use fast_io(d)  
+.................... #use fast_io(e)  
+.................... #byte port_a = 5  
+.................... #byte port_b = 6  
+.................... #byte port_c = 7  
+.................... #byte port_d = 8  
+.................... #byte port_e = 9  
+.................... //グローバル変数定義  
+.................... 	int l = 0;	//タイマーカウント値  
+*
+0020:  CLRF   20
+....................   
+....................   
+....................   
+.................... main()  
+.................... {   
+*
+0017:  CLRF   04
+0018:  MOVLW  1F
+0019:  ANDWF  03,F
+001A:  MOVLW  06
+001B:  BSF    03.5
+001C:  MOVWF  1F
+001D:  MOVLW  07
+001E:  BCF    03.5
+001F:  MOVWF  1F
+.................... 	int a=0;  
+*
+0021:  CLRF   21
+.................... 	char DATA = 0;  
+0022:  CLRF   22
+.................... 	set_tris_a(0xff);  
+0023:  MOVLW  FF
+0024:  BSF    03.5
+0025:  MOVWF  05
+.................... 	set_tris_b(0xff);  
+0026:  MOVWF  06
+.................... 	set_tris_c(0xf0);  
+0027:  MOVLW  F0
+0028:  MOVWF  07
+.................... 	set_tris_d(0x00);  
+0029:  MOVLW  00
+002A:  MOVWF  08
+.................... 	set_tris_e(0xff);  
+002B:  BSF    09.0
+002C:  BSF    09.1
+002D:  BSF    09.2
+.................... 	output_high(PIN_C0);  
+002E:  BCF    03.5
+002F:  BSF    07.0
+.................... 	//SPI設定  
+.................... 	setup_spi(SPI_MASTER | SPI_L_TO_H | SPI_CLK_DIV_16);  
+0030:  BCF    14.5
+0031:  MOVLW  21
+0032:  MOVWF  14
+0033:  MOVLW  00
+0034:  BSF    03.5
+0035:  MOVWF  14
+....................   
+.................... 	while(1)  
+.................... 		{  
+.................... 			while(!spi_data_is_in())  
+.................... 			{  
+0036:  BTFSC  14.0
+0037:  GOTO   068
+.................... 				//データ受信  
+.................... 				if( DATA = 'F')  
+.................... 				{	  
+0038:  MOVLW  46
+0039:  BCF    03.5
+003A:  MOVWF  22
+003B:  MOVF   22,F
+003C:  BTFSC  03.2
+003D:  GOTO   066
+.................... 					output_low(PIN_C0);  
+003E:  BCF    07.0
+.................... 					delay_ms(400);  
+003F:  MOVLW  02
+0040:  MOVWF  23
+0041:  MOVLW  C8
+0042:  MOVWF  24
+0043:  CALL   004
+0044:  DECFSZ 23,F
+0045:  GOTO   041
+.................... 					output_high(PIN_C0);  
+0046:  BSF    07.0
+.................... 					delay_ms(400);  
+0047:  MOVLW  02
+0048:  MOVWF  23
+0049:  MOVLW  C8
+004A:  MOVWF  24
+004B:  CALL   004
+004C:  DECFSZ 23,F
+004D:  GOTO   049
+.................... 					output_low(PIN_C0);  
+004E:  BCF    07.0
+.................... 					delay_ms(400);  
+004F:  MOVLW  02
+0050:  MOVWF  23
+0051:  MOVLW  C8
+0052:  MOVWF  24
+0053:  CALL   004
+0054:  DECFSZ 23,F
+0055:  GOTO   051
+.................... 					output_high(PIN_C0);  
+0056:  BSF    07.0
+.................... 					delay_ms(400);  
+0057:  MOVLW  02
+0058:  MOVWF  23
+0059:  MOVLW  C8
+005A:  MOVWF  24
+005B:  CALL   004
+005C:  DECFSZ 23,F
+005D:  GOTO   059
+.................... 					output_low(PIN_C0);  
+005E:  BCF    07.0
+.................... 					delay_ms(400);  
+005F:  MOVLW  02
+0060:  MOVWF  23
+0061:  MOVLW  C8
+0062:  MOVWF  24
+0063:  CALL   004
+0064:  DECFSZ 23,F
+0065:  GOTO   061
+.................... 				}  
+.................... 			}  
+0066:  BSF    03.5
+0067:  GOTO   036
+.................... 		}  
+0068:  GOTO   036
+.................... }  
+....................   
+....................  
+0069:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT NODEBUG NOPROTECT BROWNOUT NOLVP NOCPD NOWRT

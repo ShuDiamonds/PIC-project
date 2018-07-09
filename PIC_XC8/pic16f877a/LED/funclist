@@ -1,0 +1,4 @@
+_InitPortIOReg: CODE, 2001 0 4
+_main: CODE, 2005 0 39
+__initialization: CODE, 2044 0 0
+Total: 43

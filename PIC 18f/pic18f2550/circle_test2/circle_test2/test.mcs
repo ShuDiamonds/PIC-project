@@ -1,0 +1,188 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=D:\pic18f4620\test\YHY024006A.o
+Folder=Intermediary
+DeviceName=PIC18F4620
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files\Microchip\mplabc18\v3.38\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File001]
+Location=D:\pic18f4620\test\main.o
+Folder=Intermediary
+DeviceName=PIC18F4620
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files\Microchip\mplabc18\v3.38\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File002]
+Location=F:\pic18f4620\test\YHY024006A.o
+Folder=Intermediary
+DeviceName=PIC18F4620
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.38\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File003]
+Location=F:\pic18f4620\test\main.o
+Folder=Intermediary
+DeviceName=PIC18F4620
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.38\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File004]
+Location=F:\pic18f4620\circle_test2\YHY024006A.o
+Folder=Intermediary
+DeviceName=PIC18F4620
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.38\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File005]
+Location=F:\pic18f4620\circle_test2\main.o
+Folder=Intermediary
+DeviceName=PIC18F4620
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.38\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File006]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\circle_test2\circle_test2\YHY024006A.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File007]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\circle_test2\circle_test2\main.o
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File008]
+Location=F:\pic18f4620\test\test.cof
+Folder=Output
+DeviceName=PIC18F4620
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.38\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1
+[File009]
+Location=F:\pic18f4620\test\test.hex
+Folder=Output
+DeviceName=PIC18F4620
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.38\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1
+[File010]
+Location=F:\pic18f4620\circle_test2\test.cof
+Folder=Output
+DeviceName=PIC18F4620
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.38\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1
+[File011]
+Location=F:\pic18f4620\circle_test2\test.hex
+Folder=Output
+DeviceName=PIC18F4620
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.38\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1
+[File012]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\circle_test2\circle_test2\test.cof
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1
+[File013]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\circle_test2\circle_test2\test.hex
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\mplabc18\v3.38\lib||$(LKRDIR)||
+SOLK=<src>|YHY024006A.c|main.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1
+[TOOL_LOC_STAMPS]
+tool_loc{96C98149-AA1B-4CF9-B967-FAE79CAB663C}=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+tool_loc{E56A1C86-9D32-4DF6-8C34-FE0388B1B644}=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe

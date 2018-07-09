@@ -1,0 +1,185 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\AD.p1
+Folder=Intermediary
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File001]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\AD.cof
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File002]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\AD.hex
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\AD.sym
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File004]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\AD.map
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File005]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\AD.hxl
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File006]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\startup.lst
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File007]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\startup.rlf
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File008]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\doprnt.p1
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File009]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\doprnt.pre
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File010]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\AD.obj
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File011]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\AD.lst
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File012]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\AD.rlf
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=
+[File013]
+Location=C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\AD\AD.sdb
+Folder=Output
+DeviceName=PIC18F2550
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.21\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|AD.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString= C9=1
+TraceCmdString=
+DebugOptions=

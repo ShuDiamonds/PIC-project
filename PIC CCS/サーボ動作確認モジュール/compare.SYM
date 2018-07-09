@@ -1,0 +1,53 @@
+005     port_a
+006     port_b
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B-01C CCP_2
+01C     CCP_2_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029-02A main.adc
+02B     @delay_ms1.P1
+02B     main.@SCRATCH
+02C     main.@SCRATCH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+
+004B  @delay_ms1
+005F  main
+003F  ccp1_int
+0043  intval
+005F  @cinit
+
+Project Files:
+    C:\Users\FMV\Dropbox\PIC-project\PIC CCS\サーボ動作確認モジュール\compare.c
+    C:\PROGRA~2\PICC\devices\16f88.h
+
+Compiler Settings:
+    Processor:      PIC16F88
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\FMV\Dropbox\PIC-project\PIC CCS\サーボ動作確認モジュール\compare.err
+    INHX8:       C:\Users\FMV\Dropbox\PIC-project\PIC CCS\サーボ動作確認モジュール\compare.HEX
+    Symbols:     C:\Users\FMV\Dropbox\PIC-project\PIC CCS\サーボ動作確認モジュール\compare.SYM
+    List:        C:\Users\FMV\Dropbox\PIC-project\PIC CCS\サーボ動作確認モジュール\compare.LST
+    Debug/eCOD:  C:\Users\FMV\Dropbox\PIC-project\PIC CCS\サーボ動作確認モジュール\compare.cod

@@ -1,0 +1,32 @@
+[PROJECT]
+Target=sa-bo.HEX
+Development_Mode=2
+Processor=0x877A
+ToolSuite=CCS
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=sa-bo.c;
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[sa-bo.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=C:\Users\FMV\Dropbox\PIC-PR~1\PICCCS~1\サーボ\sa-bo.c
+
+[Windows]
+0=0000 C:\Users\FMV\Dropbox\PIC-PR~1\PICCCS~1\サーボ\sa-bo.c 0 0 796 451 3 0
+

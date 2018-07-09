@@ -1,0 +1,201 @@
+CCS PCM C Compiler, Version 3.185, 22500
+
+               Filename: D:\Erectric\PIC-project\PIC-project\アボカドproject\mo-ta-\mo-ta-.LST
+
+               ROM used: 115 (1%)
+                         Largest free fragment is 2048
+               RAM used: 7 (4%) at main() level
+                         7 (4%) worst case
+               Stack:    0 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+....................  #include <16F877A.h> 
+....................  //////// Standard Header file for the PIC16F877A device ////////////////  
+.................... #device PIC16F877A  
+.................... #list  
+....................  
+.................... #fuses HS,NOWDT,NOPUT,NOPROTECT,BROWNOUT,NOLVP  
+.................... #use delay(CLOCK=20000000)  
+....................   
+.................... #byte port_a=5  
+.................... #byte port_b=6  
+.................... #byte port_c=7  
+.................... #byte port_d=8  
+.................... #byte port_e=9  
+.................... #use fast_io(a)  
+.................... #use fast_io(b)  
+.................... #use fast_io(c)  
+.................... #use fast_io(d)  
+.................... #use fast_io(e)  
+.................... //ぴんマクロ  
+.................... #define RUN_LED		PIN_C3  
+.................... #define MOTA1_R		PIN_B0  
+.................... #define MOTA1_L		PIN_B1  
+....................   
+.................... int main()  
+.................... {  
+0004:  CLRF   04
+0005:  MOVLW  1F
+0006:  ANDWF  03,F
+0007:  MOVLW  06
+0008:  BSF    03.5
+0009:  MOVWF  1F
+000A:  MOVLW  07
+000B:  BCF    03.5
+000C:  MOVWF  1F
+.................... 	  
+.................... 	set_tris_a(0);  
+000D:  MOVLW  00
+000E:  BSF    03.5
+000F:  MOVWF  05
+.................... 	set_tris_b(0b11000000);  
+0010:  MOVLW  C0
+0011:  MOVWF  06
+.................... 	set_tris_c(0);  
+0012:  MOVLW  00
+0013:  MOVWF  07
+.................... 	set_tris_d(0);  
+0014:  MOVWF  08
+.................... 	set_tris_e(0);  
+0015:  BCF    09.0
+0016:  BCF    09.1
+0017:  BCF    09.2
+.................... 	  
+.................... 	  
+.................... 	port_a = 0;  
+0018:  BCF    03.5
+0019:  CLRF   05
+.................... 	port_b = 0;  
+001A:  CLRF   06
+.................... 	port_c = 0;  
+001B:  CLRF   07
+.................... 	port_d = 0;  
+001C:  CLRF   08
+.................... 	port_e = 0;  
+001D:  CLRF   09
+.................... 	  
+.................... 	setup_ccp1(CCP_PWM);  
+001E:  BCF    07.2
+001F:  MOVLW  0C
+0020:  MOVWF  17
+.................... 	setup_ccp2(CCP_PWM);  
+0021:  BCF    07.1
+0022:  MOVWF  1D
+.................... 	SETUP_TIMER_2(T2_DIV_BY_16,0xFF,1);  
+0023:  MOVLW  00
+0024:  MOVWF  78
+0025:  IORLW  06
+0026:  MOVWF  12
+0027:  MOVLW  FF
+0028:  BSF    03.5
+0029:  MOVWF  12
+.................... 	  
+.................... 	while(1)  
+.................... 	{  
+.................... 		  
+.................... 		if(input(PIN_B7) == 1 && input(PIN_B6) == 0){  
+002A:  MOVLW  00
+002B:  BCF    03.5
+002C:  BTFSC  06.7
+002D:  MOVLW  01
+002E:  SUBLW  01
+002F:  BTFSS  03.2
+0030:  GOTO   045
+0031:  MOVLW  00
+0032:  BTFSC  06.6
+0033:  MOVLW  01
+0034:  XORLW  00
+0035:  BTFSS  03.2
+0036:  GOTO   045
+.................... 			set_pwm1_duty(800);  
+0037:  MOVLW  C8
+0038:  MOVWF  15
+0039:  MOVF   17,W
+003A:  ANDLW  CF
+003B:  MOVWF  17
+.................... 			set_pwm2_duty(800);  
+003C:  MOVLW  C8
+003D:  MOVWF  1B
+003E:  MOVF   1D,W
+003F:  ANDLW  CF
+0040:  MOVWF  1D
+.................... 			output_high(MOTA1_L);  
+0041:  BSF    06.1
+.................... 			output_low(MOTA1_R);  
+0042:  BCF    06.0
+.................... 			output_low(RUN_LED);  
+0043:  BCF    07.3
+.................... 		}else if(input(PIN_B7) == 0 && input(PIN_B6) == 0){  
+0044:  GOTO   070
+0045:  MOVLW  00
+0046:  BTFSC  06.7
+0047:  MOVLW  01
+0048:  XORLW  00
+0049:  BTFSS  03.2
+004A:  GOTO   05F
+004B:  MOVLW  00
+004C:  BTFSC  06.6
+004D:  MOVLW  01
+004E:  XORLW  00
+004F:  BTFSS  03.2
+0050:  GOTO   05F
+.................... 			set_pwm1_duty(500);  
+0051:  MOVLW  7D
+0052:  MOVWF  15
+0053:  MOVF   17,W
+0054:  ANDLW  CF
+0055:  MOVWF  17
+.................... 			set_pwm2_duty(500);  
+0056:  MOVLW  7D
+0057:  MOVWF  1B
+0058:  MOVF   1D,W
+0059:  ANDLW  CF
+005A:  MOVWF  1D
+.................... 			output_high(MOTA1_R);  
+005B:  BSF    06.0
+.................... 			output_low(MOTA1_L);  
+005C:  BCF    06.1
+.................... 			output_high(RUN_LED);  
+005D:  BSF    07.3
+.................... 		}else if(input(PIN_B6) == 1){  
+005E:  GOTO   070
+005F:  MOVLW  00
+0060:  BTFSC  06.6
+0061:  MOVLW  01
+0062:  SUBLW  01
+0063:  BTFSS  03.2
+0064:  GOTO   070
+.................... 			set_pwm1_duty(1024);  
+0065:  CLRF   15
+0066:  MOVF   17,W
+0067:  ANDLW  CF
+0068:  MOVWF  17
+.................... 			set_pwm2_duty(1024);  
+0069:  CLRF   1B
+006A:  MOVF   1D,W
+006B:  ANDLW  CF
+006C:  MOVWF  1D
+.................... 			output_high(MOTA1_R);  
+006D:  BSF    06.0
+.................... 			output_high(MOTA1_L);  
+006E:  BSF    06.1
+.................... 			output_high(RUN_LED);  
+006F:  BSF    07.3
+.................... 		}  
+.................... 		  
+.................... 		  
+.................... 	}  
+0070:  BSF    03.5
+0071:  GOTO   02A
+.................... 	  
+.................... }  
+....................   
+.................... 		 
+0072:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F7A   HS NOWDT NOPUT NODEBUG NOPROTECT BROWNOUT NOLVP NOCPD NOWRT

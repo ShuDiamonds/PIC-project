@@ -1,0 +1,2016 @@
+MPLINK 4.20, Linker
+Linker Map File - Created Fri Jun 06 12:24:41 2008
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+               _entry_scn       code   0x000000    program   0x000006
+                lowVector       code   0x000018    program   0x000006
+                   .cinit    romdata   0x00002a    program   0x000092
+              .code_TCP.o       code   0x0000bc    program   0x005856
+             .code_SMTP.o       code   0x005912    program   0x001c2a
+          .code_Helpers.o       code   0x00753c    program   0x00113c
+              .code_UDP.o       code   0x008678    program   0x000f22
+         .code_ETH97J60.o       code   0x00959a    program   0x000d7c
+              .code_DNS.o       code   0x00a316    program   0x000d66
+             .code_DHCP.o       code   0x00b07c    program   0x000cc6
+        .code_AlarmMain.o       code   0x00bd42    program   0x000a58
+             .code_NBNS.o       code   0x00c79a    program   0x0005c2
+              .code_ARP.o       code   0x00cd5c    program   0x0005c2
+               .code_IP.o       code   0x00d31e    program   0x0003fa
+      .code_LCDBlocking.o       code   0x00d718    program   0x00033c
+                   STRING       code   0x00da54    program   0x0002e4
+         .code_StackTsk.o       code   0x00dd38    program   0x000272
+                   STDLIB       code   0x00dfaa    program   0x00025a
+             .code_ICMP.o       code   0x00e204    program   0x000146
+             .code_Tick.o       code   0x00e34a    program   0x000140
+                     PROG       code   0x00e48a    program   0x0000ce
+             .stringtable    romdata   0x00e558    program   0x0000c6
+               _cinit_scn       code   0x00e61e    program   0x00009e
+         .code_fxd3232u.o       code   0x00e6bc    program   0x000048
+         .code_fxd1616u.o       code   0x00e704    program   0x00002c
+              D1KTCYXCODE       code   0x00e730    program   0x000020
+             _startup_scn       code   0x00e750    program   0x00001c
+              D10TCYXCODE       code   0x00e76c    program   0x000016
+                    .code       code   0x00e782    program   0x00000e
+           .romdata_TCP.o    romdata   0x00e790    program   0x00000c
+     .romdata_AlarmMain.o    romdata   0x00e79c    program   0x000006
+           .code___init.o       code   0x00e7a2    program   0x000002
+              SEED_DATA_i    romdata   0x00e7a4    program   0x000002
+                MESSAGE_i    romdata   0x00e7a6    program   0x000208
+          .romdata_NBNS.o    romdata   0x00e9ae    program   0x000000
+          .romdata_Tick.o    romdata   0x00e9ae    program   0x000000
+           .romdata_DNS.o    romdata   0x00e9ae    program   0x000000
+         .romdata_c018i.o    romdata   0x00e9ae    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x00e9ae    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x00e9ae    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x00e9ae    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x00e9ae    program   0x000000
+        .idata___init.o_i    romdata   0x00e9ae    program   0x000000
+        .romdata___init.o    romdata   0x00e9ae    program   0x000000
+         .idata_c018i.o_i    romdata   0x00e9ae    program   0x000000
+      .romdata_StackTsk.o    romdata   0x00e9ae    program   0x000000
+           .romdata_ARP.o    romdata   0x00e9ae    program   0x000000
+           .romdata_UDP.o    romdata   0x00e9ae    program   0x000000
+          .romdata_SMTP.o    romdata   0x00e9ae    program   0x000000
+          .romdata_DHCP.o    romdata   0x00e9ae    program   0x000000
+   .romdata_LCDBlocking.o    romdata   0x00e9ae    program   0x000000
+           .idata_UDP.o_i    romdata   0x00e9ae    program   0x000002
+            .romdata_IP.o    romdata   0x00e9ae    program   0x000000
+      .romdata_ETH97J60.o    romdata   0x00e9ae    program   0x000000
+          .romdata_ICMP.o    romdata   0x00e9ae    program   0x000000
+       .romdata_Helpers.o    romdata   0x00e9ae    program   0x000000
+          .idata_Tick.o_i    romdata   0x00e9b0    program   0x000004
+           .idata_TCP.o_i    romdata   0x00e9b4    program   0x000002
+      .idata_StackTsk.o_i    romdata   0x00e9b6    program   0x000000
+          .idata_SMTP.o_i    romdata   0x00e9b6    program   0x000003
+          .idata_NBNS.o_i    romdata   0x00e9b9    program   0x000001
+            .idata_IP.o_i    romdata   0x00e9ba    program   0x000002
+   .idata_LCDBlocking.o_i    romdata   0x00e9ba    program   0x000000
+          .idata_ICMP.o_i    romdata   0x00e9bc    program   0x000000
+       .idata_Helpers.o_i    romdata   0x00e9bc    program   0x000000
+      .idata_ETH97J60.o_i    romdata   0x00e9bc    program   0x000000
+           .idata_DNS.o_i    romdata   0x00e9bc    program   0x000003
+          .idata_DHCP.o_i    romdata   0x00e9bf    program   0x000004
+     .idata_AlarmMain.o_i    romdata   0x00e9c3    program   0x000007
+           .idata_ARP.o_i    romdata   0x00e9ca    program   0x000001
+            .code_c018i.o       code   0x00e9cc    program   0x000000
+                MATH_DATA      udata   0x000000       data   0x000014
+                 .tmpdata      udata   0x000014       data   0x00000e
+                DELAYDAT1      udata   0x000022       data   0x000001
+             .udata_UDP.o      udata   0x000060       data   0x000098
+        .udata_ETH97J60.o      udata   0x0000f8       data   0x000007
+            .udata_NBNS.o      udata   0x0000ff       data   0x000001
+       .udata_AlarmMain.o      udata   0x000100       data   0x0000e6
+             .udata_DNS.o      udata   0x0001e6       data   0x000016
+         .udata_Helpers.o      udata   0x0001fc       data   0x000004
+                 TCB_uRAM      udata   0x000200       data   0x000038
+     .udata_LCDBlocking.o      udata   0x000238       data   0x000021
+            .udata_DHCP.o      udata   0x000259       data   0x000021
+             .udata_ARP.o      udata   0x00027a       data   0x000014
+           .udata_c018i.o      udata   0x00028e       data   0x00000a
+       .idata_AlarmMain.o      idata   0x000298       data   0x000007
+            .idata_DHCP.o      idata   0x00029f       data   0x000004
+            .idata_SMTP.o      idata   0x0002a3       data   0x000003
+             .idata_DNS.o      idata   0x0002a6       data   0x000003
+                SEED_DATA      idata   0x0002a9       data   0x000002
+             .idata_UDP.o      idata   0x0002ab       data   0x000002
+             .idata_TCP.o      idata   0x0002ad       data   0x000002
+              .idata_IP.o      idata   0x0002af       data   0x000002
+            .idata_NBNS.o      idata   0x0002b1       data   0x000001
+             .idata_ARP.o      idata   0x0002b2       data   0x000001
+           .idata_c018i.o      idata   0x0002b3       data   0x000000
+        .udata_fxd1616u.o      udata   0x0002b3       data   0x000000
+        .idata_fxd1616u.o      idata   0x0002b3       data   0x000000
+        .udata_fxd3232u.o      udata   0x0002b3       data   0x000000
+        .idata_fxd3232u.o      idata   0x0002b3       data   0x000000
+          .udata___init.o      udata   0x0002b3       data   0x000000
+        .idata_StackTsk.o      idata   0x0002b3       data   0x000000
+          .idata___init.o      idata   0x0002b3       data   0x000000
+     .idata_LCDBlocking.o      idata   0x0002b3       data   0x000000
+            .idata_ICMP.o      idata   0x0002b3       data   0x000000
+            .udata_ICMP.o      udata   0x0002b3       data   0x000000
+         .idata_Helpers.o      idata   0x0002b3       data   0x000000
+        .idata_ETH97J60.o      idata   0x0002b3       data   0x000000
+                  MESSAGE      idata   0x000700       data   0x000208
+                   .stack      udata   0x000d00       data   0x000100
+            .udata_SMTP.o      udata   0x000e00       data   0x00003f
+       SYN_QUEUE_RAM_SECT      udata   0x000e3f       data   0x00003c
+            .idata_Tick.o      idata   0x000e7b       data   0x000004
+              .udata_IP.o      udata   0x000e7f       data   0x000001
+              SFR_BANKED0      udata   0x000e80       data   0x000006
+              SFR_BANKED1      udata   0x000e8a       data   0x000001
+              SFR_BANKED2      udata   0x000e97       data   0x000003
+              SFR_BANKED3      udata   0x000ea0       data   0x000001
+              SFR_BANKED4      udata   0x000ea2       data   0x000003
+              SFR_BANKED5      udata   0x000ea6       data   0x000002
+              SFR_BANKED6      udata   0x000eaa       data   0x000002
+              SFR_BANKED7      udata   0x000eb2       data   0x000001
+              SFR_BANKED8      udata   0x000eb4       data   0x000001
+              SFR_BANKED9      udata   0x000eb6       data   0x000004
+             SFR_BANKED10      udata   0x000ec0       data   0x000012
+             SFR_BANKED11      udata   0x000ed4       data   0x000002
+             SFR_BANKED12      udata   0x000ed8       data   0x000002
+             SFR_BANKED13      udata   0x000ee2       data   0x000016
+             SFR_BANKED14      udata   0x000efb       data   0x000001
+             SFR_BANKED15      udata   0x000efd       data   0x000002
+             .udata_TCP.o      udata   0x000f00       data   0x00004f
+        .udata_StackTsk.o      udata   0x000f4f       data   0x00000b
+            .udata_Tick.o      udata   0x000f5a       data   0x000006
+            SFR_UNBANKED0      udata   0x000f60       data   0x0000a0
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x000018    0x00001d      
+                            0x00002a    0x00e9ca      
+            59821 out of 131072 program addresses used, program memory utilization is 45%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  ARPInit   0x00ceb6    program     extern F:\LANAlarm\TCPIP Stack\ARP.c
+            ARPIsResolved   0x00d180    program     extern F:\LANAlarm\TCPIP Stack\ARP.c
+               ARPProcess   0x00cece    program     extern F:\LANAlarm\TCPIP Stack\ARP.c
+                   ARPPut   0x00cd5c    program     static F:\LANAlarm\TCPIP Stack\ARP.c
+               ARPResolve   0x00d0a6    program     extern F:\LANAlarm\TCPIP Stack\ARP.c
+                AlarmTask   0x00c164    program     static F:\LANAlarm\AlarmMain.c  
+             Base64Encode   0x007cf8    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+     CalcIPBufferChecksum   0x009c84    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+           CalcIPChecksum   0x0083da    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+              CloseSocket   0x003f0a    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+                    D10_1   0x00e77c    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+                     D10x   0x00e774    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+                    D1K_1   0x00e73c    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+                     D1Kx   0x00e73a    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+              DHCPDisable   0x00b09a    program     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+               DHCPEnable   0x00b0b8    program     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+                DHCPReset   0x00b07c    program     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+                 DHCPTask   0x00b0ce    program     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+            DNSBeginUsage   0x00a316    program     extern F:\LANAlarm\TCPIP Stack\DNS.c
+              DNSEndUsage   0x00a328    program     extern F:\LANAlarm\TCPIP Stack\DNS.c
+             DNSGetString   0x00affc    program     static F:\LANAlarm\TCPIP Stack\DNS.c
+            DNSIsResolved   0x00a416    program     extern F:\LANAlarm\TCPIP Stack\DNS.c
+          DNSPutROMString   0x00aebc    program     static F:\LANAlarm\TCPIP Stack\DNS.c
+             DNSPutString   0x00adbc    program     static F:\LANAlarm\TCPIP Stack\DNS.c
+               DNSResolve   0x00a350    program     extern F:\LANAlarm\TCPIP Stack\DNS.c
+            DNSResolveROM   0x00a3ae    program     extern F:\LANAlarm\TCPIP Stack\DNS.c
+              Delay10TCYx   0x00e76c    program     extern C:\MCC18\src\traditional\delays\d10tcyx.asm
+              Delay1KTCYx   0x00e730    program     extern C:\MCC18\src\traditional\delays\d1ktcyx.asm
+           DisplayIPValue   0x00c02a    program     static F:\LANAlarm\AlarmMain.c  
+                 FXD1616U   0x00e704    program     extern C:\MCC18\src\traditional\math\fxd1616u.c
+                 FXD3232U   0x00e6bc    program     extern C:\MCC18\src\traditional\math\fxd3232u.c
+                 FXM1616U   0x00e48a    program     extern C:\MCC18\src\traditional\math\fxm1616u.asm
+                 FXM2424U   0x00e4c6    program     extern C:\MCC18\src\traditional\math\fxm2424u.asm
+         FindEmailAddress   0x007264    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+       FindMatchingSocket   0x00935c    program     static F:\LANAlarm\TCPIP Stack\UDP.c
+       FindMatchingSocket   0x0036bc    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+      FindROMEmailAddress   0x0073aa    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+        FormatNetBIOSName   0x0085e6    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+      GenerateRandomDWORD   0x00753c    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+              GetTickCopy   0x00e35a    program     static F:\LANAlarm\TCPIP Stack\Tick.c
+             HandleTCPSeg   0x003f94    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+              ICMPProcess   0x00e204    program     extern F:\LANAlarm\TCPIP Stack\ICMP.c
+              IPGetHeader   0x00d31e    program     extern F:\LANAlarm\TCPIP Stack\IP.c
+              IPPutHeader   0x00d492    program     extern F:\LANAlarm\TCPIP Stack\IP.c
+            IPSetRxBuffer   0x00d5f6    program     extern F:\LANAlarm\TCPIP Stack\IP.c
+            InitAppConfig   0x00c6d2    program     static F:\LANAlarm\AlarmMain.c  
+          InitializeBoard   0x00c69c    program     static F:\LANAlarm\AlarmMain.c  
+                 LCDErase   0x00d9e4    program     extern F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+                  LCDInit   0x00d76a    program     extern F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+                LCDUpdate   0x00d894    program     extern F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+                 LCDWrite   0x00d718    program     static F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+                   LowISR   0x00bd42    program     extern F:\LANAlarm\AlarmMain.c  
+                LowVector   0x000018    program     extern F:\LANAlarm\AlarmMain.c  
+        MACCalcRxChecksum   0x009bc2    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+             MACDiscardRx   0x0096fe    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                 MACFlush   0x009a80    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                   MACGet   0x00a0fe    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+              MACGetArray   0x00a104    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+         MACGetFreeRxSize   0x009778    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+             MACGetHeader   0x009870    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                  MACInit   0x00959a    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+              MACIsLinked   0x0096a4    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+         MACIsMemCopyDone   0x00a0f0    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+             MACIsTxReady   0x0096c4    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+          MACMemCopyAsync   0x009e88    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+             MACPowerDown   0x00a2f6    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+               MACPowerUp   0x00a308    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                   MACPut   0x00a1a4    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+              MACPutArray   0x00a1be    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+             MACPutHeader   0x0099f8    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+           MACPutROMArray   0x00a202    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+            MACSetReadPtr   0x009b7c    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+        MACSetReadPtrInRx   0x009ab6    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+           MACSetWritePtr   0x009b36    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+              NBNSGetName   0x00cc48    program     static F:\LANAlarm\TCPIP Stack\NBNS.c
+              NBNSPutName   0x00cbd4    program     static F:\LANAlarm\TCPIP Stack\NBNS.c
+                 NBNSTask   0x00c79a    program     extern F:\LANAlarm\TCPIP Stack\NBNS.c
+                  OneByte   0x00e1b6    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                ProcLower   0x00e16a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                ProcUpper   0x00e160    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+     ROMStringToIPAddress   0x007a94    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+               ReadPHYReg   0x00a258    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+           SMTPBeginUsage   0x005912    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+             SMTPEndUsage   0x005954    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+                SMTPFlush   0x007252    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+               SMTPIsBusy   0x006f4e    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+           SMTPIsPutReady   0x006f5e    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+                  SMTPPut   0x006f7a    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+             SMTPPutArray   0x00701e    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+              SMTPPutDone   0x00725e    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+          SMTPPutROMArray   0x0070a0    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+         SMTPPutROMString   0x0071b6    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+            SMTPPutString   0x00713c    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+             SMTPSendMail   0x006f48    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+                 SMTPTask   0x00599e    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+                  SendTCP   0x002db0    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+     SerializedMACAddress   0x00e79c    program     static F:\LANAlarm\AlarmMain.c  
+        StackApplications   0x00dfa2    program     extern F:\LANAlarm\TCPIP Stack\StackTsk.c
+                StackInit   0x00dd38    program     extern F:\LANAlarm\TCPIP Stack\StackTsk.c
+                StackTask   0x00dd78    program     extern F:\LANAlarm\TCPIP Stack\StackTsk.c
+        StringToIPAddress   0x007840    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+            SwapARPPacket   0x00d246    program     static F:\LANAlarm\TCPIP Stack\ARP.c
+             SwapIPHeader   0x00d630    program     static F:\LANAlarm\TCPIP Stack\IP.c
+            SwapTCPHeader   0x003cda    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+                  SyncTCB   0x00015a    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+              SyncTCBStub   0x0000bc    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+        TCPAdjustFIFOSize   0x005326    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+           TCPControlTask   0x00c3c2    program     extern F:\LANAlarm\AlarmMain.c  
+               TCPDiscard   0x0010ac    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+            TCPDisconnect   0x00077c    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+           TCPFindArrayEx   0x001524    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                TCPFindEx   0x0021bc    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+        TCPFindROMArrayEx   0x001b40    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                 TCPFlush   0x000870    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                   TCPGet   0x00116e    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+              TCPGetArray   0x00125e    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+         TCPGetRemoteInfo   0x000822    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+         TCPGetRxFIFOFree   0x0014aa    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+         TCPGetTxFIFOFull   0x00102c    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                  TCPInit   0x000246    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+           TCPIsConnected   0x000752    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+            TCPIsGetReady   0x0010f8    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+            TCPIsPutReady   0x0008aa    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                  TCPOpen   0x00052a    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+               TCPProcess   0x002ba2    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                   TCPPut   0x00093e    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+              TCPPutArray   0x000a7c    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+           TCPPutROMArray   0x000cc2    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+          TCPPutROMString   0x000f98    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+             TCPPutString   0x000f12    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+               TCPRAMCopy   0x005650    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+            TCPRAMCopyROM   0x005792    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+     TCPSocketInitializer   0x00e790    program     extern F:\LANAlarm\TCPIPConfig.h
+                  TCPTick   0x002210    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+              TCPWasReset   0x000728    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+TickConvertToMilliseconds   0x00e432    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+                  TickGet   0x00e380    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+            TickGetDiv256   0x00e396    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+            TickGetDiv64K   0x00e3e4    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+                 TickInit   0x00e34a    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+               TickUpdate   0x00e476    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+                 TstLower   0x00e154    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                 TstUpper   0x00e14e    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                 UDPClose   0x008850    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+               UDPDiscard   0x009114    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                 UDPFlush   0x008d24    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                   UDPGet   0x008fea    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+              UDPGetArray   0x009036    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                  UDPInit   0x008678    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+            UDPIsGetReady   0x008fa8    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+            UDPIsPutReady   0x00895c    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                  UDPOpen   0x0086aa    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+               UDPProcess   0x009128    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                   UDPPut   0x0089dc    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+              UDPPutArray   0x008a38    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+           UDPPutROMArray   0x008b24    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+          UDPPutROMString   0x008c96    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+             UDPPutString   0x008c16    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+           UDPSetRxBuffer   0x008918    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+           UDPSetTxBuffer   0x0088aa    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                  UDPTask   0x0086a4    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+              WritePHYReg   0x00a2b2    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+              _2jContinue   0x00db62    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                   _2jEnd   0x00dcb2    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+              _3jContinue   0x00db2e    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                   _3jEnd   0x00db6c    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+              _4jContinue   0x00dada    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+              _4jContinue   0x00da80    program     static C:\MCC18\src\traditional\stdclib\memcmp.asm
+                   _4jEnd   0x00db38    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                   _5jEnd   0x00dae4    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+                   _5jEnd   0x00da8a    program     static C:\MCC18\src\traditional\stdclib\memcmp.asm
+        _D10TCYXCODE_000A   0x00e776    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x00e778    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x00e77a    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D1KTCYXCODE_0010   0x00e740    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0016   0x00e746    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+             _DHCPReceive   0x00b50c    program     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                _DHCPSend   0x00ba9e    program     static F:\LANAlarm\TCPIP Stack\DHCP.c
+           ___do_lbl00002   0x00d7cc    program     static                          
+           ___do_lbl00002   0x00e378    program     static                          
+           ___do_lbl00003   0x00e37c    program     static                          
+           ___do_lbl00003   0x00d7cc    program     static                          
+           ___do_lbl00004   0x00e35a    program     static                          
+           ___do_lbl00006   0x00d79a    program     static                          
+           ___do_lbl00010   0x00d880    program     static                          
+           ___do_lbl00011   0x00d880    program     static                          
+           ___do_lbl00014   0x00d84e    program     static                          
+          ___for_lbl00007   0x00d7f4    program     static                          
+          ___for_lbl00008   0x00d7f8    program     static                          
+          ___for_lbl00009   0x00d7d6    program     static                          
+          ___for_lbl00110   0x0085a2    program     static                          
+          ___for_lbl00111   0x0085a8    program     static                          
+          ___for_lbl00112   0x008584    program     static                          
+          ___for_lbl00113   0x0085bc    program     static                          
+          ___for_lbl00114   0x0085c0    program     static                          
+          ___for_lbl00115   0x0085a8    program     static                          
+           ___if_lbl00005   0x007728    program     static                          
+           ___if_lbl00006   0x007746    program     static                          
+           ___if_lbl00007   0x0077dc    program     static                          
+           ___if_lbl00008   0x0077e2    program     static                          
+           ___if_lbl00019   0x009886    program     static                          
+           ___if_lbl00020   0x009892    program     static                          
+           ___if_lbl00026   0x009960    program     static                          
+           ___if_lbl00029   0x0099d8    program     static                          
+       ___return_lbl00000   0x00d762    program     static                          
+       ___return_lbl00000   0x00782c    program     static                          
+       ___return_lbl00000   0x00e72e    program     static                          
+       ___return_lbl00000   0x000004    program     static                          
+       ___return_lbl00000   0x00969a    program     static                          
+       ___return_lbl00000   0x00e702    program     static                          
+       ___return_lbl00001   0x00e76a    program     static                          
+       ___return_lbl00001   0x00d880    program     static                          
+       ___return_lbl00001   0x00001c    program     static                          
+       ___return_lbl00001   0x00e37e    program     static                          
+       ___return_lbl00002   0x00e6ba    program     static                          
+       ___return_lbl00018   0x0099e0    program     static                          
+       ___return_lbl00078   0x00a1b6    program     static                          
+       ___return_lbl00079   0x00a1fa    program     static                          
+       ___return_lbl00082   0x00a250    program     static                          
+       ___return_lbl00085   0x00a29e    program     static                          
+       ___return_lbl00088   0x00a2ec    program     static                          
+       ___return_lbl00109   0x0085d2    program     static                          
+        ___while_lbl00001   0x0095ac    program     static                          
+        ___while_lbl00001   0x0075bc    program     static                          
+        ___while_lbl00002   0x0077e4    program     static                          
+        ___while_lbl00002   0x0095b2    program     static                          
+        ___while_lbl00003   0x0075c4    program     static                          
+        ___while_lbl00004   0x0075c8    program     static                          
+        ___while_lbl00004   0x00d7a8    program     static                          
+        ___while_lbl00005   0x00d7cc    program     static                          
+        ___while_lbl00012   0x00d85c    program     static                          
+        ___while_lbl00013   0x00d880    program     static                          
+        ___while_lbl00080   0x00a1c6    program     static                          
+        ___while_lbl00081   0x00a1fa    program     static                          
+        ___while_lbl00083   0x00a20a    program     static                          
+        ___while_lbl00084   0x00a250    program     static                          
+        ___while_lbl00086   0x00a274    program     static                          
+        ___while_lbl00087   0x00a27a    program     static                          
+        ___while_lbl00089   0x00a2e6    program     static                          
+        ___while_lbl00090   0x00a2ec    program     static                          
+                   __init   0x00e7a2    program     extern C:\MCC18\src\traditional\stdclib\__init.c
+               __string_0   0x00e60d    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_0   0x00e578    program     static F:\LANAlarm\AlarmMain.c  
+               __string_1   0x00e5fc    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+              __string_10   0x00e5b6    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+              __string_11   0x00e558    program     static F:\LANAlarm\AlarmMain.c  
+              __string_11   0x00e5aa    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+              __string_12   0x00e5a4    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+              __string_13   0x00e5a0    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+              __string_14   0x00e599    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_2   0x00e5ef    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_3   0x00e5ec    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_4   0x00e5e0    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_5   0x00e5dc    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_6   0x00e5d2    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_7   0x00e5cb    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_8   0x00e5c4    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_9   0x00e5bd    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_9   0x00e561    program     static F:\LANAlarm\AlarmMain.c  
+               __tmplbl_0   0x007628    program     static                          
+              __tmplbl_10   0x0099b8    program     static                          
+             __tmplbl_100   0x006f34    program     static                          
+             __tmplbl_101   0x006f34    program     static                          
+             __tmplbl_105   0x006f34    program     static                          
+             __tmplbl_106   0x006ec0    program     static                          
+             __tmplbl_107   0x006eb2    program     static                          
+             __tmplbl_108   0x006d32    program     static                          
+             __tmplbl_109   0x006cea    program     static                          
+              __tmplbl_11   0x0099be    program     static                          
+             __tmplbl_110   0x00689a    program     static                          
+             __tmplbl_111   0x00686c    program     static                          
+             __tmplbl_112   0x0067de    program     static                          
+             __tmplbl_116   0x00221e    program     static                          
+             __tmplbl_123   0x006f1e    program     static                          
+             __tmplbl_124   0x006f1e    program     static                          
+             __tmplbl_125   0x006f1e    program     static                          
+             __tmplbl_129   0x006f1e    program     static                          
+             __tmplbl_133   0x006f1e    program     static                          
+             __tmplbl_135   0x006f1e    program     static                          
+             __tmplbl_136   0x006f1e    program     static                          
+             __tmplbl_137   0x006f1e    program     static                          
+             __tmplbl_138   0x006f1e    program     static                          
+             __tmplbl_139   0x006f1e    program     static                          
+             __tmplbl_139   0x005312    program     static                          
+             __tmplbl_141   0x006f1e    program     static                          
+             __tmplbl_141   0x005312    program     static                          
+             __tmplbl_142   0x006f1e    program     static                          
+             __tmplbl_143   0x006f1e    program     static                          
+             __tmplbl_143   0x005312    program     static                          
+             __tmplbl_144   0x006f1e    program     static                          
+             __tmplbl_145   0x005312    program     static                          
+             __tmplbl_147   0x005312    program     static                          
+             __tmplbl_150   0x005312    program     static                          
+             __tmplbl_160   0x005312    program     static                          
+             __tmplbl_161   0x005312    program     static                          
+             __tmplbl_163   0x005312    program     static                          
+             __tmplbl_165   0x005312    program     static                          
+             __tmplbl_166   0x005312    program     static                          
+             __tmplbl_176   0x005312    program     static                          
+             __tmplbl_177   0x005312    program     static                          
+             __tmplbl_178   0x005312    program     static                          
+             __tmplbl_180   0x005312    program     static                          
+             __tmplbl_181   0x005312    program     static                          
+             __tmplbl_182   0x005312    program     static                          
+             __tmplbl_183   0x005312    program     static                          
+               __tmplbl_2   0x00995e    program     static                          
+              __tmplbl_27   0x0075a4    program     static                          
+              __tmplbl_28   0x007644    program     static                          
+              __tmplbl_29   0x007684    program     static                          
+               __tmplbl_3   0x00994a    program     static                          
+              __tmplbl_30   0x00ad88    program     static                          
+              __tmplbl_30   0x0076e8    program     static                          
+              __tmplbl_31   0x00ad88    program     static                          
+              __tmplbl_32   0x00ad68    program     static                          
+              __tmplbl_39   0x00ada0    program     static                          
+               __tmplbl_4   0x009934    program     static                          
+              __tmplbl_40   0x00ada0    program     static                          
+              __tmplbl_41   0x00ada0    program     static                          
+              __tmplbl_42   0x00ada0    program     static                          
+              __tmplbl_43   0x00ada0    program     static                          
+               __tmplbl_5   0x009920    program     static                          
+               __tmplbl_6   0x00990a    program     static                          
+               __tmplbl_7   0x0098fc    program     static                          
+               __tmplbl_8   0x0098fa    program     static                          
+              __tmplbl_85   0x006f20    program     static                          
+              __tmplbl_89   0x006f34    program     static                          
+               __tmplbl_9   0x0099c6    program     static                          
+              __tmplbl_90   0x006f34    program     static                          
+              __tmplbl_92   0x006f34    program     static                          
+              __tmplbl_93   0x006f34    program     static                          
+              __tmplbl_95   0x006f34    program     static                          
+              __tmplbl_97   0x006f34    program     static                          
+              __tmplbl_98   0x006f34    program     static                          
+              __tmplbl_99   0x006f34    program     static                          
+            __zero_memory   0x00e782    program     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                _do_cinit   0x00e61e    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                   _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                   _false   0x00e6fe    program     static                          
+                 _startup   0x00e750    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     atoi   0x00dfaa    program     extern C:\MCC18\src\traditional\stdclib\atoi.asm
+             btohexa_high   0x008160    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+              btohexa_low   0x008196    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+               clear_loop   0x00e788    program     static C:\MCC18\src\traditional\proc\p18F67J60.asm
+                copy_loop   0x00e690    program     static                          
+            copy_one_byte   0x00e696    program     static                          
+                     done   0x00e6ba    program     static                          
+             done_copying   0x00e6a4    program     static                          
+                  endloop   0x00e72a    program     static                          
+                  hexatob   0x0080a4    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                   itoBCD   0x00e174    program     extern C:\MCC18\src\traditional\stdclib\itobcd.asm
+                     itoa   0x00e094    program     extern C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo1   0x00e11a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo2   0x00e116    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo3   0x00e112    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo4   0x00e10e    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo5   0x00e10a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jEnd   0x00dd36    program     static C:\MCC18\src\traditional\stdclib\strupr.asm
+                     jEnd   0x00dcb4    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x00dc7c    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
+                     jEnd   0x00e1b2    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                     jEnd   0x00dc60    program     static C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                     jEnd   0x00dbe0    program     static C:\MCC18\src\traditional\stdclib\schrpgm.asm
+                     jEnd   0x00da90    program     static C:\MCC18\src\traditional\stdclib\memcmp.asm
+                     jEnd   0x00db9c    program     static C:\MCC18\src\traditional\stdclib\strchr.asm
+                     jEnd   0x00db74    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                     jEnd   0x00daea    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+                     jEnd   0x00db40    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                     jEnd   0x00e068    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                 jEndLoop   0x00e050    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+               jInnerLoop   0x00dcee    program     static C:\MCC18\src\traditional\stdclib\sstrrp.asm
+                    jLoop   0x00db56    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                    jLoop   0x00db82    program     static C:\MCC18\src\traditional\stdclib\strchr.asm
+                    jLoop   0x00db22    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                    jLoop   0x00dbb0    program     static C:\MCC18\src\traditional\stdclib\schrpgm.asm
+                    jLoop   0x00e002    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                    jLoop   0x00dace    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+                    jLoop   0x00dc16    program     static C:\MCC18\src\traditional\stdclib\strcpy.asm
+                    jLoop   0x00dc56    program     static C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                    jLoop   0x00dc72    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
+                    jLoop   0x00da74    program     static C:\MCC18\src\traditional\stdclib\memcmp.asm
+                    jLoop   0x00dc9c    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x00dd22    program     static C:\MCC18\src\traditional\stdclib\strupr.asm
+                    jLoop   0x00e18c    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                   jMatch   0x00dbce    program     static C:\MCC18\src\traditional\stdclib\schrpgm.asm
+                   jMatch   0x00db94    program     static C:\MCC18\src\traditional\stdclib\strchr.asm
+                 jNoMatch   0x00dcfe    program     static C:\MCC18\src\traditional\stdclib\sstrrp.asm
+                    jNull   0x00dd08    program     static C:\MCC18\src\traditional\stdclib\sstrrp.asm
+               jOuterLoop   0x00dcd4    program     static C:\MCC18\src\traditional\stdclib\sstrrp.asm
+                    jSkip   0x00dd32    program     static C:\MCC18\src\traditional\stdclib\strupr.asm
+                  jSkipWS   0x00dfd8    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                 jSkipWS1   0x00dfea    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                jStrMatch   0x00dd0c    program     static C:\MCC18\src\traditional\stdclib\sstrrp.asm
+                jTstLowZ1   0x00e15e    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                 jTstSign   0x00dfee    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                jTstSign1   0x00dffa    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                jTstSign1   0x00e0c0    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                jTstSign2   0x00e000    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                jTstSign3   0x00e002    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+          leftRotateDWORD   0x00855a    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                     loop   0x00e6ca    program     static                          
+                     loop   0x00e760    program     static                          
+                     loop   0x00e70e    program     static                          
+                     main   0x00bdfc    program     extern F:\LANAlarm\AlarmMain.c  
+                   memcmp   0x00da54    program     extern C:\MCC18\src\traditional\stdclib\memcmp.asm
+                   memcpy   0x00daa6    program     extern C:\MCC18\src\traditional\stdclib\memcpy.asm
+            memcpypgm2ram   0x00dafc    program     extern C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                   memset   0x00db42    program     extern C:\MCC18\src\traditional\stdclib\memset.asm
+                     rand   0x00e1d6    program     extern C:\MCC18\src\traditional\stdclib\rand.asm
+                    srand   0x00e1c8    program     extern C:\MCC18\src\traditional\stdclib\rand.asm
+                   strchr   0x00db76    program     extern C:\MCC18\src\traditional\stdclib\strchr.asm
+                strchrpgm   0x00db9e    program     extern C:\MCC18\src\traditional\stdclib\schrpgm.asm
+                   strcpy   0x00dbee    program     extern C:\MCC18\src\traditional\stdclib\strcpy.asm
+            strcpypgm2ram   0x00dc30    program     extern C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+           stricmppgm2ram   0x0081ca    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                   strlen   0x00dc62    program     extern C:\MCC18\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x00dc7e    program     extern C:\MCC18\src\traditional\stdclib\slenpgm.asm
+             strstrrampgm   0x00dcc8    program     extern C:\MCC18\src\traditional\stdclib\sstrrp.asm
+                   strupr   0x00dd0e    program     extern C:\MCC18\src\traditional\stdclib\strupr.asm
+                    swapl   0x008334    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                    swaps   0x0082e0    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                     test   0x00e638    program     static                          
+                    uitoa   0x007f58    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                   ADCON0   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               ADCON0bits   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ADCON1   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               ADCON1bits   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ADCON2   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               ADCON2bits   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ADRES   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ADRESH   0x000fc4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ADRESL   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ANString   0x00018c       data     static F:\LANAlarm\AlarmMain.c  
+                  AlmMsg1   0x000700       data     extern F:\LANAlarm\AlarmMain.c  
+                  AlmMsg2   0x000740       data     extern F:\LANAlarm\AlarmMain.c  
+                  AlmMsg3   0x000780       data     extern F:\LANAlarm\AlarmMain.c  
+                  AlmMsg4   0x0007c0       data     extern F:\LANAlarm\AlarmMain.c  
+                  AlmMsg5   0x000800       data     extern F:\LANAlarm\AlarmMain.c  
+                AppConfig   0x000100       data     extern F:\LANAlarm\AlarmMain.c  
+                  BAUDCON   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 BAUDCON1   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             BAUDCON1bits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              BAUDCONbits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  BAUDCTL   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 BAUDCTL1   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             BAUDCTL1bits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              BAUDCTLbits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      BSR   0x000fe0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  CCP1CON   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              CCP1CONbits   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  CCP2CON   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              CCP2CONbits   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  CCP3CON   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              CCP3CONbits   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  CCP4CON   0x000f73       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              CCP4CONbits   0x000f73       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  CCP5CON   0x000f70       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              CCP5CONbits   0x000f70       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CCPR1   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR1H   0x000fbf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR1L   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CCPR2   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR2H   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR2L   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CCPR3   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR3H   0x000fb9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR3L   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CCPR4   0x000f74       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR4H   0x000f75       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR4L   0x000f74       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CCPR5   0x000f71       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR5H   0x000f72       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR5L   0x000f71       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CMCON   0x000fb4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                CMCONbits   0x000fb4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 CRPeriod   0x000e26       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                   CVRCON   0x000fb5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               CVRCONbits   0x000fb5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    Cache   0x00027a       data     static F:\LANAlarm\TCPIP Stack\ARP.c
+                   ContSM   0x000906       data     static F:\LANAlarm\AlarmMain.c  
+    CurrentPacketLocation   0x0000fa       data     static F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                     DDRA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRD   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRDbits   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRE   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDREbits   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRF   0x000f97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRFbits   0x000f97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRG   0x000f98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRGbits   0x000f98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+            DHCPBindCount   0x0002a2       data     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+                DHCPFlags   0x0002a0       data     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+            DHCPLeaseTime   0x00025d       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+             DHCPServerID   0x000259       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+               DHCPSocket   0x0002a1       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+              DNSHostName   0x0001e6       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+           DNSHostNameROM   0x0001e8       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+            DelayCounter1   0x000022       data     extern C:\MCC18\src\traditional\delays\delayd1.asm
+                  ECCP1AS   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              ECCP1ASbits   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP1CON   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP1CONbits   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP1DEL   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP1DELbits   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ECCP2AS   0x000f68       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              ECCP2ASbits   0x000f68       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP2CON   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP2CONbits   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP2DEL   0x000f67       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP2DELbits   0x000f67       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ECCP3AS   0x000f6a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              ECCP3ASbits   0x000f6a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP3CON   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP3CONbits   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP3DEL   0x000f69       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP3DELbits   0x000f69       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ECON1   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                ECON1bits   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ECON2   0x000efe       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                ECON2bits   0x000efe       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EDATA   0x000f61       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                EDATAbits   0x000f61       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EDMACS   0x000ef6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMACSH   0x000ef7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMACSL   0x000ef6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMADST   0x000ef4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 EDMADSTH   0x000ef5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 EDMADSTL   0x000ef4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EDMAND   0x000ef2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMANDH   0x000ef3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMANDL   0x000ef2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EDMAST   0x000ef0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMASTH   0x000ef1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMASTL   0x000ef0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EECON1   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               EECON1bits   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EECON2   0x000fa7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EFLOCON   0x000e97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              EFLOCONbits   0x000e97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT0   0x000ec0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT1   0x000ec1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT2   0x000ec2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT3   0x000ec3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT4   0x000ec4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT5   0x000ec5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT6   0x000ec6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT7   0x000ec7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      EIE   0x000efb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EIEbits   0x000efb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      EIR   0x000f60       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EIRbits   0x000f60       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPAUS   0x000e98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EPAUSH   0x000e99       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EPAUSL   0x000e98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EPKTCNT   0x000ed9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMCS   0x000ed0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EPMCSH   0x000ed1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EPMCSL   0x000ed0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM0   0x000ec8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM1   0x000ec9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM2   0x000eca       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM3   0x000ecb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM4   0x000ecc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM5   0x000ecd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM6   0x000ece       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM7   0x000ecf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EPMO   0x000ed4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMOH   0x000ed5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMOL   0x000ed4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ERDPT   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERDPTH   0x000f7b       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERDPTL   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ERXFCON   0x000ed8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              ERXFCONbits   0x000ed8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ERXND   0x000eea       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERXNDH   0x000eeb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERXNDL   0x000eea       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ERXRDPT   0x000eec       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ERXRDPTH   0x000eed       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ERXRDPTL   0x000eec       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ERXST   0x000ee8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERXSTH   0x000ee9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERXSTL   0x000ee8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ERXWRPT   0x000eee       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ERXWRPTH   0x000eef       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ERXWRPTL   0x000eee       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ESTAT   0x000efd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                ESTATbits   0x000efd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ETXND   0x000ee6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ETXNDH   0x000ee7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ETXNDL   0x000ee6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ETXST   0x000ee4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ETXSTH   0x000ee5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ETXSTL   0x000ee4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EWRPT   0x000ee2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EWRPTH   0x000ee3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EWRPTL   0x000ee2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     FSR0   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR0H   0x000fea       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR0L   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     FSR1   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR1H   0x000fe2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR1L   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     FSR2   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR2H   0x000fda       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR2L   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     Flag   0x000136       data     extern F:\LANAlarm\AlarmMain.c  
+                    Flags   0x0002a7       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                    Flags   0x0000f5       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+                    INDF0   0x000fef       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    INDF1   0x000fe7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    INDF2   0x000fdf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   INTCON   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  INTCON2   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              INTCON2bits   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  INTCON3   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              INTCON3bits   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               INTCONbits   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              IPHeaderLen   0x000e7f       data     static F:\LANAlarm\TCPIP Stack\IP.c
+                     IPR1   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 IPR1bits   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     IPR2   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 IPR2bits   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     IPR3   0x000fa5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 IPR3bits   0x000fa5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATA   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATAbits   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATB   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATBbits   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATC   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATCbits   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATD   0x000f8c       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATDbits   0x000f8c       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATE   0x000f8d       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATEbits   0x000f8d       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATF   0x000f8e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATFbits   0x000f8e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATG   0x000f8f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATGbits   0x000f8f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  LCDText   0x000238       data     extern F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+            LastPutSocket   0x0002ab       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+                    Limit   0x000299       data     extern F:\LANAlarm\AlarmMain.c  
+                   MAADR1   0x000e84       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAADR2   0x000e85       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAADR3   0x000e82       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAADR4   0x000e83       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAADR5   0x000e80       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAADR6   0x000e81       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  MABBIPG   0x000ea4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MACON1   0x000ea0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               MACON1bits   0x000ea0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MACON3   0x000ea2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               MACON3bits   0x000ea2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MACON4   0x000ea3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               MACON4bits   0x000ea3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MAIPG   0x000ea6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAIPGH   0x000ea7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAIPGL   0x000ea6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAMXFL   0x000eaa       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  MAMXFLH   0x000eab       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  MAMXFLL   0x000eaa       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                       MD   0x000901       data     extern F:\LANAlarm\AlarmMain.c  
+                    MICMD   0x000eb2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                MICMDbits   0x000eb2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     MIRD   0x000eb8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MIRDH   0x000eb9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MIRDL   0x000eb8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 MIREGADR   0x000eb4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MISTAT   0x000e8a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               MISTATbits   0x000e8a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     MIWR   0x000eb6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MIWRH   0x000eb7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MIWRL   0x000eb6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                MailState   0x000900       data     static F:\LANAlarm\AlarmMain.c  
+                 MySocket   0x0002a3       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                 MySocket   0x000907       data     static F:\LANAlarm\AlarmMain.c  
+                 MySocket   0x0000ff       data     static F:\LANAlarm\TCPIP Stack\NBNS.c
+                 MySocket   0x0002a6       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                    MyTCB   0x000f02       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                MyTCBStub   0x000f27       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+       NextPacketLocation   0x0000f8       data     static F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                 NextPort   0x000f00       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                 NextPort   0x0000f6       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+                   OSCCON   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               OSCCONbits   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  OSCTUNE   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              OSCTUNEbits   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 OldValue   0x000133       data     extern F:\LANAlarm\AlarmMain.c  
+                       PC   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      PCL   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   PCLATH   0x000ffa       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   PCLATU   0x000ffb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIE1   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIE1bits   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIE2   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIE2bits   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIE3   0x000fa3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIE3bits   0x000fa3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIR1   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIR1bits   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIR2   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIR2bits   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIR3   0x000fa4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIR3bits   0x000fa4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   PLUSW0   0x000feb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   PLUSW1   0x000fe3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   PLUSW2   0x000fdb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTA   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTAbits   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTB   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTBbits   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTC   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTCbits   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTD   0x000f83       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTDbits   0x000f83       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTE   0x000f84       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTEbits   0x000f84       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTF   0x000f85       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTFbits   0x000f85       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTG   0x000f86       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTGbits   0x000f86       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTDEC0   0x000fed       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTDEC1   0x000fe5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTDEC2   0x000fdd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTINC0   0x000fee       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTINC1   0x000fe6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTINC2   0x000fde       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      PR2   0x000fcb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      PR4   0x000f77       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  PREINC0   0x000fec       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  PREINC1   0x000fe4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  PREINC2   0x000fdc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PROD   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PRODH   0x000ff4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PRODL   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+          PutHeadersState   0x000e29       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                RAMStrPtr   0x000e3b       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+            RAMStringBody   0x00013c       data     static F:\LANAlarm\AlarmMain.c  
+          RAMStringServer   0x000880       data     extern F:\LANAlarm\AlarmMain.c  
+         RAMStringSubject   0x0008c0       data     extern F:\LANAlarm\AlarmMain.c  
+              RAMStringTo   0x000840       data     extern F:\LANAlarm\AlarmMain.c  
+                     RCON   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 RCONbits   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    RCREG   0x000fae       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   RCREG1   0x000fae       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    RCSTA   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   RCSTA1   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               RCSTA1bits   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                RCSTAbits   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                ROMStrPtr   0x000e35       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               ROMStrPtr2   0x000e38       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                 RXBuffer   0x000e31       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+            RXParserState   0x000e2a       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                   RcvLen   0x000194       data     static F:\LANAlarm\AlarmMain.c  
+               RecordType   0x0001eb       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+               RemoteInfo   0x000f43       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+             ResolvedInfo   0x0001ec       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+             ResponseCode   0x000e2b       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                   Result   0x000134       data     extern F:\LANAlarm\AlarmMain.c  
+                     SIGN   0x000000       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+               SMTPClient   0x000e00       data     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+                SMTPFlags   0x0002a5       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               SMTPServer   0x000e22       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                SMTPState   0x000e28       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                    SPBRG   0x000faf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   SPBRG1   0x000faf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   SPBRGH   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SPBRGH1   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SSP1ADD   0x000fc8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SSP1BUF   0x000fc9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 SSP1CON1   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             SSP1CON1bits   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 SSP1CON2   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             SSP1CON2bits   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 SSP1STAT   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             SSP1STATbits   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   SSPADD   0x000fc8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   SSPBUF   0x000fc9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SSPCON1   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              SSPCON1bits   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SSPCON2   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              SSPCON2bits   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SSPSTAT   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              SSPSTATbits   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   STATUS   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               STATUSbits   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   STKPTR   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               STKPTRbits   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 SYNQueue   0x000e3f       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                     Seed   0x0002a9       data     static C:\MCC18\src\traditional\stdclib\rand.asm
+        SentTransactionID   0x0001fa       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+         SocketWithRxData   0x0002ac       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+                StartTime   0x0001f6       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                    T0CON   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                T0CONbits   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    T1CON   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                T1CONbits   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    T2CON   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                T2CONbits   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    T3CON   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                T3CONbits   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    T4CON   0x000f76       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                T4CONbits   0x000f76       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   TABLAT   0x000ff5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   TBLPTR   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  TBLPTRH   0x000ff7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  TBLPTRL   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  TBLPTRU   0x000ff8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 TCBStubs   0x000200       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                    TMR0H   0x000fd7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR0L   0x000fd6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR1H   0x000fcf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR1L   0x000fce       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     TMR2   0x000fcc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR3H   0x000fb3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR3L   0x000fb2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     TMR4   0x000f78       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      TOS   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     TOSH   0x000ffe       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     TOSL   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     TOSU   0x000fff       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISD   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISDbits   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISE   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISEbits   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISF   0x000f97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISFbits   0x000f97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISG   0x000f98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISGbits   0x000f98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TXREG   0x000fad       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   TXREG1   0x000fad       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TXSTA   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   TXSTA1   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               TXSTA1bits   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TXSTAbits   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   Target   0x000284       data     static F:\LANAlarm\TCPIP Stack\ARP.c
+                    Timer   0x000e2d       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+           TransportState   0x0002a4       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               UDPRxCount   0x0000ef       data     extern F:\LANAlarm\TCPIP Stack\UDP.c
+            UDPSocketInfo   0x000060       data     extern F:\LANAlarm\TCPIP Stack\UDP.c
+               UDPTxCount   0x0000ed       data     extern F:\LANAlarm\TCPIP Stack\UDP.c
+              ValidValues   0x000275       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                   WDTCON   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               WDTCONbits   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     WREG   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 WaitTime   0x000138       data     static F:\LANAlarm\AlarmMain.c  
+             WasDiscarded   0x0000fc       data     static F:\LANAlarm\TCPIP Stack\ETH97J60.c
+              _Identifier   0x0002af       data     static F:\LANAlarm\TCPIP Stack\IP.c
+                 __AARGB0   0x000009       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB1   0x000008       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB2   0x000007       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB3   0x000006       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB4   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB5   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB7   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                   __AEXP   0x00000a       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __BARGB0   0x00000e       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB1   0x00000d       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB2   0x00000c       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB3   0x00000b       data     extern C:\MCC18\src\traditional\math\barg.asm
+                   __BEXP   0x00000f       data     extern C:\MCC18\src\traditional\math\barg.asm
+                __FPFLAGS   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                  __REMB0   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB1   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB2   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB3   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                   __TEMP   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000012       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000011       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB3   0x000010       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                  __tmp_0   0x000014       data     static F:\LANAlarm\AlarmMain.c  
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\NBNS.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\StackTsk.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\IP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\ICMP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\Helpers.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\ARP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+          activeUDPSocket   0x0000ec       data     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                   buffer   0x000196       data     static F:\LANAlarm\AlarmMain.c  
+                curr_byte   0x000291       data     static C:\MCC18\src\traditional\startup\c018i.c
+               curr_entry   0x000293       data     static C:\MCC18\src\traditional\startup\c018i.c
+                 data_ptr   0x000295       data     static C:\MCC18\src\traditional\startup\c018i.c
+          dwInternalTicks   0x000e7b       data     static F:\LANAlarm\TCPIP Stack\Tick.c
+                eventTime   0x000276       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+              hCurrentTCP   0x0002ad       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                 hLastTCB   0x0002ae       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+          myDHCPBindCount   0x000298       data     extern F:\LANAlarm\AlarmMain.c  
+                     prom   0x00028e       data     static C:\MCC18\src\traditional\startup\c018i.c
+               remoteNode   0x000f50       data     extern F:\LANAlarm\TCPIP Stack\StackTsk.c
+                    smARP   0x0002b2       data     static F:\LANAlarm\TCPIP Stack\ARP.c
+              smDHCPState   0x00029f       data     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+                    smDNS   0x0002a8       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                   smNBNS   0x0002b1       data     static F:\LANAlarm\TCPIP Stack\NBNS.c
+                  smStack   0x000f4f       data     static F:\LANAlarm\TCPIP Stack\StackTsk.c
+                        t   0x00029b       data     static F:\LANAlarm\AlarmMain.c  
+                  tempDNS   0x00026d       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                 tempDNS2   0x000271       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+              tempGateway   0x000265       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+            tempIPAddress   0x000261       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                 tempMask   0x000269       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                 toRotate   0x0001fc       data     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+             vTickReading   0x000f5a       data     static F:\LANAlarm\TCPIP Stack\Tick.c
+           wAddressLength   0x000e3d       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               wGetOffset   0x0000f3       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+               wPutOffset   0x0000f1       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+              wTXWatchdog   0x0000fd       data     static F:\LANAlarm\TCPIP Stack\ETH97J60.c
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
+       ___return_lbl00000   0x000004    program     static                          
+                LowVector   0x000018    program     extern F:\LANAlarm\AlarmMain.c  
+       ___return_lbl00001   0x00001c    program     static                          
+              SyncTCBStub   0x0000bc    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+                  SyncTCB   0x00015a    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+                  TCPInit   0x000246    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                  TCPOpen   0x00052a    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+              TCPWasReset   0x000728    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+           TCPIsConnected   0x000752    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+            TCPDisconnect   0x00077c    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+         TCPGetRemoteInfo   0x000822    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                 TCPFlush   0x000870    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+            TCPIsPutReady   0x0008aa    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                   TCPPut   0x00093e    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+              TCPPutArray   0x000a7c    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+           TCPPutROMArray   0x000cc2    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+             TCPPutString   0x000f12    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+          TCPPutROMString   0x000f98    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+         TCPGetTxFIFOFull   0x00102c    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+               TCPDiscard   0x0010ac    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+            TCPIsGetReady   0x0010f8    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                   TCPGet   0x00116e    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+              TCPGetArray   0x00125e    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+         TCPGetRxFIFOFree   0x0014aa    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+           TCPFindArrayEx   0x001524    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+        TCPFindROMArrayEx   0x001b40    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                TCPFindEx   0x0021bc    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                  TCPTick   0x002210    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+             __tmplbl_116   0x00221e    program     static                          
+               TCPProcess   0x002ba2    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+                  SendTCP   0x002db0    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+       FindMatchingSocket   0x0036bc    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+            SwapTCPHeader   0x003cda    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+              CloseSocket   0x003f0a    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+             HandleTCPSeg   0x003f94    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+             __tmplbl_165   0x005312    program     static                          
+             __tmplbl_163   0x005312    program     static                          
+             __tmplbl_161   0x005312    program     static                          
+             __tmplbl_160   0x005312    program     static                          
+             __tmplbl_150   0x005312    program     static                          
+             __tmplbl_147   0x005312    program     static                          
+             __tmplbl_166   0x005312    program     static                          
+             __tmplbl_176   0x005312    program     static                          
+             __tmplbl_177   0x005312    program     static                          
+             __tmplbl_178   0x005312    program     static                          
+             __tmplbl_180   0x005312    program     static                          
+             __tmplbl_181   0x005312    program     static                          
+             __tmplbl_182   0x005312    program     static                          
+             __tmplbl_183   0x005312    program     static                          
+             __tmplbl_145   0x005312    program     static                          
+             __tmplbl_143   0x005312    program     static                          
+             __tmplbl_139   0x005312    program     static                          
+             __tmplbl_141   0x005312    program     static                          
+        TCPAdjustFIFOSize   0x005326    program     extern F:\LANAlarm\TCPIP Stack\TCP.c
+               TCPRAMCopy   0x005650    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+            TCPRAMCopyROM   0x005792    program     static F:\LANAlarm\TCPIP Stack\TCP.c
+           SMTPBeginUsage   0x005912    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+             SMTPEndUsage   0x005954    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+                 SMTPTask   0x00599e    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+             __tmplbl_112   0x0067de    program     static                          
+             __tmplbl_111   0x00686c    program     static                          
+             __tmplbl_110   0x00689a    program     static                          
+             __tmplbl_109   0x006cea    program     static                          
+             __tmplbl_108   0x006d32    program     static                          
+             __tmplbl_107   0x006eb2    program     static                          
+             __tmplbl_106   0x006ec0    program     static                          
+             __tmplbl_123   0x006f1e    program     static                          
+             __tmplbl_124   0x006f1e    program     static                          
+             __tmplbl_125   0x006f1e    program     static                          
+             __tmplbl_129   0x006f1e    program     static                          
+             __tmplbl_133   0x006f1e    program     static                          
+             __tmplbl_135   0x006f1e    program     static                          
+             __tmplbl_136   0x006f1e    program     static                          
+             __tmplbl_137   0x006f1e    program     static                          
+             __tmplbl_141   0x006f1e    program     static                          
+             __tmplbl_142   0x006f1e    program     static                          
+             __tmplbl_143   0x006f1e    program     static                          
+             __tmplbl_144   0x006f1e    program     static                          
+             __tmplbl_139   0x006f1e    program     static                          
+             __tmplbl_138   0x006f1e    program     static                          
+              __tmplbl_85   0x006f20    program     static                          
+              __tmplbl_97   0x006f34    program     static                          
+              __tmplbl_95   0x006f34    program     static                          
+             __tmplbl_100   0x006f34    program     static                          
+             __tmplbl_101   0x006f34    program     static                          
+             __tmplbl_105   0x006f34    program     static                          
+              __tmplbl_98   0x006f34    program     static                          
+              __tmplbl_99   0x006f34    program     static                          
+              __tmplbl_89   0x006f34    program     static                          
+              __tmplbl_90   0x006f34    program     static                          
+              __tmplbl_92   0x006f34    program     static                          
+              __tmplbl_93   0x006f34    program     static                          
+             SMTPSendMail   0x006f48    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+               SMTPIsBusy   0x006f4e    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+           SMTPIsPutReady   0x006f5e    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+                  SMTPPut   0x006f7a    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+             SMTPPutArray   0x00701e    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+          SMTPPutROMArray   0x0070a0    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+            SMTPPutString   0x00713c    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+         SMTPPutROMString   0x0071b6    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+                SMTPFlush   0x007252    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+              SMTPPutDone   0x00725e    program     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+         FindEmailAddress   0x007264    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+      FindROMEmailAddress   0x0073aa    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+      GenerateRandomDWORD   0x00753c    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+              __tmplbl_27   0x0075a4    program     static                          
+        ___while_lbl00001   0x0075bc    program     static                          
+        ___while_lbl00003   0x0075c4    program     static                          
+        ___while_lbl00004   0x0075c8    program     static                          
+               __tmplbl_0   0x007628    program     static                          
+              __tmplbl_28   0x007644    program     static                          
+              __tmplbl_29   0x007684    program     static                          
+              __tmplbl_30   0x0076e8    program     static                          
+           ___if_lbl00005   0x007728    program     static                          
+           ___if_lbl00006   0x007746    program     static                          
+           ___if_lbl00007   0x0077dc    program     static                          
+           ___if_lbl00008   0x0077e2    program     static                          
+        ___while_lbl00002   0x0077e4    program     static                          
+       ___return_lbl00000   0x00782c    program     static                          
+        StringToIPAddress   0x007840    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+     ROMStringToIPAddress   0x007a94    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+             Base64Encode   0x007cf8    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                    uitoa   0x007f58    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                  hexatob   0x0080a4    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+             btohexa_high   0x008160    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+              btohexa_low   0x008196    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+           stricmppgm2ram   0x0081ca    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                    swaps   0x0082e0    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                    swapl   0x008334    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+           CalcIPChecksum   0x0083da    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+          leftRotateDWORD   0x00855a    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+          ___for_lbl00112   0x008584    program     static                          
+          ___for_lbl00110   0x0085a2    program     static                          
+          ___for_lbl00115   0x0085a8    program     static                          
+          ___for_lbl00111   0x0085a8    program     static                          
+          ___for_lbl00113   0x0085bc    program     static                          
+          ___for_lbl00114   0x0085c0    program     static                          
+       ___return_lbl00109   0x0085d2    program     static                          
+        FormatNetBIOSName   0x0085e6    program     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                  UDPInit   0x008678    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                  UDPTask   0x0086a4    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                  UDPOpen   0x0086aa    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                 UDPClose   0x008850    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+           UDPSetTxBuffer   0x0088aa    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+           UDPSetRxBuffer   0x008918    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+            UDPIsPutReady   0x00895c    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                   UDPPut   0x0089dc    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+              UDPPutArray   0x008a38    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+           UDPPutROMArray   0x008b24    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+             UDPPutString   0x008c16    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+          UDPPutROMString   0x008c96    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                 UDPFlush   0x008d24    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+            UDPIsGetReady   0x008fa8    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+                   UDPGet   0x008fea    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+              UDPGetArray   0x009036    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+               UDPDiscard   0x009114    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+               UDPProcess   0x009128    program     extern F:\LANAlarm\TCPIP Stack\UDP.c
+       FindMatchingSocket   0x00935c    program     static F:\LANAlarm\TCPIP Stack\UDP.c
+                  MACInit   0x00959a    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+        ___while_lbl00001   0x0095ac    program     static                          
+        ___while_lbl00002   0x0095b2    program     static                          
+       ___return_lbl00000   0x00969a    program     static                          
+              MACIsLinked   0x0096a4    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+             MACIsTxReady   0x0096c4    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+             MACDiscardRx   0x0096fe    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+         MACGetFreeRxSize   0x009778    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+             MACGetHeader   0x009870    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+           ___if_lbl00019   0x009886    program     static                          
+           ___if_lbl00020   0x009892    program     static                          
+               __tmplbl_8   0x0098fa    program     static                          
+               __tmplbl_7   0x0098fc    program     static                          
+               __tmplbl_6   0x00990a    program     static                          
+               __tmplbl_5   0x009920    program     static                          
+               __tmplbl_4   0x009934    program     static                          
+               __tmplbl_3   0x00994a    program     static                          
+               __tmplbl_2   0x00995e    program     static                          
+           ___if_lbl00026   0x009960    program     static                          
+              __tmplbl_10   0x0099b8    program     static                          
+              __tmplbl_11   0x0099be    program     static                          
+               __tmplbl_9   0x0099c6    program     static                          
+           ___if_lbl00029   0x0099d8    program     static                          
+       ___return_lbl00018   0x0099e0    program     static                          
+             MACPutHeader   0x0099f8    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                 MACFlush   0x009a80    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+        MACSetReadPtrInRx   0x009ab6    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+           MACSetWritePtr   0x009b36    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+            MACSetReadPtr   0x009b7c    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+        MACCalcRxChecksum   0x009bc2    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+     CalcIPBufferChecksum   0x009c84    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+          MACMemCopyAsync   0x009e88    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+         MACIsMemCopyDone   0x00a0f0    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                   MACGet   0x00a0fe    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+              MACGetArray   0x00a104    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                   MACPut   0x00a1a4    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+       ___return_lbl00078   0x00a1b6    program     static                          
+              MACPutArray   0x00a1be    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+        ___while_lbl00080   0x00a1c6    program     static                          
+       ___return_lbl00079   0x00a1fa    program     static                          
+        ___while_lbl00081   0x00a1fa    program     static                          
+           MACPutROMArray   0x00a202    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+        ___while_lbl00083   0x00a20a    program     static                          
+        ___while_lbl00084   0x00a250    program     static                          
+       ___return_lbl00082   0x00a250    program     static                          
+               ReadPHYReg   0x00a258    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+        ___while_lbl00086   0x00a274    program     static                          
+        ___while_lbl00087   0x00a27a    program     static                          
+       ___return_lbl00085   0x00a29e    program     static                          
+              WritePHYReg   0x00a2b2    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+        ___while_lbl00089   0x00a2e6    program     static                          
+       ___return_lbl00088   0x00a2ec    program     static                          
+        ___while_lbl00090   0x00a2ec    program     static                          
+             MACPowerDown   0x00a2f6    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+               MACPowerUp   0x00a308    program     extern F:\LANAlarm\TCPIP Stack\ETH97J60.c
+            DNSBeginUsage   0x00a316    program     extern F:\LANAlarm\TCPIP Stack\DNS.c
+              DNSEndUsage   0x00a328    program     extern F:\LANAlarm\TCPIP Stack\DNS.c
+               DNSResolve   0x00a350    program     extern F:\LANAlarm\TCPIP Stack\DNS.c
+            DNSResolveROM   0x00a3ae    program     extern F:\LANAlarm\TCPIP Stack\DNS.c
+            DNSIsResolved   0x00a416    program     extern F:\LANAlarm\TCPIP Stack\DNS.c
+              __tmplbl_32   0x00ad68    program     static                          
+              __tmplbl_31   0x00ad88    program     static                          
+              __tmplbl_30   0x00ad88    program     static                          
+              __tmplbl_42   0x00ada0    program     static                          
+              __tmplbl_41   0x00ada0    program     static                          
+              __tmplbl_40   0x00ada0    program     static                          
+              __tmplbl_39   0x00ada0    program     static                          
+              __tmplbl_43   0x00ada0    program     static                          
+             DNSPutString   0x00adbc    program     static F:\LANAlarm\TCPIP Stack\DNS.c
+          DNSPutROMString   0x00aebc    program     static F:\LANAlarm\TCPIP Stack\DNS.c
+             DNSGetString   0x00affc    program     static F:\LANAlarm\TCPIP Stack\DNS.c
+                DHCPReset   0x00b07c    program     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+              DHCPDisable   0x00b09a    program     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+               DHCPEnable   0x00b0b8    program     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+                 DHCPTask   0x00b0ce    program     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+             _DHCPReceive   0x00b50c    program     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                _DHCPSend   0x00ba9e    program     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                   LowISR   0x00bd42    program     extern F:\LANAlarm\AlarmMain.c  
+                     main   0x00bdfc    program     extern F:\LANAlarm\AlarmMain.c  
+           DisplayIPValue   0x00c02a    program     static F:\LANAlarm\AlarmMain.c  
+                AlarmTask   0x00c164    program     static F:\LANAlarm\AlarmMain.c  
+           TCPControlTask   0x00c3c2    program     extern F:\LANAlarm\AlarmMain.c  
+          InitializeBoard   0x00c69c    program     static F:\LANAlarm\AlarmMain.c  
+            InitAppConfig   0x00c6d2    program     static F:\LANAlarm\AlarmMain.c  
+                 NBNSTask   0x00c79a    program     extern F:\LANAlarm\TCPIP Stack\NBNS.c
+              NBNSPutName   0x00cbd4    program     static F:\LANAlarm\TCPIP Stack\NBNS.c
+              NBNSGetName   0x00cc48    program     static F:\LANAlarm\TCPIP Stack\NBNS.c
+                   ARPPut   0x00cd5c    program     static F:\LANAlarm\TCPIP Stack\ARP.c
+                  ARPInit   0x00ceb6    program     extern F:\LANAlarm\TCPIP Stack\ARP.c
+               ARPProcess   0x00cece    program     extern F:\LANAlarm\TCPIP Stack\ARP.c
+               ARPResolve   0x00d0a6    program     extern F:\LANAlarm\TCPIP Stack\ARP.c
+            ARPIsResolved   0x00d180    program     extern F:\LANAlarm\TCPIP Stack\ARP.c
+            SwapARPPacket   0x00d246    program     static F:\LANAlarm\TCPIP Stack\ARP.c
+              IPGetHeader   0x00d31e    program     extern F:\LANAlarm\TCPIP Stack\IP.c
+              IPPutHeader   0x00d492    program     extern F:\LANAlarm\TCPIP Stack\IP.c
+            IPSetRxBuffer   0x00d5f6    program     extern F:\LANAlarm\TCPIP Stack\IP.c
+             SwapIPHeader   0x00d630    program     static F:\LANAlarm\TCPIP Stack\IP.c
+                 LCDWrite   0x00d718    program     static F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+       ___return_lbl00000   0x00d762    program     static                          
+                  LCDInit   0x00d76a    program     extern F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+           ___do_lbl00006   0x00d79a    program     static                          
+        ___while_lbl00004   0x00d7a8    program     static                          
+           ___do_lbl00002   0x00d7cc    program     static                          
+           ___do_lbl00003   0x00d7cc    program     static                          
+        ___while_lbl00005   0x00d7cc    program     static                          
+          ___for_lbl00009   0x00d7d6    program     static                          
+          ___for_lbl00007   0x00d7f4    program     static                          
+          ___for_lbl00008   0x00d7f8    program     static                          
+           ___do_lbl00014   0x00d84e    program     static                          
+        ___while_lbl00012   0x00d85c    program     static                          
+        ___while_lbl00013   0x00d880    program     static                          
+       ___return_lbl00001   0x00d880    program     static                          
+           ___do_lbl00010   0x00d880    program     static                          
+           ___do_lbl00011   0x00d880    program     static                          
+                LCDUpdate   0x00d894    program     extern F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+                 LCDErase   0x00d9e4    program     extern F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+                   memcmp   0x00da54    program     extern C:\MCC18\src\traditional\stdclib\memcmp.asm
+                    jLoop   0x00da74    program     static C:\MCC18\src\traditional\stdclib\memcmp.asm
+              _4jContinue   0x00da80    program     static C:\MCC18\src\traditional\stdclib\memcmp.asm
+                   _5jEnd   0x00da8a    program     static C:\MCC18\src\traditional\stdclib\memcmp.asm
+                     jEnd   0x00da90    program     static C:\MCC18\src\traditional\stdclib\memcmp.asm
+                   memcpy   0x00daa6    program     extern C:\MCC18\src\traditional\stdclib\memcpy.asm
+                    jLoop   0x00dace    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+              _4jContinue   0x00dada    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+                   _5jEnd   0x00dae4    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+                     jEnd   0x00daea    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+            memcpypgm2ram   0x00dafc    program     extern C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                    jLoop   0x00db22    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+              _3jContinue   0x00db2e    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                   _4jEnd   0x00db38    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                     jEnd   0x00db40    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                   memset   0x00db42    program     extern C:\MCC18\src\traditional\stdclib\memset.asm
+                    jLoop   0x00db56    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+              _2jContinue   0x00db62    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                   _3jEnd   0x00db6c    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                     jEnd   0x00db74    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                   strchr   0x00db76    program     extern C:\MCC18\src\traditional\stdclib\strchr.asm
+                    jLoop   0x00db82    program     static C:\MCC18\src\traditional\stdclib\strchr.asm
+                   jMatch   0x00db94    program     static C:\MCC18\src\traditional\stdclib\strchr.asm
+                     jEnd   0x00db9c    program     static C:\MCC18\src\traditional\stdclib\strchr.asm
+                strchrpgm   0x00db9e    program     extern C:\MCC18\src\traditional\stdclib\schrpgm.asm
+                    jLoop   0x00dbb0    program     static C:\MCC18\src\traditional\stdclib\schrpgm.asm
+                   jMatch   0x00dbce    program     static C:\MCC18\src\traditional\stdclib\schrpgm.asm
+                     jEnd   0x00dbe0    program     static C:\MCC18\src\traditional\stdclib\schrpgm.asm
+                   strcpy   0x00dbee    program     extern C:\MCC18\src\traditional\stdclib\strcpy.asm
+                    jLoop   0x00dc16    program     static C:\MCC18\src\traditional\stdclib\strcpy.asm
+            strcpypgm2ram   0x00dc30    program     extern C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                    jLoop   0x00dc56    program     static C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                     jEnd   0x00dc60    program     static C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                   strlen   0x00dc62    program     extern C:\MCC18\src\traditional\stdclib\strlen.asm
+                    jLoop   0x00dc72    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
+                     jEnd   0x00dc7c    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x00dc7e    program     extern C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x00dc9c    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                   _2jEnd   0x00dcb2    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x00dcb4    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+             strstrrampgm   0x00dcc8    program     extern C:\MCC18\src\traditional\stdclib\sstrrp.asm
+               jOuterLoop   0x00dcd4    program     static C:\MCC18\src\traditional\stdclib\sstrrp.asm
+               jInnerLoop   0x00dcee    program     static C:\MCC18\src\traditional\stdclib\sstrrp.asm
+                 jNoMatch   0x00dcfe    program     static C:\MCC18\src\traditional\stdclib\sstrrp.asm
+                    jNull   0x00dd08    program     static C:\MCC18\src\traditional\stdclib\sstrrp.asm
+                jStrMatch   0x00dd0c    program     static C:\MCC18\src\traditional\stdclib\sstrrp.asm
+                   strupr   0x00dd0e    program     extern C:\MCC18\src\traditional\stdclib\strupr.asm
+                    jLoop   0x00dd22    program     static C:\MCC18\src\traditional\stdclib\strupr.asm
+                    jSkip   0x00dd32    program     static C:\MCC18\src\traditional\stdclib\strupr.asm
+                     jEnd   0x00dd36    program     static C:\MCC18\src\traditional\stdclib\strupr.asm
+                StackInit   0x00dd38    program     extern F:\LANAlarm\TCPIP Stack\StackTsk.c
+                StackTask   0x00dd78    program     extern F:\LANAlarm\TCPIP Stack\StackTsk.c
+        StackApplications   0x00dfa2    program     extern F:\LANAlarm\TCPIP Stack\StackTsk.c
+                     atoi   0x00dfaa    program     extern C:\MCC18\src\traditional\stdclib\atoi.asm
+                  jSkipWS   0x00dfd8    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                 jSkipWS1   0x00dfea    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                 jTstSign   0x00dfee    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                jTstSign1   0x00dffa    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                jTstSign2   0x00e000    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                    jLoop   0x00e002    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                jTstSign3   0x00e002    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                 jEndLoop   0x00e050    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                     jEnd   0x00e068    program     static C:\MCC18\src\traditional\stdclib\atoi.asm
+                     itoa   0x00e094    program     extern C:\MCC18\src\traditional\stdclib\itoa.asm
+                jTstSign1   0x00e0c0    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo5   0x00e10a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo4   0x00e10e    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo3   0x00e112    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo2   0x00e116    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo1   0x00e11a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                 TstUpper   0x00e14e    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                 TstLower   0x00e154    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                jTstLowZ1   0x00e15e    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                ProcUpper   0x00e160    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                ProcLower   0x00e16a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                   itoBCD   0x00e174    program     extern C:\MCC18\src\traditional\stdclib\itobcd.asm
+                    jLoop   0x00e18c    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                     jEnd   0x00e1b2    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                  OneByte   0x00e1b6    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                    srand   0x00e1c8    program     extern C:\MCC18\src\traditional\stdclib\rand.asm
+                     rand   0x00e1d6    program     extern C:\MCC18\src\traditional\stdclib\rand.asm
+              ICMPProcess   0x00e204    program     extern F:\LANAlarm\TCPIP Stack\ICMP.c
+                 TickInit   0x00e34a    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+           ___do_lbl00004   0x00e35a    program     static                          
+              GetTickCopy   0x00e35a    program     static F:\LANAlarm\TCPIP Stack\Tick.c
+           ___do_lbl00002   0x00e378    program     static                          
+           ___do_lbl00003   0x00e37c    program     static                          
+       ___return_lbl00001   0x00e37e    program     static                          
+                  TickGet   0x00e380    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+            TickGetDiv256   0x00e396    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+            TickGetDiv64K   0x00e3e4    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+TickConvertToMilliseconds   0x00e432    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+               TickUpdate   0x00e476    program     extern F:\LANAlarm\TCPIP Stack\Tick.c
+                 FXM1616U   0x00e48a    program     extern C:\MCC18\src\traditional\math\fxm1616u.asm
+                 FXM2424U   0x00e4c6    program     extern C:\MCC18\src\traditional\math\fxm2424u.asm
+              __string_11   0x00e558    program     static F:\LANAlarm\AlarmMain.c  
+               __string_9   0x00e561    program     static F:\LANAlarm\AlarmMain.c  
+               __string_0   0x00e578    program     static F:\LANAlarm\AlarmMain.c  
+              __string_14   0x00e599    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+              __string_13   0x00e5a0    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+              __string_12   0x00e5a4    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+              __string_11   0x00e5aa    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+              __string_10   0x00e5b6    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_9   0x00e5bd    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_8   0x00e5c4    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_7   0x00e5cb    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_6   0x00e5d2    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_5   0x00e5dc    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_4   0x00e5e0    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_3   0x00e5ec    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_2   0x00e5ef    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_1   0x00e5fc    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               __string_0   0x00e60d    program     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                _do_cinit   0x00e61e    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     test   0x00e638    program     static                          
+                copy_loop   0x00e690    program     static                          
+            copy_one_byte   0x00e696    program     static                          
+             done_copying   0x00e6a4    program     static                          
+                     done   0x00e6ba    program     static                          
+       ___return_lbl00002   0x00e6ba    program     static                          
+                 FXD3232U   0x00e6bc    program     extern C:\MCC18\src\traditional\math\fxd3232u.c
+                     loop   0x00e6ca    program     static                          
+                   _false   0x00e6fe    program     static                          
+       ___return_lbl00000   0x00e702    program     static                          
+                 FXD1616U   0x00e704    program     extern C:\MCC18\src\traditional\math\fxd1616u.c
+                     loop   0x00e70e    program     static                          
+                  endloop   0x00e72a    program     static                          
+       ___return_lbl00000   0x00e72e    program     static                          
+              Delay1KTCYx   0x00e730    program     extern C:\MCC18\src\traditional\delays\d1ktcyx.asm
+                     D1Kx   0x00e73a    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+                    D1K_1   0x00e73c    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0010   0x00e740    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0016   0x00e746    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+                 _startup   0x00e750    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     loop   0x00e760    program     static                          
+       ___return_lbl00001   0x00e76a    program     static                          
+              Delay10TCYx   0x00e76c    program     extern C:\MCC18\src\traditional\delays\d10tcyx.asm
+                     D10x   0x00e774    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000A   0x00e776    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x00e778    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x00e77a    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x00e77c    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+            __zero_memory   0x00e782    program     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               clear_loop   0x00e788    program     static C:\MCC18\src\traditional\proc\p18F67J60.asm
+     TCPSocketInitializer   0x00e790    program     extern F:\LANAlarm\TCPIPConfig.h
+     SerializedMACAddress   0x00e79c    program     static F:\LANAlarm\AlarmMain.c  
+                   __init   0x00e7a2    program     extern C:\MCC18\src\traditional\stdclib\__init.c
+                     SIGN   0x000000       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                __FPFLAGS   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                 __AARGB7   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB3   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB2   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB5   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB1   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB4   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB0   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB3   0x000006       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB2   0x000007       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB1   0x000008       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB0   0x000009       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                   __AEXP   0x00000a       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __BARGB3   0x00000b       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB2   0x00000c       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB1   0x00000d       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB0   0x00000e       data     extern C:\MCC18\src\traditional\math\barg.asm
+                   __BEXP   0x00000f       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __TEMPB3   0x000010       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000011       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000012       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                   __TEMP   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                  __tmp_0   0x000014       data     static F:\LANAlarm\AlarmMain.c  
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\NBNS.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\StackTsk.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\IP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\ARP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\Helpers.c
+                  __tmp_0   0x000014       data     static F:\LANAlarm\TCPIP Stack\ICMP.c
+            DelayCounter1   0x000022       data     extern C:\MCC18\src\traditional\delays\delayd1.asm
+            UDPSocketInfo   0x000060       data     extern F:\LANAlarm\TCPIP Stack\UDP.c
+          activeUDPSocket   0x0000ec       data     extern F:\LANAlarm\TCPIP Stack\UDP.c
+               UDPTxCount   0x0000ed       data     extern F:\LANAlarm\TCPIP Stack\UDP.c
+               UDPRxCount   0x0000ef       data     extern F:\LANAlarm\TCPIP Stack\UDP.c
+               wPutOffset   0x0000f1       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+               wGetOffset   0x0000f3       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+                    Flags   0x0000f5       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+                 NextPort   0x0000f6       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+       NextPacketLocation   0x0000f8       data     static F:\LANAlarm\TCPIP Stack\ETH97J60.c
+    CurrentPacketLocation   0x0000fa       data     static F:\LANAlarm\TCPIP Stack\ETH97J60.c
+             WasDiscarded   0x0000fc       data     static F:\LANAlarm\TCPIP Stack\ETH97J60.c
+              wTXWatchdog   0x0000fd       data     static F:\LANAlarm\TCPIP Stack\ETH97J60.c
+                 MySocket   0x0000ff       data     static F:\LANAlarm\TCPIP Stack\NBNS.c
+                AppConfig   0x000100       data     extern F:\LANAlarm\AlarmMain.c  
+                 OldValue   0x000133       data     extern F:\LANAlarm\AlarmMain.c  
+                   Result   0x000134       data     extern F:\LANAlarm\AlarmMain.c  
+                     Flag   0x000136       data     extern F:\LANAlarm\AlarmMain.c  
+                 WaitTime   0x000138       data     static F:\LANAlarm\AlarmMain.c  
+            RAMStringBody   0x00013c       data     static F:\LANAlarm\AlarmMain.c  
+                 ANString   0x00018c       data     static F:\LANAlarm\AlarmMain.c  
+                   RcvLen   0x000194       data     static F:\LANAlarm\AlarmMain.c  
+                   buffer   0x000196       data     static F:\LANAlarm\AlarmMain.c  
+              DNSHostName   0x0001e6       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+           DNSHostNameROM   0x0001e8       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+               RecordType   0x0001eb       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+             ResolvedInfo   0x0001ec       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                StartTime   0x0001f6       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+        SentTransactionID   0x0001fa       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                 toRotate   0x0001fc       data     extern F:\LANAlarm\TCPIP Stack\Helpers.c
+                 TCBStubs   0x000200       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                  LCDText   0x000238       data     extern F:\LANAlarm\TCPIP Stack\LCDBlocking.c
+             DHCPServerID   0x000259       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+            DHCPLeaseTime   0x00025d       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+            tempIPAddress   0x000261       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+              tempGateway   0x000265       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                 tempMask   0x000269       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                  tempDNS   0x00026d       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                 tempDNS2   0x000271       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+              ValidValues   0x000275       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                eventTime   0x000276       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+                    Cache   0x00027a       data     static F:\LANAlarm\TCPIP Stack\ARP.c
+                   Target   0x000284       data     static F:\LANAlarm\TCPIP Stack\ARP.c
+                     prom   0x00028e       data     static C:\MCC18\src\traditional\startup\c018i.c
+                curr_byte   0x000291       data     static C:\MCC18\src\traditional\startup\c018i.c
+               curr_entry   0x000293       data     static C:\MCC18\src\traditional\startup\c018i.c
+                 data_ptr   0x000295       data     static C:\MCC18\src\traditional\startup\c018i.c
+          myDHCPBindCount   0x000298       data     extern F:\LANAlarm\AlarmMain.c  
+                    Limit   0x000299       data     extern F:\LANAlarm\AlarmMain.c  
+                        t   0x00029b       data     static F:\LANAlarm\AlarmMain.c  
+              smDHCPState   0x00029f       data     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+                DHCPFlags   0x0002a0       data     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+               DHCPSocket   0x0002a1       data     static F:\LANAlarm\TCPIP Stack\DHCP.c
+            DHCPBindCount   0x0002a2       data     extern F:\LANAlarm\TCPIP Stack\DHCP.c
+                 MySocket   0x0002a3       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+           TransportState   0x0002a4       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                SMTPFlags   0x0002a5       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                 MySocket   0x0002a6       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                    Flags   0x0002a7       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                    smDNS   0x0002a8       data     static F:\LANAlarm\TCPIP Stack\DNS.c
+                     Seed   0x0002a9       data     static C:\MCC18\src\traditional\stdclib\rand.asm
+            LastPutSocket   0x0002ab       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+         SocketWithRxData   0x0002ac       data     static F:\LANAlarm\TCPIP Stack\UDP.c
+              hCurrentTCP   0x0002ad       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                 hLastTCB   0x0002ae       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+              _Identifier   0x0002af       data     static F:\LANAlarm\TCPIP Stack\IP.c
+                   smNBNS   0x0002b1       data     static F:\LANAlarm\TCPIP Stack\NBNS.c
+                    smARP   0x0002b2       data     static F:\LANAlarm\TCPIP Stack\ARP.c
+                  AlmMsg1   0x000700       data     extern F:\LANAlarm\AlarmMain.c  
+                  AlmMsg2   0x000740       data     extern F:\LANAlarm\AlarmMain.c  
+                  AlmMsg3   0x000780       data     extern F:\LANAlarm\AlarmMain.c  
+                  AlmMsg4   0x0007c0       data     extern F:\LANAlarm\AlarmMain.c  
+                  AlmMsg5   0x000800       data     extern F:\LANAlarm\AlarmMain.c  
+              RAMStringTo   0x000840       data     extern F:\LANAlarm\AlarmMain.c  
+          RAMStringServer   0x000880       data     extern F:\LANAlarm\AlarmMain.c  
+         RAMStringSubject   0x0008c0       data     extern F:\LANAlarm\AlarmMain.c  
+                MailState   0x000900       data     static F:\LANAlarm\AlarmMain.c  
+                       MD   0x000901       data     extern F:\LANAlarm\AlarmMain.c  
+                   ContSM   0x000906       data     static F:\LANAlarm\AlarmMain.c  
+                 MySocket   0x000907       data     static F:\LANAlarm\AlarmMain.c  
+               SMTPClient   0x000e00       data     extern F:\LANAlarm\TCPIP Stack\SMTP.c
+               SMTPServer   0x000e22       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                 CRPeriod   0x000e26       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                SMTPState   0x000e28       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+          PutHeadersState   0x000e29       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+            RXParserState   0x000e2a       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+             ResponseCode   0x000e2b       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                    Timer   0x000e2d       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                 RXBuffer   0x000e31       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                ROMStrPtr   0x000e35       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+               ROMStrPtr2   0x000e38       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                RAMStrPtr   0x000e3b       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+           wAddressLength   0x000e3d       data     static F:\LANAlarm\TCPIP Stack\SMTP.c
+                 SYNQueue   0x000e3f       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+          dwInternalTicks   0x000e7b       data     static F:\LANAlarm\TCPIP Stack\Tick.c
+              IPHeaderLen   0x000e7f       data     static F:\LANAlarm\TCPIP Stack\IP.c
+                   MAADR5   0x000e80       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAADR6   0x000e81       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAADR3   0x000e82       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAADR4   0x000e83       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAADR1   0x000e84       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAADR2   0x000e85       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               MISTATbits   0x000e8a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MISTAT   0x000e8a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              EFLOCONbits   0x000e97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EFLOCON   0x000e97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EPAUSL   0x000e98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPAUS   0x000e98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EPAUSH   0x000e99       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               MACON1bits   0x000ea0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MACON1   0x000ea0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               MACON3bits   0x000ea2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MACON3   0x000ea2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MACON4   0x000ea3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               MACON4bits   0x000ea3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  MABBIPG   0x000ea4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MAIPG   0x000ea6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAIPGL   0x000ea6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAIPGH   0x000ea7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   MAMXFL   0x000eaa       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  MAMXFLL   0x000eaa       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  MAMXFLH   0x000eab       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MICMD   0x000eb2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                MICMDbits   0x000eb2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 MIREGADR   0x000eb4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     MIWR   0x000eb6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MIWRL   0x000eb6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MIWRH   0x000eb7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     MIRD   0x000eb8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MIRDL   0x000eb8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    MIRDH   0x000eb9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT0   0x000ec0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT1   0x000ec1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT2   0x000ec2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT3   0x000ec3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT4   0x000ec4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT5   0x000ec5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT6   0x000ec6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EHT7   0x000ec7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM0   0x000ec8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM1   0x000ec9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM2   0x000eca       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM3   0x000ecb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM4   0x000ecc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM5   0x000ecd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM6   0x000ece       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMM7   0x000ecf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EPMCSL   0x000ed0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMCS   0x000ed0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EPMCSH   0x000ed1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     EPMO   0x000ed4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMOL   0x000ed4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EPMOH   0x000ed5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              ERXFCONbits   0x000ed8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ERXFCON   0x000ed8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EPKTCNT   0x000ed9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EWRPTL   0x000ee2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EWRPT   0x000ee2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EWRPTH   0x000ee3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ETXSTL   0x000ee4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ETXST   0x000ee4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ETXSTH   0x000ee5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ETXNDL   0x000ee6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ETXND   0x000ee6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ETXNDH   0x000ee7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERXSTL   0x000ee8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ERXST   0x000ee8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERXSTH   0x000ee9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ERXND   0x000eea       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERXNDL   0x000eea       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERXNDH   0x000eeb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ERXRDPTL   0x000eec       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ERXRDPT   0x000eec       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ERXRDPTH   0x000eed       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ERXWRPT   0x000eee       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ERXWRPTL   0x000eee       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ERXWRPTH   0x000eef       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMASTL   0x000ef0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EDMAST   0x000ef0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMASTH   0x000ef1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMANDL   0x000ef2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EDMAND   0x000ef2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMANDH   0x000ef3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 EDMADSTL   0x000ef4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMADST   0x000ef4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 EDMADSTH   0x000ef5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EDMACS   0x000ef6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMACSL   0x000ef6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EDMACSH   0x000ef7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  EIEbits   0x000efb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      EIE   0x000efb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                ESTATbits   0x000efd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ESTAT   0x000efd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ECON2   0x000efe       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                ECON2bits   0x000efe       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 NextPort   0x000f00       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                    MyTCB   0x000f02       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                MyTCBStub   0x000f27       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+               RemoteInfo   0x000f43       data     static F:\LANAlarm\TCPIP Stack\TCP.c
+                  smStack   0x000f4f       data     static F:\LANAlarm\TCPIP Stack\StackTsk.c
+               remoteNode   0x000f50       data     extern F:\LANAlarm\TCPIP Stack\StackTsk.c
+             vTickReading   0x000f5a       data     static F:\LANAlarm\TCPIP Stack\Tick.c
+                  EIRbits   0x000f60       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      EIR   0x000f60       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    EDATA   0x000f61       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                EDATAbits   0x000f61       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP2DEL   0x000f67       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP2DELbits   0x000f67       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ECCP2AS   0x000f68       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              ECCP2ASbits   0x000f68       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP3DELbits   0x000f69       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP3DEL   0x000f69       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ECCP3AS   0x000f6a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              ECCP3ASbits   0x000f6a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  CCP5CON   0x000f70       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              CCP5CONbits   0x000f70       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR5L   0x000f71       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CCPR5   0x000f71       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR5H   0x000f72       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  CCP4CON   0x000f73       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              CCP4CONbits   0x000f73       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CCPR4   0x000f74       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR4L   0x000f74       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR4H   0x000f75       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    T4CON   0x000f76       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                T4CONbits   0x000f76       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      PR4   0x000f77       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     TMR4   0x000f78       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP1DEL   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP1DELbits   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ERDPT   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERDPTL   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ERDPTH   0x000f7b       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              BAUDCTLbits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             BAUDCTL1bits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 BAUDCTL1   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  BAUDCTL   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              BAUDCONbits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             BAUDCON1bits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  BAUDCON   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 BAUDCON1   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SPBRGH1   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   SPBRGH   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTA   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTAbits   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTB   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTBbits   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTCbits   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTC   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTDbits   0x000f83       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTD   0x000f83       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTEbits   0x000f84       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTE   0x000f84       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTF   0x000f85       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTFbits   0x000f85       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PORTG   0x000f86       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                PORTGbits   0x000f86       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATAbits   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATA   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATBbits   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATB   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATCbits   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATC   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATD   0x000f8c       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATDbits   0x000f8c       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATEbits   0x000f8d       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATE   0x000f8d       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATFbits   0x000f8e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATF   0x000f8e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     LATG   0x000f8f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 LATGbits   0x000f8f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISD   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISDbits   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRDbits   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRD   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISEbits   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISE   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDREbits   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRE   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRF   0x000f97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRFbits   0x000f97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISF   0x000f97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISFbits   0x000f97       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     DDRG   0x000f98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 DDRGbits   0x000f98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TRISG   0x000f98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TRISGbits   0x000f98       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  OSCTUNE   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              OSCTUNEbits   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIE1   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIE1bits   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIR1bits   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIR1   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     IPR1   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 IPR1bits   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIE2   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIE2bits   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIR2   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIR2bits   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     IPR2   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 IPR2bits   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIE3bits   0x000fa3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIE3   0x000fa3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PIR3   0x000fa4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 PIR3bits   0x000fa4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     IPR3   0x000fa5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 IPR3bits   0x000fa5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               EECON1bits   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EECON1   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   EECON2   0x000fa7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                RCSTAbits   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               RCSTA1bits   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   RCSTA1   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    RCSTA   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                TXSTAbits   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               TXSTA1bits   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   TXSTA1   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TXSTA   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   TXREG1   0x000fad       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TXREG   0x000fad       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   RCREG1   0x000fae       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    RCREG   0x000fae       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    SPBRG   0x000faf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   SPBRG1   0x000faf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    T3CON   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                T3CONbits   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR3L   0x000fb2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR3H   0x000fb3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CMCON   0x000fb4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                CMCONbits   0x000fb4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CVRCON   0x000fb5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               CVRCONbits   0x000fb5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              ECCP1ASbits   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  ECCP1AS   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  CCP3CON   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              CCP3CONbits   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP3CONbits   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP3CON   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR3L   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CCPR3   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR3H   0x000fb9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP2CONbits   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP2CON   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  CCP2CON   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              CCP2CONbits   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR2L   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CCPR2   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR2H   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              CCP1CONbits   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  CCP1CON   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 ECCP1CON   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             ECCP1CONbits   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    CCPR1   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR1L   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   CCPR1H   0x000fbf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ADCON2   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               ADCON2bits   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               ADCON1bits   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ADCON1   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               ADCON0bits   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ADCON0   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ADRESL   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ADRES   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   ADRESH   0x000fc4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SSPCON2   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              SSPCON2bits   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             SSP1CON2bits   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 SSP1CON2   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             SSP1CON1bits   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 SSP1CON1   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              SSPCON1bits   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SSPCON1   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              SSPSTATbits   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SSPSTAT   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+             SSP1STATbits   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 SSP1STAT   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   SSPADD   0x000fc8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SSP1ADD   0x000fc8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   SSPBUF   0x000fc9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  SSP1BUF   0x000fc9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                T2CONbits   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    T2CON   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      PR2   0x000fcb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     TMR2   0x000fcc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                T1CONbits   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    T1CON   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR1L   0x000fce       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR1H   0x000fcf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 RCONbits   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     RCON   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   WDTCON   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               WDTCONbits   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    ECON1   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                ECON1bits   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   OSCCON   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               OSCCONbits   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    T0CON   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                T0CONbits   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR0L   0x000fd6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    TMR0H   0x000fd7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   STATUS   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               STATUSbits   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     FSR2   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR2L   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR2H   0x000fda       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   PLUSW2   0x000fdb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  PREINC2   0x000fdc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTDEC2   0x000fdd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTINC2   0x000fde       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    INDF2   0x000fdf       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      BSR   0x000fe0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     FSR1   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR1L   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR1H   0x000fe2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   PLUSW1   0x000fe3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  PREINC1   0x000fe4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTDEC1   0x000fe5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTINC1   0x000fe6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    INDF1   0x000fe7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     WREG   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR0L   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     FSR0   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    FSR0H   0x000fea       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   PLUSW0   0x000feb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  PREINC0   0x000fec       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTDEC0   0x000fed       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                 POSTINC0   0x000fee       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    INDF0   0x000fef       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  INTCON3   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              INTCON3bits   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+              INTCON2bits   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  INTCON2   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   INTCON   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               INTCONbits   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     PROD   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PRODL   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                    PRODH   0x000ff4       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   TABLAT   0x000ff5       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  TBLPTRL   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   TBLPTR   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  TBLPTRH   0x000ff7       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                  TBLPTRU   0x000ff8       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                       PC   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      PCL   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   PCLATH   0x000ffa       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   PCLATU   0x000ffb       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+               STKPTRbits   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                   STKPTR   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                      TOS   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     TOSL   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     TOSH   0x000ffe       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+                     TOSU   0x000fff       data     extern C:\MCC18\src\traditional\proc\p18F67J60.asm
+
+

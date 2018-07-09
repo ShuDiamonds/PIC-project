@@ -1,0 +1,5 @@
+Warning[2074] D:\aaa\Intrrept.c 135 : location PROD specified in the interrupt save list is redundant
+Warning[2074] D:\aaa\Intrrept.c 135 : location WREG specified in the interrupt save list is redundant
+Warning[2074] D:\aaa\Intrrept.c 135 : location BSR specified in the interrupt save list is redundant
+Warning[2074] D:\aaa\Intrrept.c 135 : location STATUS specified in the interrupt save list is redundant
+Warning[2074] D:\aaa\Intrrept.c 136 : location PROD specified in the interrupt save list is redundant

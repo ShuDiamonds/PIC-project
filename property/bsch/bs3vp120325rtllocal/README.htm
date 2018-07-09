@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 11.0.0.0 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<P><FONT size="+1"><B>BSch3V パッケージ 120325版</B></FONT></P>
+<P align="right">水魚堂&nbsp; &nbsp;岡田 仁史 &nbsp;2012/03/25</P>
+<HR>
+<P><FONT size="-1"><B><U><FONT size="+0">1. 概要</FONT></U></B></FONT></P>
+<BLOCKQUOTE>&nbsp; BSch3V (Basic Schematic 3V) はWindows XP/Vista/7で動作するフリーソフトウェアの回路図エディタです。
+操作の見通しが悪くならないように、一般的な回路図作成に必要な基本的な機能に絞ってあります。<BR>
+&nbsp;&nbsp;本パッケージは、BSch3Vとその周辺ユーティリティソフトウェアをまとめたものです。<BR>
+</BLOCKQUOTE>
+<P><B><U>2. パッケージの内容</U></B></P>
+<BLOCKQUOTE>
+<TABLE border="1">
+  <TBODY>
+    <TR>
+      <TD bgcolor="#fff0e1">README.htm</TD>
+      <TD bgcolor="#fff0e1">このファイル</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">bsch3v.exe<BR>
+      bsch3v_lang.dll (注1)</TD>
+      <TD bgcolor="#fff0e1">BSch3V Ver 0.69.05 回路図エディタ</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">lcov.exe<BR>
+      lcov_lang.dll (注1)</TD>
+      <TD bgcolor="#fff0e1">LCoV Ver 0.69.00 部品ライブラリエディタ</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">ce2to3.exe<BR>
+      ce2to3_lang.dll (注1)</TD>
+      <TD bgcolor="#fff0e1">CE2TO3 Ver 0.69.02 旧BSchのデータをBSch3Vのデータに変換するソフトウェア</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">pl3w.exe<BR>
+      pl3w_lang.dll (注1)</TD>
+      <TD bgcolor="#fff0e1">PL3W Ver 0.69.03 部品リスト作成ソフトウェア</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">nl3w.exe<BR>
+      nl3w_lang.dll (注1)<BR>
+      nl3wpads.dll (注2)</TD>
+      <TD bgcolor="#fff0e1">NL3W Ver 0.69.04 ネットリスト作成ソフトウェア</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">nut3w.exe<BR>
+      nu3w_lang.dll (注1)</TD>
+      <TD bgcolor="#fff0e1">NUT3W Ver 0.69.00 部品番号振り付けソフトウェア</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">CE3Search.exe</TD>
+      <TD bgcolor="#fff0e1">CE3Search Ver 0.11.10 BSch3V回路図ファイル用の検索ソフト</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">BSCH3.INI</TD>
+      <TD bgcolor="#fff0e1">BSch3V 設定ファイル</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">LIBフォルダ</TD>
+      <TD bgcolor="#fff0e1">部品ライブラリ</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">SAMPLEフォルダ (注3)</TD>
+      <TD bgcolor="#fff0e1">サンプル回路</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">Licenseフォルダ</TD>
+      <TD bgcolor="#fff0e1">ライセンス文書</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1"><B><FONT color="#ff0000">Runtimeフォルダ</FONT></B></TD>
+      <TD bgcolor="#fff0e1"><B><FONT color="#ff0000">ランタイムライブラリ付きパッケージにのみ存在します</FONT></B></TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1"><B><FONT color="#ff0000">Microsoft.VC90.*フォルダ</FONT></B></TD>
+      <TD bgcolor="#fff0e1"><B><FONT color="#ff0000">インストールなしで使えるランタイムライブラリ付きパッケージにのみ存在します</FONT></B></TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">SRCフォルダ</TD>
+      <TD bgcolor="#fff0e1">プログラムのソースファイル</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">IMGフォルダ</TD>
+      <TD bgcolor="#fff0e1">README.htmで参照している画像ファイルのフォルダ</TD>
+    </TR>
+    <TR>
+      <TD bgcolor="#fff0e1">oldcolor.txt</TD>
+      <TD bgcolor="#fff0e1">旧BSchと同じ配色にするためのデータ。<A href="MANUAL/bsch3v/setcol/oldcol.htm">
+旧BSchと同じ配色にする方法</A>参照</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</BLOCKQUOTE>
+<UL>
+  <LI>(注1)実行ファイルとペアになっている「○○_lang.dll」は日本語のメッセージファイルです。exeファイルと同じフォルダに保存してください。<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CE3Search.exeには日本語メッセージファイルは付いていません。
+  <LI>(注2)NL3WでPADSタイプのネットリストを作成するためのアドインです。nl3w.exeと同じフォルダに保存して、NL3Wのアドインで指定してください。
+  <LI>(注3)SAMPLEフォルダの回路図は、回路図エディタおよび周辺プログラムの試用評価のためのものです。回路図に従って組み立てたときの動作を保証するものではありません。
+  <LI>各プログラムの更新履歴は水魚堂ホームページの<A href="http://www.suigyodo.com/online/history/index.htm">ソフトウェアの履歴</A>をご覧ください。
+</UL>
+<P><B><U>3. インストール</U></B>&nbsp;&nbsp;</P>
+<BLOCKQUOTE>
+<P><B>1. 準備（ランタイムライブラリのインストール)</B><BR>
+&nbsp;&nbsp;BSch3Vと周辺ソフトウェアは、Version 0.65以降、実行に必要なランタイムライブラリを動的リンクするという方法に変更しました。</P>
+<UL style="list-style-type : none">
+  <LI><B>(1)ランタイムライブラリ付きパッケージの場合<BR>
+  </B>&nbsp;&nbsp;BSch3Vシリーズをお使いになる前に、ランタイムライブラリである「Microsoft Visual C++ 2008
+SP1 再頒布可能パッケージ (x86)」を予めインストールしておく必要があります。<BR>
+  &nbsp;&nbsp;ランタイム付きBSch3VパッケージのRuntimeフォルダに、ランタイムライブラリのインストールプログラム vcredist_x86.exe
+を収めています。BSch3Vシリーズのプログラムを使う前に、このvcredist_x86.exe を実行してください。<BR>
+  &nbsp;&nbsp;以前のパッケージから、ランタイムライブラリのバージョンも変わっています。旧バージョンのBSch3Vとともに配布していたランタイムライブラリでは実行できない場合があります。その場合も、本パッケージのvcredist_x86.exeを実行して、ランタイムライブラリを更新してください。<BR>
+  <LI><B>(2)インストールなしで使えるランタイムライブラリ付きパッケージの場合</B><BR>
+  &nbsp;複数の Microsoft.VC90.* という名前のフォルダがパッケージに含まれています。これらをBSch3Vシリーズの実行ファイルと同じフォルダにそのままコピーしてください。
+</UL>
+
+<P><B>2. BSch3Vパッケージ版のインストール</B><BR>
+&nbsp;&nbsp;BSch3V自体には特にインストーラは準備していません。解凍したパッケージ版のフォルダの階層構造そのまままるごと<FONT 
+color=#ff0000><B>ユーザーフォルダの下の</B></FONT>適当なフォルダに移動してください。ユーザーフォルダ外(&quot;C:\Program files&quot;など)に保存することはお奨めできません。<BR>
+<BR>
+&nbsp;&nbsp;あとは必要に応じて、exeファイルのショートカットを作ってください。<BR>
+<BR>
+&nbsp;&nbsp;ユーザーインターフェースに日本語が出なくなった! と思われたときは、exeファイルと同じフォルダに、*_lang.dllがあるかどうか確認してください。</P>
+</BLOCKQUOTE>
+<P><B><U>4. 使い方</U></B></P>
+<BLOCKQUOTE><A href="http://www.suigyodo.com/online/manual/index.htm">水魚堂ONLINEのマニュアルページ</A>をご覧ください。</BLOCKQUOTE>
+<P><B><U>5. ライセンスとソースファイルについて</U></B></P>
+<BLOCKQUOTE>&nbsp;&nbsp;ライセンスはGPLです。詳細についてはLicenseフォルダの文書をご覧ください。<BR>
+&nbsp;&nbsp;本プログラムで回路図を作成されるぶんには、無保証という点だけご理解いただければ、使用目的などの制限はありません。<BR>
+&nbsp;&nbsp;プログラムの再配布は、(あなたが改造を施していてもいなくても)必ずすべてのソースファイルも含んだ状態で行ってください。<BR>
+<BR>
+&nbsp;&nbsp;添付しているソースファイルは Visual C++ 2008 SP1 Standard Edition 以上でコンパイルできます。</BLOCKQUOTE>
+<P><B><U>6. プログラムのアップデート</U></B></P>
+<BLOCKQUOTE>&nbsp;&nbsp;プログラムの最新版は、<A href="http://www.suigyodo.com/online">水魚堂オンライン(http://www.suigyodo.com/online)</A>で公開します。<BR>
+&nbsp;&nbsp;ときどきアクセスするようにしてください。</BLOCKQUOTE>
+<HR>
+<P>水魚堂  岡田 仁史<BR>
+URL    : http://www.suigyodo.com/online<BR>
+E-Mail : hitoshi@suigyodo.com</P>
+</BODY>
+</HTML>

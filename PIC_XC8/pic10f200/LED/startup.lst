@@ -1,0 +1,73 @@
+
+
+Microchip Technology PIC Macro Assembler V1.21 build 54009 
+                                                                                                           Mon Jan 13 08:12:12 2014
+
+
+     1                           
+     2                           	; Microchip MPLAB XC8 C Compiler V1.21
+     3                           	; Copyright (C) 1984-2013 HI-TECH Software
+     4                           
+     5                           	; Auto-generated runtime startup code for final link stage.
+     6                           
+     7                           	;
+     8                           	; Compiler options:
+     9                           	;
+    10                           	; -oLED.cof -mLED.map --summary=default --output=default LED.p1 \
+    11                           	; --chip=10F200 -P --runtime=default --opt=default -N-1 -D__DEBUG=1 -g \
+    12                           	; --asmlist --errformat=Error   [%n] %f; %l.%c %s \
+    13                           	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
+    14                           	;
+    15                           
+    16                           
+    17                           	processor	10F200
+    18                           
+    19                           	global	_main,start,reset_vec
+    20                           	fnroot	_main
+    21                           	psect	config,class=CONFIG,delta=2,noexec
+    22                           	psect	idloc,class=IDLOC,delta=2,noexec
+    23                           	psect	code,class=CODE,delta=2
+    24                           	psect	powerup,class=CODE,delta=2
+    25                           	psect	reset_vec,class=CODE,delta=2
+    26                           	psect	maintext,class=CODE,delta=2
+    27  0000                     	C	set	0
+    28  0002                     	Z	set	2
+    29  0002                     	PCL	set	2
+    30  0000                     	INDF	set	0
+    31                           
+    32  0003                     	STATUS	equ	3
+    33  0004                     	FSR	equ	4
+    34  0005                     OSCCAL	equ	0x5
+    35                           
+    36                           	psect	reset_wrap,class=ENTRY,delta=2
+    37                           	psect	text,class=CODE,delta=2
+    38                           	psect	functab,class=ENTRY,delta=2
+    39                           	psect	init,class=ENTRY,delta=2
+    40                           	psect	cinit,class=ENTRY,delta=2
+    41                           	psect	end_init,class=ENTRY,delta=2
+    42                           	psect	clrtext,class=ENTRY,delta=2
+    43                           	psect	jmp_tab,class=ENTRY,delta=2
+    44                           	psect	strings,class=STRING,delta=2
+    45                           
+    46                           	psect	reset_vec,class=CODE,delta=2
+    47  0FF                     reset_vec:
+    48  0FF                     	ds 1	;oscillator constant would be pre-programmed here
+    49                           	psect	reset_wrap
+    50  000                     reset_wrap:
+    51  000  064                	clrf	FSR		;select bank 0
+    52  001  025                	movwf	5		;calibrate oscillator
+    53                           	; No powerup routine
+    54                           
+    55                           
+    56                           	psect	init
+    57  002                     start
+    58                           	psect	end_init
+    59                           	global start_initialization
+    60  002  A03                	ljmp start_initialization	;jump to C runtime clear & initialization
+
+
+Microchip Technology PIC Macro Assembler V1.21 build 54009 
+Symbol Table                                                                                               Mon Jan 13 08:12:12 2014
+
+                 FSR 0004                 _main 0005                 start 0002  start_initialization 0003  
+          reset_wrap 0000             reset_vec 00FF  

@@ -1,0 +1,52 @@
+MPLINK 4.38, Linker
+Linker Map File - Created Sat Jan 26 17:02:54 2013
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000001    program   0x000004
+                   .org_1       code   0x000004    program   0x0000c2
+      .config_2007_UART.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000002      
+                            0x000004    0x000064      
+                            0x002007    0x002007      
+            101 out of 8454 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    FRAME   0x000047    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                     INIT   0x000005    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+               INTOBUFFER   0x00003c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                     MAIN   0x00001d    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                     OVER   0x00004f    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                   RXLOOP   0x000032    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                     SEND   0x000057    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                   TXLOOP   0x000060    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                TX_CHEACK   0x00005e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     INIT   0x000005    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                     MAIN   0x00001d    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                   RXLOOP   0x000032    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+               INTOBUFFER   0x00003c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                    FRAME   0x000047    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                     OVER   0x00004f    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                     SEND   0x000057    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                TX_CHEACK   0x00005e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+                   TXLOOP   0x000060    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\UART\UART.asm
+
+

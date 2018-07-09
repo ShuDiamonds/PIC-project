@@ -1,0 +1,653 @@
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 
+                      00002 ;***　UART送信プログラム　***
+                      00003 ;1文字飛んできたらそれを送り返すプログラム
+                      00004 ;アボカドの動作確認LEDはRC０につながっている
+                      00005 ;
+                      00006 ;       注意    movlw   はリテラルデータをwレスたに書き込む
+                      00007 ;
+                      00008 ;****************************
+                      00009 
+                      00010 
+                      00011 
+                      00012                 list    P=PIC16F877A    
+                      00013                 #include        <P16F877A.inc>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F877A processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2011 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+                      00555         LIST
+                      00014                 
+                      00015                 errorlevel  -302 
+                      00016                 
+2007   3FB2           00017                 __CONFIG        _HS_OSC & _WDT_OFF & _PWRTE_ON & _BODEN_OFF & _LVP_ON & _CPD_OFF & _WRT_
+                            OFF & _DEBUG_OFF  & _CP_OFF
+                      00018                 
+                      00019 ;******************************
+                      00020 ;変数定義
+                      00021 ;******************************
+                      00022 
+  00000020            00023 BUFFER  equ             020H
+  00000021            00024 WORK    equ             021H
+  00000022            00025 COUNT01 equ             022H
+                      00026 
+                      00027 ;*****************************
+                      00028 ;送信モードの初期化
+                      00029 ;
+                      00030 ;Clock  10MHz   20MHz
+                      00031 ;Baud   SPBRG   SPBRG
+                      00032 ;1200   81H             FFH
+                      00033 ;2400   40H             81H
+                      00034 ;9600   0FH             20H
+                      00035 ;19K    07H             0FH
+                      00036 ;*****************************
+                      00037 
+                      00038                 ORG     0x000
+0000   2???           00039                 goto    INIT
+                      00040                 ORG     0x004
+0004   0008           00041                 return
+                      00042                 
+0005                  00043 INIT
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0005   1303           00044                 BCF     STATUS,RP1              ;この2つでバンク１に
+0006   1683           00045                 BSF     STATUS,RP0              ;切り替え
+0007   3080           00046                 MOVLW   B'10000000'             ;RC7をIN
+0008   0087           00047                 MOVWF   TRISC                   ;PORTC
+0009   0185           00048                 CLRF    TRISA           
+000A   3027           00049                 MOVLW   B'00100111'             ;RB5をIN
+000B   0086           00050                 MOVWF   TRISB                   ;PORTN
+000C   0188           00051                 CLRF    TRISD
+000D   0189           00052                 CLRF    TRISE                   ;ALL OUT
+000E   1303           00053                 BCF     STATUS,RP1
+000F   1283           00054                 BCF     STATUS,RP0              ;バンク０に
+0010   0185           00055                 CLRF    PORTA
+                      00056                 ;CLRF   PORTB
+                      00057                 ;CLRF   PORTC
+0011   0188           00058                 CLRF    PORTD
+0012   0189           00059                 CLRF    PORTE
+                      00060 ;**************UART設定************************
+0013   1303           00061                 BCF     STATUS,RP1              ;バンク１に
+0014   1683           00062                 BSF     STATUS,RP0              
+0015   3020           00063                 MOVLW   020H                    ;RC6をTXモードに
+0016   0098           00064                 MOVWF   TXSTA                   ;SET
+                      00065                 ;ボーレート設定 ;低速モード
+0017   3020           00066                 MOVLW   20H                             ;9600BPS
+                      00067                 ;MOVLW  0FH                             ;19.2KBPS
+0018   0099           00068                 MOVWF   SPBRG                   ;SET BRG
+0019   1303           00069                 BCF     STATUS,RP1
+001A   1283           00070                 BCF     STATUS,RP0              ;バンク０に
+001B   3090           00071                 MOVLW   090H
+001C   0098           00072                 MOVWF   RCSTA                   ;RC7をRXに　連続受信を許可 ８BIT通信
+                      00073                 
+                      00074                 
+                      00075 
+001D                  00076 MAIN    
+001D   1303           00077                 BCF     STATUS,RP1
+001E   1283           00078                 BCF     STATUS,RP0              ;バンク０に
+001F   2???           00079                 CALL    TX_CHEACK
+0020   3053           00080                 MOVLW   'S'
+0021   0099           00081                 MOVWF   TXREG                   ;送信
+0022   2???           00082                 CALL    TX_CHEACK
+0023   3054           00083                 MOVLW   'T'
+0024   0099           00084                 MOVWF   TXREG                   ;送信
+0025   2???           00085                 CALL    TX_CHEACK
+0026   3041           00086                 MOVLW   'A'
+0027   0099           00087                 MOVWF   TXREG                   ;送信
+0028   2???           00088                 CALL    TX_CHEACK
+0029   3052           00089                 MOVLW   'R'
+002A   0099           00090                 MOVWF   TXREG                   ;送信
+002B   2???           00091                 CALL    TX_CHEACK
+002C   3054           00092                 MOVLW   'T'
+002D   0099           00093                 MOVWF   TXREG                   ;送信
+002E   2???           00094                 CALL    TX_CHEACK
+                      00095         
+002F   1407           00096                 BSF             PORTC,0                 ;動作確認LEDをON
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00097                 
+0030   1303           00098                 BCF     STATUS,RP1
+0031   1283           00099                 BCF     STATUS,RP0              ;バンク０に
+0032                  00100 RXLOOP          
+                      00101 
+0032   1E8C           00102                 BTFSS   PIR1,RCIF               ;RXフラグが1か?
+0033   2???           00103                 GOTO    RXLOOP
+0034   1007           00104                 BCF             PORTC,0                 ;動作確認LEDをOFF
+0035   128C           00105                 BCF             PIR1,RCIF               ;RXフラグを0にする
+                      00106                 
+                      00107 
+                      00108                 ;MOVLW  'H'
+                      00109                 ;MOVWF  TXREG                   ;送信
+                      00110                 
+                      00111                 
+                      00112 ;****エラーチェック*******
+                      00113 ;
+                      00114 ;エラーについて
+                      00115 ;①　フレーミングエラー　……　ストップピットが０になっている場合のエラー
+                      00116 ;②　オーバーランエラー……　前のデータが取り出されないうちに次のデータが来てしまった場合のエラー
+                      00117 ;③　パリティエラー　　　……　パリティチェックで検出されたエラー
+                      00118 ;*************************
+0036   1303           00119                 BCF     STATUS,RP1
+0037   1283           00120                 BCF     STATUS,RP0              ;バンク０に
+0038   1918           00121                 BTFSC   RCSTA,FERR              ;フレーミングエラーがあるか？
+0039   2???           00122                 GOTO    FRAME
+003A   1898           00123                 BTFSC   RCSTA,OERR              ;オバーランエラーがあるか？
+003B   2???           00124                 GOTO    OVER
+                      00125                 
+                      00126                 
+                      00127 ;*******バッファーに格納
+                      00128 
+003C                  00129 INTOBUFFER
+003C   1303           00130                 BCF     STATUS,RP1
+003D   1283           00131                 BCF     STATUS,RP0              ;バンク０に
+003E   081A           00132                 MOVF    RCREG,W                 
+003F   00A0           00133                 MOVWF   BUFFER                  ;BUFFERに受信データを格納
+0040   2???           00134                 CALL    TX_CHEACK
+0041   0820           00135                 MOVF    BUFFER,W
+0042   0099           00136                 MOVWF   TXREG                   ;送信
+                      00137                 
+0043   2???           00138                 CALL    TX_CHEACK
+0044   0820           00139                 MOVF    BUFFER,W
+0045   0099           00140                 MOVWF   TXREG                   ;送信
+                      00141                 
+                      00142                 ;CALL   TX_CHEACK
+                      00143                 ;MOVLW  'B'
+                      00144                 ;MOVWF  TXREG                   ;送信
+                      00145                 
+0046   2???           00146                 GOTO    SEND
+                      00147         
+                      00148 
+                      00149 ;*****ERROR PROCES*********
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00150 
+                      00151 ;***フラーミングエラー****
+                      00152 
+0047                  00153 FRAME   
+0047   1303           00154                 BCF     STATUS,RP1
+0048   1283           00155                 BCF     STATUS,RP0              ;バンク０に
+0049   081A           00156                 MOVF    RCREG,W                 ;ダミーを取り出す
+004A   2???           00157                 CALL    TX_CHEACK
+004B   3046           00158                 MOVLW   'F'
+004C   0099           00159                 MOVWF   TXREG                   ;送信
+                      00160                 
+004D   1C98           00161                 BTFSS   RCSTA,OERR              ;オーバーエラーもあるか？
+004E   2???           00162                 GOTO    RXLOOP
+                      00163                 
+                      00164 ;***オーバーエラー*******
+                      00165                 
+004F                  00166 OVER
+004F   1303           00167                 BCF     STATUS,RP1
+0050   1283           00168                 BCF     STATUS,RP0              ;バンク０に
+0051   1218           00169                 BCF             RCSTA,CREN              ;連続受信を不許可
+0052   1618           00170                 BSF             RCSTA,CREN              ;連続受信を許可
+0053   2???           00171                 CALL    TX_CHEACK
+0054   304F           00172                 MOVLW   'O'
+0055   0099           00173                 MOVWF   TXREG                   ;送信
+                      00174                 
+0056   2???           00175                 GOTO    RXLOOP
+                      00176                 
+                      00177 ;************送信*************
+                      00178                 
+0057                  00179 SEND    
+                      00180 
+                      00181                 ;CALL   TX_CHEACK
+                      00182                 ;MOVLW  'C'
+                      00183                 ;MOVWF  TXREG                   ;送信
+0057   1303           00184                 BCF     STATUS,RP1
+0058   1283           00185                 BCF     STATUS,RP0              ;バンク０に
+0059   2???           00186                 CALL    TX_CHEACK
+005A   0820           00187                 MOVF    BUFFER,W
+005B   0099           00188                 MOVWF   TXREG                   ;送信
+                      00189                 
+                      00190                 ;RETURN
+                      00191                 
+                      00192                 ;CALL   TX_CHEACK
+                      00193                 ;MOVLW  'S'
+                      00194                 ;MOVWF  TXREG                   ;送信
+                      00195                 
+005C   081A           00196                 MOVF    RCREG,W
+005D   2???           00197                 GOTO    RXLOOP
+                      00198                 
+                      00199                 
+                      00200 ;************送信完了待ちループ**************
+                      00201 
+005E                  00202 TX_CHEACK
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+005E   1303           00203                 BCF     STATUS,RP1              ;この2つでバンク１に
+005F   1683           00204                 BSF     STATUS,RP0              ;切り替え
+                      00205 
+0060                  00206 TXLOOP          
+0060   1C98           00207                 BTFSS   TXSTA,TRMT              ;送信バッファが空か？
+0061   2???           00208                 GOTO    TXLOOP
+                      00209                 
+0062   1303           00210                 BCF     STATUS,RP1
+0063   1283           00211                 BCF     STATUS,RP0              ;バンク０に
+0064   0008           00212                 RETURN
+                      00213                 
+                      00214 ;**************END*****************
+                      00215                 
+3FB2                  00216                 END
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+BUFFER                            00000020
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CKE                               00000006
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+COUNT01                           00000022
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+DATA_ADDRESS                      00000005
+DC                                00000001
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FRAME                             00000047
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INIT                              00000005
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+INTF                              00000001
+INTOBUFFER                        0000003C
+IRP                               00000007
+MAIN                              0000001D
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+OVER                              0000004F
+P                                 00000004
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+RXLOOP                            00000032
+R_NOT_W                           00000002
+R_W                               00000002
+S                                 00000003
+SEN                               00000000
+SEND                              00000057
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXLOOP                            00000060
+TXREG                             00000019
+TXSTA                             00000098
+TX_CHEACK                         0000005E
+UA                                00000001
+W                                 00000000
+WCOL                              00000007
+WORK                              00000021
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+MPASM  5.40                          UART.ASM   1-26-2013  17:02:52         PAGE 12
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+__DEBUG                           1
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     0 reported,     8 suppressed
+
+

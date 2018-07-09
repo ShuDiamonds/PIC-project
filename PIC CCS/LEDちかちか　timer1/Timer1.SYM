@@ -1,0 +1,60 @@
+005     port_a
+006     port_b
+007     port_c
+008     PSP_DATA
+008     port_d
+009     port_e
+015-016 CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B-01C CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     l
+029     main.a
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+
+0035  intval
+003E  main
+003E  @cinit
+
+Project Files:
+    C:\Users\FMV\Dropbox\PIC-project\PIC CCS\LEDちかちか　timer1\Timer1.c
+    C:\PROGRA~2\PICC\devices\16f877a.h
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\FMV\Dropbox\PIC-project\PIC CCS\LEDちかちか　timer1\Timer1.err
+    INHX8:       C:\Users\FMV\Dropbox\PIC-project\PIC CCS\LEDちかちか　timer1\Timer1.HEX
+    Symbols:     C:\Users\FMV\Dropbox\PIC-project\PIC CCS\LEDちかちか　timer1\Timer1.SYM
+    List:        C:\Users\FMV\Dropbox\PIC-project\PIC CCS\LEDちかちか　timer1\Timer1.LST
+    Debug/eCOD:  C:\Users\FMV\Dropbox\PIC-project\PIC CCS\LEDちかちか　timer1\Timer1.cod

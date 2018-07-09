@@ -1,0 +1,197 @@
+CCS PCM C Compiler, Version 3.185, 22500
+
+               Filename: C:\Users\FMV\Dropbox\PIC-project\PIC CCS\LEDちかちか　timer1\Timer1.LST
+
+               ROM used: 115 (1%)
+                         Largest free fragment is 2048
+               RAM used: 15 (9%) at main() level
+                         15 (9%) worst case
+               Stack:    1 worst case (0 in main + 1 for interrupts)
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   03E
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  MOVF   7B,W
+0016:  MOVWF  27
+0017:  BCF    03.7
+0018:  BCF    03.5
+0019:  MOVLW  8C
+001A:  MOVWF  04
+001B:  BTFSS  00.0
+001C:  GOTO   01F
+001D:  BTFSC  0C.0
+001E:  GOTO   032
+001F:  MOVF   22,W
+0020:  MOVWF  04
+0021:  MOVF   23,W
+0022:  MOVWF  77
+0023:  MOVF   24,W
+0024:  MOVWF  78
+0025:  MOVF   25,W
+0026:  MOVWF  79
+0027:  MOVF   26,W
+0028:  MOVWF  7A
+0029:  MOVF   27,W
+002A:  MOVWF  7B
+002B:  MOVF   20,W
+002C:  MOVWF  0A
+002D:  SWAPF  21,W
+002E:  MOVWF  03
+002F:  SWAPF  7F,F
+0030:  SWAPF  7F,W
+0031:  RETFIE
+0032:  BCF    0A.3
+0033:  BCF    0A.4
+0034:  GOTO   035
+....................  #include<16f877a.h> 
+....................  //////// Standard Header file for the PIC16F877A device ////////////////  
+.................... #device PIC16F877A  
+.................... #list  
+....................  
+....................   
+.................... #fuses HS,NOWDT,NOPROTECT,NOLVP,PUT,BROWNOUT  
+.................... #use delay(clock = 20000000)  
+....................   
+.................... #use fast_io(a)  
+.................... #use fast_io(b)  
+.................... #use fast_io(c)  
+.................... #use fast_io(d)  
+.................... #use fast_io(e)  
+.................... #byte port_a = 5  
+.................... #byte port_b = 6  
+.................... #byte port_c = 7  
+.................... #byte port_d = 8  
+.................... #byte port_e = 9  
+.................... //グローバル変数定義  
+.................... 	int l = 0;	//タイマーカウント値  
+*
+0047:  CLRF   28
+....................   
+....................   
+.................... #int_timer1  
+.................... void intval() {  
+.................... 	set_timer1(0x0BDB);			//カウント値代入  
+*
+0035:  MOVLW  0B
+0036:  MOVWF  0F
+0037:  MOVLW  DB
+0038:  MOVWF  0E
+.................... 	l++;  
+0039:  INCF   28,F
+.................... 	  
+.................... }  
+....................   
+....................   
+003A:  BCF    0C.0
+003B:  BCF    0A.3
+003C:  BCF    0A.4
+003D:  GOTO   01F
+.................... main()  
+.................... {   
+003E:  CLRF   04
+003F:  MOVLW  1F
+0040:  ANDWF  03,F
+0041:  MOVLW  06
+0042:  BSF    03.5
+0043:  MOVWF  1F
+0044:  MOVLW  07
+0045:  BCF    03.5
+0046:  MOVWF  1F
+.................... 	int a=0;  
+*
+0048:  CLRF   29
+.................... 	set_tris_a(0xff);  
+0049:  MOVLW  FF
+004A:  BSF    03.5
+004B:  MOVWF  05
+.................... 	set_tris_b(0xff);  
+004C:  MOVWF  06
+.................... 	set_tris_c(0xf0);  
+004D:  MOVLW  F0
+004E:  MOVWF  07
+.................... 	set_tris_d(0x00);  
+004F:  MOVLW  00
+0050:  MOVWF  08
+.................... 	set_tris_e(0xff);  
+0051:  BSF    09.0
+0052:  BSF    09.1
+0053:  BSF    09.2
+.................... 	  
+.................... 	//PWM設定  
+.................... 	setup_ccp1(CCP_PWM);  
+0054:  BCF    03.5
+0055:  BCF    07.2
+0056:  MOVLW  0C
+0057:  MOVWF  17
+.................... 	setup_ccp2(CCP_PWM);  
+0058:  BCF    07.1
+0059:  MOVWF  1D
+.................... 	setup_timer_2(T2_DIV_BY_16,0xFF,1);  
+005A:  MOVLW  00
+005B:  MOVWF  78
+005C:  IORLW  06
+005D:  MOVWF  12
+005E:  MOVLW  FF
+005F:  BSF    03.5
+0060:  MOVWF  12
+.................... 	//set_pwm1_duty(0);  
+.................... 	output_low(PIN_C0);  
+0061:  BCF    03.5
+0062:  BCF    07.0
+.................... 	//Timer1設定  
+.................... 	SETUP_TIMER_1(T1_INTERNAL|T1_DIV_BY_8);	//内部クロック使用　プリスケーラ８  
+0063:  MOVLW  B5
+0064:  MOVWF  10
+.................... 	//割り込み許可  
+.................... 	enable_interrupts(int_timer1);  
+0065:  BSF    03.5
+0066:  BSF    0C.0
+.................... 	enable_interrupts(GLOBAL);  
+0067:  MOVLW  C0
+0068:  BCF    03.5
+0069:  IORWF  0B,F
+....................   
+.................... 	while(1)  
+.................... 		{  
+.................... 			   
+.................... 			if(l==10)			//1秒立った時  
+.................... 			{  
+006A:  MOVF   28,W
+006B:  SUBLW  0A
+006C:  BTFSS  03.2
+006D:  GOTO   071
+.................... 				l=0;  
+006E:  CLRF   28
+.................... 				  
+.................... 				port_c = port_c^0b00000001;  
+006F:  MOVLW  01
+0070:  XORWF  07,F
+.................... 			}  
+.................... 		}  
+0071:  GOTO   06A
+.................... }  
+....................   
+....................  
+0072:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT NODEBUG NOPROTECT BROWNOUT NOLVP NOCPD NOWRT

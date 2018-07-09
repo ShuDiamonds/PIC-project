@@ -1,0 +1,8 @@
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\FreeRTOS\sample1\serial\serial.c 219 : location PRODH specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\FreeRTOS\sample1\serial\serial.c 219 : location PRODL specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\FreeRTOS\sample1\serial\serial.c 219 : location TABLAT specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\FreeRTOS\sample1\serial\serial.c 219 : location .tmpdata specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\FreeRTOS\sample1\serial\serial.c 246 : location PRODH specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\FreeRTOS\sample1\serial\serial.c 246 : location PRODL specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\FreeRTOS\sample1\serial\serial.c 246 : location TABLAT specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\FreeRTOS\sample1\serial\serial.c 246 : location .tmpdata specified in the interrupt save list is redundant

@@ -1,0 +1,255 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+BORDIS::0x3CFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	251;"	d	line:251
+BOREN::0x3FFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	248;"	d	line:248
+BOREN_XSLP::0x3EFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	249;"	d	line:249
+CONFIG_ADDR::0x2007	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	240;"	d	line:240
+CPD::0x3F7F	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	254;"	d	line:254
+EC::0x3FFB	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	272;"	d	line:272
+FCMDIS::0x37FF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	243;"	d	line:243
+FCMEN::0x3FFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	242;"	d	line:242
+HS::0x3FFA	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	273;"	d	line:273
+IESODIS::0x3BFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	246;"	d	line:246
+IESOEN::0x3FFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	245;"	d	line:245
+INTCLK::0x3FFD	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	270;"	d	line:270
+INTIO	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\init.c	15;"	v	line:15
+INTIO::0x3FFC	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	271;"	d	line:271
+LP::0x3FF8	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	275;"	d	line:275
+MCLRDIS::0x3FDF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	260;"	d	line:260
+MCLREN::0x3FFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	259;"	d	line:259
+PROTECT::0x3FBF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	257;"	d	line:257
+PWRTDIS::0x3FFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	262;"	d	line:262
+PWRTEN::0x3FEF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	263;"	d	line:263
+RCCLK::0x3FFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	268;"	d	line:268
+RCIO::0x3FFE	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	269;"	d	line:269
+SBOREN::0x3DFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	250;"	d	line:250
+UNPROTECT::0x3FFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	253;"	d	line:253
+UNPROTECT::0x3FFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	256;"	d	line:256
+WDTDIS::0x3FF7	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	266;"	d	line:266
+WDTEN::0x3FFF	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	265;"	d	line:265
+WD_TMR1	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pulse.c	41;"	p	line:41	file:	signature:(unsigned)&CH_TMR1L
+XT::0x3FF9	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	274;"	d	line:274
+__PIC12F683_H	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	11;"	d	line:11
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	100;"	p	line:100	signature:(unsigned)&CH_T1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	101;"	p	line:101	signature:(unsigned)&CH_T1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	102;"	p	line:102	signature:(unsigned)&CH_T1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	103;"	p	line:103	signature:(unsigned)&CH_T1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	106;"	p	line:106	signature:(unsigned)&CH_T2CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	107;"	p	line:107	signature:(unsigned)&CH_T2CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	108;"	p	line:108	signature:(unsigned)&CH_T2CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	109;"	p	line:109	signature:(unsigned)&CH_T2CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	110;"	p	line:110	signature:(unsigned)&CH_T2CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	111;"	p	line:111	signature:(unsigned)&CH_T2CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	112;"	p	line:112	signature:(unsigned)&CH_T2CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	116;"	p	line:116	signature:(unsigned)&CH_CCP1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	117;"	p	line:117	signature:(unsigned)&CH_CCP1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	118;"	p	line:118	signature:(unsigned)&CH_CCP1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	119;"	p	line:119	signature:(unsigned)&CH_CCP1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	120;"	p	line:120	signature:(unsigned)&CH_CCP1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	121;"	p	line:121	signature:(unsigned)&CH_CCP1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	124;"	p	line:124	signature:(unsigned)&CH_WDTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	125;"	p	line:125	signature:(unsigned)&CH_WDTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	126;"	p	line:126	signature:(unsigned)&CH_WDTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	127;"	p	line:127	signature:(unsigned)&CH_WDTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	128;"	p	line:128	signature:(unsigned)&CH_WDTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	131;"	p	line:131	signature:(unsigned)&CH_CMCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	132;"	p	line:132	signature:(unsigned)&CH_CMCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	133;"	p	line:133	signature:(unsigned)&CH_CMCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	134;"	p	line:134	signature:(unsigned)&CH_CMCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	135;"	p	line:135	signature:(unsigned)&CH_CMCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	136;"	p	line:136	signature:(unsigned)&CH_CMCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	139;"	p	line:139	signature:(unsigned)&CH_CMCON1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	140;"	p	line:140	signature:(unsigned)&CH_CMCON1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	143;"	p	line:143	signature:(unsigned)&CH_ADCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	144;"	p	line:144	signature:(unsigned)&CH_ADCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	145;"	p	line:145	signature:(unsigned)&CH_ADCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	146;"	p	line:146	signature:(unsigned)&CH_ADCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	147;"	p	line:147	signature:(unsigned)&CH_ADCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	148;"	p	line:148	signature:(unsigned)&CH_ADCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	149;"	p	line:149	signature:(unsigned)&CH_ADCON0*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	152;"	p	line:152	signature:(unsigned)&CH_OPTION*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	153;"	p	line:153	signature:(unsigned)&CH_OPTION*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	154;"	p	line:154	signature:(unsigned)&CH_OPTION*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	155;"	p	line:155	signature:(unsigned)&CH_OPTION*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	156;"	p	line:156	signature:(unsigned)&CH_OPTION*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	157;"	p	line:157	signature:(unsigned)&CH_OPTION*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	158;"	p	line:158	signature:(unsigned)&CH_OPTION*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	159;"	p	line:159	signature:(unsigned)&CH_OPTION*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	162;"	p	line:162	signature:(unsigned)&CH_TRISIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	163;"	p	line:163	signature:(unsigned)&CH_TRISIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	164;"	p	line:164	signature:(unsigned)&CH_TRISIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	165;"	p	line:165	signature:(unsigned)&CH_TRISIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	166;"	p	line:166	signature:(unsigned)&CH_TRISIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	167;"	p	line:167	signature:(unsigned)&CH_TRISIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	170;"	p	line:170	signature:(unsigned)&CH_PIE1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	171;"	p	line:171	signature:(unsigned)&CH_PIE1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	172;"	p	line:172	signature:(unsigned)&CH_PIE1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	173;"	p	line:173	signature:(unsigned)&CH_PIE1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	174;"	p	line:174	signature:(unsigned)&CH_PIE1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	175;"	p	line:175	signature:(unsigned)&CH_PIE1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	176;"	p	line:176	signature:(unsigned)&CH_PIE1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	179;"	p	line:179	signature:(unsigned)&CH_PCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	180;"	p	line:180	signature:(unsigned)&CH_PCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	181;"	p	line:181	signature:(unsigned)&CH_PCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	182;"	p	line:182	signature:(unsigned)&CH_PCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	185;"	p	line:185	signature:(unsigned)&CH_OSCCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	186;"	p	line:186	signature:(unsigned)&CH_OSCCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	187;"	p	line:187	signature:(unsigned)&CH_OSCCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	188;"	p	line:188	signature:(unsigned)&CH_OSCCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	189;"	p	line:189	signature:(unsigned)&CH_OSCCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	190;"	p	line:190	signature:(unsigned)&CH_OSCCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	191;"	p	line:191	signature:(unsigned)&CH_OSCCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	194;"	p	line:194	signature:(unsigned)&CH_OSCTUNE*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	195;"	p	line:195	signature:(unsigned)&CH_OSCTUNE*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	196;"	p	line:196	signature:(unsigned)&CH_OSCTUNE*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	197;"	p	line:197	signature:(unsigned)&CH_OSCTUNE*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	198;"	p	line:198	signature:(unsigned)&CH_OSCTUNE*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	201;"	p	line:201	signature:(unsigned)&CH_WPU*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	202;"	p	line:202	signature:(unsigned)&CH_WPU*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	203;"	p	line:203	signature:(unsigned)&CH_WPU*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	204;"	p	line:204	signature:(unsigned)&CH_WPU*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	205;"	p	line:205	signature:(unsigned)&CH_WPU*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	206;"	p	line:206	signature:(unsigned)&CH_WPU*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	209;"	p	line:209	signature:(unsigned)&CH_IOC*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	210;"	p	line:210	signature:(unsigned)&CH_IOC*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	211;"	p	line:211	signature:(unsigned)&CH_IOC*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	212;"	p	line:212	signature:(unsigned)&CH_IOC*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	213;"	p	line:213	signature:(unsigned)&CH_IOC*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	214;"	p	line:214	signature:(unsigned)&CH_IOC*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	217;"	p	line:217	signature:(unsigned)&CH_VRCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	218;"	p	line:218	signature:(unsigned)&CH_VRCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	219;"	p	line:219	signature:(unsigned)&CH_VRCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	220;"	p	line:220	signature:(unsigned)&CH_VRCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	221;"	p	line:221	signature:(unsigned)&CH_VRCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	222;"	p	line:222	signature:(unsigned)&CH_VRCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	225;"	p	line:225	signature:(unsigned)&CH_EECON1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	226;"	p	line:226	signature:(unsigned)&CH_EECON1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	227;"	p	line:227	signature:(unsigned)&CH_EECON1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	228;"	p	line:228	signature:(unsigned)&CH_EECON1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	231;"	p	line:231	signature:(unsigned)&CH_ANSEL*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	232;"	p	line:232	signature:(unsigned)&CH_ANSEL*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	233;"	p	line:233	signature:(unsigned)&CH_ANSEL*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	234;"	p	line:234	signature:(unsigned)&CH_ANSEL*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	235;"	p	line:235	signature:(unsigned)&CH_ANSEL*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	236;"	p	line:236	signature:(unsigned)&CH_ANSEL*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	237;"	p	line:237	signature:(unsigned)&CH_ANSEL*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	59;"	p	line:59	signature:(unsigned)&CH_STATUS*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	60;"	p	line:60	signature:(unsigned)&CH_STATUS*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	61;"	p	line:61	signature:(unsigned)&CH_STATUS*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	62;"	p	line:62	signature:(unsigned)&CH_STATUS*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	63;"	p	line:63	signature:(unsigned)&CH_STATUS*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	64;"	p	line:64	signature:(unsigned)&CH_STATUS*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	65;"	p	line:65	signature:(unsigned)&CH_STATUS*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	66;"	p	line:66	signature:(unsigned)&CH_STATUS*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	69;"	p	line:69	signature:(unsigned)&CH_GPIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	70;"	p	line:70	signature:(unsigned)&CH_GPIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	71;"	p	line:71	signature:(unsigned)&CH_GPIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	72;"	p	line:72	signature:(unsigned)&CH_GPIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	73;"	p	line:73	signature:(unsigned)&CH_GPIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	74;"	p	line:74	signature:(unsigned)&CH_GPIO*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	77;"	p	line:77	signature:(unsigned)&CH_INTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	78;"	p	line:78	signature:(unsigned)&CH_INTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	79;"	p	line:79	signature:(unsigned)&CH_INTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	80;"	p	line:80	signature:(unsigned)&CH_INTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	81;"	p	line:81	signature:(unsigned)&CH_INTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	82;"	p	line:82	signature:(unsigned)&CH_INTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	83;"	p	line:83	signature:(unsigned)&CH_INTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	84;"	p	line:84	signature:(unsigned)&CH_INTCON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	87;"	p	line:87	signature:(unsigned)&CH_PIR1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	88;"	p	line:88	signature:(unsigned)&CH_PIR1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	89;"	p	line:89	signature:(unsigned)&CH_PIR1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	90;"	p	line:90	signature:(unsigned)&CH_PIR1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	91;"	p	line:91	signature:(unsigned)&CH_PIR1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	92;"	p	line:92	signature:(unsigned)&CH_PIR1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	93;"	p	line:93	signature:(unsigned)&CH_PIR1*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	96;"	p	line:96	signature:(unsigned)&CH_T1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	97;"	p	line:97	signature:(unsigned)&CH_T1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	98;"	p	line:98	signature:(unsigned)&CH_T1CON*8
+bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	99;"	p	line:99	signature:(unsigned)&CH_T1CON*8
+di_bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	51;"	l	line:51
+di_his	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	51;"	l	line:51
+dmode	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	61;"	l	line:61
+drive_data	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	75;"	l	line:75
+gate_old	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	53;"	l	line:53
+main	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	47;"	f	line:47
+mmode	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	65;"	l	line:65
+motor_data	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	76;"	l	line:76
+motor_flag	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	35;"	p	line:35	file:	signature:(void)
+motor_flag	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\motor.c	17;"	p	line:17	file:	signature:(void)
+motor_flag	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\motor.c	71;"	f	line:71
+motor_init	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	33;"	p	line:33	file:	signature:(void)
+motor_init	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\motor.c	15;"	p	line:15	file:	signature:(void)
+motor_init	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\motor.c	24;"	f	line:24
+motor_out	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	34;"	p	line:34	file:	signature:(unsigned char , unsigned char)
+motor_out	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\motor.c	16;"	p	line:16	file:	signature:(unsigned char , unsigned char)
+motor_out	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\motor.c	60;"	f	line:60	signature:(unsigned char pwm_do , unsigned char pwm_out)
+pls_bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	49;"	l	line:49
+pls_his	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	49;"	l	line:49
+pnon_cnt	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	57;"	l	line:57
+power	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	71;"	l	line:71
+prg_cnt	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	58;"	l	line:58
+pulse_data	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	54;"	l	line:54
+pulse_init	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	31;"	p	line:31	file:	signature:(void)
+pulse_init	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pulse.c	15;"	p	line:15	file:	signature:(void)
+pulse_init	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pulse.c	23;"	f	line:23
+pulse_read	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	32;"	p	line:32	file:	signature:(void)
+pulse_read	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pulse.c	16;"	p	line:16	file:	signature:(void)
+pulse_read	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pulse.c	43;"	f	line:43
+pwmdo	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	73;"	l	line:73
+pwr	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	74;"	l	line:74
+sw_bit	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	50;"	l	line:50
+sw_his	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	50;"	l	line:50
+sys_init	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\init.c	32;"	p	line:32	file:	signature:(void)
+sys_init	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\init.c	34;"	f	line:34
+sys_init	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	30;"	p	line:30	file:	signature:(void)
+time_cnt	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	56;"	l	line:56
+ver_buf	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	39;"	v	line:39
+wk	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\motor.c	73;"	l	line:73
+wk_int	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	78;"	l	line:78
+wwk	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pulse.c	45;"	l	line:45
+x01	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	15;"	v	line:15
+x02	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	16;"	v	line:16
+x03	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	17;"	v	line:17
+x04	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	18;"	v	line:18
+x05	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	19;"	v	line:19
+x0A	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	20;"	v	line:20
+x0B	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	21;"	v	line:21
+x0C	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	22;"	v	line:22
+x0E	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	23;"	v	line:23
+x0F	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	24;"	v	line:24
+x10	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	25;"	v	line:25
+x11	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	26;"	v	line:26
+x12	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	27;"	v	line:27
+x13	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	28;"	v	line:28
+x14	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	29;"	v	line:29
+x15	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	30;"	v	line:30
+x18	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	31;"	v	line:31
+x19	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	32;"	v	line:32
+x1A	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	33;"	v	line:33
+x1E	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	34;"	v	line:34
+x1F	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	35;"	v	line:35
+x81	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	36;"	v	line:36
+x85	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	37;"	v	line:37
+x8C	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	38;"	v	line:38
+x8E	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	39;"	v	line:39
+x8F	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	40;"	v	line:40
+x90	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	41;"	v	line:41
+x92	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	42;"	v	line:42
+x95	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	43;"	v	line:43
+x96	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	44;"	v	line:44
+x99	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	45;"	v	line:45
+x9A	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	46;"	v	line:46
+x9A	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	48;"	v	line:48
+x9B	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	49;"	v	line:49
+x9B	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	51;"	v	line:51
+x9C	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	52;"	v	line:52
+x9D	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	53;"	v	line:53
+x9E	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	54;"	v	line:54
+x9F	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\pic12f683.h	55;"	v	line:55
+zoffcnt	D:\PIC_Prog\PIC12F683\spcon_1\picc_0421\main.c	60;"	l	line:60

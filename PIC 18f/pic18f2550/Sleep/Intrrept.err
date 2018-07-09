@@ -1,0 +1,5 @@
+Warning[2074] D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\—Dæ‡ˆÊŠ„‚è‚İ\Intrrept.c 93 : location PROD specified in the interrupt save list is redundant
+Warning[2074] D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\—Dæ‡ˆÊŠ„‚è‚İ\Intrrept.c 93 : location WREG specified in the interrupt save list is redundant
+Warning[2074] D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\—Dæ‡ˆÊŠ„‚è‚İ\Intrrept.c 93 : location BSR specified in the interrupt save list is redundant
+Warning[2074] D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\—Dæ‡ˆÊŠ„‚è‚İ\Intrrept.c 93 : location STATUS specified in the interrupt save list is redundant
+Warning[2074] D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\—Dæ‡ˆÊŠ„‚è‚İ\Intrrept.c 94 : location PROD specified in the interrupt save list is redundant

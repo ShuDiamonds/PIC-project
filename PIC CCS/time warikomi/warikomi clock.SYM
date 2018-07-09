@@ -1,0 +1,35 @@
+006     port_b
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     sec
+015     flag
+016     main.@SCRATCH
+
+002E  rtcc_isr
+0043  main
+0043  @cinit
+
+Project Files:
+    C:\Users\Fukaken\Desktop\R12\福田\warikomi clock.c
+    C:\PROGRA~2\PICC\devices\16f84a.h
+
+Compiler Settings:
+    Processor:      PIC16F84A
+    Pointer Size:   8
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\Fukaken\Desktop\R12\福田\warikomi clock.err
+    INHX8:       C:\Users\Fukaken\Desktop\R12\福田\warikomi clock.HEX
+    Symbols:     C:\Users\Fukaken\Desktop\R12\福田\warikomi clock.SYM
+    List:        C:\Users\Fukaken\Desktop\R12\福田\warikomi clock.LST
+    Debug/eCOD:  C:\Users\Fukaken\Desktop\R12\福田\warikomi clock.cod
+    Project:     C:\Users\Fukaken\Desktop\R12\福田\warikomi clock.PJT

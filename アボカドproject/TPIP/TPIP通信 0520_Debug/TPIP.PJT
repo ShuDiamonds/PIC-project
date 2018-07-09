@@ -1,0 +1,32 @@
+[PROJECT]
+Target=TPIP.HEX
+Development_Mode=2
+Processor=0x877A
+ToolSuite=CCS
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=TPIP.c;
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[TPIP.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=C:\DOCUME~1\WORKAH~1\デスク~1\R12\fukuda\ABOKAD~1.1\TPIP通~1\TPIP.c
+
+[Windows]
+0=0000 C:\DOCUME~1\WORKAH~1\デスク~1\R12\fukuda\ABOKAD~1.1\TPIP通~1\TPIP.c 0 0 796 451 3 0
+

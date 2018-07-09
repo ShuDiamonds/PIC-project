@@ -1,0 +1,188 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB\usb_descriptors.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=-pa=4
+TraceCmdString=
+DebugOptions=
+[File001]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB\Keyboard.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=-pa=4
+TraceCmdString=
+DebugOptions=
+[File002]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB\usb_function_hid.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=-pa=4
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB\usb_device.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=-pa=4
+TraceCmdString=
+DebugOptions=
+[File004]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard_2\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB\usb_descriptors.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=-pa=4
+TraceCmdString=
+DebugOptions=
+[File005]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard_2\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB\Keyboard.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=-pa=4
+TraceCmdString=
+DebugOptions=
+[File006]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard_2\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB\usb_function_hid.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=-pa=4
+TraceCmdString=
+DebugOptions=
+[File007]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard_2\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB\usb_device.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=-pa=4
+TraceCmdString=
+DebugOptions=
+[File008]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\keyboard.cof
+Folder=Output
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=
+[File009]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\keyboard.hex
+Folder=Output
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=
+[File010]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\keyboard.map
+Folder=Output
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=
+[File011]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard_2\4550_keyboard\keyboard\keyboard.cof
+Folder=Output
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=
+[File012]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard_2\4550_keyboard\keyboard\keyboard.hex
+Folder=Output
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=
+[File013]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard_2\4550_keyboard\keyboard\keyboard.map
+Folder=Output
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\4550_keyboard\4550_keyboard\keyboard\Objects\USB Device - HID Keyboard - C18 - PICDEM FSUSB;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\Include;D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip;C:\MCC18\h||$(LIBDIR)|C:\mcc18\lib||$(LKRDIR)||
+SOLK=<src>|usb_descriptors.c|Keyboard.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\HID Device Driver\usb_function_hid.c|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f4550\Microchip\Microchip\USB\usb_device.c||<obj>||<lib>||<lkr>|rm18f4550 - HID Bootload.lkr|C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\LKR\18f4550_g.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=
+[TOOL_LOC_STAMPS]
+tool_loc{96C98149-AA1B-4CF9-B967-FAE79CAB663C}=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+tool_loc{E56A1C86-9D32-4DF6-8C34-FE0388B1B644}=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe

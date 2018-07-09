@@ -1,0 +1,22 @@
+  18f87j50_g_MSDIntFlash_wHIDBoot.lkr
+  HardwareProfile - PIC18F46J50 PIM.h
+  HardwareProfile - PIC18F87J50 PIM.h
+  HardwareProfile - PIC24F Starter Kit.h
+  HardwareProfile - PIC24FJ256GB110 PIM.h
+  HardwareProfile - PIC32 USB Starter Kit.h
+  HardwareProfile - PIC32MX460F512L PIM.h
+  p24FJ256GB110 - HID Bootload.gld
+  PIC24 HID Bootloader Remapping.s
+  procdefs.ld.boot
+  rm18f4550 - MCHPUSB Bootload.lkr
+  rm18f46j50_g.lkr
+  USB Device - Mass Storage - Internal Flash Demo - C18 - PIC18F46J50 PIM.mcp
+  USB Device - Mass Storage - Internal Flash Demo - C18 - PIC18F46J50 PIM.mcw
+  USB Device - Mass Storage - Internal Flash Demo - C18 - PIC18F87J50 PIM.mcp
+  USB Device - Mass Storage - Internal Flash Demo - C18 - PIC18F87J50 PIM.mcw
+  USB Device - Mass Storage - Internal Flash Demo - C30.mcp
+  USB Device - Mass Storage - Internal Flash Demo - C30.mcw
+  USB Device - Mass Storage - Internal Flash Demo - C32 - PIC32 USB Starter Kit.mcp
+  USB Device - Mass Storage - Internal Flash Demo - C32 - PIC32 USB Starter Kit.mcw
+  USB Device - Mass Storage - Internal Flash Demo - C32 - PIC32MX460F512L PIM.mcp
+  USB Device - Mass Storage - Internal Flash Demo - C32 - PIC32MX460F512L PIM.mcw

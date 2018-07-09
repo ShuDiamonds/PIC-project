@@ -1,0 +1,52 @@
+005     GP
+005.0   AD_PIN
+005.1   SorvoPIN
+005.2   M2
+005.3   SW2
+005.4   SW1
+005.5   M1
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+019.6   C1OUT
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     @SCRATCH
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @INTERRUPT_AREA
+02C     @INTERRUPT_AREA
+02D     @INTERRUPT_AREA
+02E     main.@SCRATCH
+02F     @delay_ms1.P1
+
+0056  @delay_ms1
+0069  main
+004A  ccp1_int
+004E  intval
+0069  @cinit
+
+Project Files:
+    C:\Users\FMV\Dropbox\PIC-project\PIC CCS\pic12f683\SW\SW.c
+    C:\PROGRA~2\PICC\devices\12f683.h
+
+Compiler Settings:
+    Processor:      PIC12F683
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\FMV\Dropbox\PIC-project\PIC CCS\pic12f683\SW\SW.err
+    INHX8:       C:\Users\FMV\Dropbox\PIC-project\PIC CCS\pic12f683\SW\SW.HEX
+    Symbols:     C:\Users\FMV\Dropbox\PIC-project\PIC CCS\pic12f683\SW\SW.SYM
+    List:        C:\Users\FMV\Dropbox\PIC-project\PIC CCS\pic12f683\SW\SW.LST
+    Debug/eCOD:  C:\Users\FMV\Dropbox\PIC-project\PIC CCS\pic12f683\SW\SW.cod

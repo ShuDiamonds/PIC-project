@@ -1,0 +1,10 @@
+F:\VisualStudio2005\AlarmUtility\bin\Release\AlarmUtility.exe
+F:\VisualStudio2005\AlarmUtility\bin\Release\AlarmUtility.pdb
+F:\VisualStudio2005\AlarmUtility\bin\Release\AlarmUtility.xml
+F:\VisualStudio2005\AlarmUtility\obj\Release\ResolveAssemblyReference.cache
+F:\VisualStudio2005\AlarmUtility\obj\Release\AlarmUtility.Form1.resources
+F:\VisualStudio2005\AlarmUtility\obj\Release\AlarmUtility.Resources.resources
+F:\VisualStudio2005\AlarmUtility\obj\Release\AlarmUtility.vbproj.GenerateResource.Cache
+F:\VisualStudio2005\AlarmUtility\obj\Release\AlarmUtility.exe
+F:\VisualStudio2005\AlarmUtility\obj\Release\AlarmUtility.xml
+F:\VisualStudio2005\AlarmUtility\obj\Release\AlarmUtility.pdb

@@ -1,0 +1,165 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init ENTRY 0 2 2 1 2
+reset_wrap ENTRY 0 0 0 2 2
+reset_vec CODE 0 FF FF 1 2
+$LED.obj
+cinit ENTRY 0 3 3 2 2
+cstackBANK0 BANK0 1 10 10 2 1
+maintext CODE 0 5 5 28 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 012-01B 1
+CODE 02D-0FE 2
+CONFIG FFF-FFF 2
+ENTRY 02D-0FE 2
+IDLOC 100-103 2
+RAM 012-01B 1
+SFR0 000-00F 1
+STRCODE 02D-0FE 2
+STRING 02D-0FE 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$LED.obj
+"C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\LED.as":78 3 cinit ENTRY
+"C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\LED.as":79 4 cinit ENTRY
+"C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\LED.c":11 5 maintext CODE
+"C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\LED.c":19 7 maintext CODE
+"C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\LED.c":24 8 maintext CODE
+"C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\LED.c":26 12 maintext CODE
+"C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\LED.c":31 2D maintext CODE
+$startup.obj
+"C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\startup.as":51 0 reset_wrap ENTRY
+"C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\startup.as":52 1 reset_wrap ENTRY
+"C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic10f200\LED\startup.as":60 2 end_init ENTRY
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__S0 2D 0 ABS 0 - -
+__S1 12 0 ABS 0 - -
+_GPIO 6 0 ABS 0 - LED.obj
+_main A 0 CODE 0 maintext LED.obj
+btemp 1C 0 ABS 0 - LED.obj
+start 4 0 ENTRY 0 init startup.obj
+reset_vec 1FE 0 CODE 0 reset_vec startup.obj
+ltemp0 1C 0 ABS 0 - LED.obj
+ttemp0 1C 0 ABS 0 - LED.obj
+wtemp0 1C 0 ABS 0 - LED.obj
+ltemp1 20 0 ABS 0 - LED.obj
+ttemp1 1F 0 ABS 0 - LED.obj
+wtemp1 1E 0 ABS 0 - LED.obj
+wtemp2 20 0 ABS 0 - LED.obj
+wtemp3 22 0 ABS 0 - LED.obj
+__Hconfig 0 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
+main@i 10 0 BANK0 1 cstackBANK0 LED.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__Hjmp_tab 0 0 ABS 0 jmp_tab -
+__Ljmp_tab 0 0 ABS 0 jmp_tab -
+__Hfunctab 0 0 ENTRY 0 functab -
+__Lfunctab 0 0 ENTRY 0 functab -
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+_GPIObits 6 0 ABS 0 - LED.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 10 0 BANK0 1 cstackBANK0 LED.obj
+__Hinit 4 0 ENTRY 0 init -
+__Linit 4 0 ENTRY 0 init -
+__end_of_main 5A 0 CODE 0 maintext LED.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+end_of_initialization 6 0 ENTRY 0 cinit LED.obj
+__Hstrings 0 0 STRING 0 strings -
+__Lstrings 0 0 STRING 0 strings -
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+___latbits 0 0 ABS 0 - startup.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__Hclrtext A 0 ENTRY 0 clrtext -
+__Lclrtext A 0 ENTRY 0 clrtext -
+__end_of__initialization 6 0 ENTRY 0 cinit LED.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hcinit A 0 ENTRY 0 cinit -
+__Lcinit 6 0 ENTRY 0 cinit -
+__size_of_main 0 0 ABS 0 - LED.obj
+__Hreset_wrap 4 0 ENTRY 0 reset_wrap -
+__Lreset_wrap 0 0 ENTRY 0 reset_wrap -
+__Hend_init 6 0 ENTRY 0 end_init -
+__Lend_init 4 0 ENTRY 0 end_init -
+__Hreset_vec 200 0 CODE 0 reset_vec -
+__Lreset_vec 1FE 0 CODE 0 reset_vec -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON LED.obj
+start_initialization 6 0 ENTRY 0 cinit LED.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext A 0 CODE 0 maintext LED.obj
+__initialization 6 0 ENTRY 0 cinit LED.obj
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 1C 4
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta> <class name>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 FF 1FE 1 2 CODE
+reset_wrap 0 0 0 5 2 ENTRY
+cstackBANK0 1 10 10 2 1 BANK0
+maintext 0 5 A 28 2 CODE

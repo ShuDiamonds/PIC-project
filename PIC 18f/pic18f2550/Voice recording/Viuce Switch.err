@@ -1,0 +1,5 @@
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\Voice recording\Viuce Switch.c 221 : location PROD specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\Voice recording\Viuce Switch.c 221 : location WREG specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\Voice recording\Viuce Switch.c 221 : location BSR specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\Voice recording\Viuce Switch.c 221 : location STATUS specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2550\Voice recording\Viuce Switch.c 222 : location PROD specified in the interrupt save list is redundant

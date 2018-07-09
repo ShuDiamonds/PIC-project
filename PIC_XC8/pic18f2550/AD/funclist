@@ -1,0 +1,18 @@
+_OpenUSART: CODE, 3134 0 92
+__stringdata: SMALLCONST, 2088 0 25
+_putch: CODE, 3398 0 2
+_dpowers: SMALLCONST, 2048 0 40
+_main: CODE, 2552 0 250
+_BusyADC: CODE, 3388 0 6
+_ConvertADC: CODE, 3394 0 4
+__initialization: CODE, 3226 0 34
+_ReadADC: CODE, 3378 0 10
+_putsUSART: CODE, 3270 0 40
+___lldiv: CODE, 2802 0 134
+_WriteUSART: CODE, 3348 0 16
+_Delay100TCYx: CODE, 3364 0 14
+_printf: CODE, 2114 0 438
+___llmod: CODE, 2936 0 106
+_OpenADC: CODE, 3042 0 92
+_SetChanADC: CODE, 3310 0 20
+Total: 1323

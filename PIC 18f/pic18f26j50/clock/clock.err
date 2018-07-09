@@ -1,0 +1,25 @@
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 374 : location PROD specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 374 : location WREG specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 374 : location BSR specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 374 : location STATUS specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 375 : location PROD specified in the interrupt save list is redundant
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 198 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 250 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 273 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 329 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 330 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 495 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 496 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 498 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 499 : type qualifier mismatch in assignment
+Warning[2058] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 507 : call of function without prototype
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 508 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 510 : type qualifier mismatch in assignment
+Warning[2058] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 515 : call of function without prototype
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 516 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 517 : type qualifier mismatch in assignment
+Warning[2058] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 522 : call of function without prototype
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 523 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 524 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 556 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\clock\clock.c 572 : type qualifier mismatch in assignment

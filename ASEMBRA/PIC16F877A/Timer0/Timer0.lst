@@ -1,0 +1,686 @@
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;******************************************
+                      00002 
+                      00003 ;*****************************************
+                      00004         ;delayÉâÉCÉuÉâÉä
+                      00005         ;20MHzÇÃèÍçá
+                      00006         ;íçà”Å@COUNT01,COUNT02Å@Ç∆Ç¢Ç§ïœêîÇêÈåæÇµÇƒÇ®Ç≠
+                      00007         ;1ÉTÉCÉNÉãÇÕ4ÉNÉçÉbÉNÇ»ÇÃÇ≈ 1 / 20M = 0.000 000 005 = 0.05usec
+                      00008         ;Ç»ÇÃÇ≈ 1ÉTÉCÉNÉãÇÕ0.2usecÇ»ÇÃÇ≈ 0.2usec * 500 = 100usec 
+                      00009         ;ZÉtÉâÉOíçà”                    
+                      00010 ;****************************************/
+                      00011                 list    P=PIC16F877A    
+                      00012                 #include        <P16F877A.inc>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F877A processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2011 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+                      00555         LIST
+                      00013                 
+                      00014                 errorlevel  -302 
+                      00015                 
+2007   3FB2           00016                 __CONFIG        _HS_OSC & _WDT_OFF & _PWRTE_ON & _BODEN_OFF & _LVP_ON & _CPD_OFF & _WRT_
+                            OFF & _DEBUG_OFF  & _CP_OFF
+                      00017                 
+                      00018 ;******************************
+                      00019         ;ïœêîíËã`
+                      00020 ;******************************
+                      00021 
+  00000020            00022 BUFFER  equ                     020H
+  00000021            00023 COUNT01 equ                     021H
+  00000022            00024 COUNT02 equ                     022H
+  00000023            00025 DATA_1BYRE      equ             023H
+  00000024            00026 WORK1   equ                     024H    ;äÑÇËçûÇ›éûÇÃÉÅÉCÉìÉvÉçÉOÉâÉÄÇÃÉfÅ[É^ÇÃ
+                      00027                                                         ;ëﬁîèÍèäÅD
+  00000025            00028 TIME_COUNT01    equ     025H    ;É^ÉCÉ}Å[0ópÉJÉEÉìÉ^
+                      00029 
+                      00030 
+                      00031 ;************************************
+                      00032                 ORG     0x000
+0000   2???           00033                 GOTO    INIT
+                      00034                 ORG     0x004
+0004   00A4           00035                 MOVWF WORK1                     ;WÉåÉWÉXÉ^ÇÃì‡óeÇëﬁî
+0005   138B           00036                 BCF             INTCON,GIE      ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉbÉg(7bitñ⁄)Çã÷é~
+                      00037                 
+0006   2???           00038                 CALL    Timer0_ISR              ;Timer0äÑÇËçûÇ›èàóùÇ…çsÇ≠
+                      00039                 
+0007   138B           00040                 BCF             INTCON,GIE      ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉbÉg(7bitñ⁄)Çãñâ¬
+0008   1303           00041                 BCF     STATUS,RP1
+0009   1283           00042                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+000A   0824           00043                 MOVF WORK1, W           ;WÉåÉWÉXÉ^ÇÃì‡óeÇñﬂÇ∑
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+000B   0009           00044                 RETFIE
+                      00045         ;RETFIE ÅiäÑÇËçûÇ›Ç©ÇÁÇÃReturnÅjÇé¿çs
+                      00046         ;Ç∑ÇÈÇ∆ÅCÉXÉ^ÉbÉNÇ…äiî[ÇµÇΩî‘ínÇ™ÉvÉçÉO
+                      00047         ;ÉâÉÄÉJÉEÉìÉ^Ç…ñﬂÇ≥ÇÍÅCäÑÇËçûÇ›Ç™Ç©Ç©Ç¡
+                      00048         ;ÇΩéûÇÃÉÅÉCÉìÉvÉçÉOÉâÉÄÇ…ñﬂÇÈ
+                      00049 ;***************èâä˙âª*********************
+000C                  00050 INIT
+000C   1383           00051                 BCF     STATUS,IRP              ;ÉoÉìÉN 0,1Ç…éwíË
+000D   1303           00052                 BCF     STATUS,RP1              ;Ç±ÇÃ2Ç¬Ç≈ÉoÉìÉNÇPÇ…
+000E   1683           00053                 BSF     STATUS,RP0              ;êÿÇËë÷Ç¶
+000F   3080           00054                 MOVLW   B'10000000'             ;RC7ÇIN
+0010   0087           00055                 MOVWF   TRISC                   ;PORTC
+0011   0185           00056                 CLRF    TRISA           
+0012   3027           00057                 MOVLW   B'00100111'             ;RB5ÇIN
+0013   0086           00058                 MOVWF   TRISB                   ;PORT
+0014   0188           00059                 CLRF    TRISD
+0015   0189           00060                 CLRF    TRISE                   ;ALL OUT
+0016   1303           00061                 BCF     STATUS,RP1
+0017   1283           00062                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0018   0185           00063                 CLRF    PORTA
+0019   0186           00064                 CLRF    PORTB
+001A   0187           00065                 CLRF    PORTC
+001B   0188           00066                 CLRF    PORTD
+001C   0189           00067                 CLRF    PORTE
+                      00068 ;*****************************
+                      00069         ;ëóêMÉÇÅ[ÉhÇÃèâä˙âª
+                      00070         ;
+                      00071         ;Clock  10MHz   20MHz
+                      00072         ;Baud   SPBRG   SPBRG
+                      00073         ;1200   81H             FFH
+                      00074         ;2400   40H             81H
+                      00075         ;9600   0FH             20H
+                      00076         ;19K    07H             0FH
+                      00077 ;*****************************
+                      00078 ;**************UARTê›íË************************
+001D   1303           00079                 BCF     STATUS,RP1              ;ÉoÉìÉNÇPÇ…
+001E   1683           00080                 BSF     STATUS,RP0              
+001F   3020           00081                 MOVLW   020H                    ;RC6ÇTXÉÇÅ[ÉhÇ…
+0020   0098           00082                 MOVWF   TXSTA                   ;SET
+                      00083                 ;É{Å[ÉåÅ[Égê›íË ;í·ë¨ÉÇÅ[Éh
+0021   3020           00084                 MOVLW   20H                             ;9600BPS
+                      00085                 ;MOVLW  0FH                             ;19.2KBPS
+0022   0099           00086                 MOVWF   SPBRG                   ;SET BRG
+0023   1303           00087                 BCF     STATUS,RP1
+0024   1283           00088                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0025   3090           00089                 MOVLW   090H
+0026   0098           00090                 MOVWF   RCSTA                   ;RC7ÇRXÇ…Å@òAë±éÛêMÇãñâ¬ ÇWBITí êM
+                      00091 ;************äÑÇËçûÇ›ê›íË***********************
+                      00092                 ;BSF            INTCON,GIE                              ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉ
+                            bÉg(7bitñ⁄)Çãñâ¬
+0027   138B           00093                 BCF             INTCON,GIE                              ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉ
+                            bÉg(7bitñ⁄)Çïsãñâ¬
+                      00094 ;************Timer0äÑÇËçûÇ›ê›íË*********
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00095 ;ÉJÉEÉìÉgílÇÃåvéZÇ…Ç¬Ç¢ÇƒÇÕÉfÅ[É^ÉVÅ[ÉgéQè∆
+                      00096 ;***************************************
+0028   1303           00097                 BCF     STATUS,RP1              ;ÉoÉìÉNÇPÇ…
+0029   1683           00098                 BSF     STATUS,RP0              
+                      00099                 ;Timer0ÇÃÉNÉçÉbÉNëIë
+002A   1681           00100                 BSF             OPTION_REG,T0CS         ;T0CKIÉsÉìÇ©ÇÁÉNÉçÉbÉNì¸óÕ
+002B   1281           00101                 BCF             OPTION_REG,T0CS         ;ì‡ïîÉNÉçÉbÉNÇ©ÇÁÉNÉçÉbÉNì¸óÕ
+                      00102                 ;TMR0ÇÃì¸óÕÉGÉbÉWëIë
+002C   1601           00103                 BSF             OPTION_REG,T0SE         ;óßÇøè„Ç™ÇËÉGÉbÉW
+002D   1201           00104                 BCF             OPTION_REG,T0SE         ;óßÇøâ∫Ç™ÇËÉGÉbÉW
+                      00105                 ;ÉvÉäÉXÉPÅ[ÉâêÿÇËë÷Ç¶ëIë
+002E   1581           00106                 BSF             OPTION_REG,PSA          ;WDTÇ…égÇ§
+002F   1181           00107                 BCF             OPTION_REG,PSA          ;Timer0Ç…égÇ§
+                      00108                 ;pÉvÉäÉXÉPÅ[ÉâÇÃÉXÉPÅ[Éãílê›íË
+0030   3007           00109                 MOVLW   B'00000111'             ;1:256Ç…ê›íË
+Message[305]: Using default destination of 1 (file).
+0031   0481           00110                 IORWF   OPTION_REG
+0032   1303           00111                 BCF     STATUS,RP1
+0033   1283           00112                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0034   128B           00113                 BCF             INTCON,T0IE             ;É^ÉCÉ}Å[0äÑÇËçûÇ›ïsãñâ¬
+0035   30B1           00114                 MOVLW   D'177'                  ;ÉJÉEÉìÉgílÇÃÉçÅ[Éh
+0036   0081           00115                 MOVWF   TMR0                    ;TMR0Ç…èoóÕ
+                      00116                 
+                      00117 ;*********ÉÅÉCÉìä÷êî****************
+0037   1303           00118                 BCF     STATUS,RP1
+0038   1283           00119                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0039   2???           00120                 CALL    TX_CHEACK
+003A   300A           00121                 MOVLW   '\n'
+003B   0099           00122                 MOVWF   TXREG                   ;ëóêM
+003C   2???           00123                 CALL    TX_CHEACK
+003D   3053           00124                 MOVLW   'S'
+003E   0099           00125                 MOVWF   TXREG                   ;ëóêM
+003F   2???           00126                 CALL    TX_CHEACK
+0040   3054           00127                 MOVLW   'T'
+0041   0099           00128                 MOVWF   TXREG                   ;ëóêM
+0042   2???           00129                 CALL    TX_CHEACK
+0043   3041           00130                 MOVLW   'A'
+0044   0099           00131                 MOVWF   TXREG                   ;ëóêM
+0045   2???           00132                 CALL    TX_CHEACK
+0046   3052           00133                 MOVLW   'R'
+0047   0099           00134                 MOVWF   TXREG                   ;ëóêM
+0048   2???           00135                 CALL    TX_CHEACK
+0049   3054           00136                 MOVLW   'T'
+004A   0099           00137                 MOVWF   TXREG                   ;ëóêM
+004B   300D           00138                 MOVLW   '\r'
+004C   0099           00139                 MOVWF   TXREG                   ;ëóêM
+004D   2???           00140                 CALL    TX_CHEACK
+                      00141                 
+004E   178B           00142                 BSF             INTCON,GIE                              ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉ
+                            bÉg(7bitñ⁄)Çãñâ¬
+004F   168B           00143                 BSF             INTCON,T0IE             ;É^ÉCÉ}Å[0äÑÇËçûÇ›ãñâ¬
+0050   30FA           00144                 MOVLW   D'250'                  
+0051   00A5           00145                 MOVWF   TIME_COUNT01
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0052   1587           00146                 BSF             PORTC,RC3
+                      00147                 
+0053                  00148 MAINLOOP                                                
+0053   0000           00149                 NOP
+0054   0000           00150                 NOP
+0055   2???           00151                 GOTO    MAINLOOP
+                      00152 ;*****ëóêMäÆóπë“ÇøÉãÅ[ÉvÉãÅ[É`Éì******
+                      00153 
+0056                  00154 TX_CHEACK
+0056   1303           00155                 BCF     STATUS,RP1              ;Ç±ÇÃ2Ç¬Ç≈ÉoÉìÉNÇPÇ…
+0057   1683           00156                 BSF     STATUS,RP0              ;êÿÇËë÷Ç¶
+                      00157 
+0058                  00158 TXLOOP          
+0058   1C98           00159                 BTFSS   TXSTA,TRMT              ;ëóêMÉoÉbÉtÉ@Ç™ãÛÇ©ÅH
+0059   2???           00160                 GOTO    TXLOOP
+                      00161                 
+005A   1303           00162                 BCF     STATUS,RP1
+005B   1283           00163                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+005C   0008           00164                 RETURN
+                      00165 ;*****delayÉãÅ[É`Éì*********/
+                      00166                 
+005D                  00167 DELAY_100US                                             ;ÉTÉCÉNÉã
+005D   30A5           00168                 MOVLW   D'165'                  ;1
+005E   00A1           00169                 MOVWF   COUNT01                 ;1
+005F                  00170 LPLPLPLP
+005F   0BA1           00171                 DECFSZ  COUNT01,F               ;1*164+2
+0060   2???           00172                 GOTO    LPLPLPLP                ;2*164
+0061   0008           00173                 RETURN                                  ;2
+                      00174                                                                 ;åv500 = 100usc
+                      00175                                                                 
+                      00176 ;*****delayÉãÅ[É`Éì*********
+                      00177                 
+0062                  00178 DELAY_595US                                             ;ÉTÉCÉNÉã
+0062   2???           00179                 CALL    DELAY_100US
+0063   2???           00180                 CALL    DELAY_100US
+0064   2???           00181                 CALL    DELAY_100US
+0065   2???           00182                 CALL    DELAY_100US
+0066   2???           00183                 CALL    DELAY_100US
+0067   1303           00184                 BCF     STATUS,RP1
+0068   1283           00185                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0069   304E           00186                 MOVLW   D'78'                   ;1
+006A   00A1           00187                 MOVWF   COUNT01                 ;1
+006B                  00188 LLBAL
+006B   0BA1           00189                 DECFSZ  COUNT01,F               ;1*155+2
+006C   2???           00190                 GOTO    LLBAL                   ;2*155
+006D   0008           00191                 RETURN                                  ;2
+                      00192                                                                 ;åv475 = 95usc + 500sec
+                      00193                                                                 ;          = 595usec
+                      00194                                                                 
+                      00195 ;*****delayÉãÅ[É`Éì*********
+006E                  00196 NOP_10
+                      00197                 
+006E   0000           00198                 NOP                                             ;1
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+006F   0000           00199                 NOP                                             ;1
+0070   0000           00200                 NOP                                             ;1
+0071   0000           00201                 NOP                                             ;1
+0072   0000           00202                 NOP                                             ;1
+0073   0000           00203                 NOP                                             ;1
+0074   0008           00204                 RETURN                                  ;2
+                      00205                                                                 ;åv10
+                      00206 
+                      00207 ;************************************
+                      00208 ;************************************
+                      00209         ;RP1    RP0
+                      00210         ; 0             0 Å® Bank0
+                      00211         ; 0             1 Å® Bank1
+                      00212         ; 1             0 Å® Bank2
+                      00213         ; 1             1 Å® Bank3
+                      00214 ;************************************
+                      00215 
+                      00216 ;***************äÑÇËçûÇ›èàóùÉãÅ[É`Éì******************
+                      00217 
+                      00218 ;**********Timer0äÑÇËçûÇ›èàóùÉãÅ[É`Éì*********
+0075                  00219 Timer0_ISR
+0075   30B1           00220                 MOVLW   D'177'                  ;ÉJÉEÉìÉgílÇÃÉçÅ[Éh
+0076   0081           00221                 MOVWF   TMR0                    ;TMR0Ç…èoóÕ
+0077   110B           00222                 BCF             INTCON,T0IF
+                      00223                 ;Timer0äÑÇËçûÇ›èàóù
+0078   0BA5           00224                 DECFSZ  TIME_COUNT01,F          ;
+0079   2???           00225                 GOTO    END_POINT
+007A   2???           00226                 GOTO    Time1_ROTIN                     ;
+007B                  00227 END_POINT
+007B   0008           00228                 RETURN
+                      00229                 
+007C                  00230 Time1_ROTIN
+007C   30FA           00231                 MOVLW   D'250'                  
+007D   00A5           00232                 MOVWF   TIME_COUNT01
+007E   3008           00233                 MOVLW   B'00001000'
+Message[305]: Using default destination of 1 (file).
+007F   0687           00234                 XORWF   PORTC
+0080   0008           00235                 RETURN
+                      00236 ;***********************************
+                      00237 ;***********************************
+3FB2                  00238                 END
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+BUFFER                            00000020
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CKE                               00000006
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+COUNT01                           00000021
+COUNT02                           00000022
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+DATA_1BYRE                        00000023
+DATA_ADDRESS                      00000005
+DC                                00000001
+DELAY_100US                       0000005D
+DELAY_595US                       00000062
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+END_POINT                         0000007B
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+INIT                              0000000C
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+LLBAL                             0000006B
+LPLPLPLP                          0000005F
+MAINLOOP                          00000053
+NOP_10                            0000006E
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+P                                 00000004
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PSPMODE                           00000004
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+R_W                               00000002
+S                                 00000003
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TIME_COUNT01                      00000025
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXLOOP                            00000058
+TXREG                             00000019
+TXSTA                             00000098
+TX_CHEACK                         00000056
+Time1_ROTIN                       0000007C
+Timer0_ISR                        00000075
+UA                                00000001
+MPASM  5.40                        TIMER0.ASM   3-9-2013  11:34:17         PAGE 12
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+W                                 00000000
+WCOL                              00000007
+WORK1                             00000024
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+__DEBUG                           1
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     2 reported,    15 suppressed
+
+

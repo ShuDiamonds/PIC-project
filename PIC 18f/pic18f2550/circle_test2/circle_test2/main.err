@@ -1,0 +1,4 @@
+Warning[2058] D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\circle_test2\circle_test2\main.c 82 : call of function without prototype
+Warning[2066] D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\circle_test2\circle_test2\main.c 92 : type qualifier mismatch in assignment
+Warning[2066] D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\circle_test2\circle_test2\main.c 104 : type qualifier mismatch in assignment
+Warning[2066] D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f2550\circle_test2\circle_test2\main.c 108 : type qualifier mismatch in assignment

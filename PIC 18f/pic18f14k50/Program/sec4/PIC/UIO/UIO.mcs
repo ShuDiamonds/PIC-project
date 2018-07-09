@@ -1,0 +1,110 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO\main.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(TMPDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(LIBDIR)|d:\mcc18\lib||$(LKRDIR)|D:\mcc18\lkr||
+SOLK=<src>|main.c|lcd_lib.c|autofiles\usbdsc.c|system\usb\class\cdc\cdc.c|system\usb\usb9\usb9.c|system\usb\usbctrltrf\usbctrltrf.c|system\usb\usbdrv\usbdrv.c|system\usb\usbmmap.c||<obj>||<lib>||<lkr>|D:\mcc18\lkr\18f4550.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File001]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO\lcd_lib.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(TMPDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(LIBDIR)|d:\mcc18\lib||$(LKRDIR)|D:\mcc18\lkr||
+SOLK=<src>|main.c|lcd_lib.c|autofiles\usbdsc.c|system\usb\class\cdc\cdc.c|system\usb\usb9\usb9.c|system\usb\usbctrltrf\usbctrltrf.c|system\usb\usbdrv\usbdrv.c|system\usb\usbmmap.c||<obj>||<lib>||<lkr>|D:\mcc18\lkr\18f4550.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File002]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO\usbdsc.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(TMPDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(LIBDIR)|d:\mcc18\lib||$(LKRDIR)|D:\mcc18\lkr||
+SOLK=<src>|main.c|lcd_lib.c|autofiles\usbdsc.c|system\usb\class\cdc\cdc.c|system\usb\usb9\usb9.c|system\usb\usbctrltrf\usbctrltrf.c|system\usb\usbdrv\usbdrv.c|system\usb\usbmmap.c||<obj>||<lib>||<lkr>|D:\mcc18\lkr\18f4550.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File003]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO\cdc.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(TMPDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(LIBDIR)|d:\mcc18\lib||$(LKRDIR)|D:\mcc18\lkr||
+SOLK=<src>|main.c|lcd_lib.c|autofiles\usbdsc.c|system\usb\class\cdc\cdc.c|system\usb\usb9\usb9.c|system\usb\usbctrltrf\usbctrltrf.c|system\usb\usbdrv\usbdrv.c|system\usb\usbmmap.c||<obj>||<lib>||<lkr>|D:\mcc18\lkr\18f4550.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File004]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO\usb9.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(TMPDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(LIBDIR)|d:\mcc18\lib||$(LKRDIR)|D:\mcc18\lkr||
+SOLK=<src>|main.c|lcd_lib.c|autofiles\usbdsc.c|system\usb\class\cdc\cdc.c|system\usb\usb9\usb9.c|system\usb\usbctrltrf\usbctrltrf.c|system\usb\usbdrv\usbdrv.c|system\usb\usbmmap.c||<obj>||<lib>||<lkr>|D:\mcc18\lkr\18f4550.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File005]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO\usbctrltrf.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(TMPDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(LIBDIR)|d:\mcc18\lib||$(LKRDIR)|D:\mcc18\lkr||
+SOLK=<src>|main.c|lcd_lib.c|autofiles\usbdsc.c|system\usb\class\cdc\cdc.c|system\usb\usb9\usb9.c|system\usb\usbctrltrf\usbctrltrf.c|system\usb\usbdrv\usbdrv.c|system\usb\usbmmap.c||<obj>||<lib>||<lkr>|D:\mcc18\lkr\18f4550.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File006]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO\usbdrv.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(TMPDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(LIBDIR)|d:\mcc18\lib||$(LKRDIR)|D:\mcc18\lkr||
+SOLK=<src>|main.c|lcd_lib.c|autofiles\usbdsc.c|system\usb\class\cdc\cdc.c|system\usb\usb9\usb9.c|system\usb\usbctrltrf\usbctrltrf.c|system\usb\usbdrv\usbdrv.c|system\usb\usbmmap.c||<obj>||<lib>||<lkr>|D:\mcc18\lkr\18f4550.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[File007]
+Location=D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO\usbmmap.o
+Folder=Intermediary
+DeviceName=PIC18F4550
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe
+PPAD=$(BINDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(TMPDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(AINDIR)||$(INCDIR)|D:\Erectric\PIC-project\PIC-project\PIC 18f\pic18f14k50\Program\sec4\PIC\UIO||$(LIBDIR)|d:\mcc18\lib||$(LKRDIR)|D:\mcc18\lkr||
+SOLK=<src>|main.c|lcd_lib.c|autofiles\usbdsc.c|system\usb\class\cdc\cdc.c|system\usb\usb9\usb9.c|system\usb\usbctrltrf\usbctrltrf.c|system\usb\usbdrv\usbdrv.c|system\usb\usbmmap.c||<obj>||<lib>||<lkr>|D:\mcc18\lkr\18f4550.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=-D__DEBUG
+[TOOL_LOC_STAMPS]
+tool_loc{96C98149-AA1B-4CF9-B967-FAE79CAB663C}=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mplink.exe
+tool_loc{E56A1C86-9D32-4DF6-8C34-FE0388B1B644}=C:\Program Files (x86)\Microchip\mplabc18\v3.43\bin\mcc18.exe

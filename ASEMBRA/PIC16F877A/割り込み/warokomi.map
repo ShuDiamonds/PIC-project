@@ -1,0 +1,82 @@
+MPLINK 4.38, Linker
+Linker Map File - Created Sat Mar 09 15:54:46 2013
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000001    program   0x000004
+                   .org_1       code   0x000004    program   0x0001b6
+  .config_2007_WARIKOMI.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000002      
+                            0x000004    0x0000de      
+                            0x002007    0x002007      
+            223 out of 8454 program addresses used, program memory utilization is 2%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   AD_ISR   0x000067    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                   BR_END   0x000020    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+              DELAY_100US   0x0000c7    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+              DELAY_595US   0x0000cc    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                     INIT   0x00006f    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                INTERRUPT   0x000004    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                    LLBAL   0x0000d5    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                 LPLPLPLP   0x0000c9    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                 MAINLOOP   0x0000bd    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                   NOP_10   0x0000d8    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  PSP_ISR   0x00006b    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB0_ISR   0x000035    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB4_ISR   0x000031    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB5_CMP   0x00001a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB5_ISR   0x000032    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB6_CMP   0x00001c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB6_ISR   0x000033    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB7_CMP   0x00001e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB7_ISR   0x000034    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+               RBPORT_ISR   0x000017    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                   TXLOOP   0x0000c2    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                TX_CHEACK   0x0000c0    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+          UART_RECIVE_ISR   0x000046    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+            UART_SEND_ISR   0x000037    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                INTERRUPT   0x000004    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+               RBPORT_ISR   0x000017    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB5_CMP   0x00001a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB6_CMP   0x00001c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB7_CMP   0x00001e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                   BR_END   0x000020    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB4_ISR   0x000031    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB5_ISR   0x000032    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB6_ISR   0x000033    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB7_ISR   0x000034    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  RB0_ISR   0x000035    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+            UART_SEND_ISR   0x000037    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+          UART_RECIVE_ISR   0x000046    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                   AD_ISR   0x000067    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                  PSP_ISR   0x00006b    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                     INIT   0x00006f    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                 MAINLOOP   0x0000bd    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                TX_CHEACK   0x0000c0    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                   TXLOOP   0x0000c2    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+              DELAY_100US   0x0000c7    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                 LPLPLPLP   0x0000c9    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+              DELAY_595US   0x0000cc    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                    LLBAL   0x0000d5    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+                   NOP_10   0x0000d8    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\äÑÇËçûÇ›\warikomi.asm
+
+

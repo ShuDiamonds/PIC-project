@@ -1,0 +1,227 @@
+CCS PCM C Compiler, Version 3.185, 22500
+
+               Filename: C:\Users\FMV\Google Drive\software\PIC-project\PIC CCS\LED\LED.LST
+
+               ROM used: 134 (2%)
+                         Largest free fragment is 2048
+               RAM used: 12 (7%) at main() level
+                         13 (7%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   022
+0003:  NOP
+....................  #include <16F877A.h> 
+....................  //////// Standard Header file for the PIC16F877A device ////////////////  
+.................... #device PIC16F877A  
+.................... #list  
+....................  
+.................... #fuses HS,NOWDT,NOPUT,NOPROTECT,BROWNOUT,NOLVP  
+.................... #use delay(CLOCK=20000000)  
+0004:  MOVLW  27
+0005:  MOVWF  04
+0006:  MOVF   00,W
+0007:  BTFSC  03.2
+0008:  GOTO   016
+0009:  MOVLW  06
+000A:  MOVWF  78
+000B:  CLRF   77
+000C:  DECFSZ 77,F
+000D:  GOTO   00C
+000E:  DECFSZ 78,F
+000F:  GOTO   00B
+0010:  MOVLW  7B
+0011:  MOVWF  77
+0012:  DECFSZ 77,F
+0013:  GOTO   012
+0014:  DECFSZ 00,F
+0015:  GOTO   009
+0016:  RETLW  00
+0017:  MOVLW  28
+0018:  MOVWF  04
+0019:  MOVF   00,W
+001A:  BTFSC  03.2
+001B:  GOTO   021
+001C:  GOTO   01F
+001D:  NOP
+001E:  NOP
+001F:  DECFSZ 00,F
+0020:  GOTO   01D
+0021:  RETLW  00
+....................   
+.................... #byte port_a=5  
+.................... #byte port_b=6  
+.................... #byte port_c=7  
+.................... #byte port_d=8  
+.................... #byte port_e=9  
+.................... #use fast_io(a)  
+.................... #use fast_io(b)  
+.................... #use fast_io(c)  
+.................... #use fast_io(d)  
+.................... #use fast_io(e)  
+.................... //Ç“ÇÒÉ}ÉNÉç  
+.................... #define RUN_LED		PIN_C3  
+.................... #define MOTA1		PIN_B3  
+.................... #define MOTA2		PIN_B4  
+.................... #define MOTAPWM		PIN_B5  
+....................   
+.................... int main()  
+.................... {  
+0022:  CLRF   04
+0023:  MOVLW  1F
+0024:  ANDWF  03,F
+0025:  MOVLW  06
+0026:  BSF    03.5
+0027:  MOVWF  1F
+0028:  MOVLW  07
+0029:  BCF    03.5
+002A:  MOVWF  1F
+.................... 	long int a=0,b=0;  
+002B:  CLRF   21
+002C:  CLRF   22
+002D:  CLRF   23
+002E:  CLRF   24
+.................... 	int i;  
+.................... 	  
+.................... 	  
+.................... 	set_tris_a(0);  
+002F:  MOVLW  00
+0030:  BSF    03.5
+0031:  MOVWF  05
+.................... 	set_tris_b(0b11000000);  
+0032:  MOVLW  C0
+0033:  MOVWF  06
+.................... 	set_tris_c(0);  
+0034:  MOVLW  00
+0035:  MOVWF  07
+.................... 	set_tris_d(0);  
+0036:  MOVWF  08
+.................... 	set_tris_e(0);  
+0037:  BCF    09.0
+0038:  BCF    09.1
+0039:  BCF    09.2
+.................... 	  
+.................... 	  
+.................... 	port_a = 0;  
+003A:  BCF    03.5
+003B:  CLRF   05
+.................... 	port_b = 0;  
+003C:  CLRF   06
+.................... 	port_c = 0;  
+003D:  CLRF   07
+.................... 	port_d = 0;  
+003E:  CLRF   08
+.................... 	port_e = 0;  
+003F:  CLRF   09
+.................... 	  
+.................... 	output_high(RUN_LED);  
+0040:  BSF    07.3
+.................... 	delay_ms(500);  
+0041:  MOVLW  02
+0042:  MOVWF  26
+0043:  MOVLW  FA
+0044:  MOVWF  27
+0045:  CALL   004
+0046:  DECFSZ 26,F
+0047:  GOTO   043
+.................... 	output_low(RUN_LED);  
+0048:  BCF    07.3
+.................... 	output_high(RUN_LED);  
+0049:  BSF    07.3
+.................... 	delay_ms(500);  
+004A:  MOVLW  02
+004B:  MOVWF  26
+004C:  MOVLW  FA
+004D:  MOVWF  27
+004E:  CALL   004
+004F:  DECFSZ 26,F
+0050:  GOTO   04C
+.................... 	output_low(RUN_LED);  
+0051:  BCF    07.3
+.................... 	output_high(RUN_LED);  
+0052:  BSF    07.3
+.................... 	delay_ms(500);  
+0053:  MOVLW  02
+0054:  MOVWF  26
+0055:  MOVLW  FA
+0056:  MOVWF  27
+0057:  CALL   004
+0058:  DECFSZ 26,F
+0059:  GOTO   055
+.................... 	output_low(RUN_LED);  
+005A:  BCF    07.3
+.................... 	  
+.................... 	output_high(MOTA1);  
+005B:  BSF    06.3
+.................... 	delay_ms(500);  
+005C:  MOVLW  02
+005D:  MOVWF  26
+005E:  MOVLW  FA
+005F:  MOVWF  27
+0060:  CALL   004
+0061:  DECFSZ 26,F
+0062:  GOTO   05E
+.................... 	output_low(MOTA2);  
+0063:  BCF    06.4
+.................... 	a=2000;  
+0064:  MOVLW  07
+0065:  MOVWF  22
+0066:  MOVLW  D0
+0067:  MOVWF  21
+.................... 	b=1700;  
+0068:  MOVLW  06
+0069:  MOVWF  24
+006A:  MOVLW  A4
+006B:  MOVWF  23
+.................... 	while(1)  
+.................... 	{  
+.................... 		for(i=0;i<100;i++)  
+006C:  CLRF   25
+006D:  MOVF   25,W
+006E:  SUBLW  63
+006F:  BTFSS  03.0
+0070:  GOTO   084
+.................... 		{  
+.................... 			output_high(MOTAPWM);  
+0071:  BSF    06.5
+.................... 			delay_us(b);  
+0072:  MOVF   23,W
+0073:  MOVWF  28
+0074:  CALL   017
+.................... 			output_low(MOTAPWM);  
+0075:  BCF    06.5
+.................... 			delay_us(a-b);  
+0076:  MOVF   23,W
+0077:  SUBWF  21,W
+0078:  MOVWF  26
+0079:  MOVF   22,W
+007A:  MOVWF  27
+007B:  MOVF   24,W
+007C:  BTFSS  03.0
+007D:  INCFSZ 24,W
+007E:  SUBWF  27,F
+007F:  MOVF   26,W
+0080:  MOVWF  28
+0081:  CALL   017
+.................... 		}  
+0082:  INCF   25,F
+0083:  GOTO   06D
+.................... 		//b=b+5;  
+.................... 		/*  
+.................... 		if(b>=20)  
+.................... 		{  
+.................... 			b=0;  
+.................... 		}  
+.................... 		*/  
+.................... 	}  
+0084:  GOTO   06C
+.................... 	  
+.................... }  
+....................   
+.................... 		 
+0085:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F7A   HS NOWDT NOPUT NODEBUG NOPROTECT BROWNOUT NOLVP NOCPD NOWRT

@@ -1,0 +1,835 @@
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;******************************************
+                      00002 ;èâä˙âªÇ≈ADCON1ê›íË
+                      00003 ;RA0,RA1ÇÃ2É`ÉÉÉìÉlÉã
+                      00004 ;VrefÇÕäOïîì¸óÕÇÕégópÇπÇ∏
+                      00005 ;ÉNÉçÉbÉNÇÕFosc/32
+                      00006 ;ÉfÅ[É^í~êœë“ÇøÉ^ÉCÉ}Å[ÇÕ15sec
+                      00007 ;*****************************************
+                      00008         ;delayÉâÉCÉuÉâÉä
+                      00009         ;20MHzÇÃèÍçá
+                      00010         ;íçà”Å@COUNT01,COUNT02Å@Ç∆Ç¢Ç§ïœêîÇêÈåæÇµÇƒÇ®Ç≠
+                      00011         ;1ÉTÉCÉNÉãÇÕ4ÉNÉçÉbÉNÇ»ÇÃÇ≈ 1 / 20M = 0.000 000 005 = 0.05usec
+                      00012         ;Ç»ÇÃÇ≈ 1ÉTÉCÉNÉãÇÕ0.2usecÇ»ÇÃÇ≈ 0.2usec * 500 = 100usec 
+                      00013         ;ZÉtÉâÉOíçà”                    
+                      00014 ;****************************************
+                      00015 ;É`ÉÉÉìÉlÉã0Ç∆1Ç©ÇÁ1ïbÇ≤Ç∆Ç…ÉfÅ[É^Çì«Ç›çûÇ›ëóêMÇ∑ÇÈÉvÉçÉOÉâÉÄ
+                      00016 ;****************************************
+                      00017                 list    P=PIC16F877A    
+                      00018                 #include        <P16F877A.inc>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F877A processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2011 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+                      00555         LIST
+                      00019                 
+                      00020                 errorlevel  -302 
+                      00021                 
+2007   3FB2           00022                 __CONFIG        _HS_OSC & _WDT_OFF & _PWRTE_ON & _BODEN_OFF & _LVP_ON & _CPD_OFF & _WRT_
+                            OFF & _DEBUG_OFF  & _CP_OFF
+                      00023                 
+                      00024 ;******************************
+                      00025         ;ïœêîíËã`
+                      00026 ;******************************
+                      00027 
+  00000020            00028 BUFFER  equ                     020H
+  00000021            00029 COUNT01 equ                     021H
+  00000022            00030 COUNT02 equ                     022H
+  00000023            00031 DATA_1BYRE      equ             023H
+  00000024            00032 WORK1   equ                     024H    ;äÑÇËçûÇ›éûÇÃÉÅÉCÉìÉvÉçÉOÉâÉÄÇÃÉfÅ[É^ÇÃ
+                      00033                                                         ;ëﬁîèÍèäÅD
+                      00034 
+                      00035 
+                      00036 ;************************************
+                      00037                 ORG     0x000
+0000   2???           00038                 GOTO    INIT
+                      00039                 ORG     0x004
+0004   00A4           00040                 MOVWF WORK1                     ;WÉåÉWÉXÉ^ÇÃì‡óeÇëﬁî
+0005   138B           00041                 BCF             INTCON,GIE      ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉbÉg(7bitñ⁄)Çã÷é~
+                      00042                 
+0006   1303           00043                 BCF     STATUS,RP1
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0007   1283           00044                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0008   0824           00045                 MOVF WORK1, W           ;WÉåÉWÉXÉ^ÇÃì‡óeÇñﬂÇ∑
+0009   0009           00046                 RETFIE
+                      00047         ;RETFIE ÅiäÑÇËçûÇ›Ç©ÇÁÇÃReturnÅjÇé¿çs
+                      00048         ;Ç∑ÇÈÇ∆ÅCÉXÉ^ÉbÉNÇ…äiî[ÇµÇΩî‘ínÇ™ÉvÉçÉO
+                      00049         ;ÉâÉÄÉJÉEÉìÉ^Ç…ñﬂÇ≥ÇÍÅCäÑÇËçûÇ›Ç™Ç©Ç©Ç¡
+                      00050         ;ÇΩéûÇÃÉÅÉCÉìÉvÉçÉOÉâÉÄÇ…ñﬂÇÈ
+                      00051 ;***************èâä˙âª*********************
+000A                  00052 INIT
+000A   1383           00053                 BCF     STATUS,IRP              ;ÉoÉìÉN 0,1Ç…éwíË
+000B   1303           00054                 BCF     STATUS,RP1              ;Ç±ÇÃ2Ç¬Ç≈ÉoÉìÉNÇPÇ…
+000C   1683           00055                 BSF     STATUS,RP0              ;êÿÇËë÷Ç¶
+000D   3080           00056                 MOVLW   B'10000000'             ;RC7ÇIN
+000E   0087           00057                 MOVWF   TRISC                   ;PORTC
+000F   0185           00058                 CLRF    TRISA           
+0010   3027           00059                 MOVLW   B'00100111'             ;RB5ÇIN
+0011   0086           00060                 MOVWF   TRISB                   ;PORT
+0012   0188           00061                 CLRF    TRISD
+0013   0189           00062                 CLRF    TRISE                   ;ALL OUT
+0014   1303           00063                 BCF     STATUS,RP1
+0015   1283           00064                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0016   0185           00065                 CLRF    PORTA
+0017   0186           00066                 CLRF    PORTB
+0018   0187           00067                 CLRF    PORTC
+0019   0188           00068                 CLRF    PORTD
+001A   0189           00069                 CLRF    PORTE
+                      00070 ;*****************************
+                      00071         ;ëóêMÉÇÅ[ÉhÇÃèâä˙âª
+                      00072         ;
+                      00073         ;Clock  10MHz   20MHz
+                      00074         ;Baud   SPBRG   SPBRG
+                      00075         ;1200   81H             FFH
+                      00076         ;2400   40H             81H
+                      00077         ;9600   0FH             20H
+                      00078         ;19K    07H             0FH
+                      00079 ;*****************************
+                      00080 ;**************UARTê›íË************************
+001B   1303           00081                 BCF     STATUS,RP1              ;ÉoÉìÉNÇPÇ…
+001C   1683           00082                 BSF     STATUS,RP0              
+001D   3020           00083                 MOVLW   020H                    ;RC6ÇTXÉÇÅ[ÉhÇ…
+001E   0098           00084                 MOVWF   TXSTA                   ;SET
+                      00085                 ;É{Å[ÉåÅ[Égê›íË ;í·ë¨ÉÇÅ[Éh
+001F   3020           00086                 MOVLW   20H                             ;9600BPS
+                      00087                 ;MOVLW  0FH                             ;19.2KBPS
+0020   0099           00088                 MOVWF   SPBRG                   ;SET BRG
+0021   1303           00089                 BCF     STATUS,RP1
+0022   1283           00090                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0023   3090           00091                 MOVLW   090H
+0024   0098           00092                 MOVWF   RCSTA                   ;RC7ÇRXÇ…Å@òAë±éÛêMÇãñâ¬ ÇWBITí êM
+                      00093 ;************äÑÇËçûÇ›ê›íË***********************
+                      00094                 ;BSF            INTCON,GIE                              ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉ
+                            bÉg(7bitñ⁄)Çãñâ¬
+0025   138B           00095                 BCF             INTCON,GIE                              ;ÉOÉçÅ[ÉoÉãäÑÇËçûÇ›ÉCÉlÅ[ÉuÉãÉrÉ
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                            bÉg(7bitñ⁄)Çïsãñâ¬
+                      00096 
+                      00097 ;************ADïœä∑ê›íË*************************        
+0026   1303           00098                 BCF     STATUS,RP1
+0027   1283           00099                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+                      00100                 ;Foscê›íË
+                      00101                 ;BCF            ADCON0,ADCS1    ;FOSC/2
+                      00102                 ;BCF            ADCON0,ADCS0
+                      00103                 
+                      00104                 ;BCF            ADCON0,ADCS1    ;FOSC/8
+                      00105                 ;BSF            ADCON0,ADCS0
+                      00106                 
+0028   179F           00107                 BSF             ADCON0,ADCS1    ;FOSC/32
+0029   131F           00108                 BCF             ADCON0,ADCS0
+                      00109                 
+                      00110                 ;BSF            ADCON0,ADCS1    ;FOSCRC(RCî≠êM)
+                      00111                 ;BSF            ADCON0,ADCS0
+                      00112                 ;ÉAÉiÉçÉOÉ`ÉÉÉìÉlÉãê›íË
+002A   129F           00113                 BCF             ADCON0,CHS2             ;channel 0, (RA0/AN0)
+002B   121F           00114                 BCF             ADCON0,CHS1
+002C   119F           00115                 BCF             ADCON0,CHS0
+                      00116                 ;BCF            ADCON0,CHS2             ;channel 1, (RA1/AN1)
+                      00117                 ;BCF            ADCON0,CHS1
+                      00118                 ;BSF            ADCON0,CHS0
+                      00119                 ;BCF            ADCON0,CHS2             ;channel 2, (RA2/AN2)
+                      00120                 ;BSF            ADCON0,CHS1
+                      00121                 ;BCF            ADCON0,CHS0
+                      00122                 ;BCF            ADCON0,CHS2             ;channel 3, (RA3/AN3)
+                      00123                 ;BSF            ADCON0,CHS1
+                      00124                 ;BSF            ADCON0,CHS0
+                      00125                 ;BSF            ADCON0,CHS2             ;channel 4, (RA5/AN4)
+                      00126                 ;BCF            ADCON0,CHS1
+                      00127                 ;BCF            ADCON0,CHS0
+                      00128                 ;BSF            ADCON0,CHS2             ;channel 5, (RE0/AN5)
+                      00129                 ;BCF            ADCON0,CHS1
+                      00130                 ;BSF            ADCON0,CHS0
+                      00131                 ;BSF            ADCON0,CHS2             ;channel 6, (RE1/AN6)
+                      00132                 ;BSF            ADCON0,CHS1
+                      00133                 ;BCF            ADCON0,CHS0
+                      00134                 ;BSF            ADCON0,CHS2             ;channel 7, (RE2/AN7)
+                      00135                 ;BSF            ADCON0,CHS1
+                      00136                 ;BSF            ADCON0,CHS0
+                      00137                 ;A/D É|Å[Égç\ê¨ÉRÉìÉgÉçÅ[ÉãÉrÉbÉgê›íË
+002D   1303           00138                 BCF     STATUS,RP1              ;ÉoÉìÉNÇPÇ…
+002E   1683           00139                 BSF     STATUS,RP0      
+002F   3002           00140                 MOVLW           B'00000010'             ;VddÇ∆GNDÇÃìdà≥ç∑ÇADïœä∑Ç∑ÇÈ
+0030   009F           00141                 MOVWF           ADCON1                  ;RA0Å`3ÇÕÉAÉiÉçÉOì¸óÕÇªÇÃëºÇÕÉfÉWÉ^Éãì¸óÕ
+0031   139F           00142                 BCF                     ADCON1,ADFM             ;ÉfÅ[É^ÇÕç∂ãl
+                      00143                 ;BSF                    ADCON1,ADFM             ;ÉfÅ[É^ÇÕâEãl
+0032   1303           00144                 BCF     STATUS,RP1
+0033   1283           00145                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+                      00146 ;*********ÉÅÉCÉìä÷êî****************
+0034   1303           00147                 BCF     STATUS,RP1
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0035   1283           00148                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+0036   2???           00149                 CALL    TX_CHEACK
+0037   300A           00150                 MOVLW   '\n'
+0038   0099           00151                 MOVWF   TXREG                   ;ëóêM
+0039   2???           00152                 CALL    TX_CHEACK
+003A   3053           00153                 MOVLW   'S'
+003B   0099           00154                 MOVWF   TXREG                   ;ëóêM
+003C   2???           00155                 CALL    TX_CHEACK
+003D   3054           00156                 MOVLW   'T'
+003E   0099           00157                 MOVWF   TXREG                   ;ëóêM
+003F   2???           00158                 CALL    TX_CHEACK
+0040   3041           00159                 MOVLW   'A'
+0041   0099           00160                 MOVWF   TXREG                   ;ëóêM
+0042   2???           00161                 CALL    TX_CHEACK
+0043   3052           00162                 MOVLW   'R'
+0044   0099           00163                 MOVWF   TXREG                   ;ëóêM
+0045   2???           00164                 CALL    TX_CHEACK
+0046   3054           00165                 MOVLW   'T'
+0047   0099           00166                 MOVWF   TXREG                   ;ëóêM
+0048   300D           00167                 MOVLW   '\r'
+0049   0099           00168                 MOVWF   TXREG                   ;ëóêM
+004A   2???           00169                 CALL    TX_CHEACK
+004B                  00170 MAINLOOP                                                
+004B   1587           00171                 BSF             PORTC,RC3
+004C   0000           00172                 NOP
+                      00173                 ;ADïœä∑É`ÉÉÉìÉlÉã0
+004D   129F           00174                 BCF             ADCON0,CHS2             ;channel 0, (RA0/AN0)
+004E   121F           00175                 BCF             ADCON0,CHS1
+004F   119F           00176                 BCF             ADCON0,CHS0
+0050   141F           00177                 BSF             ADCON0,ADON             ;ÉfÅ[É^í~êœäJén
+0051   2???           00178                 CALL    DELAY_15US              ;ÉfÅ[É^ïœä∑ë“Çø
+0052   151F           00179                 BSF             ADCON0,GO               ;ÉfÅ[É^ÇêîílÇ…ïœä∑
+0053   191F           00180 AD_WAIT BTFSC   ADCON0,GO
+0054   2???           00181                 GOTO    AD_WAIT                 ;ÉfÅ[É^ÇêîílÇ…ïœä∑ë“Çø
+Error[113]  : Symbol not previously defined (ADRES)
+0055   0800           00182                 MOVF    ADRES,W                 ;Get AD Data
+0056   2???           00183                 CALL    TX_CHEACK
+0057   0099           00184                 MOVWF   TXREG                   ;ëóêM
+                      00185                 
+                      00186                 ;ADïœä∑É`ÉÉÉìÉlÉã1
+0058   129F           00187                 BCF             ADCON0,CHS2             ;channel 1, (RA1/AN1)
+0059   121F           00188                 BCF             ADCON0,CHS1
+005A   159F           00189                 BSF             ADCON0,CHS0
+005B   141F           00190                 BSF             ADCON0,ADON             ;ÉfÅ[É^í~êœäJén
+005C   2???           00191                 CALL    DELAY_15US              ;ÉfÅ[É^ïœä∑ë“Çø
+005D   151F           00192                 BSF             ADCON0,GO               ;ÉfÅ[É^ÇêîílÇ…ïœä∑
+005E   191F           00193 ADDD    BTFSC   ADCON0,GO
+005F   2???           00194                 GOTO    ADDD                    ;ÉfÅ[É^ÇêîílÇ…ïœä∑ë“Çø
+Error[113]  : Symbol not previously defined (ADRES)
+0060   0800           00195                 MOVF    ADRES,W                 ;Get AD Data
+0061   2???           00196                 CALL    TX_CHEACK
+0062   0099           00197                 MOVWF   TXREG                   ;ëóêM
+                      00198                 
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0063   2???           00199                 GOTO    MAINLOOP
+                      00200 ;*****ëóêMäÆóπë“ÇøÉãÅ[ÉvÉãÅ[É`Éì******
+                      00201 
+0064                  00202 TX_CHEACK
+0064   1303           00203                 BCF     STATUS,RP1              ;Ç±ÇÃ2Ç¬Ç≈ÉoÉìÉNÇPÇ…
+0065   1683           00204                 BSF     STATUS,RP0              ;êÿÇËë÷Ç¶
+                      00205 
+0066                  00206 TXLOOP          
+0066   1C98           00207                 BTFSS   TXSTA,TRMT              ;ëóêMÉoÉbÉtÉ@Ç™ãÛÇ©ÅH
+0067   2???           00208                 GOTO    TXLOOP
+                      00209                 
+0068   1303           00210                 BCF     STATUS,RP1
+0069   1283           00211                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+006A   0008           00212                 RETURN
+                      00213 ;*****delayÉãÅ[É`Éì*********
+                      00214                 
+006B                  00215 DELAY_100US                                             ;ÉTÉCÉNÉã
+006B   30A5           00216                 MOVLW   D'165'                  ;1
+006C   00A1           00217                 MOVWF   COUNT01                 ;1
+006D                  00218 LPLPLPLP
+006D   0BA1           00219                 DECFSZ  COUNT01,F               ;1*164+2
+006E   2???           00220                 GOTO    LPLPLPLP                ;2*164
+006F   0008           00221                 RETURN                                  ;2
+                      00222                                                                 ;åv500 = 100usc
+                      00223                                                                 
+                      00224 ;*****delayÉãÅ[É`Éì*********
+0070                  00225 DELAY_15US                                              ;ÉTÉCÉNÉã
+0070   3017           00226                 MOVLW   D'23'                   ;1
+0071   00A1           00227                 MOVWF   COUNT01                 ;1
+0072   0000           00228                 NOP                                             ;1
+0073                  00229 T_LP1
+0073   0BA1           00230                 DECFSZ  COUNT01,F               ;1*22+2
+0074   2???           00231                 GOTO    T_LP1                   ;2*22
+0075   0008           00232                 RETURN                                  ;2
+                      00233                                                                 ;åv75 = 100usc
+                      00234 ;*****delayÉãÅ[É`Éì*********
+                      00235                 
+0076                  00236 DELAY_595US                                             ;ÉTÉCÉNÉã
+0076   2???           00237                 CALL    DELAY_100US
+0077   2???           00238                 CALL    DELAY_100US
+0078   2???           00239                 CALL    DELAY_100US
+0079   2???           00240                 CALL    DELAY_100US
+007A   2???           00241                 CALL    DELAY_100US
+007B   1303           00242                 BCF     STATUS,RP1
+007C   1283           00243                 BCF     STATUS,RP0              ;ÉoÉìÉNÇOÇ…
+007D   309C           00244                 MOVLW   D'156'                  ;1
+007E   00A1           00245                 MOVWF   COUNT01                 ;1
+007F                  00246 LLBAL
+007F   0BA1           00247                 DECFSZ  COUNT01,F               ;1*155+2
+0080   2???           00248                 GOTO    LLBAL                   ;2*155
+0081   0008           00249                 RETURN                                  ;2
+                      00250                                                                 ;åv475 = 95usc + 500sec
+                      00251                                                                 ;          = 595usec
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00252                                                                 
+                      00253 ;*****delayÉãÅ[É`Éì*********
+0082                  00254 NOP_10
+                      00255                 
+0082   0000           00256                 NOP                                             ;1
+0083   0000           00257                 NOP                                             ;1
+0084   0000           00258                 NOP                                             ;1
+0085   0000           00259                 NOP                                             ;1
+0086   0000           00260                 NOP                                             ;1
+0087   0000           00261                 NOP                                             ;1
+0088   0008           00262                 RETURN                                  ;2
+                      00263                                                                 ;åv10
+                      00264 
+                      00265 ;************************************
+                      00266 ;*********************************************
+                      00267 ;1msecdelayÉãÅ[É`Éì
+                      00268 ;*********************************************
+0089                  00269 DELAY_1MS                                               ;ÉTÉCÉNÉã
+                      00270                 
+0089   2???           00271                 CALL    DELAY_100US
+008A   2???           00272                 CALL    DELAY_100US
+008B   2???           00273                 CALL    DELAY_100US
+008C   2???           00274                 CALL    DELAY_100US
+008D   2???           00275                 CALL    DELAY_100US
+008E   2???           00276                 CALL    DELAY_100US
+008F   2???           00277                 CALL    DELAY_100US
+0090   2???           00278                 CALL    DELAY_100US
+0091   2???           00279                 CALL    DELAY_100US
+                      00280                 
+0092   30A4           00281                 MOVLW   D'164'                  ;1
+0093   00A1           00282                 MOVWF   COUNT01                 ;1
+0094   0000           00283                 NOP                                             ;1
+0095   0000           00284                 NOP                                             ;1
+0096   0000           00285                 NOP                                             ;1
+0097                  00286 MLMLM
+0097   0BA1           00287                 DECFSZ  COUNT01,F               ;1*163+2
+0098   2???           00288                 GOTO    MLMLM                   ;2*163
+0099   0008           00289                 RETURN                                  ;2
+                      00290                                                                 ;åv900usec + 498 
+                      00291                                                                 
+                      00292 ;*********************************************
+                      00293 ;10msecdelayÉãÅ[É`Éì
+                      00294 ;*********************************************
+009A                  00295 DELAY_10MS                                              ;ÉTÉCÉNÉã
+                      00296                 
+009A   2???           00297                 CALL    DELAY_1MS
+009B   2???           00298                 CALL    DELAY_1MS
+009C   2???           00299                 CALL    DELAY_1MS
+009D   2???           00300                 CALL    DELAY_1MS
+009E   2???           00301                 CALL    DELAY_1MS
+009F   2???           00302                 CALL    DELAY_1MS
+00A0   2???           00303                 CALL    DELAY_1MS
+00A1   2???           00304                 CALL    DELAY_1MS
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00A2   2???           00305                 CALL    DELAY_1MS
+                      00306                 
+00A3   2???           00307                 CALL    DELAY_100US
+00A4   2???           00308                 CALL    DELAY_100US
+00A5   2???           00309                 CALL    DELAY_100US
+00A6   2???           00310                 CALL    DELAY_100US
+00A7   2???           00311                 CALL    DELAY_100US
+00A8   2???           00312                 CALL    DELAY_100US
+00A9   2???           00313                 CALL    DELAY_100US
+00AA   2???           00314                 CALL    DELAY_100US
+00AB   2???           00315                 CALL    DELAY_100US
+                      00316                 
+00AC   30A4           00317                 MOVLW   D'164'                  ;1
+00AD   00A1           00318                 MOVWF   COUNT01                 ;1
+00AE   0000           00319                 NOP                                             ;1
+00AF   0000           00320                 NOP                                             ;1
+00B0   0000           00321                 NOP                                             ;1
+00B1                  00322 AACCAAAA
+00B1   0BA1           00323                 DECFSZ  COUNT01,F                       ;1*163+2
+00B2   2???           00324                 GOTO    AACCAAAA                        ;2*163
+00B3   0008           00325                 RETURN                                  ;2
+                      00326                                                                 ;åv900usec + 498 
+                      00327                 
+                      00328 ;*********************************************
+                      00329 ;1000msecdelayÉãÅ[É`Éì
+                      00330 ;*********************************************
+00B4                  00331 DELAY_1000MS                                            ;ÉTÉCÉNÉã
+00B4   3063           00332                 MOVLW   D'99'                   ;1
+00B5   00A1           00333                 MOVWF   COUNT01                 ;1
+00B6                  00334 OPOPOPS
+00B6   2???           00335                 CALL    DELAY_100US             ;99âÒÅ@CALLÇ≥ÇÍÇÈ
+00B7   2???           00336                 CALL    DELAY_10MS              ;99âÒÅ@CALLÇ≥ÇÍÇÈ
+00B8   0BA1           00337                 DECFSZ  COUNT01,F               ;1*98+2
+00B9   2???           00338                 GOTO    OPOPOPS                 ;2*98
+                      00339                                                                 ;åv298
+                      00340 
+00BA   3041           00341                 MOVLW   D'65'                   ;1
+00BB   00A1           00342                 MOVWF   COUNT01                 ;1
+00BC   0000           00343                 NOP
+00BD   0000           00344                 NOP
+00BE                  00345 KLPIOJ
+00BE   0BA1           00346                 DECFSZ  COUNT01,F               ;1*64+2
+00BF   2???           00347                 GOTO    KLPIOJ                  ;2*64
+00C0   0008           00348                 RETURN                                  ;2
+                      00349                                                                 ;åv200
+                      00350                                                                 ;ëçåv498 + 999.9msec = 1000msec
+                      00351 ;************************************
+                      00352         ;RP1    RP0
+                      00353         ; 0             0 Å® Bank0
+                      00354         ; 0             1 Å® Bank1
+                      00355         ; 1             0 Å® Bank2
+                      00356         ; 1             1 Å® Bank3
+                      00357 ;************************************
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00358 
+                      00359 ;***************äÑÇËçûÇ›èàóùÉãÅ[É`Éì******************
+                      00360 
+                      00361 
+                      00362 ;***********************************
+3FB2                  00363                 END
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+AACCAAAA                          000000B1
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDD                              0000005E
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+AD_WAIT                           00000053
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+BUFFER                            00000020
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+CKE                               00000006
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+COUNT01                           00000021
+COUNT02                           00000022
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+DATA_1BYRE                        00000023
+DATA_ADDRESS                      00000005
+DC                                00000001
+DELAY_1000MS                      000000B4
+DELAY_100US                       0000006B
+DELAY_10MS                        0000009A
+DELAY_15US                        00000070
+DELAY_1MS                         00000089
+DELAY_595US                       00000076
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+I2C_DATA                          00000005
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INIT                              0000000A
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+KLPIOJ                            000000BE
+LLBAL                             0000007F
+LPLPLPLP                          0000006D
+MAINLOOP                          0000004B
+MLMLM                             00000097
+NOP_10                            00000082
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPOPOPS                           000000B6
+OPTION_REG                        00000081
+P                                 00000004
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE 12
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE 13
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+R_W                               00000002
+S                                 00000003
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE 14
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+MPASM  5.40                   ADCONVERTER.ASM   3-8-2013  23:34:05         PAGE 15
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TXIF                              00000004
+TXLOOP                            00000066
+TXREG                             00000019
+TXSTA                             00000098
+TX_CHEACK                         00000064
+T_LP1                             00000073
+UA                                00000001
+W                                 00000000
+WCOL                              00000007
+WORK1                             00000024
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+__DEBUG                           1
+
+Errors   :     2
+Warnings :     0 reported,     0 suppressed
+Messages :     0 reported,    10 suppressed
+
+

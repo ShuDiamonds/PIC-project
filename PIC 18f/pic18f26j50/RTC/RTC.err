@@ -1,0 +1,22 @@
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 194 : location PROD specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 194 : location WREG specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 194 : location BSR specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 194 : location STATUS specified in the interrupt save list is redundant
+Warning[2074] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 195 : location PROD specified in the interrupt save list is redundant
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 103 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 104 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 166 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 241 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 242 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 244 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 245 : type qualifier mismatch in assignment
+Warning[2058] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 253 : call of function without prototype
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 254 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 256 : type qualifier mismatch in assignment
+Warning[2058] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 261 : call of function without prototype
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 262 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 264 : type qualifier mismatch in assignment
+Warning[2058] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 269 : call of function without prototype
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 270 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 272 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\FMV\Google Drive\software\PIC-project\PIC 18f\pic18f26j50\RTC\RTC.c 304 : type qualifier mismatch in assignment

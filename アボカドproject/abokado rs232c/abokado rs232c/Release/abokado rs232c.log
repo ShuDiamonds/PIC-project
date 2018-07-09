@@ -1,0 +1,18 @@
+﻿2013/04/25 23:15:13 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "D:\VC++\abokado rs232c\abokado rs232c\abokado rs232c.vcxproj" (build ターゲット)。
+     1>InitializeBuildStatus:
+         "AlwaysCreate" が指定されたため "Release\abokado rs232c.unsuccessfulbuild" を作成しています。
+       GenerateTargetFrameworkMonikerAttribute:
+       すべての出力ファイルが入力ファイルに対して最新なので、ターゲット "GenerateTargetFrameworkMonikerAttribute" を省略します。
+       ClCompile:
+         すべての出力が最新のものです。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\abokado rs232c.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt "abokado rs232c.cpp" /clr:nostdlib 
+         abokado rs232c.cpp
+     1>d:\vc++\abokado rs232c\abokado rs232c\Form1.h(172): error C2664: 'void System::IO::Ports::SerialPort::Write(System::String ^)' : 1 番目の引数を 'int' から 'System::String ^' に変換できません。(新しい機能 ; ヘルプを参照)
+                 使用可能なユーザー定義された変換演算子がない、または
+                 演算型のボックス化された形式からターゲット型への標準変換は存在しません
+     1>プロジェクト "D:\VC++\abokado rs232c\abokado rs232c\abokado rs232c.vcxproj" (build ターゲット) のビルドが終了しました -- 失敗。
+
+ビルドに失敗しました。
+
+経過時間 00:00:00.20

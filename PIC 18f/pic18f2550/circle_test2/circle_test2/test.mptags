@@ -1,0 +1,162 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+ABS::(num)(((num)>0)?(num):-(num))	F:\pic18f4620\test\YHY024006A.h	88;"	d	line:88
+BLACK::0x0000	F:\pic18f4620\test\YHY024006A.h	47;"	d	line:47
+BLUE::0x001f	F:\pic18f4620\test\YHY024006A.h	46;"	d	line:46
+COLOR16::unsignedint	F:\pic18f4620\test\YHY024006A.h	30;"	d	line:30
+CYAN::0x07FF	F:\pic18f4620\test\YHY024006A.h	51;"	d	line:51
+Dc::PORTEbits.RE2	F:\pic18f4620\test\YHY024006A.h	66;"	d	line:66
+FALSE::0	F:\pic18f4620\test\YHY024006A.h	38;"	d	line:38
+GET_XR::(out)SetChanADC(ADC_CH1);Conve	F:\pic18f4620\test\YHY024006A.h	76;"	d	line:76
+GET_YU::(out)SetChanADC(ADC_CH0);Conve	F:\pic18f4620\test\YHY024006A.h	77;"	d	line:77
+GRAY::0x8c51	F:\pic18f4620\test\YHY024006A.h	49;"	d	line:49
+GREEN::0x07e0	F:\pic18f4620\test\YHY024006A.h	45;"	d	line:45
+Gradation	F:\pic18f4620\test\main.c	17;"	f	line:17	signature:(COLOR16 start, COLOR16 end, int max, int t)
+LCD_DATA::PORTB	F:\pic18f4620\test\YHY024006A.h	68;"	d	line:68
+LCD_DATA_OUTPUT::TRISE=0x00	F:\pic18f4620\test\YHY024006A.h	62;"	d	line:62
+LCD_H::320	F:\pic18f4620\test\YHY024006A.h	81;"	d	line:81
+LCD_PORT_OUTPUT::TRISB=0x00	F:\pic18f4620\test\YHY024006A.h	63;"	d	line:63
+LCD_W::240	F:\pic18f4620\test\YHY024006A.h	80;"	d	line:80
+Lcd_Clear	F:\pic18f4620\test\YHY024006A.c	215;"	f	line:215	signature:(COLOR16 color)
+Lcd_Clear	F:\pic18f4620\test\YHY024006A.h	98;"	p	line:98	signature:(COLOR16 color)
+Lcd_Draw_Box	F:\pic18f4620\test\YHY024006A.c	552;"	f	line:552	signature:(int x, int y, int w, int h, COLOR16 color)
+Lcd_Draw_Box	F:\pic18f4620\test\YHY024006A.h	113;"	p	line:113	signature:(int x, int y, int w, int h, COLOR16 color)
+Lcd_Draw_Box2	F:\pic18f4620\test\YHY024006A.c	560;"	f	line:560	signature:(int x, int y, int w, int h, COLOR16 color)
+Lcd_Draw_Box2	F:\pic18f4620\test\YHY024006A.h	114;"	p	line:114	signature:(int x, int y, int w, int h, COLOR16 color)
+Lcd_Draw_Char	F:\pic18f4620\test\YHY024006A.c	256;"	f	line:256	signature:(const char c)
+Lcd_Draw_Char	F:\pic18f4620\test\YHY024006A.h	101;"	p	line:101	signature:(const char c)
+Lcd_Draw_Circle	F:\pic18f4620\test\YHY024006A.c	508;"	f	line:508	signature:(int xx, int yy, int r, COLOR16 color)
+Lcd_Draw_Circle	F:\pic18f4620\test\YHY024006A.h	111;"	p	line:111	signature:(int xx, int yy, int r, COLOR16 color)
+Lcd_Draw_Circle2	F:\pic18f4620\test\YHY024006A.c	532;"	f	line:532	signature:(int xx, int yy, int r, COLOR16 color)
+Lcd_Draw_Circle2	F:\pic18f4620\test\YHY024006A.h	112;"	p	line:112	signature:(int xx, int yy, int r, COLOR16 color)
+Lcd_Draw_Dot	F:\pic18f4620\test\YHY024006A.c	388;"	f	line:388	signature:(int x, int y, COLOR16 color)
+Lcd_Draw_Dot	F:\pic18f4620\test\YHY024006A.h	109;"	p	line:109	signature:(int x, int y, COLOR16 color)
+Lcd_Draw_Line	F:\pic18f4620\test\YHY024006A.c	394;"	f	line:394	signature:(int x, int y, int xx, int yy, COLOR16 color)
+Lcd_Draw_Line	F:\pic18f4620\test\YHY024006A.h	110;"	p	line:110	signature:(int x, int y, int xx, int yy, COLOR16 color)
+Lcd_Draw_Patt	F:\pic18f4620\test\YHY024006A.c	227;"	f	line:227	signature:(rom PATT16* patt, int x, int y)
+Lcd_Draw_Patt	F:\pic18f4620\test\YHY024006A.h	97;"	p	line:97	signature:(rom PATT16* patt, int x, int y)
+Lcd_Draw_String	F:\pic18f4620\test\YHY024006A.c	290;"	f	line:290	signature:(char* str)
+Lcd_Draw_String	F:\pic18f4620\test\YHY024006A.h	102;"	p	line:102	signature:(char* str)
+Lcd_Draw_String_Rom	F:\pic18f4620\test\YHY024006A.c	296;"	f	line:296	signature:(rom char* str)
+Lcd_Draw_String_Rom	F:\pic18f4620\test\YHY024006A.h	103;"	p	line:103	signature:(rom char* str)
+Lcd_Draw_XLine	F:\pic18f4620\test\YHY024006A.c	339;"	f	line:339	signature:(int x1, int x2, int y, COLOR16 color)
+Lcd_Draw_XLine	F:\pic18f4620\test\YHY024006A.h	107;"	p	line:107	signature:(int x1, int x2, int y, COLOR16 color)
+Lcd_Draw_YLine	F:\pic18f4620\test\YHY024006A.c	364;"	f	line:364	signature:(int y1, int y2, int x, COLOR16 color)
+Lcd_Draw_YLine	F:\pic18f4620\test\YHY024006A.h	108;"	p	line:108	signature:(int y1, int y2, int x, COLOR16 color)
+Lcd_Get_Touch	F:\pic18f4620\test\YHY024006A.c	52;"	f	line:52	signature:(int *x, int *y)
+Lcd_Get_Touch	F:\pic18f4620\test\YHY024006A.h	106;"	p	line:106	signature:(int *x, int *y)
+Lcd_Init	F:\pic18f4620\test\YHY024006A.c	95;"	f	line:95
+Lcd_Init	F:\pic18f4620\test\YHY024006A.h	93;"	p	line:93	signature:()
+Lcd_Set_Area	F:\pic18f4620\test\YHY024006A.c	188;"	f	line:188	signature:(int x, int y, int w, int h)
+Lcd_Set_Area	F:\pic18f4620\test\YHY024006A.h	95;"	p	line:95	signature:(int x, int y, int w, int h)
+Lcd_Set_Font	F:\pic18f4620\test\YHY024006A.c	246;"	f	line:246	signature:(rom PATT8* patt)
+Lcd_Set_Font	F:\pic18f4620\test\YHY024006A.h	99;"	p	line:99	signature:(rom PATT8* patt)
+Lcd_Set_Font_Sub_Color	F:\pic18f4620\test\YHY024006A.c	251;"	f	line:251	signature:(COLOR16 color)
+Lcd_Set_Font_Sub_Color	F:\pic18f4620\test\YHY024006A.h	100;"	p	line:100	signature:(COLOR16 color)
+Lcd_Set_Pos	F:\pic18f4620\test\YHY024006A.c	206;"	f	line:206	signature:(int x, int y)
+Lcd_Set_Pos	F:\pic18f4620\test\YHY024006A.h	96;"	p	line:96	signature:(int x, int y)
+Lcd_printf	F:\pic18f4620\test\YHY024006A.c	303;"	f	line:303	signature:(int x, int y, COLOR16 color, char *str, ...)
+Lcd_printf	F:\pic18f4620\test\YHY024006A.h	104;"	p	line:104	signature:(int x, int y, COLOR16 color, char *str, ...)
+Lcd_printf_rom	F:\pic18f4620\test\YHY024006A.c	321;"	f	line:321	signature:(int x, int y, COLOR16 color, rom char *str, ...)
+Lcd_printf_rom	F:\pic18f4620\test\YHY024006A.h	105;"	p	line:105	signature:(int x, int y, COLOR16 color, rom char *str, ...)
+PATT16::unsignedint	F:\pic18f4620\test\YHY024006A.h	22;"	d	line:22
+PATT8::unsignedchar	F:\pic18f4620\test\YHY024006A.h	26;"	d	line:26
+PATT_BIT::(patt)patt[0]	F:\pic18f4620\test\YHY024006A.h	56;"	d	line:56
+PATT_DATA::(patt,x,y)patt[PATT_HEADER_SIZ	F:\pic18f4620\test\YHY024006A.h	59;"	d	line:59
+PATT_H::(patt)patt[2]	F:\pic18f4620\test\YHY024006A.h	58;"	d	line:58
+PATT_HEADER_SIZE::3	F:\pic18f4620\test\YHY024006A.h	55;"	d	line:55
+PATT_W::(patt)patt[1]	F:\pic18f4620\test\YHY024006A.h	57;"	d	line:57
+PURPLE::0xF81F	F:\pic18f4620\test\YHY024006A.h	52;"	d	line:52
+RED::0xf800	F:\pic18f4620\test\YHY024006A.h	44;"	d	line:44
+Res::PORTEbits.RE0	F:\pic18f4620\test\YHY024006A.h	65;"	d	line:65
+SETUP_XR::XL_IO=1;YD_IO=0;YD=1	F:\pic18f4620\test\YHY024006A.h	74;"	d	line:74
+SETUP_YU::XL_IO=0;YD_IO=1;XL=1	F:\pic18f4620\test\YHY024006A.h	75;"	d	line:75
+TRUE::1	F:\pic18f4620\test\YHY024006A.h	34;"	d	line:34
+Trans_Com_16	F:\pic18f4620\test\YHY024006A.c	29;"	f	line:29	signature:(uint data)
+Trans_Dat_16	F:\pic18f4620\test\YHY024006A.c	42;"	f	line:42	signature:(uint data)
+Trans_Dat_16	F:\pic18f4620\test\YHY024006A.h	94;"	p	line:94	signature:(uint data)
+WAIT_MS::Delay1KTCYx(10)	F:\pic18f4620\test\YHY024006A.h	84;"	d	line:84
+WAIT_US::Delay10TCYx(1)	F:\pic18f4620\test\YHY024006A.h	85;"	d	line:85
+WHITE::0xffff	F:\pic18f4620\test\YHY024006A.h	48;"	d	line:48
+Wr::PORTEbits.RE1	F:\pic18f4620\test\YHY024006A.h	67;"	d	line:67
+XL::PORTAbits.RA5	F:\pic18f4620\test\YHY024006A.h	70;"	d	line:70
+XL_IO::TRISAbits.RA5	F:\pic18f4620\test\YHY024006A.h	72;"	d	line:72
+YD::PORTAbits.RA4	F:\pic18f4620\test\YHY024006A.h	71;"	d	line:71
+YD_IO::TRISAbits.RA4	F:\pic18f4620\test\YHY024006A.h	73;"	d	line:73
+YELLOW::0xFFE0	F:\pic18f4620\test\YHY024006A.h	50;"	d	line:50
+YHY024006A_H	F:\pic18f4620\test\YHY024006A.h	8;"	d	line:8
+arg	F:\pic18f4620\test\YHY024006A.c	304;"	l	line:304
+arg	F:\pic18f4620\test\YHY024006A.c	322;"	l	line:322
+buf	F:\pic18f4620\test\YHY024006A.c	12;"	v	line:12
+color	F:\pic18f4620\test\main.c	36;"	l	line:36
+color2	F:\pic18f4620\test\main.c	36;"	l	line:36
+dot	F:\pic18f4620\test\YHY024006A.c	262;"	l	line:262
+font_color	F:\pic18f4620\test\YHY024006A.c	5;"	v	line:5
+font_patt	F:\pic18f4620\test\YHY024006A.c	4;"	v	line:4
+font_patt_816	F:\pic18f4620\test\font_patt.h	2;"	v	line:2
+font_sub_color	F:\pic18f4620\test\YHY024006A.c	6;"	v	line:6
+h	F:\pic18f4620\test\YHY024006A.c	230;"	l	line:230
+h	F:\pic18f4620\test\YHY024006A.c	259;"	l	line:259
+h	F:\pic18f4620\test\YHY024006A.c	343;"	l	line:343
+h	F:\pic18f4620\test\YHY024006A.c	367;"	l	line:367
+h	F:\pic18f4620\test\YHY024006A.c	396;"	l	line:396
+h2	F:\pic18f4620\test\YHY024006A.c	398;"	l	line:398
+i	F:\pic18f4620\test\YHY024006A.c	216;"	l	line:216
+i	F:\pic18f4620\test\YHY024006A.c	228;"	l	line:228
+i	F:\pic18f4620\test\YHY024006A.c	257;"	l	line:257
+i	F:\pic18f4620\test\YHY024006A.c	340;"	l	line:340
+i	F:\pic18f4620\test\YHY024006A.c	365;"	l	line:365
+i	F:\pic18f4620\test\YHY024006A.c	395;"	l	line:395
+i	F:\pic18f4620\test\YHY024006A.c	561;"	l	line:561
+i	F:\pic18f4620\test\main.c	34;"	l	line:34
+j	F:\pic18f4620\test\YHY024006A.c	216;"	l	line:216
+j	F:\pic18f4620\test\YHY024006A.c	228;"	l	line:228
+j	F:\pic18f4620\test\YHY024006A.c	257;"	l	line:257
+j	F:\pic18f4620\test\YHY024006A.c	561;"	l	line:561
+main	F:\pic18f4620\test\main.c	33;"	f	line:33	signature:(void)
+my_sqrt	F:\pic18f4620\test\YHY024006A.c	492;"	f	line:492	signature:(int x)
+patt	F:\pic18f4620\test\YHY024006A.c	265;"	l	line:265
+patt_dango_0	F:\pic18f4620\test\bmp_table.h	1;"	v	line:1
+patt_dango_1	F:\pic18f4620\test\bmp_table.h	25;"	v	line:25
+patt_dango_2	F:\pic18f4620\test\bmp_table.h	49;"	v	line:49
+patt_dango_3	F:\pic18f4620\test\bmp_table.h	73;"	v	line:73
+patt_dango_4	F:\pic18f4620\test\bmp_table.h	97;"	v	line:97
+pos_f	F:\pic18f4620\test\YHY024006A.c	263;"	l	line:263
+r2	F:\pic18f4620\test\YHY024006A.c	510;"	l	line:510
+r2	F:\pic18f4620\test\YHY024006A.c	534;"	l	line:534
+ret	F:\pic18f4620\test\main.c	18;"	l	line:18
+s	F:\pic18f4620\test\YHY024006A.c	493;"	l	line:493
+size	F:\pic18f4620\test\main.c	35;"	l	line:35
+str_base_x	F:\pic18f4620\test\YHY024006A.c	7;"	v	line:7
+str_base_y	F:\pic18f4620\test\YHY024006A.c	8;"	v	line:8
+str_cur_x	F:\pic18f4620\test\YHY024006A.c	9;"	v	line:9
+str_cur_y	F:\pic18f4620\test\YHY024006A.c	10;"	v	line:10
+t	F:\pic18f4620\test\YHY024006A.c	493;"	l	line:493
+temp	F:\pic18f4620\test\YHY024006A.c	397;"	l	line:397
+uchar::unsignedchar	F:\pic18f4620\test\YHY024006A.h	18;"	d	line:18
+uint::unsignedint	F:\pic18f4620\test\YHY024006A.h	14;"	d	line:14
+w	F:\pic18f4620\test\YHY024006A.c	229;"	l	line:229
+w	F:\pic18f4620\test\YHY024006A.c	258;"	l	line:258
+w	F:\pic18f4620\test\YHY024006A.c	342;"	l	line:342
+w	F:\pic18f4620\test\YHY024006A.c	368;"	l	line:368
+w	F:\pic18f4620\test\YHY024006A.c	396;"	l	line:396
+w2	F:\pic18f4620\test\YHY024006A.c	398;"	l	line:398
+wait_ms	F:\pic18f4620\test\YHY024006A.c	15;"	f	line:15	signature:(int t)
+wait_ms	F:\pic18f4620\test\YHY024006A.h	92;"	p	line:92	signature:(int t)
+wait_us	F:\pic18f4620\test\YHY024006A.c	22;"	f	line:22	signature:(int t)
+x	F:\pic18f4620\test\YHY024006A.c	260;"	l	line:260
+x	F:\pic18f4620\test\YHY024006A.c	341;"	l	line:341
+x	F:\pic18f4620\test\YHY024006A.c	509;"	l	line:509
+x	F:\pic18f4620\test\YHY024006A.c	533;"	l	line:533
+x	F:\pic18f4620\test\main.c	37;"	l	line:37
+y	F:\pic18f4620\test\YHY024006A.c	261;"	l	line:261
+y	F:\pic18f4620\test\YHY024006A.c	366;"	l	line:366
+y	F:\pic18f4620\test\YHY024006A.c	509;"	l	line:509
+y	F:\pic18f4620\test\YHY024006A.c	533;"	l	line:533
+y	F:\pic18f4620\test\main.c	37;"	l	line:37

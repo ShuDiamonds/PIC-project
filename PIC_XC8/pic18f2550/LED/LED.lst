@@ -1,0 +1,295 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.21 build 54009 
+                                                                                               Sun Jan 12 09:23:24 2014
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 54009
+     1                           	processor	18F2550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	text1,global,reloc=2,class=CODE,delta=1
+     9                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    10                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    11  0000                     _PORTAbits	set	3968
+    12  0000                     _TRISAbits	set	3986
+    13                           
+    14 ;;
+    15 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+    16 ;;
+    17 ;; *************** function _main *****************
+    18 ;; Defined at:
+    19 ;;		line 10 in file "C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\LED\LED.c"
+    20 ;; Parameters:    Size  Location     Type
+    21 ;;		None
+    22 ;; Auto vars:     Size  Location     Type
+    23 ;;  i               2    0[COMRAM] int 
+    24 ;; Return value:  Size  Location     Type
+    25 ;;                  2    8[COMRAM] int 
+    26 ;; Registers used:
+    27 ;;		wreg, status,2, status,0, cstack
+    28 ;; Tracked objects:
+    29 ;;		On entry : 0/0
+    30 ;;		On exit  : 0/0
+    31 ;;		Unchanged: 0/0
+    32 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+    33 ;;      Params:         0       0       0       0       0       0       0       0       0
+    34 ;;      Locals:         2       0       0       0       0       0       0       0       0
+    35 ;;      Temps:          0       0       0       0       0       0       0       0       0
+    36 ;;      Totals:         2       0       0       0       0       0       0       0       0
+    37 ;;Total ram usage:        2 bytes
+    38 ;; Hardware stack levels required when called:    1
+    39 ;; This function calls:
+    40 ;;		_InitPortIOReg
+    41 ;; This function is called by:
+    42 ;;		Startup code after reset
+    43 ;; This function uses a non-reentrant model
+    44 ;;
+    45                           
+    46                           	psect	text0
+    47  007FD4                     __ptext0:
+    48                           	opt stack 0
+    49  007FD4                     _main:
+    50                           	opt stack 30
+    51                           
+    52                           ;LED.c: 12: int i = 0;
+    53                           
+    54                           ;incstack = 0
+    55                           ;incstack = 0
+    56  007FD4  0E00               	movlw	0
+    57  007FD6  6E02               	movwf	main@i+1,c
+    58  007FD8  0E00               	movlw	0
+    59  007FDA  6E01               	movwf	main@i,c
+    60                           
+    61                           ;LED.c: 14: InitPortIOReg();
+    62  007FDC  ECE5  F03F         	call	_InitPortIOReg	;wreg free
+    63  007FE0                     l599:
+    64                           
+    65                           ;LED.c: 17: {
+    66                           ;LED.c: 18: PORTAbits.RA0 ^= 1;
+    67  007FE0  7080               	btg	3968,0,c	;volatile
+    68                           
+    69                           ;LED.c: 19: for(i=0;i<1000;i++);
+    70  007FE2  0E00               	movlw	0
+    71  007FE4  6E02               	movwf	main@i+1,c
+    72  007FE6  0E00               	movlw	0
+    73  007FE8  6E01               	movwf	main@i,c
+    74  007FEA  5002               	movf	main@i+1,w,c
+    75  007FEC  0A80               	xorlw	128
+    76  007FEE  0F7D               	addlw	-131
+    77  007FF0  0EE8               	movlw	232
+    78  007FF2  B4D8               	btfsc	status,2,c
+    79  007FF4  5C01               	subwf	main@i,w,c
+    80  007FF6  B0D8               	btfsc	status,0,c
+    81  007FF8  D7F3               	goto	l599
+    82  007FFA  4A01               	infsnz	main@i,f,c
+    83  007FFC  2A02               	incf	main@i+1,f,c
+    84  007FFE  D7F5               	goto	L1
+    85  008000                     __end_of_main:
+    86                           	opt stack 0
+    87                           status	equ	0xFD8
+    88                           
+    89                           ; #config settings
+    90                           
+    91                           	psect	cinit
+    92  007FCE                     __pcinit:
+    93                           	opt stack 0
+    94  007FCE                     start_initialization:
+    95                           	opt stack 0
+    96  007FCE                     __initialization:
+    97                           	opt stack 0
+    98  007FCE                     end_of_initialization:
+    99                           	opt stack 0
+   100  007FCE                     __end_of__initialization:
+   101                           	opt stack 0
+   102  007FCE  0100               	movlb	0
+   103  007FD0  EFEA  F03F         	goto	_main	;jump to C main() function
+   104                           status	equ	0xFD8
+   105                           
+   106                           	psect	cstackCOMRAM
+   107  000001                     __pcstackCOMRAM:
+   108                           	opt stack 0
+   109  000001                     main@i:
+   110                           	opt stack 0
+   111                           
+   112                           ; 2 bytes @ 0x0
+   113  000001                     	ds	2
+   114                           status	equ	0xFD8
+   115                           
+   116 ;; *************** function _InitPortIOReg *****************
+   117 ;; Defined at:
+   118 ;;		line 27 in file "C:\Users\FMV\Dropbox\PIC-project\PIC_XC8\pic18f2550\LED\LED.c"
+   119 ;; Parameters:    Size  Location     Type
+   120 ;;		None
+   121 ;; Auto vars:     Size  Location     Type
+   122 ;;		None
+   123 ;; Return value:  Size  Location     Type
+   124 ;;		None               void
+   125 ;; Registers used:
+   126 ;;		None
+   127 ;; Tracked objects:
+   128 ;;		On entry : 0/0
+   129 ;;		On exit  : 0/0
+   130 ;;		Unchanged: 0/0
+   131 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   132 ;;      Params:         0       0       0       0       0       0       0       0       0
+   133 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   134 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   135 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   136 ;;Total ram usage:        0 bytes
+   137 ;; Hardware stack levels used:    1
+   138 ;; This function calls:
+   139 ;;		Nothing
+   140 ;; This function is called by:
+   141 ;;		_main
+   142 ;; This function uses a non-reentrant model
+   143 ;;
+   144                           
+   145                           	psect	text1
+   146  007FCA                     __ptext1:
+   147                           	opt stack 0
+   148  007FCA                     _InitPortIOReg:
+   149                           	opt stack 30
+   150                           
+   151                           ;LED.c: 29: TRISAbits.TRISA0 = 0;
+   152                           
+   153                           ;incstack = 0
+   154                           ;incstack = 0
+   155  007FCA  9092               	bcf	3986,0,c	;volatile
+   156  007FCC  0012               	return	
+   157  007FCE                     __end_of_InitPortIOReg:
+   158                           	opt stack 0
+   159  0000                     status	equ	0xFD8
+   160                           status	equ	0xFD8
+   161                           
+   162                           	psect	rparam
+   163  0000                     status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      2       2
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0      30
+                                              0 COMRAM     2     2      0
+                      _InitPortIOReg
+ ---------------------------------------------------------------------------------
+ (1) _InitPortIOReg                                        0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _InitPortIOReg
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      2       2       1        2.1%
+STACK                0      0       1       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+ABS                  0      0       0      20        0.0%
+BIGRAM             7FF      0       0      21        0.0%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.21 build 54009 
+Symbol Table                                                                                   Sun Jan 12 09:23:24 2014
+
+                    l599 7FE0                     _main 7FD4                     start 0000  
+                  ?_main 0001            _InitPortIOReg 7FCA                    main@i 0001  
+                  status 000FD8          __initialization 7FCE             __end_of_main 8000  
+         ?_InitPortIOReg 0001                   ??_main 0001            __activetblptr 000000  
+             __accesstop 0060  __end_of__initialization 7FCE           __pcstackCOMRAM 0001  
+        ??_InitPortIOReg 0001                  __Hparam 0000                  __Lparam 0000  
+                __pcinit 7FCE                  __ramtop 0800                  __ptext0 7FD4  
+                __ptext1 7FCA     end_of_initialization 7FCE                _PORTAbits 000F80  
+              _TRISAbits 000F92      start_initialization 7FCE    __end_of_InitPortIOReg 7FCE  
+               __Hrparam 0000                 __Lrparam 0000            __size_of_main 002C  
+ __size_of_InitPortIOReg 0004  

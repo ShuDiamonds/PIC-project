@@ -1,0 +1,32 @@
+[PROJECT]
+Target=SW.HEX
+Development_Mode=2
+Processor=0x2683
+ToolSuite=CCS
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=SW.c;
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[SW.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=C:\Users\FMV\Dropbox\PIC-PR~1\PICCCS~1\PIC12F~1\SW\SW.c
+
+[Windows]
+0=0000 C:\Users\FMV\Dropbox\PIC-PR~1\PICCCS~1\PIC12F~1\SW\SW.c 0 0 796 451 3 0
+

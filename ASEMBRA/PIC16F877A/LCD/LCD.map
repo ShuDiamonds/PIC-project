@@ -1,0 +1,74 @@
+MPLINK 4.38, Linker
+Linker Map File - Created Sun Mar 10 15:40:47 2013
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000188
+                   .cinit    romdata   0x0000c4    program   0x000004
+       .config_2007_LCD.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x0000c5      
+                            0x002007    0x002007      
+            199 out of 8454 program addresses used, program memory utilization is 2%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                LCD_2line   0x00002e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+              LCD_BF_wait   0x000064    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+             LCD_BF_wait1   0x000077    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                LCD_clear   0x000028    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+              LCD_command   0x00004f    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                 LCD_home   0x00002b    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                 LCD_init   0x000081    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                  LCD_off   0x000037    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                   LCD_on   0x000031    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+               LCD_on_cur   0x000034    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                LCD_write   0x00003a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                     init   0x000000    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                     main   0x00000b    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                 wait15ms   0x0000ad    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+            wait15ms_loop   0x0000af    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                  wait1ms   0x0000b9    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+             wait1ms_loop   0x0000bb    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                 wait50us   0x0000bf    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+            wait50us_loop   0x0000c1    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                  wait5ms   0x0000b3    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+             wait5ms_loop   0x0000b5    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     init   0x000000    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                     main   0x00000b    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                LCD_clear   0x000028    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                 LCD_home   0x00002b    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                LCD_2line   0x00002e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                   LCD_on   0x000031    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+               LCD_on_cur   0x000034    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                  LCD_off   0x000037    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                LCD_write   0x00003a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+              LCD_command   0x00004f    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+              LCD_BF_wait   0x000064    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+             LCD_BF_wait1   0x000077    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                 LCD_init   0x000081    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                 wait15ms   0x0000ad    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+            wait15ms_loop   0x0000af    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                  wait5ms   0x0000b3    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+             wait5ms_loop   0x0000b5    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                  wait1ms   0x0000b9    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+             wait1ms_loop   0x0000bb    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+                 wait50us   0x0000bf    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+            wait50us_loop   0x0000c1    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\LCD\LCD.asm
+
+

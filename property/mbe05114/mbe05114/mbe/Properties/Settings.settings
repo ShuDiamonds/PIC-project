@@ -1,0 +1,333 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="mbe.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PathBoardFont" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mbeboardfont.dat</Value>
+    </Setting>
+    <Setting Name="UseEmbeddedFont" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CustomColorPTH" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPLC" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorSTC" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorCMP" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorSOL" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorSTS" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPLS" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorDIM" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorDRL" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorDOC" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="GridPitch" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="GridDisplayEvery" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DrcPatternGap" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2000</Value>
+    </Setting>
+    <Setting Name="DrcErrorCheckLimit" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="CustomColorOriginMark" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorGridOrigin" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorGrid" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorSnapMark" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPinNum" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorCursor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorBgOutside" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorInputErr" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="MainWindowState" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="MainWindowWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">600</Value>
+    </Setting>
+    <Setting Name="MainWindowHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">450</Value>
+    </Setting>
+    <Setting Name="PrintLeftMargin" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="PrintBottomMargin" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="ExpBmpLeft" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ExpBmpBottom" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ExpBmpWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3000000</Value>
+    </Setting>
+    <Setting Name="ExpBmpHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3000000</Value>
+    </Setting>
+    <Setting Name="ExpBmpResolution" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="CustomColorActiveSnapMark" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorBg" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DefaultGridInfoString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MyStandardGridString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MyStandardLineString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MyStandardHoleString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MyStandardPthString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MyStandardPadString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MyStandardArcString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MyStandardTextString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MyStandardPolygonString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomColorL2" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorL3" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorMMC" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorMMS" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="GerberExportLayer" Type="System.UInt64" Scope="User">
+      <Value Profile="(Default)">18446744073709551615</Value>
+    </Setting>
+    <Setting Name="MyStandardLibString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ToolMarkFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">toolMark.mb3</Value>
+    </Setting>
+    <Setting Name="Print2xMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CenterPunchMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ToolMarkPrint" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MyStandardPrintPageLayerString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PrintCurrentView" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintPTH" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintPLC" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintSTC" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintCMP" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintSOL" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintSTS" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintPLS" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintDIM" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintDRL" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintDOC" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintL2" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintL3" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintMMC" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CustomColorPrintMMS" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="PrintColorMode" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ImageColorMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MainTitleText" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ListFileUseLocalEncoding" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="PrintHeader" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="HeaderText" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ForceClipboardTextFormat" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="PrintMirrorMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PasteObjectAtCursor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SCKeyEditFlip" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyEditComponenting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyEditUncomponenting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyEditProperty" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyUpdateFillPolygon" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyViewPolygonFrameMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolSelector" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolConnectionCheck" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolMeasure" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolHole" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolPTH" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolPad" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolLine" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolArc" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolPolygon" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyToolComponent" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeySetGridOrigin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyResetGridOrigin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="OneKeyToolSelection" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SCKeyEditBulkHole" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyEditBulkPTH" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyEditBulkPad" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyEditBulkLine" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyEditBulkText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyEditBulkPolygon" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="SCKeyEditBulkLayer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="InhibitHatchBrushPolygonframe" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DrawTextSolidly" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

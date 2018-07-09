@@ -1,0 +1,58 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+005     port_a
+006     port_b
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+020-021 strtok.save
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  MAIN
+000004  @cinit1
+000010  @cinit2
+
+Project Directory:
+    D:\shuichi\電子工作\PIC-project\PIC 動作確認\pic16f88\
+
+Project Files:
+    pic16f88.c                                              [22-9-12 17:43  CRC=0DBB82D4]
+    C:\Program Files (x86)\PICC\devices\16F88.h             [16-8-12 10:54  CRC=F409A014]
+    C:\Program Files (x86)\PICC\drivers\stdio.h             [31-7-07 13:24  CRC=4E4534F4]
+    C:\Program Files (x86)\PICC\drivers\string.h            [14-7-11 10:13  CRC=23EDEC8F]
+    C:\Program Files (x86)\PICC\drivers\stddef.h            [16-7-10 09:27  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\drivers\ctype.h             [03-1-08 13:55  CRC=2D1F019F]
+
+Source signature=57B33415
+
+Units:
+    pic16f88 (main)
+
+Compiler Settings:
+    Processor:      PIC16F88
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    Errors:      pic16f88.err
+    Ext Symbols: pic16f88.esym
+    INHX8:       pic16f88.hex
+    Symbols:     pic16f88.sym
+    List:        pic16f88.lst
+    Debug/eCOD:  pic16f88.cod
+    Project:     pic16f88.PJT

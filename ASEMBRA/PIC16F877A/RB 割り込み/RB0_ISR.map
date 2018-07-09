@@ -1,0 +1,54 @@
+MPLINK 4.38, Linker
+Linker Map File - Created Sat Mar 09 13:37:24 2013
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000001    program   0x000004
+                   .org_1       code   0x000004    program   0x000104
+        .config_2007_RB.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000002      
+                            0x000004    0x000085      
+                            0x002007    0x002007      
+            134 out of 8454 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+              DELAY_100US   0x00004f    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+              DELAY_595US   0x000054    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                     INIT   0x00000c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                    LLBAL   0x00005d    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                 LPLPLPLP   0x000051    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                 MAINLOOP   0x000045    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                   NOP_10   0x000060    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                  RB0_ISR   0x000067    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                   TXLOOP   0x00004a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                TX_CHEACK   0x000048    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     INIT   0x00000c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                 MAINLOOP   0x000045    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                TX_CHEACK   0x000048    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                   TXLOOP   0x00004a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+              DELAY_100US   0x00004f    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                 LPLPLPLP   0x000051    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+              DELAY_595US   0x000054    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                    LLBAL   0x00005d    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                   NOP_10   0x000060    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+                  RB0_ISR   0x000067    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC16F877A\RB äÑÇËçûÇ›\RB.asm
+
+

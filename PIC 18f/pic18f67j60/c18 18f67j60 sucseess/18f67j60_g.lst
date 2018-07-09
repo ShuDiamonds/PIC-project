@@ -1,0 +1,107 @@
+MPASM  5.46                    18F67J60_G.LKR   12-23-2012  10:16:42         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[108]  : Illegal character (/)
+                      00001 // File: 18f67j60_g.lkr
+Error[108]  : Illegal character (/)
+                      00002 // Generic linker script for the PIC18F67J60 processor
+                      00003 
+                      00004 #DEFINE _CODEEND _DEBUGCODESTART - 1
+                      00005 #DEFINE _CEND _CODEEND + _DEBUGCODELEN
+                      00006 #DEFINE _DATAEND _DEBUGDATASTART - 1
+                      00007 #DEFINE _DEND _DATAEND + _DEBUGDATALEN
+                      00008 
+Error[122]  : Illegal opcode (.)
+                      00009 LIBPATH .
+                      00010 
+                      00011 #IFDEF _CRUNTIME
+                      00012   #IFDEF _EXTENDEDMODE
+                      00013     FILES c018i_e.o
+                      00014     FILES clib_e.lib
+                      00015     FILES p18f67j60_e.lib
+                      00016 
+                      00017   #ELSE
+                      00018     FILES c018i.o
+                      00019     FILES clib.lib
+                      00020     FILES p18f67j60.lib
+                      00021   #FI
+                      00022 
+                      00023 #FI
+                      00024 
+                      00025 #IFDEF _DEBUGCODESTART
+                      00026   CODEPAGE   NAME=page       START=0x0               END=_CODEEND
+                      00027   CODEPAGE   NAME=debug      START=_DEBUGCODESTART   END=_CEND        PROTECTED
+                      00028 #ELSE
+                      00029   CODEPAGE   NAME=page       START=0x0               END=0x1FFF7
+                      00030 #FI
+                      00031 
+                      00032 CODEPAGE   NAME=config     START=0x1FFF8           END=0x1FFFD        PROTECTED
+                      00033 CODEPAGE   NAME=devid      START=0x3FFFFE          END=0x3FFFFF       PROTECTED
+                      00034 
+                      00035 #IFDEF _EXTENDEDMODE
+                      00036   DATABANK   NAME=gpre       START=0x0               END=0x5F
+                      00037 #ELSE
+                      00038   ACCESSBANK NAME=accessram  START=0x0               END=0x5F
+                      00039 #FI
+                      00040 
+                      00041 DATABANK   NAME=gpr0       START=0x60              END=0xFF
+                      00042 DATABANK   NAME=gpr1       START=0x100             END=0x1FF
+                      00043 DATABANK   NAME=gpr2       START=0x200             END=0x2FF
+                      00044 DATABANK   NAME=gpr3       START=0x300             END=0x3FF
+                      00045 DATABANK   NAME=gpr4       START=0x400             END=0x4FF
+                      00046 DATABANK   NAME=gpr5       START=0x500             END=0x5FF
+                      00047 DATABANK   NAME=gpr6       START=0x600             END=0x6FF
+                      00048 DATABANK   NAME=gpr7       START=0x700             END=0x7FF
+                      00049 DATABANK   NAME=gpr8       START=0x800             END=0x8FF
+                      00050 DATABANK   NAME=gpr9       START=0x900             END=0x9FF
+MPASM  5.46                    18F67J60_G.LKR   12-23-2012  10:16:42         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00051 DATABANK   NAME=gpr10      START=0xA00             END=0xAFF
+                      00052 DATABANK   NAME=gpr11      START=0xB00             END=0xBFF
+                      00053 DATABANK   NAME=gpr12      START=0xC00             END=0xCFF
+                      00054 
+                      00055 #IFDEF _DEBUGDATASTART
+                      00056   DATABANK   NAME=gpr13      START=0xD00             END=_DATAEND
+                      00057   DATABANK   NAME=dbgspr     START=_DEBUGDATASTART   END=_DEND           PROTECTED
+                      00058 #ELSE //no debug
+                      00059   DATABANK   NAME=gpr13      START=0xD00             END=0xDFF
+                      00060 #FI
+                      00061 
+                      00062 DATABANK   NAME=gpr14      START=0xE00             END=0xE7F
+                      00063 DATABANK   NAME=sfr14      START=0xE80             END=0xEFF          PROTECTED
+                      00064 DATABANK   NAME=gpr15      START=0xF00             END=0xF5F
+                      00065 ACCESSBANK NAME=accesssfr  START=0xF60             END=0xFFF          PROTECTED
+                      00066 
+                      00067 #IFDEF _CRUNTIME
+                      00068   SECTION    NAME=CONFIG     ROM=config
+                      00069   #IFDEF _DEBUGDATASTART
+                      00070     STACK SIZE=0x100 RAM=gpr12
+                      00071   #ELSE
+                      00072     STACK SIZE=0x100 RAM=gpr13
+                      00073   #FI
+                      00074 #FI
+MPASM  5.46                    18F67J60_G.LKR   12-23-2012  10:16:42         PAGE  3
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_CEND                             _CODEEND + _DEBUGCODELEN
+_CODEEND                          _DEBUGCODESTART - 1
+_DATAEND                          _DEBUGDATASTART - 1
+_DEND                             _DATAEND + _DEBUGDATALEN
+__18F14K50                        00000001
+__DEBUG                           1
+
+Errors   :     3
+Warnings :     0 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+

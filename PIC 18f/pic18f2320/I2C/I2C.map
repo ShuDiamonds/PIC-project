@@ -1,0 +1,846 @@
+MPLINK 4.44, Linker
+Linker Map File - Created Tue Aug 27 13:17:06 2013
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+               _entry_scn       code   0x000000    program   0x000006
+                   .cinit    romdata   0x000006    program   0x00000e
+         .code_vfprintf.o       code   0x000014    program   0x000c22
+              .code_I2C.o       code   0x000c36    program   0x000642
+                   STDLIB       code   0x001278    program   0x000134
+               _cinit_scn       code   0x0013ac    program   0x00009e
+           .code_printf.o       code   0x00144a    program   0x000098
+             .code_putc.o       code   0x0014e2    program   0x000084
+            .code_uopen.o       code   0x001566    program   0x00007a
+         .code_i2c_puts.o       code   0x0015e0    program   0x000076
+         .code_i2c_gets.o       code   0x001656    program   0x000076
+         .code_i2c_writ.o       code   0x0016cc    program   0x000072
+          .code_fxm3232.o       code   0x00173e    program   0x000070
+                   STRING       code   0x0017ae    program   0x000066
+                     PROG       code   0x001814    program   0x00005a
+            .code_uputs.o       code   0x00186e    program   0x00004c
+         .code_fxd3232u.o       code   0x0018ba    program   0x000048
+         .code_i2c_open.o       code   0x001902    program   0x000036
+             D10KTCYXCODE       code   0x001938    program   0x00002e
+           .code_uwrite.o       code   0x001966    program   0x00002e
+                    CTYPE       code   0x001994    program   0x000024
+                    .code       code   0x0019b8    program   0x000020
+             _startup_scn       code   0x0019d8    program   0x00001c
+                    STDIO       code   0x0019f4    program   0x00001c
+         .code_i2c_read.o       code   0x001a10    program   0x00001a
+             .stringtable    romdata   0x001a2a    program   0x000017
+      .romdata_vfprintf.o    romdata   0x001a41    program   0x000011
+         .code_i2c_idle.o       code   0x001a52    program   0x00000e
+       .code__user_putc.o       code   0x001a60    program   0x000002
+           .code___init.o       code   0x001a62    program   0x000002
+      .romdata_i2c_puts.o    romdata   0x001a64    program   0x000000
+      .idata_vfprintf.o_i    romdata   0x001a64    program   0x000000
+        .romdata_printf.o    romdata   0x001a64    program   0x000000
+      .romdata_i2c_writ.o    romdata   0x001a64    program   0x000000
+         .idata_uputs.o_i    romdata   0x001a64    program   0x000000
+         .romdata_uputs.o    romdata   0x001a64    program   0x000000
+        .idata_uwrite.o_i    romdata   0x001a64    program   0x000000
+        .romdata_uwrite.o    romdata   0x001a64    program   0x000000
+         .idata_udefs.o_i    romdata   0x001a64    program   0x000000
+         .romdata_udefs.o    romdata   0x001a64    program   0x000000
+        .romdata_stdout.o    romdata   0x001a64    program   0x000000
+        .idata_stdout.o_i    romdata   0x001a64    program   0x000002
+           .romdata_I2C.o    romdata   0x001a64    program   0x000000
+    .romdata__user_putc.o    romdata   0x001a64    program   0x000000
+          .romdata_putc.o    romdata   0x001a64    program   0x000000
+       .romdata_fxm3232.o    romdata   0x001a64    program   0x000000
+      .romdata_i2c_idle.o    romdata   0x001a64    program   0x000000
+      .romdata_i2c_open.o    romdata   0x001a64    program   0x000000
+         .idata_uopen.o_i    romdata   0x001a64    program   0x000000
+         .romdata_uopen.o    romdata   0x001a64    program   0x000000
+        .romdata___init.o    romdata   0x001a64    program   0x000000
+      .romdata_i2c_gets.o    romdata   0x001a64    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x001a64    program   0x000000
+      .romdata_i2c_read.o    romdata   0x001a64    program   0x000000
+         .romdata_c018i.o    romdata   0x001a64    program   0x000000
+           .code_stdout.o       code   0x001a66    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x001a66    program   0x000000
+          .idata_putc.o_i    romdata   0x001a66    program   0x000000
+    .idata__user_putc.o_i    romdata   0x001a66    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x001a66    program   0x000000
+         .idata_c018i.o_i    romdata   0x001a66    program   0x000000
+            .code_udefs.o       code   0x001a66    program   0x000000
+      .idata_i2c_writ.o_i    romdata   0x001a66    program   0x000000
+      .idata_i2c_puts.o_i    romdata   0x001a66    program   0x000000
+           .idata_I2C.o_i    romdata   0x001a66    program   0x000000
+        .idata_printf.o_i    romdata   0x001a66    program   0x000000
+            .code_c018i.o       code   0x001a66    program   0x000000
+      .idata_i2c_read.o_i    romdata   0x001a66    program   0x000000
+      .idata_i2c_gets.o_i    romdata   0x001a66    program   0x000000
+        .idata___init.o_i    romdata   0x001a66    program   0x000000
+      .idata_i2c_open.o_i    romdata   0x001a66    program   0x000000
+      .idata_i2c_idle.o_i    romdata   0x001a66    program   0x000000
+     .config_300001_I2C.o    romdata   0x300001    program   0x000001
+     .config_300002_I2C.o    romdata   0x300002    program   0x000001
+     .config_300003_I2C.o    romdata   0x300003    program   0x000001
+     .config_300005_I2C.o    romdata   0x300005    program   0x000001
+     .config_300006_I2C.o    romdata   0x300006    program   0x000001
+     .config_300008_I2C.o    romdata   0x300008    program   0x000001
+     .config_300009_I2C.o    romdata   0x300009    program   0x000001
+     .config_30000a_I2C.o    romdata   0x30000a    program   0x000001
+     .config_30000b_I2C.o    romdata   0x30000b    program   0x000001
+     .config_30000c_I2C.o    romdata   0x30000c    program   0x000001
+     .config_30000d_I2C.o    romdata   0x30000d    program   0x000001
+                MATH_DATA      udata   0x000000       data   0x000014
+                 .tmpdata      udata   0x000014       data   0x000007
+                DELAYDAT2      udata   0x00001b       data   0x000001
+                DELAYDAT1      udata   0x00001c       data   0x000001
+           .udata_c018i.o      udata   0x000080       data   0x00000a
+          .idata_stdout.o      idata   0x00008a       data   0x000002
+           .udata_udefs.o      udata   0x00008c       data   0x000001
+        .udata_i2c_writ.o      udata   0x00008d       data   0x000000
+        .idata_i2c_writ.o      idata   0x00008d       data   0x000000
+           .udata_uputs.o      udata   0x00008d       data   0x000000
+           .idata_uputs.o      idata   0x00008d       data   0x000000
+          .udata_uwrite.o      udata   0x00008d       data   0x000000
+          .idata_uwrite.o      idata   0x00008d       data   0x000000
+           .idata_udefs.o      idata   0x00008d       data   0x000000
+          .udata_stdout.o      udata   0x00008d       data   0x000000
+        .udata_vfprintf.o      udata   0x00008d       data   0x000000
+        .idata_vfprintf.o      idata   0x00008d       data   0x000000
+        .udata_fxd3232u.o      udata   0x00008d       data   0x000000
+        .idata_fxd3232u.o      idata   0x00008d       data   0x000000
+         .udata_fxm3232.o      udata   0x00008d       data   0x000000
+         .idata_fxm3232.o      idata   0x00008d       data   0x000000
+            .udata_putc.o      udata   0x00008d       data   0x000000
+            .idata_putc.o      idata   0x00008d       data   0x000000
+      .udata__user_putc.o      udata   0x00008d       data   0x000000
+      .idata__user_putc.o      idata   0x00008d       data   0x000000
+           .idata_c018i.o      idata   0x00008d       data   0x000000
+             .udata_I2C.o      udata   0x00008d       data   0x000000
+             .idata_I2C.o      idata   0x00008d       data   0x000000
+        .udata_i2c_idle.o      udata   0x00008d       data   0x000000
+        .idata_i2c_idle.o      idata   0x00008d       data   0x000000
+        .udata_i2c_open.o      udata   0x00008d       data   0x000000
+        .idata_i2c_open.o      idata   0x00008d       data   0x000000
+           .udata_uopen.o      udata   0x00008d       data   0x000000
+           .idata_uopen.o      idata   0x00008d       data   0x000000
+          .udata___init.o      udata   0x00008d       data   0x000000
+          .idata___init.o      idata   0x00008d       data   0x000000
+        .udata_i2c_gets.o      udata   0x00008d       data   0x000000
+        .idata_i2c_gets.o      idata   0x00008d       data   0x000000
+        .udata_i2c_read.o      udata   0x00008d       data   0x000000
+        .idata_i2c_read.o      idata   0x00008d       data   0x000000
+          .udata_printf.o      udata   0x00008d       data   0x000000
+          .idata_printf.o      idata   0x00008d       data   0x000000
+        .udata_i2c_puts.o      udata   0x00008d       data   0x000000
+        .idata_i2c_puts.o      idata   0x00008d       data   0x000000
+                   .stack      udata   0x000100       data   0x000100
+            SFR_UNBANKED0      udata   0x000f80       data   0x000080
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x001a65      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            6769 out of 8472 program addresses used, program memory utilization is 79%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   D10K_1   0x001944    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x001950    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x001942    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+             Delay10KTCYx   0x001938    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                EByteRead   0x001188    program     extern C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               EByteWrite   0x0010e0    program     extern C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               EPageWrite   0x000f48    program     extern C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+          ESequentialRead   0x000ff8    program     extern C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+                 FXD3232U   0x0018ba    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                 FXM1616S   0x001814    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                  FXM3232   0x00173e    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+                  IdleI2C   0x001a52    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
+                  OneByte   0x00139a    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                  OpenI2C   0x001902    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_open.c
+                OpenUSART   0x001566    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+                ProcLower   0x00134e    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                ProcUpper   0x001344    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                  ReadI2C   0x001a10    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_read.c
+               TSIGN1616A   0x001860    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                 TstLower   0x001338    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                 TstUpper   0x001332    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                 WriteI2C   0x0016cc    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
+               WriteUSART   0x001966    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
+                   _2jEnd   0x0017fe    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+       _D10KTCYXCODE_0010   0x001948    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x001954    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       ___return_lbl00000   0x001900    program     static                          
+       ___return_lbl00000   0x000004    program     static                          
+       ___return_lbl00000   0x0017ac    program     static                          
+       ___return_lbl00001   0x0019f2    program     static                          
+       ___return_lbl00002   0x001448    program     static                          
+               __config_0   0x300001    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_1   0x300002    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+              __config_10   0x30000d    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_2   0x300003    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_3   0x300005    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_4   0x300006    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_5   0x300008    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_6   0x300009    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_7   0x30000a    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_8   0x30000b    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_9   0x30000c    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+                   __init   0x001a62    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                   __pa_0   0x001646    program     static D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_puts.c
+                   __pa_0   0x000954    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_1   0x00095c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_10   0x000a10    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_11   0x000a1e    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_12   0x000a34    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_13   0x000a4e    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_14   0x000a66    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_15   0x000a76    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_16   0x000a8c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_17   0x000a9e    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_18   0x000ab0    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_19   0x000aba    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_2   0x000966    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_20   0x000aca    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_21   0x000ada    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_22   0x000aea    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_23   0x000af6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_24   0x000b04    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_25   0x000b0c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_26   0x000b16    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_27   0x000b20    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_28   0x000b28    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_29   0x000b36    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_3   0x000970    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_30   0x000b52    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_31   0x000b6c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_32   0x000b86    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_33   0x000b9e    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_34   0x000ba8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_35   0x000bb6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_36   0x000bbe    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_37   0x000bc8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_38   0x000bd8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_39   0x000be6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_4   0x000988    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_40   0x000bf2    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_41   0x000bfe    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_42   0x000c06    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_43   0x000c10    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_44   0x000c16    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_45   0x000c20    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_46   0x000c2c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_5   0x00099c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_6   0x0009b8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_7   0x0009c2    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_8   0x0009ce    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_9   0x0009f0    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+               __string_3   0x001a39    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __string_4   0x001a2a    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+              __tmplbl_42   0x000aea    program     static                          
+              __tmplbl_43   0x000932    program     static                          
+              __tmplbl_44   0x000918    program     static                          
+              __tmplbl_85   0x00006a    program     static                          
+            __zero_memory   0x0019b8    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                _do_cinit   0x0013ac    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   _entry   0x000000    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   _false   0x0018fc    program     static                          
+                 _startup   0x0019d8    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+              _usart_putc   0x0019f4    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+               _user_putc   0x001a60    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\_user_putc.c
+                compare_l   0x0019ce    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                copy_loop   0x00141e    program     static                          
+            copy_one_byte   0x001424    program     static                          
+                     done   0x001448    program     static                          
+             done_copying   0x001432    program     static                          
+                  getsI2C   0x001656    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_gets.c
+                  isdigit   0x001994    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                   itoBCD   0x001358    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                     itoa   0x001278    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo1   0x0012fe    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo2   0x0012fa    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo3   0x0012f6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo4   0x0012f2    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo5   0x0012ee    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jEnd   0x0017c8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                     jEnd   0x001800    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x001396    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                    jLoop   0x0017be    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x0017e8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x001370    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                   jMatch   0x0019b4    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                 jNoMatch   0x0019b6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                jTstLowZ1   0x001342    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                jTstSign1   0x0012a4    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     loop   0x0018c8    program     static                          
+                     loop   0x0019e8    program     static                          
+                     loop   0x001a04    program     static D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                   loop_h   0x0019c6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   loop_l   0x0019d0    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     main   0x000c36    program     extern C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+                   printf   0x00144a    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\printf.c
+                     putc   0x0014e2    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+                  putsI2C   0x0015e0    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_puts.c
+                putsUSART   0x00186e    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
+                 s_digits   0x001a41    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+            s_put_n_chars   0x000014    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   strlen   0x0017ae    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x0017ca    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     test   0x0013c6    program     static                          
+                 vfprintf   0x000040    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+               zero_block   0x0019c6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   ADCON0   0x000fc2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               ADCON0bits   0x000fc2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   ADCON1   0x000fc1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               ADCON1bits   0x000fc1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   ADCON2   0x000fc0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               ADCON2bits   0x000fc0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    ADRES   0x000fc3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   ADRESH   0x000fc4       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   ADRESL   0x000fc3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                      BSR   0x000fe0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  CCP1CON   0x000fbd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              CCP1CONbits   0x000fbd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  CCP2CON   0x000fba       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              CCP2CONbits   0x000fba       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    CCPR1   0x000fbe       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   CCPR1H   0x000fbf       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   CCPR1L   0x000fbe       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    CCPR2   0x000fbb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   CCPR2H   0x000fbc       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   CCPR2L   0x000fbb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    CMCON   0x000fb4       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                CMCONbits   0x000fb4       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   CVRCON   0x000fb5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               CVRCONbits   0x000fb5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     DDRA   0x000f92       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 DDRAbits   0x000f92       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     DDRB   0x000f93       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 DDRBbits   0x000f93       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     DDRC   0x000f94       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 DDRCbits   0x000f94       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+            DelayCounter1   0x00001c       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
+            DelayCounter2   0x00001b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\delayd2.asm
+                    EEADR   0x000fa9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   EECON1   0x000fa6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               EECON1bits   0x000fa6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   EECON2   0x000fa7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   EEDATA   0x000fa8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     FSR0   0x000fe9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR0H   0x000fea       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR0L   0x000fe9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     FSR1   0x000fe1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR1H   0x000fe2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR1L   0x000fe1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     FSR2   0x000fd9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR2H   0x000fda       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR2L   0x000fd9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    INDF0   0x000fef       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    INDF1   0x000fe7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    INDF2   0x000fdf       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   INTCON   0x000ff2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  INTCON2   0x000ff1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              INTCON2bits   0x000ff1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  INTCON3   0x000ff0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              INTCON3bits   0x000ff0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               INTCONbits   0x000ff2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     IPR1   0x000f9f       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 IPR1bits   0x000f9f       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     IPR2   0x000fa2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 IPR2bits   0x000fa2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     LATA   0x000f89       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 LATAbits   0x000f89       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     LATB   0x000f8a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 LATBbits   0x000f8a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     LATC   0x000f8b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 LATCbits   0x000f8b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   LVDCON   0x000fd2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               LVDCONbits   0x000fd2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   OSCCON   0x000fd3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               OSCCONbits   0x000fd3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  OSCTUN2   0x000f9a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              OSCTUN2bits   0x000f9a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  OSCTUNE   0x000f9b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              OSCTUNEbits   0x000f9b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                       PC   0x000ff9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                      PCL   0x000ff9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   PCLATH   0x000ffa       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   PCLATU   0x000ffb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     PIE1   0x000f9d       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 PIE1bits   0x000f9d       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     PIE2   0x000fa0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 PIE2bits   0x000fa0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     PIR1   0x000f9e       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 PIR1bits   0x000f9e       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     PIR2   0x000fa1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 PIR2bits   0x000fa1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   PLUSW0   0x000feb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   PLUSW1   0x000fe3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   PLUSW2   0x000fdb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    PORTA   0x000f80       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                PORTAbits   0x000f80       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    PORTB   0x000f81       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                PORTBbits   0x000f81       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    PORTC   0x000f82       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                PORTCbits   0x000f82       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTDEC0   0x000fed       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTDEC1   0x000fe5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTDEC2   0x000fdd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTINC0   0x000fee       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTINC1   0x000fe6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTINC2   0x000fde       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                      PR2   0x000fcb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  PREINC0   0x000fec       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  PREINC1   0x000fe4       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  PREINC2   0x000fdc       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     PROD   0x000ff3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    PRODH   0x000ff4       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    PRODL   0x000ff3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     RCON   0x000fd0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 RCONbits   0x000fd0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    RCREG   0x000fae       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    RCSTA   0x000fab       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                RCSTAbits   0x000fab       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     SIGN   0x000000       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                    SPBRG   0x000faf       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   SSPADD   0x000fc8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   SSPBUF   0x000fc9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  SSPCON1   0x000fc6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              SSPCON1bits   0x000fc6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  SSPCON2   0x000fc5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              SSPCON2bits   0x000fc5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  SSPSTAT   0x000fc7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              SSPSTATbits   0x000fc7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   STATUS   0x000fd8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               STATUSbits   0x000fd8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   STKPTR   0x000ffc       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               STKPTRbits   0x000ffc       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    T0CON   0x000fd5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                T0CONbits   0x000fd5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    T1CON   0x000fcd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                T1CONbits   0x000fcd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    T2CON   0x000fca       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                T2CONbits   0x000fca       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    T3CON   0x000fb1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                T3CONbits   0x000fb1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   TABLAT   0x000ff5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   TBLPTR   0x000ff6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  TBLPTRH   0x000ff7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  TBLPTRL   0x000ff6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  TBLPTRU   0x000ff8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR0H   0x000fd7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR0L   0x000fd6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR1H   0x000fcf       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR1L   0x000fce       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     TMR2   0x000fcc       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR3H   0x000fb3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR3L   0x000fb2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                      TOS   0x000ffd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     TOSH   0x000ffe       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     TOSL   0x000ffd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     TOSU   0x000fff       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TRISA   0x000f92       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                TRISAbits   0x000f92       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TRISB   0x000f93       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                TRISBbits   0x000f93       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TRISC   0x000f94       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                TRISCbits   0x000f94       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TXREG   0x000fad       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TXSTA   0x000fac       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                TXSTAbits   0x000fac       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+             USART_Status   0x00008c       data     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\udefs.c
+                        W   0x000fe8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   WDTCON   0x000fd1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               WDTCONbits   0x000fd1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     WREG   0x000fe8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 __AARGB0   0x000009       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB1   0x000008       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB2   0x000007       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB3   0x000006       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x000005       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x000004       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB7   0x000002       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __AEXP   0x00000a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __BARGB0   0x00000e       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB1   0x00000d       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB2   0x00000c       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB3   0x00000b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                   __BEXP   0x00000f       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                __FPFLAGS   0x000001       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000001       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                  __REMB0   0x000005       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x000004       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x000003       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x000002       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __TEMP   0x000013       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000013       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000012       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000011       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB3   0x000010       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                  __tmp_0   0x000014       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+                  __tmp_0   0x000014       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __tmp_0   0x000014       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\printf.c
+                  __tmp_0   0x000014       data     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+                curr_byte   0x000083       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x000085       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x000087       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     prom   0x000080       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   stdout   0x00008a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\stdout.c
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   _entry   0x000000    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+       ___return_lbl00000   0x000004    program     static                          
+            s_put_n_chars   0x000014    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                 vfprintf   0x000040    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+              __tmplbl_85   0x00006a    program     static                          
+              __tmplbl_44   0x000918    program     static                          
+              __tmplbl_43   0x000932    program     static                          
+                   __pa_0   0x000954    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_1   0x00095c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_2   0x000966    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_3   0x000970    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_4   0x000988    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_5   0x00099c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_6   0x0009b8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_7   0x0009c2    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_8   0x0009ce    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                   __pa_9   0x0009f0    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_10   0x000a10    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_11   0x000a1e    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_12   0x000a34    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_13   0x000a4e    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_14   0x000a66    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_15   0x000a76    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_16   0x000a8c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_17   0x000a9e    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_18   0x000ab0    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_19   0x000aba    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_20   0x000aca    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_21   0x000ada    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_22   0x000aea    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+              __tmplbl_42   0x000aea    program     static                          
+                  __pa_23   0x000af6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_24   0x000b04    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_25   0x000b0c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_26   0x000b16    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_27   0x000b20    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_28   0x000b28    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_29   0x000b36    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_30   0x000b52    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_31   0x000b6c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_32   0x000b86    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_33   0x000b9e    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_34   0x000ba8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_35   0x000bb6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_36   0x000bbe    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_37   0x000bc8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_38   0x000bd8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_39   0x000be6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_40   0x000bf2    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_41   0x000bfe    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_42   0x000c06    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_43   0x000c10    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_44   0x000c16    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_45   0x000c20    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __pa_46   0x000c2c    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                     main   0x000c36    program     extern C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               EPageWrite   0x000f48    program     extern C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+          ESequentialRead   0x000ff8    program     extern C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               EByteWrite   0x0010e0    program     extern C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+                EByteRead   0x001188    program     extern C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+                     itoa   0x001278    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                jTstSign1   0x0012a4    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo5   0x0012ee    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo4   0x0012f2    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo3   0x0012f6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo2   0x0012fa    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo1   0x0012fe    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                 TstUpper   0x001332    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                 TstLower   0x001338    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                jTstLowZ1   0x001342    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                ProcUpper   0x001344    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                ProcLower   0x00134e    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                   itoBCD   0x001358    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                    jLoop   0x001370    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                     jEnd   0x001396    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                  OneByte   0x00139a    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                _do_cinit   0x0013ac    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x0013c6    program     static                          
+                copy_loop   0x00141e    program     static                          
+            copy_one_byte   0x001424    program     static                          
+             done_copying   0x001432    program     static                          
+       ___return_lbl00002   0x001448    program     static                          
+                     done   0x001448    program     static                          
+                   printf   0x00144a    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\printf.c
+                     putc   0x0014e2    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+                OpenUSART   0x001566    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+                  putsI2C   0x0015e0    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_puts.c
+                   __pa_0   0x001646    program     static D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_puts.c
+                  getsI2C   0x001656    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_gets.c
+                 WriteI2C   0x0016cc    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
+                  FXM3232   0x00173e    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x0017ac    program     static                          
+                   strlen   0x0017ae    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x0017be    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                     jEnd   0x0017c8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x0017ca    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x0017e8    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                   _2jEnd   0x0017fe    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x001800    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                 FXM1616S   0x001814    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x001860    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                putsUSART   0x00186e    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\uputs.c
+                 FXD3232U   0x0018ba    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x0018c8    program     static                          
+                   _false   0x0018fc    program     static                          
+       ___return_lbl00000   0x001900    program     static                          
+                  OpenI2C   0x001902    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_open.c
+             Delay10KTCYx   0x001938    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x001942    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                   D10K_1   0x001944    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x001948    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x001950    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x001954    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+               WriteUSART   0x001966    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
+                  isdigit   0x001994    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                   jMatch   0x0019b4    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                 jNoMatch   0x0019b6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+            __zero_memory   0x0019b8    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               zero_block   0x0019c6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   loop_h   0x0019c6    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                compare_l   0x0019ce    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   loop_l   0x0019d0    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 _startup   0x0019d8    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x0019e8    program     static                          
+       ___return_lbl00001   0x0019f2    program     static                          
+              _usart_putc   0x0019f4    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                     loop   0x001a04    program     static D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                  ReadI2C   0x001a10    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_read.c
+               __string_4   0x001a2a    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __string_3   0x001a39    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+                 s_digits   0x001a41    program     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  IdleI2C   0x001a52    program     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
+               _user_putc   0x001a60    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\_user_putc.c
+                   __init   0x001a62    program     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+               __config_0   0x300001    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_1   0x300002    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_2   0x300003    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_3   0x300005    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_4   0x300006    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_5   0x300008    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_6   0x300009    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_7   0x30000a    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_8   0x30000b    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+               __config_9   0x30000c    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+              __config_10   0x30000d    program     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+                     SIGN   0x000000       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000001       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                __FPFLAGS   0x000001       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                  __REMB3   0x000002       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB7   0x000002       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x000003       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x000004       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x000004       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x000005       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB0   0x000005       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB3   0x000006       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB2   0x000007       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB1   0x000008       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB0   0x000009       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __AEXP   0x00000a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __BARGB3   0x00000b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB2   0x00000c       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB1   0x00000d       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB0   0x00000e       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                   __BEXP   0x00000f       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __TEMPB3   0x000010       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000011       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000012       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                   __TEMP   0x000013       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000013       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                  __tmp_0   0x000014       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\printf.c
+                  __tmp_0   0x000014       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __tmp_0   0x000014       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+                  __tmp_0   0x000014       data     static C:\Users\FMV\Dropbox\PIC-project\PIC 18f\pic18f2320\I2C\I2C.c
+            DelayCounter2   0x00001b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\delayd2.asm
+            DelayCounter1   0x00001c       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
+                     prom   0x000080       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                curr_byte   0x000083       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x000085       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x000087       data     static D:\3.43\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   stdout   0x00008a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\stdclib\stdout.c
+             USART_Status   0x00008c       data     extern D:\3.43\pic18-lt\cxx-framework\src\pmc_common\USART\udefs.c
+                PORTAbits   0x000f80       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    PORTA   0x000f80       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                PORTBbits   0x000f81       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    PORTB   0x000f81       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                PORTCbits   0x000f82       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    PORTC   0x000f82       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 LATAbits   0x000f89       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     LATA   0x000f89       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 LATBbits   0x000f8a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     LATB   0x000f8a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 LATCbits   0x000f8b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     LATC   0x000f8b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                TRISAbits   0x000f92       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TRISA   0x000f92       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     DDRA   0x000f92       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 DDRAbits   0x000f92       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     DDRB   0x000f93       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                TRISBbits   0x000f93       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TRISB   0x000f93       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 DDRBbits   0x000f93       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                TRISCbits   0x000f94       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TRISC   0x000f94       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     DDRC   0x000f94       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 DDRCbits   0x000f94       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  OSCTUN2   0x000f9a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              OSCTUN2bits   0x000f9a       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  OSCTUNE   0x000f9b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              OSCTUNEbits   0x000f9b       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 PIE1bits   0x000f9d       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     PIE1   0x000f9d       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 PIR1bits   0x000f9e       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     PIR1   0x000f9e       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 IPR1bits   0x000f9f       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     IPR1   0x000f9f       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     PIE2   0x000fa0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 PIE2bits   0x000fa0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     PIR2   0x000fa1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 PIR2bits   0x000fa1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 IPR2bits   0x000fa2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     IPR2   0x000fa2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               EECON1bits   0x000fa6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   EECON1   0x000fa6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   EECON2   0x000fa7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   EEDATA   0x000fa8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    EEADR   0x000fa9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                RCSTAbits   0x000fab       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    RCSTA   0x000fab       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                TXSTAbits   0x000fac       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TXSTA   0x000fac       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TXREG   0x000fad       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    RCREG   0x000fae       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    SPBRG   0x000faf       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    T3CON   0x000fb1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                T3CONbits   0x000fb1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR3L   0x000fb2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR3H   0x000fb3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                CMCONbits   0x000fb4       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    CMCON   0x000fb4       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               CVRCONbits   0x000fb5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   CVRCON   0x000fb5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  CCP2CON   0x000fba       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              CCP2CONbits   0x000fba       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    CCPR2   0x000fbb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   CCPR2L   0x000fbb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   CCPR2H   0x000fbc       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              CCP1CONbits   0x000fbd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  CCP1CON   0x000fbd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    CCPR1   0x000fbe       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   CCPR1L   0x000fbe       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   CCPR1H   0x000fbf       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               ADCON2bits   0x000fc0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   ADCON2   0x000fc0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               ADCON1bits   0x000fc1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   ADCON1   0x000fc1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   ADCON0   0x000fc2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               ADCON0bits   0x000fc2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   ADRESL   0x000fc3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    ADRES   0x000fc3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   ADRESH   0x000fc4       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  SSPCON2   0x000fc5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              SSPCON2bits   0x000fc5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  SSPCON1   0x000fc6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              SSPCON1bits   0x000fc6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  SSPSTAT   0x000fc7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              SSPSTATbits   0x000fc7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   SSPADD   0x000fc8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   SSPBUF   0x000fc9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    T2CON   0x000fca       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                T2CONbits   0x000fca       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                      PR2   0x000fcb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     TMR2   0x000fcc       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    T1CON   0x000fcd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                T1CONbits   0x000fcd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR1L   0x000fce       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR1H   0x000fcf       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 RCONbits   0x000fd0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     RCON   0x000fd0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               WDTCONbits   0x000fd1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   WDTCON   0x000fd1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               LVDCONbits   0x000fd2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   LVDCON   0x000fd2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               OSCCONbits   0x000fd3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   OSCCON   0x000fd3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                T0CONbits   0x000fd5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    T0CON   0x000fd5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR0L   0x000fd6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    TMR0H   0x000fd7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   STATUS   0x000fd8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               STATUSbits   0x000fd8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR2L   0x000fd9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     FSR2   0x000fd9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR2H   0x000fda       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   PLUSW2   0x000fdb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  PREINC2   0x000fdc       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTDEC2   0x000fdd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTINC2   0x000fde       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    INDF2   0x000fdf       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                      BSR   0x000fe0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR1L   0x000fe1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     FSR1   0x000fe1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR1H   0x000fe2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   PLUSW1   0x000fe3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  PREINC1   0x000fe4       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTDEC1   0x000fe5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTINC1   0x000fe6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    INDF1   0x000fe7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     WREG   0x000fe8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                        W   0x000fe8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     FSR0   0x000fe9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR0L   0x000fe9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    FSR0H   0x000fea       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   PLUSW0   0x000feb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  PREINC0   0x000fec       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTDEC0   0x000fed       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                 POSTINC0   0x000fee       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    INDF0   0x000fef       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              INTCON3bits   0x000ff0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  INTCON3   0x000ff0       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+              INTCON2bits   0x000ff1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  INTCON2   0x000ff1       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               INTCONbits   0x000ff2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   INTCON   0x000ff2       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     PROD   0x000ff3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    PRODL   0x000ff3       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                    PRODH   0x000ff4       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   TABLAT   0x000ff5       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  TBLPTRL   0x000ff6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   TBLPTR   0x000ff6       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  TBLPTRH   0x000ff7       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                  TBLPTRU   0x000ff8       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                      PCL   0x000ff9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                       PC   0x000ff9       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   PCLATH   0x000ffa       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   PCLATU   0x000ffb       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+               STKPTRbits   0x000ffc       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                   STKPTR   0x000ffc       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                      TOS   0x000ffd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     TOSL   0x000ffd       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     TOSH   0x000ffe       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+                     TOSU   0x000fff       data     extern D:\3.43\pic18-lt\cxx-framework\src\traditional\proc\p18f2320.asm
+
+

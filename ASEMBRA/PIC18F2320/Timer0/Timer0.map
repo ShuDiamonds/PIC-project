@@ -1,0 +1,84 @@
+MPLINK 4.44, Linker
+Linker Map File - Created Sat Mar 09 18:48:16 2013
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000002    program   0x000002
+                   .org_1       code   0x000008    program   0x000006
+                   .org_2       code   0x000018    program   0x00013e
+  .config_300001_TIMER0.O    romdata   0x300001    program   0x000001
+  .config_300002_TIMER0.O    romdata   0x300002    program   0x000001
+  .config_300003_TIMER0.O    romdata   0x300003    program   0x000001
+  .config_300005_TIMER0.O    romdata   0x300005    program   0x000001
+  .config_300006_TIMER0.O    romdata   0x300006    program   0x000001
+  .config_300008_TIMER0.O    romdata   0x300008    program   0x000001
+  .config_300009_TIMER0.O    romdata   0x300009    program   0x000001
+  .config_30000A_TIMER0.O    romdata   0x30000a    program   0x000001
+  .config_30000B_TIMER0.O    romdata   0x30000b    program   0x000001
+  .config_30000C_TIMER0.O    romdata   0x30000c    program   0x000001
+  .config_30000D_TIMER0.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000003      
+                            0x000008    0x00000d      
+                            0x000018    0x000155      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            339 out of 8472 program addresses used, program memory utilization is 4%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 HIGH_ISR   0x0000b6    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                     INIT   0x00001c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  LOW_ISR   0x0000c8    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                 MAINLOOP   0x0000a8    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB0_ISR   0x0000f2    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB1_ISR   0x0000f6    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB2_ISR   0x0000fa    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB4_ISR   0x00013e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB5_CMP   0x00010a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB5_ISR   0x000144    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB6_CMP   0x000110    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB6_ISR   0x00014a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB7_CMP   0x000116    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB7_ISR   0x000150    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                   RB_END   0x00011c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+              RB_PORT_ISR   0x0000fe    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                TX_CHEACK   0x0000ae    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+               Timer0_ISR   0x0000e2    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     INIT   0x00001c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                 MAINLOOP   0x0000a8    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                TX_CHEACK   0x0000ae    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                 HIGH_ISR   0x0000b6    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  LOW_ISR   0x0000c8    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+               Timer0_ISR   0x0000e2    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB0_ISR   0x0000f2    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB1_ISR   0x0000f6    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB2_ISR   0x0000fa    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+              RB_PORT_ISR   0x0000fe    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB5_CMP   0x00010a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB6_CMP   0x000110    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB7_CMP   0x000116    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                   RB_END   0x00011c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB4_ISR   0x00013e    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB5_ISR   0x000144    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB6_ISR   0x00014a    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+                  RB7_ISR   0x000150    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\PIC18F2320\Timer0\Timer0.asm
+
+

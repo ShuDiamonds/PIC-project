@@ -1,0 +1,14 @@
+				メモ
+			
+			c18	lanのプログラムがコンパイルできなくエラーが出ていた
+			MPLINK 4.44, Linker
+Device Database Version 1.9
+Copyright (c) 1998-2011 Microchip Technology Inc.
+Error - Error reading object file 'Sample.o'
+Errors    : 1
+
+
+しかしmplabの設定を
+project-> buildoption->project->Directoriesのbuild DirectoryPolicyのチェックボックスを下から上に変えると成功した
+
+漢字をファイル名に使ってはいけない

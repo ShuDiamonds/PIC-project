@@ -1,0 +1,4 @@
+_InitPortIOReg: CODE, 32714 0 4
+_main: CODE, 32724 0 44
+__initialization: CODE, 32718 0 0
+Total: 48

@@ -1,0 +1,46 @@
+MPLINK 4.38, Linker
+Linker Map File - Created Sun Jan 27 12:23:46 2013
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000001    program   0x000004
+                   .org_1       code   0x000004    program   0x000042
+        .config_2007_P1.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000002      
+                            0x000004    0x000024      
+                            0x002007    0x002007      
+            37 out of 1158 program addresses used, program memory utilization is 3%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+              DELAY_100US   0x00001f    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+                  LOOP001   0x000022    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+                   ledoff   0x00001d    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+                    ledon   0x00001b    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+                     main   0x00000c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+                   main00   0x000019    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     main   0x00000c    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+                   main00   0x000019    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+                    ledon   0x00001b    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+                   ledoff   0x00001d    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+              DELAY_100US   0x00001f    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+                  LOOP001   0x000022    program     static D:\Erectric Enginiaring\PIC-project\ASEMBRA\P1\P1.ASM
+
+

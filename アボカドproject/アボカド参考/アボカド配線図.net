@@ -1,0 +1,87 @@
+$PACKAGES
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! C-pit1; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! DIP-08; 
+! Pin; 
+! Pin; 
+! Pin; 
+! LED-pit1; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! C-pit1; 
+! C-pit1; 
+! Pin; 
+! C-pit1; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! CC-pit1; 
+! C-pit1; 
+! CC-pit1; 
+! Socket; 
+! 3-Terminal regulator-pit1; 
+! Pin; 
+! C-pit1; 
+! Pin; 
+! SlideSW1-2x2; 
+! R-pit3; 
+! Socket; 
+! Socket; 
+! Socket; 
+! ICB-293; 
+! Socket; 
+! Socket; 
+! Socket; 
+! Socket; 
+! Socket; 
+! Socket; 
+! C-pit1; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! C-pit1; 
+! DIP-40; 
+! C-pit1; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! Pin; 
+! XTALwithC; NUMBER
+! R-pit1; NUMBER
+! R-pit1; NUMBER
+! DIP-16; NUMBER
+$NETS
+$END
